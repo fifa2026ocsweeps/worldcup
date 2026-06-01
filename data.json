@@ -1,0 +1,32 @@
+{
+  "last_updated": "2026-06-01T06:00:00Z",
+  "last_match": "Tournament not yet started — showing pre-tournament odds",
+  "source": "Pre-tournament betting markets (ESPN, RotoWire) — 1 Jun 2026",
+  "players": [
+    { "name": "Logan Dubois",      "teams": ["Croatia", "England", "Colombia"],          "probability": 16.90 },
+    { "name": "Mia Svensson",      "teams": ["Iran", "France"],                          "probability": 16.84 },
+    { "name": "Henry Nakamura",    "teams": ["Costa Rica", "Brazil"],                    "probability": 10.58 },
+    { "name": "Olivia Bennett",    "teams": ["Argentina", "Cape Verde"],                 "probability": 10.10 },
+    { "name": "Amelia Johansson",  "teams": ["Colombia", "United States", "Egypt"],      "probability": 4.33  },
+    { "name": "Mason Okonkwo",     "teams": ["Cape Verde", "Norway"],                    "probability": 2.90  },
+    { "name": "Ava Kowalski",      "teams": ["Belgium"],                                 "probability": 2.80  },
+    { "name": "Ethan Nguyen",      "teams": ["Mexico", "Türkiye", "Tunisia"],            "probability": 2.39  },
+    { "name": "Isabella García",   "teams": ["Senegal", "DR Congo", "Sweden"],           "probability": 2.19  },
+    { "name": "Luna Ivanova",      "teams": ["Uruguay"],                                 "probability": 1.90  },
+    { "name": "Sophia Tanaka",     "teams": ["Canada", "Mexico"],                        "probability": 1.70  },
+    { "name": "Liam Carter",       "teams": ["Jordan", "Mexico", "Bahrain"],             "probability": 1.28  },
+    { "name": "James Müller",      "teams": ["Sweden", "Australia", "New Zealand"],      "probability": 1.23  },
+    { "name": "Aria Andersen",     "teams": ["Australia", "Türkiye"],                    "probability": 1.16  },
+    { "name": "Owen Marchetti",    "teams": ["South Korea", "Canada", "Côte d'Ivoire"],  "probability": 1.15  },
+    { "name": "Jack O'Brien",      "teams": ["Sweden", "Jordan"],                        "probability": 1.03  },
+    { "name": "Evelyn Hasan",      "teams": ["Czechia", "Tunisia"],                      "probability": 0.60  },
+    { "name": "Lucas Ferreira",    "teams": ["Ghana"],                                   "probability": 0.33  },
+    { "name": "Charlotte Kim",     "teams": ["Ghana"],                                   "probability": 0.33  },
+    { "name": "Alexander Petrov",  "teams": ["Iran", "Australia"],                       "probability": 0.31  },
+    { "name": "Sebastian Reyes",   "teams": ["Honduras", "Panama"],                      "probability": 0.14  },
+    { "name": "Emma Rossi",        "teams": ["Cameroon"],                                "probability": 0.10  },
+    { "name": "Felix Bergmann",    "teams": ["Cape Verde"],                              "probability": 0.10  },
+    { "name": "Harper Silva",      "teams": ["Iraq"],                                    "probability": 0.07  },
+    { "name": "Noah Patel",        "teams": ["Bahrain"],                                 "probability": 0.04  }
+  ]
+}
