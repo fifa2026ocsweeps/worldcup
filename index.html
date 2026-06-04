@@ -254,9 +254,9 @@
       <thead>
         <tr>
           <th class="num">#</th>
+          <th>Team</th>
           <th>Player</th>
-          <th>Teams Drawn</th>
-          <th class="num">No. of Teams</th>
+          <th class="num">FIFA Rank</th>
         </tr>
       </thead>
       <tbody id="draw-tbody"></tbody>
@@ -354,33 +354,67 @@
 // DATA
 // ═══════════════════════════════════════════
 
-const DRAW = [
-  { name: "Liam Carter",        teams: ["Jordan", "Mexico", "Bahrain"] },
-  { name: "Olivia Bennett",     teams: ["Argentina", "Cape Verde"] },
-  { name: "Noah Patel",         teams: ["Bahrain"] },
-  { name: "Emma Rossi",         teams: ["Cameroon"] },
-  { name: "James Müller",       teams: ["Sweden", "Australia", "New Zealand"] },
-  { name: "Sophia Tanaka",      teams: ["Canada", "Mexico"] },
-  { name: "Lucas Ferreira",     teams: ["Ghana"] },
-  { name: "Ava Kowalski",       teams: ["Belgium"] },
-  { name: "Ethan Nguyen",       teams: ["Mexico", "Türkiye", "Tunisia"] },
-  { name: "Isabella García",    teams: ["Senegal", "DR Congo", "Sweden"] },
-  { name: "Mason Okonkwo",      teams: ["Cape Verde", "Norway"] },
-  { name: "Amelia Johansson",   teams: ["Colombia", "United States", "Egypt"] },
-  { name: "Logan Dubois",       teams: ["Croatia", "England", "Colombia"] },
-  { name: "Charlotte Kim",      teams: ["Ghana"] },
-  { name: "Alexander Petrov",   teams: ["Iran", "Australia"] },
-  { name: "Mia Svensson",       teams: ["Iran", "France"] },
-  { name: "Henry Nakamura",     teams: ["Costa Rica", "Brazil"] },
-  { name: "Harper Silva",       teams: ["Iraq"] },
-  { name: "Jack O'Brien",       teams: ["Sweden", "Jordan"] },
-  { name: "Aria Andersen",      teams: ["Australia", "Türkiye"] },
-  { name: "Sebastian Reyes",    teams: ["Honduras", "Panama"] },
-  { name: "Evelyn Hasan",       teams: ["Czechia", "Tunisia"] },
-  { name: "Owen Marchetti",     teams: ["South Korea", "Canada", "Côte d'Ivoire"] },
-  { name: "Luna Ivanova",       teams: ["Uruguay"] },
-  { name: "Felix Bergmann",     teams: ["Cape Verde"] },
+// Raw draw: one row per team allocation (matches the Excel sheet)
+// Team names normalised to match TEAM_PROBS keys
+const RAW_DRAW = [
+  { team: "Argentina",          player: "Matt",          rank: 1   },
+  { team: "France",             player: "Livia",         rank: 2   },
+  { team: "Spain",              player: "Alan",          rank: 3   },
+  { team: "England",            player: "Jon",           rank: 4   },
+  { team: "Brazil",             player: "Gabi",          rank: 5   },
+  { team: "Portugal",           player: "MEJ (Michael)", rank: 6   },
+  { team: "Netherlands",        player: "Orgil",         rank: 7   },
+  { team: "Belgium",            player: "Rose",          rank: 8   },
+  { team: "Germany",            player: "Georgia",       rank: 10  },
+  { team: "Morocco",            player: "Mark",          rank: 11  },
+  { team: "Croatia",            player: "Denis",         rank: 12  },
+  { team: "Uruguay",            player: "Pip",           rank: 13  },
+  { team: "Colombia",           player: "Alistair",      rank: 14  },
+  { team: "Japan",              player: "Aditi",         rank: 15  },
+  { team: "United States",      player: "Jimmy",         rank: 16  },
+  { team: "Mexico",             player: "Marcelo",       rank: 17  },
+  { team: "Senegal",            player: "Lach",          rank: 19  },
+  { team: "Switzerland",        player: "Tess",          rank: 20  },
+  { team: "Iran",               player: "Jamaica",       rank: 20  },
+  { team: "Austria",            player: "Anita",         rank: 22  },
+  { team: "South Korea",        player: "Sanaz",         rank: 23  },
+  { team: "Australia",          player: "Sarah",         rank: 24  },
+  { team: "Ecuador",            player: "Linda",         rank: 25  },
+  { team: "Türkiye",            player: "Adele",         rank: 27  },
+  { team: "Sweden",             player: "Lidia",         rank: 28  },
+  { team: "Canada",             player: "Steph",         rank: 30  },
+  { team: "Panama",             player: "Fiona",         rank: 33  },
+  { team: "Egypt",              player: "Kena",          rank: 34  },
+  { team: "Algeria",            player: "Nicko",         rank: 36  },
+  { team: "Czechia",            player: "Kash",          rank: 39  },
+  { team: "Côte d'Ivoire",      player: "Jodie",         rank: 41  },
+  { team: "Norway",             player: "Eden",          rank: 43  },
+  { team: "Scotland",           player: "Simon D",       rank: 44  },
+  { team: "Paraguay",           player: "Reino",         rank: 48  },
+  { team: "Tunisia",            player: "Dani",          rank: 49  },
+  { team: "Qatar",              player: "Jimmy",         rank: 55  },
+  { team: "South Africa",       player: "Lids",          rank: 56  },
+  { team: "Uzbekistan",         player: "Rose",          rank: 57  },
+  { team: "Saudi Arabia",       player: "Daniel",        rank: 58  },
+  { team: "Iraq",               player: "Maria",         rank: 59  },
+  { team: "Jordan",             player: "Gina",          rank: 62  },
+  { team: "Cape Verde",         player: "Clarence",      rank: 65  },
+  { team: "Bosnia & Herzegovina", player: "Linda",       rank: "70+" },
+  { team: "Ghana",              player: "Josh",          rank: 76  },
+  { team: "Haiti",              player: "Upendra",       rank: "80+" },
+  { team: "New Zealand",        player: "Cristina",      rank: 89  },
+  { team: "Curaçao",            player: "Amy",           rank: "90+" },
+  { team: "DR Congo",           player: "Kath",          rank: "60+" },
 ];
+
+// Grouped by player (for Tabs 3 & 4)
+const DRAW = Object.values(
+  RAW_DRAW.reduce((acc, { team, player }) => {
+    if (!acc[player]) acc[player] = { name: player, teams: [] };
+    acc[player].teams.push(team);
+    return acc;
+  }, {})
+);
 
 // Static pre-tournament team probabilities (%)
 // Source: ESPN, RotoWire, FOX Sports – 1 Jun 2026
@@ -508,12 +542,12 @@ function chipsHtml(teams) {
 
 function renderDraw() {
   const tbody = document.getElementById('draw-tbody');
-  tbody.innerHTML = DRAW.map((p, i) => `
+  tbody.innerHTML = RAW_DRAW.map((row, i) => `
     <tr>
       <td class="num">${i + 1}</td>
-      <td><strong>${p.name}</strong></td>
-      <td>${chipsHtml(p.teams)}</td>
-      <td class="num">${p.teams.length}</td>
+      <td><strong>${row.team}</strong></td>
+      <td>${row.player}</td>
+      <td class="num">${row.rank}</td>
     </tr>`).join('');
 }
 
