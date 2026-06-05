@@ -41,7 +41,7 @@ DRAW = [
     {"name": "Linda",         "teams": ["Ecuador", "Bosnia & Herzegovina"]},
     {"name": "Adele",         "teams": ["Türkiye"]},
     {"name": "Lidia",         "teams": ["Sweden"]},
-    {"name": "Steph",         "teams": ["Canada"]},
+    {"name": "Steph",         "teams": ["Cape Verde"]},
     {"name": "Fiona",         "teams": ["Panama"]},
     {"name": "Kena",          "teams": ["Egypt"]},
     {"name": "Nicko",         "teams": ["Algeria"]},
@@ -57,7 +57,7 @@ DRAW = [
     {"name": "Kath",          "teams": ["DR Congo"]},
     {"name": "Upendra",       "teams": ["Haiti"]},
     {"name": "Gina",          "teams": ["Jordan"]},
-    {"name": "Clarence",      "teams": ["Cape Verde"]},
+    {"name": "Clarence",      "teams": ["Canada"]},
     {"name": "Daniel",        "teams": ["Saudi Arabia"]},
     {"name": "Maria",         "teams": ["Iraq"]},
     {"name": "Josh",          "teams": ["Ghana"]},
@@ -97,22 +97,66 @@ def normalise(name):
     return TEAM_ALIASES.get(name.lower().strip(), name.strip())
 
 
+# ─── Discover correct FIFA WC sport key from The Odds API ────────────────────
+def find_wc_sport_key(api_key):
+    """Return the sport key for FIFA World Cup outright winner market, or None."""
+    try:
+        r = requests.get(
+            "https://api.the-odds-api.com/v4/sports/",
+            params={"apiKey": api_key, "all": "true"},
+            timeout=15,
+        )
+        r.raise_for_status()
+        sports = r.json()
+        # Prefer an outright/winner market; fall back to any WC sport
+        wc_key = None
+        for s in sports:
+            key = s.get("key", "").lower()
+            if "world_cup" in key and "winner" in key:
+                return s["key"]
+            if "world_cup" in key:
+                wc_key = s["key"]
+        if wc_key:
+            print(f"  No winner-specific key found, using: {wc_key}")
+        return wc_key
+    except Exception as e:
+        print(f"[WARN] Could not list sports: {e}", file=sys.stderr)
+        return None
+
+
 # ─── Fetch odds from The Odds API ────────────────────────────────────────────
 def fetch_team_probs(api_key):
     """Return dict {team_name: probability_%} from The Odds API outright market."""
-    url = "https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds/"
-    params = {
-        "apiKey": api_key,
-        "regions": "uk,eu",
-        "markets": "outrights",
-        "oddsFormat": "decimal",
-    }
-    try:
-        r = requests.get(url, params=params, timeout=15)
-        r.raise_for_status()
-        data = r.json()
-    except Exception as e:
-        print(f"[WARN] Odds API error: {e}", file=sys.stderr)
+    sport_key = find_wc_sport_key(api_key)
+    if not sport_key:
+        print("[WARN] FIFA World Cup sport not found in The Odds API — not active yet?", file=sys.stderr)
+        return None
+
+    print(f"  Using sport key: {sport_key}")
+
+    # Try outright winner market first, fall back to h2h
+    for market in ("outrights", "h2h"):
+        url = f"https://api.the-odds-api.com/v4/sports/{sport_key}/odds/"
+        params = {
+            "apiKey": api_key,
+            "regions": "uk,eu,us",
+            "markets": market,
+            "oddsFormat": "decimal",
+        }
+        try:
+            r = requests.get(url, params=params, timeout=15)
+            if r.status_code == 422:
+                print(f"  Market '{market}' not available, trying next…")
+                continue
+            r.raise_for_status()
+            data = r.json()
+            if data:
+                print(f"  Got odds via market '{market}' for {len(data)} event(s).")
+                break
+        except Exception as e:
+            print(f"[WARN] Odds API error ({market}): {e}", file=sys.stderr)
+            return None
+    else:
         return None
 
     # Aggregate decimal odds per team across bookmakers (use average)
@@ -121,10 +165,8 @@ def fetch_team_probs(api_key):
 
     for event in data:
         for bm in event.get("bookmakers", []):
-            for market in bm.get("markets", []):
-                if market.get("key") != "outrights":
-                    continue
-                for outcome in market.get("outcomes", []):
+            for mkt in bm.get("markets", []):
+                for outcome in mkt.get("outcomes", []):
                     team = normalise(outcome["name"])
                     decimal_odds = float(outcome["price"])
                     team_odds_sum[team] = team_odds_sum.get(team, 0) + decimal_odds
@@ -143,9 +185,10 @@ def fetch_team_probs(api_key):
 # ─── Fetch last finished match from football-data.org ────────────────────────
 def fetch_last_match(api_key):
     """Return a human-readable string for the most recently finished WC match."""
-    url = "https://api.football-data.org/v4/competitions/WC2026/matches"
+    # Competition code is 'WC'; season=2026 targets the 2026 tournament
+    url = "https://api.football-data.org/v4/competitions/WC/matches"
     headers = {"X-Auth-Token": api_key}
-    params = {"status": "FINISHED"}
+    params = {"status": "FINISHED", "season": "2026"}
     try:
         r = requests.get(url, headers=headers, params=params, timeout=15)
         r.raise_for_status()
