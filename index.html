@@ -51,7 +51,7 @@
       background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 45%, #388e3c 75%, #43a047 100%);
       color: var(--white);
       text-align: center;
-      padding: 14px 20px 12px;
+      padding: 22px 20px 20px;
       position: relative;
       overflow: hidden;
     }
@@ -68,10 +68,10 @@
       display: flex; align-items: center; justify-content: center;
       gap: 14px; flex-wrap: wrap;
     }
-    .header-ball { font-size: 1.8rem; animation: spin 8s linear infinite; flex-shrink: 0; }
+    .header-ball { display: none; }
     @keyframes spin { to { transform: rotate(360deg); } }
     header h1 {
-      font-size: clamp(1.2rem, 3.5vw, 1.7rem);
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
       font-weight: 900;
       letter-spacing: -0.3px;
       text-shadow: 0 2px 8px rgba(0,0,0,0.3);
@@ -80,7 +80,7 @@
     header h1 span { color: var(--gold); }
     .header-meta {
       display: flex; align-items: center; gap: 10px;
-      font-size: 0.78rem; font-weight: 500; opacity: 0.85;
+      font-size: 0.88rem; font-weight: 500; opacity: 0.85;
       flex-wrap: wrap; justify-content: center;
     }
     .header-meta .dot { opacity: 0.5; }
