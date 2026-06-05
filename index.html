@@ -174,6 +174,12 @@
       margin-bottom: 6px;
       flex-wrap: wrap;
     }
+    .panel-header-right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
     .panel-icon {
       width: 42px; height: 42px;
       background: linear-gradient(135deg, var(--pitch-mid), var(--pitch-lite));
@@ -380,16 +386,10 @@
     }
 
     /* ── SEARCH ── */
-    .search-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
+    .search-wrap { display: none; } /* unused — search is now in panel-header-right */
     .search-box {
-      flex: 1;
-      max-width: 340px;
-      padding: 9px 14px 9px 38px;
+      width: 210px;
+      padding: 7px 12px 7px 34px;
       border: 1.5px solid var(--border);
       border-radius: 99px;
       font-family: 'Poppins', sans-serif;
@@ -483,13 +483,12 @@
     <div class="panel-icon">📋</div>
     <div class="panel-title">Sweepstakes Draw</div>
     <span class="badge badge-static">Static</span>
+    <div class="panel-header-right">
+      <input class="search-box" type="search" placeholder="Search player or team…" oninput="filterTable('draw-tbody', this.value, 'draw-count')">
+      <span class="search-count" id="draw-count"></span>
+    </div>
   </div>
   <div class="panel-subtitle">Official team allocations — OurCommunity FIFA 2026 Sweepstakes</div>
-
-  <div class="search-wrap">
-    <input class="search-box" type="search" placeholder="Search player or team…" oninput="filterTable('draw-tbody', this.value, 'draw-count')">
-    <span class="search-count" id="draw-count"></span>
-  </div>
   <div class="card">
     <div class="table-wrap">
       <table>
@@ -516,13 +515,12 @@
     <div class="panel-icon">📊</div>
     <div class="panel-title">Team Win Probabilities</div>
     <span class="badge badge-static">Static · Pre-Tournament</span>
+    <div class="panel-header-right">
+      <input class="search-box" type="search" placeholder="Search team…" oninput="filterTable('team-tbody', this.value, 'team-count')">
+      <span class="search-count" id="team-count"></span>
+    </div>
   </div>
   <div class="panel-subtitle">Win probabilities for all 48 teams — betting markets &amp; model projections as of 1 June 2026</div>
-
-  <div class="search-wrap">
-    <input class="search-box" type="search" placeholder="Search team…" oninput="filterTable('team-tbody', this.value, 'team-count')">
-    <span class="search-count" id="team-count"></span>
-  </div>
   <div class="card">
     <div class="table-wrap">
       <table>
@@ -549,13 +547,12 @@
     <div class="panel-icon">🏅</div>
     <div class="panel-title">Pre-Tournament Player Standings</div>
     <span class="badge badge-static">Static · Snapshot</span>
+    <div class="panel-header-right">
+      <input class="search-box" type="search" placeholder="Search player or team…" oninput="filterTable('player-static-tbody', this.value, 'static-count')">
+      <span class="search-count" id="static-count"></span>
+    </div>
   </div>
   <div class="panel-subtitle">Combined win probability per player based on drawn teams — frozen at tournament kick-off</div>
-
-  <div class="search-wrap">
-    <input class="search-box" type="search" placeholder="Search player or team…" oninput="filterTable('player-static-tbody', this.value, 'static-count')">
-    <span class="search-count" id="static-count"></span>
-  </div>
   <div class="card">
     <div class="table-wrap">
       <table>
@@ -582,6 +579,10 @@
     <div class="panel-icon">🔴</div>
     <div class="panel-title">Live Player Standings</div>
     <span class="badge badge-live">⚡ Updated Daily 4 PM AEST</span>
+    <div class="panel-header-right">
+      <input class="search-box" type="search" placeholder="Search player or team…" oninput="filterTable('player-live-tbody', this.value, 'live-count')">
+      <span class="search-count" id="live-count"></span>
+    </div>
   </div>
   <div class="panel-subtitle">Probabilities reflect current betting markets — refreshed automatically after each match day</div>
 
@@ -610,10 +611,6 @@
       </div>
     </div>
 
-    <div class="search-wrap">
-      <input class="search-box" type="search" placeholder="Search player or team…" oninput="filterTable('player-live-tbody', this.value, 'live-count')">
-      <span class="search-count" id="live-count"></span>
-    </div>
     <div class="card">
       <div class="table-wrap">
         <table>
