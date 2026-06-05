@@ -49,3 +49,15 @@ jobs:
             git push
             echo "✅ data.json committed and pushed"
           fi
+
+      - name: Trigger Pages deploy
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'deploy.yml',
+              ref: 'main'
+            });
+            console.log('✅ Deploy workflow triggered');
