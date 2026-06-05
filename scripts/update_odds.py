@@ -223,18 +223,26 @@ def main():
     odds_key = os.environ.get("ODDS_API_KEY", "")
     fd_key   = os.environ.get("FOOTBALL_DATA_KEY", "")
 
+    print("=" * 50)
+    print(f"ODDS_API_KEY   : {'SET ✅' if odds_key else 'NOT SET ❌'}")
+    print(f"FOOTBALL_DATA_KEY: {'SET ✅' if fd_key else 'NOT SET ❌'}")
+    print("=" * 50)
+
     # Fetch live odds (or fall back to static)
     team_probs = None
     source = "Pre-tournament static data (live odds API not configured)"
 
     if odds_key:
-        print("Fetching live odds from The Odds API…")
+        print("\nFetching live odds from The Odds API…")
         team_probs = fetch_team_probs(odds_key)
         if team_probs:
             source = "The Odds API (live betting markets)"
-            print(f"  Got odds for {len(team_probs)} teams.")
+            print(f"  ✅ Got odds for {len(team_probs)} teams.")
         else:
-            print("  Failed – falling back to static data.")
+            print("  ⚠️  Odds API returned no data — falling back to static probabilities.")
+            source = "Static fallback (Odds API unavailable or tournament not yet active)"
+    else:
+        print("\n⚠️  ODDS_API_KEY not set — using static probabilities.")
 
     if team_probs is None:
         team_probs = FALLBACK_PROBS.copy()
@@ -242,9 +250,11 @@ def main():
     # Fetch last match
     last_match = "Tournament not yet started"
     if fd_key:
-        print("Fetching last match from football-data.org…")
+        print("\nFetching last match from football-data.org…")
         last_match = fetch_last_match(fd_key)
         print(f"  Last match: {last_match}")
+    else:
+        print("\n⚠️  FOOTBALL_DATA_KEY not set — skipping match fetch.")
 
     # Build output
     players = compute_players(team_probs)
@@ -259,7 +269,11 @@ def main():
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
-    print(f"✅  data.json updated – {len(players)} players written.")
+    print(f"\n✅  data.json written to: {os.path.abspath(out_path)}")
+    print(f"    last_updated : {output['last_updated']}")
+    print(f"    last_match   : {output['last_match']}")
+    print(f"    source       : {output['source']}")
+    print(f"    players      : {len(players)}")
 
 
 if __name__ == "__main__":

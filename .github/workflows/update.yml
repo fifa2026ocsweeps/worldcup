@@ -9,6 +9,9 @@ on:
 permissions:
   contents: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   update-odds:
     runs-on: ubuntu-latest
@@ -19,8 +22,6 @@ jobs:
 
       - name: Set up Python
         uses: actions/setup-python@v5
-        env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
         with:
           python-version: '3.11'
 
@@ -33,10 +34,18 @@ jobs:
           FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
         run: python scripts/update_odds.py
 
-      - name: Commit updated data.json
+      - name: Show updated data.json
+        run: cat data.json
+
+      - name: Commit and push updated data.json
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json
-          git diff --cached --quiet || git commit -m "chore: update live standings [$(date -u '+%Y-%m-%d %H:%M UTC')]"
-          git push
+          if git diff --cached --quiet; then
+            echo "⚠️  data.json unchanged — nothing to commit"
+          else
+            git commit -m "chore: update live standings [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+            git push
+            echo "✅ data.json committed and pushed"
+          fi
