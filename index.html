@@ -518,7 +518,23 @@
       cursor: pointer;
       transition: background 0.15s, transform 0.1s;
     }
+    .chip-btn::after { content: ' ↗'; font-size: 0.65rem; opacity: 0.5; }
     .chip-btn:hover { background: #b9debb; transform: translateY(-1px); }
+    .chip-btn:hover::after { opacity: 1; }
+
+    /* click hint badge */
+    .click-hint {
+      display: inline-block;
+      margin-top: 6px;
+      background: #fff8e1;
+      color: #e65100;
+      border: 1px solid #ffcc80;
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
 
     /* ── LOADING ── */
     #live-loading {
@@ -732,7 +748,10 @@
       <span class="search-count" id="live-count"></span>
     </div>
   </div>
-  <div class="panel-subtitle">Probabilities reflect current betting markets — refreshed automatically after each match day &nbsp;·&nbsp; <span style="color:var(--pitch-mid)">👆 Click any team name for match stats &amp; fixtures</span></div>
+  <div class="panel-subtitle">
+    Probabilities reflect current betting markets — refreshed automatically after each match day
+    <span class="click-hint">👆 Click any team name for match stats &amp; fixtures</span>
+  </div>
 
   <div id="live-loading">
     <span class="spinner">⚽</span>
