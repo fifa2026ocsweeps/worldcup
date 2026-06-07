@@ -1067,30 +1067,41 @@ function liveChips(teams) {
      </span>`).join('')}</div>`;
 }
 
-function renderHighlights(data) {
-  const h = data.highlights || {};
-  if (!Object.keys(h).length) return;
+const DUMMY_HIGHLIGHTS = {
+  top_scoring_team:   { team: "Spain",        goals: 9 },
+  most_conceded_team: { team: "Saudi Arabia", goals: 7 },
+  top_scorers: [
+    { name: "Kylian Mbappé",  team: "France", goals: 5, assists: 2 },
+    { name: "Erling Haaland", team: "Norway", goals: 4, assists: 1 },
+    { name: "Lamine Yamal",   team: "Spain",  goals: 3, assists: 3 },
+  ],
+};
 
-  document.getElementById('highlights-strip').style.display = 'grid';
+function renderHighlights(data) {
+  const real = data.highlights && Object.keys(data.highlights).length;
+  const h = real ? data.highlights : DUMMY_HIGHLIGHTS;
+  const preview = !real;
+
+  document.getElementById('highlights-strip').style.display = 'block';
 
   if (h.top_scoring_team) {
     document.getElementById('hl-top-team').textContent =
       `${flag(h.top_scoring_team.team)} ${h.top_scoring_team.team}`;
     document.getElementById('hl-top-team-sub').textContent =
-      `${h.top_scoring_team.goals} goal${h.top_scoring_team.goals !== 1 ? 's' : ''} scored`;
+      `${h.top_scoring_team.goals} goals scored${preview ? ' · preview' : ''}`;
   }
   if (h.most_conceded_team) {
     document.getElementById('hl-most-conceded').textContent =
       `${flag(h.most_conceded_team.team)} ${h.most_conceded_team.team}`;
     document.getElementById('hl-most-conceded-sub').textContent =
-      `${h.most_conceded_team.goals} goal${h.most_conceded_team.goals !== 1 ? 's' : ''} conceded`;
+      `${h.most_conceded_team.goals} goals conceded${preview ? ' · preview' : ''}`;
   }
   if (h.top_scorers && h.top_scorers.length) {
     const top = h.top_scorers[0];
     document.getElementById('hl-scorer-card').style.display = 'flex';
     document.getElementById('hl-scorer').textContent = top.name;
     document.getElementById('hl-scorer-sub').textContent =
-      `${flag(top.team)} ${top.team} · ${top.goals} goal${top.goals !== 1 ? 's' : ''}`;
+      `${flag(top.team)} ${top.team} · ${top.goals} goals${preview ? ' · preview' : ''}`;
   }
 }
 
