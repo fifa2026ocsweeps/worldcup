@@ -495,8 +495,8 @@
         <thead>
           <tr>
             <th class="c">#</th>
-            <th>Team</th>
             <th>Player</th>
+            <th>Team</th>
             <th class="c">FIFA Rank</th>
           </tr>
         </thead>
@@ -793,8 +793,8 @@ function renderDraw() {
   document.getElementById('draw-tbody').innerHTML = RAW_DRAW.map((r, i) => `
     <tr>
       <td class="c" style="color:#90a4ae;font-size:.8rem;font-weight:600">${i+1}</td>
-      <td><span class="team-name">${flag(r.team)} ${r.team}</span></td>
       <td class="player-name">${r.player}</td>
+      <td><span class="team-name">${flag(r.team)} ${r.team}</span></td>
       <td class="c" style="font-weight:700;color:${typeof r.rank==='number'&&r.rank<=10?'#e65100':typeof r.rank==='number'&&r.rank<=20?'#f57f17':'#546e7a'}">${r.rank}</td>
     </tr>`).join('');
 }
