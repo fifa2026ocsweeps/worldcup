@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -14,15 +14,60 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
+  # ── Step 1: refresh data.json ──────────────────────────────────────────────
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main          # always get latest, including any prior workflow commits
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run odds update script
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
+        run: python scripts/update_odds.py
+
+      - name: Commit and push updated data.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          if git diff --cached --quiet; then
+            echo "⚠️  data.json unchanged — nothing to commit"
+          else
+            git commit -m "chore: update live standings [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+            git push
+            echo "✅ data.json committed and pushed"
+          fi
+
+  # ── Step 2: deploy to Pages (runs after update-data) ──────────────────────
   deploy:
+    needs: update-data        # waits for data.json to be refreshed first
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository (with fresh data.json)
         uses: actions/checkout@v4
+        with:
+          ref: main           # picks up the data.json commit from update-data job
 
       - name: Setup Pages
         uses: actions/configure-pages@v6
@@ -35,5 +80,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true

@@ -1,4 +1,4 @@
-name: Update Live Standings
+name: Update Live Standings (Scheduled)
 
 on:
   schedule:
@@ -8,7 +8,6 @@ on:
 
 permissions:
   contents: write
-  actions: write
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -20,6 +19,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -50,15 +51,3 @@ jobs:
             git push
             echo "✅ data.json committed and pushed"
           fi
-
-      - name: Trigger Pages deploy
-        uses: actions/github-script@v7
-        with:
-          script: |
-            await github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: 'deploy.yml',
-              ref: 'main'
-            });
-            console.log('✅ Deploy workflow triggered');
