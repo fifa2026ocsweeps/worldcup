@@ -871,7 +871,8 @@ function renderLive(data) {
 }
 
 function loadLiveData() {
-  fetch('data.json?v=' + Date.now())
+  const RAW = 'https://raw.githubusercontent.com/fifa2026ocsweeps/worldcup/main/data.json';
+  fetch(RAW + '?v=' + Date.now())
     .then(r => { if (!r.ok) throw 0; return r.json(); })
     .then(renderLive)
     .catch(() => renderLive({
