@@ -323,45 +323,6 @@
     .down { color: #c62828; font-weight: 700; }
     .flat { color: #90a4ae; }
 
-    /* ── LIVE INFO CARDS ── */
-    .info-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 14px;
-      margin-bottom: 20px;
-    }
-    .info-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 18px;
-      box-shadow: var(--shadow);
-    }
-    .info-card .label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      color: var(--text-mid);
-      margin-bottom: 4px;
-    }
-    .info-card .value { font-size: 0.92rem; font-weight: 700; color: var(--pitch); }
-
-    /* ── MATCH BOX ── */
-    .match-box {
-      background: linear-gradient(135deg, var(--pitch) 0%, var(--pitch-lite) 100%);
-      color: var(--white);
-      border-radius: 12px;
-      padding: 16px 22px;
-      margin-bottom: 20px;
-      box-shadow: var(--shadow-lg);
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .match-ball { font-size: 2rem; flex-shrink: 0; }
-    .match-label { font-size: 0.68rem; font-weight: 700; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.6px; }
-    .match-name  { font-size: 1rem; font-weight: 700; margin-top: 2px; }
 
     /* ── SOURCE NOTE ── */
     .source-note {
@@ -372,34 +333,97 @@
       font-style: italic;
     }
 
-    /* ── HIGHLIGHTS STRIP ── */
-    .highlights {
+    /* ── LIVE TAB LAYOUT ── */
+    .live-layout {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 12px;
-      margin-bottom: 18px;
+      grid-template-columns: 1fr 260px;
+      gap: 20px;
+      align-items: start;
     }
-    .hl-card {
+    .live-sidebar {
+      position: sticky;
+      top: 58px; /* below tab bar */
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* ── SIDEBAR CARDS ── */
+    .sb-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 13px 16px;
+      padding: 14px 16px;
       box-shadow: var(--shadow);
-      display: flex;
-      align-items: center;
-      gap: 12px;
     }
+    .sb-card-title {
+      font-size: 0.67rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--text-mid);
+      margin-bottom: 4px;
+    }
+    .sb-card-value {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--pitch);
+      line-height: 1.3;
+    }
+    .sb-card-sub {
+      font-size: 0.75rem;
+      color: var(--text-mid);
+      margin-top: 2px;
+    }
+
+    /* ── HIGHLIGHTS in sidebar ── */
+    .hl-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .hl-card:last-child { border-bottom: none; padding-bottom: 0; }
+    .hl-card:first-child { padding-top: 0; }
     .hl-icon {
-      font-size: 1.6rem;
+      font-size: 1.2rem;
       flex-shrink: 0;
-      width: 40px; height: 40px;
+      width: 34px; height: 34px;
       background: var(--grass);
-      border-radius: 10px;
+      border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
     }
-    .hl-label { font-size: 0.67rem; font-weight: 700; color: var(--text-mid); text-transform: uppercase; letter-spacing: 0.5px; }
-    .hl-value { font-size: 0.9rem; font-weight: 700; color: var(--pitch); margin-top: 2px; line-height: 1.3; }
-    .hl-sub   { font-size: 0.72rem; color: var(--text-mid); margin-top: 1px; }
+    .hl-label { font-size: 0.65rem; font-weight: 700; color: var(--text-mid); text-transform: uppercase; letter-spacing: 0.5px; }
+    .hl-value { font-size: 0.84rem; font-weight: 700; color: var(--pitch); margin-top: 2px; line-height: 1.3; }
+    .hl-sub   { font-size: 0.7rem; color: var(--text-mid); margin-top: 1px; }
+
+    /* ── MATCH BOX (sidebar version) ── */
+    .match-box {
+      background: linear-gradient(135deg, var(--pitch) 0%, var(--pitch-lite) 100%);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow-lg);
+    }
+    .match-ball { font-size: 1.4rem; margin-bottom: 6px; display: block; }
+    .match-label { font-size: 0.65rem; font-weight: 700; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.6px; }
+    .match-name  { font-size: 0.85rem; font-weight: 700; margin-top: 4px; line-height: 1.4; }
+
+    @media (max-width: 780px) {
+      .live-layout {
+        grid-template-columns: 1fr;
+      }
+      .live-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+    }
+    @media (max-width: 480px) {
+      .live-sidebar { grid-template-columns: 1fr; }
+    }
 
     /* ── TEAM MODAL ── */
     .modal-overlay {
@@ -751,70 +775,79 @@
   </div>
 
   <div id="live-content" style="display:none">
-    <!-- Tournament highlights (hidden until data loads) -->
-    <div class="highlights" id="highlights-strip" style="display:none">
-      <div class="hl-card">
-        <div class="hl-icon">🥅</div>
-        <div>
-          <div class="hl-label">Top Scoring Team</div>
-          <div class="hl-value" id="hl-top-team">—</div>
-          <div class="hl-sub" id="hl-top-team-sub"></div>
-        </div>
-      </div>
-      <div class="hl-card">
-        <div class="hl-icon">🛡️</div>
-        <div>
-          <div class="hl-label">Most Goals Conceded</div>
-          <div class="hl-value" id="hl-most-conceded">—</div>
-          <div class="hl-sub" id="hl-most-conceded-sub"></div>
-        </div>
-      </div>
-      <div class="hl-card" id="hl-scorer-card" style="display:none">
-        <div class="hl-icon">⭐</div>
-        <div>
-          <div class="hl-label">Leading Scorer</div>
-          <div class="hl-value" id="hl-scorer">—</div>
-          <div class="hl-sub" id="hl-scorer-sub"></div>
-        </div>
-      </div>
-    </div>
+    <div class="live-layout">
 
-    <div class="info-cards">
-      <div class="info-card">
-        <div class="label">🕓 Last Updated</div>
-        <div class="value" id="last-updated-val">—</div>
+      <!-- ── MAIN TABLE ── -->
+      <div class="live-main">
+        <div class="card">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th class="c">Rank</th>
+                  <th>Player</th>
+                  <th>Teams</th>
+                  <th>Win Probability</th>
+                  <th class="c">vs Pre-Tournament</th>
+                </tr>
+              </thead>
+              <tbody id="player-live-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="source-note" id="live-source-note"></div>
       </div>
-      <div class="info-card">
-        <div class="label">🔄 Next Update</div>
-        <div class="value" id="next-update-val">—</div>
-      </div>
-    </div>
 
-    <div class="match-box">
-      <div class="match-ball">⚽</div>
-      <div>
-        <div class="match-label">Last match considered</div>
-        <div class="match-name" id="last-match-val">Loading…</div>
-      </div>
-    </div>
+      <!-- ── SIDEBAR ── -->
+      <aside class="live-sidebar">
 
-    <div class="card">
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th class="c">Rank</th>
-              <th>Player</th>
-              <th>Teams</th>
-              <th>Win Probability</th>
-              <th class="c">vs Pre-Tournament</th>
-            </tr>
-          </thead>
-          <tbody id="player-live-tbody"></tbody>
-        </table>
-      </div>
+        <div class="sb-card">
+          <div class="sb-card-title">🕓 Last Updated</div>
+          <div class="sb-card-value" id="last-updated-val">—</div>
+        </div>
+
+        <div class="sb-card">
+          <div class="sb-card-title">🔄 Next Update</div>
+          <div class="sb-card-value" id="next-update-val">—</div>
+        </div>
+
+        <div class="match-box">
+          <span class="match-ball">⚽</span>
+          <div class="match-label">Last match considered</div>
+          <div class="match-name" id="last-match-val">Loading…</div>
+        </div>
+
+        <!-- Highlights — shown once data has them -->
+        <div class="sb-card" id="highlights-strip" style="display:none">
+          <div class="sb-card-title" style="margin-bottom:10px">🏆 Tournament Highlights</div>
+          <div class="hl-card">
+            <div class="hl-icon">🥅</div>
+            <div>
+              <div class="hl-label">Top Scoring Team</div>
+              <div class="hl-value" id="hl-top-team">—</div>
+              <div class="hl-sub"   id="hl-top-team-sub"></div>
+            </div>
+          </div>
+          <div class="hl-card">
+            <div class="hl-icon">🛡️</div>
+            <div>
+              <div class="hl-label">Most Conceded</div>
+              <div class="hl-value" id="hl-most-conceded">—</div>
+              <div class="hl-sub"   id="hl-most-conceded-sub"></div>
+            </div>
+          </div>
+          <div class="hl-card" id="hl-scorer-card" style="display:none">
+            <div class="hl-icon">⭐</div>
+            <div>
+              <div class="hl-label">Leading Scorer</div>
+              <div class="hl-value" id="hl-scorer">—</div>
+              <div class="hl-sub"   id="hl-scorer-sub"></div>
+            </div>
+          </div>
+        </div>
+
+      </aside>
     </div>
-    <div class="source-note" id="live-source-note"></div>
   </div>
 </div>
 
