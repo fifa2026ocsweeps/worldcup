@@ -372,6 +372,130 @@
       font-style: italic;
     }
 
+    /* ── HIGHLIGHTS STRIP ── */
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .hl-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 16px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hl-icon {
+      font-size: 1.6rem;
+      flex-shrink: 0;
+      width: 40px; height: 40px;
+      background: var(--grass);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hl-label { font-size: 0.67rem; font-weight: 700; color: var(--text-mid); text-transform: uppercase; letter-spacing: 0.5px; }
+    .hl-value { font-size: 0.9rem; font-weight: 700; color: var(--pitch); margin-top: 2px; line-height: 1.3; }
+    .hl-sub   { font-size: 0.72rem; color: var(--text-mid); margin-top: 1px; }
+
+    /* ── TEAM MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 500;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: 0 16px 60px rgba(0,0,0,0.25);
+      width: 100%; max-width: 480px;
+      overflow: hidden;
+      animation: modal-in 0.2s ease;
+    }
+    @keyframes modal-in { from { transform: translateY(20px); opacity: 0; } to { transform: none; opacity: 1; } }
+    .modal-header {
+      background: linear-gradient(135deg, var(--pitch), var(--pitch-lite));
+      color: var(--white);
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .modal-flag { font-size: 2.2rem; }
+    .modal-team-name { font-size: 1.2rem; font-weight: 800; }
+    .modal-group { font-size: 0.78rem; opacity: 0.8; margin-top: 2px; }
+    .modal-close {
+      margin-left: auto;
+      background: rgba(255,255,255,0.2);
+      border: none; color: var(--white);
+      width: 30px; height: 30px;
+      border-radius: 50%; cursor: pointer;
+      font-size: 1rem; display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s;
+    }
+    .modal-close:hover { background: rgba(255,255,255,0.35); }
+    .modal-body { padding: 20px 22px; }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .stat-box {
+      background: var(--grass);
+      border-radius: 10px;
+      padding: 10px 6px;
+      text-align: center;
+    }
+    .stat-box .sv { font-size: 1.3rem; font-weight: 800; color: var(--pitch); }
+    .stat-box .sl { font-size: 0.65rem; font-weight: 700; color: var(--text-mid); text-transform: uppercase; margin-top: 2px; }
+    .stats-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .modal-section-title {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.5px; color: var(--text-mid); margin-bottom: 8px;
+    }
+    .fixture-box {
+      background: #f8fff8;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px 14px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--pitch);
+    }
+    .fixture-box.none { color: var(--text-mid); font-weight: 400; font-style: italic; }
+    .modal-win-prob {
+      margin-top: 14px;
+      background: linear-gradient(90deg, var(--grass), #d4edda);
+      border-radius: 10px;
+      padding: 11px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .modal-win-prob .label { font-size: 0.75rem; font-weight: 600; color: var(--text-mid); }
+    .modal-win-prob .value { font-size: 1.1rem; font-weight: 800; color: var(--pitch); }
+
+    /* clickable chip on live tab */
+    .chip-btn {
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .chip-btn:hover { background: #b9debb; transform: translateY(-1px); }
+
     /* ── LOADING ── */
     #live-loading {
       text-align: center;
@@ -591,7 +715,70 @@
     Loading live standings…
   </div>
 
+  <!-- Team detail modal -->
+  <div class="modal-overlay" id="team-modal" onclick="closeModal(event)">
+    <div class="modal" id="modal-box">
+      <div class="modal-header">
+        <span class="modal-flag" id="m-flag"></span>
+        <div>
+          <div class="modal-team-name" id="m-name"></div>
+          <div class="modal-group" id="m-group"></div>
+        </div>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section-title">Match Record</div>
+        <div class="stats-grid">
+          <div class="stat-box"><div class="sv" id="m-p">—</div><div class="sl">Played</div></div>
+          <div class="stat-box"><div class="sv" id="m-w">—</div><div class="sl">Won</div></div>
+          <div class="stat-box"><div class="sv" id="m-d">—</div><div class="sl">Drawn</div></div>
+          <div class="stat-box"><div class="sv" id="m-l">—</div><div class="sl">Lost</div></div>
+        </div>
+        <div class="modal-section-title">Goals</div>
+        <div class="stats-grid-2">
+          <div class="stat-box"><div class="sv" id="m-gf">—</div><div class="sl">For</div></div>
+          <div class="stat-box"><div class="sv" id="m-ga">—</div><div class="sl">Against</div></div>
+          <div class="stat-box"><div class="sv" id="m-gd">—</div><div class="sl">Diff</div></div>
+        </div>
+        <div class="modal-section-title">Next Fixture</div>
+        <div class="fixture-box" id="m-fixture">—</div>
+        <div class="modal-win-prob">
+          <span class="label">⚽ Pre-tournament win probability</span>
+          <span class="value" id="m-prob">—</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="live-content" style="display:none">
+    <!-- Tournament highlights (hidden until data loads) -->
+    <div class="highlights" id="highlights-strip" style="display:none">
+      <div class="hl-card">
+        <div class="hl-icon">🥅</div>
+        <div>
+          <div class="hl-label">Top Scoring Team</div>
+          <div class="hl-value" id="hl-top-team">—</div>
+          <div class="hl-sub" id="hl-top-team-sub"></div>
+        </div>
+      </div>
+      <div class="hl-card">
+        <div class="hl-icon">🛡️</div>
+        <div>
+          <div class="hl-label">Most Goals Conceded</div>
+          <div class="hl-value" id="hl-most-conceded">—</div>
+          <div class="hl-sub" id="hl-most-conceded-sub"></div>
+        </div>
+      </div>
+      <div class="hl-card" id="hl-scorer-card" style="display:none">
+        <div class="hl-icon">⭐</div>
+        <div>
+          <div class="hl-label">Leading Scorer</div>
+          <div class="hl-value" id="hl-scorer">—</div>
+          <div class="hl-sub" id="hl-scorer-sub"></div>
+        </div>
+      </div>
+    </div>
+
     <div class="info-cards">
       <div class="info-card">
         <div class="label">🕓 Last Updated</div>
@@ -837,9 +1024,48 @@ function renderStaticPlayers() {
 // ═══════════════════════════════════
 const STATIC_PROBS = Object.fromEntries(DRAW.map(p => [p.name, calcP(p.teams)]));
 
+let LIVE_TEAM_STATS = {};  // populated from data.json
+
+// Clickable chips for live tab
+function liveChips(teams) {
+  return `<div class="chips">${teams.map(t =>
+    `<span class="chip chip-btn" onclick="openTeamModal('${t.replace(/'/g,"\\'")}')">
+       ${flag(t)} ${t}
+     </span>`).join('')}</div>`;
+}
+
+function renderHighlights(data) {
+  const h = data.highlights || {};
+  if (!Object.keys(h).length) return;
+
+  document.getElementById('highlights-strip').style.display = 'grid';
+
+  if (h.top_scoring_team) {
+    document.getElementById('hl-top-team').textContent =
+      `${flag(h.top_scoring_team.team)} ${h.top_scoring_team.team}`;
+    document.getElementById('hl-top-team-sub').textContent =
+      `${h.top_scoring_team.goals} goal${h.top_scoring_team.goals !== 1 ? 's' : ''} scored`;
+  }
+  if (h.most_conceded_team) {
+    document.getElementById('hl-most-conceded').textContent =
+      `${flag(h.most_conceded_team.team)} ${h.most_conceded_team.team}`;
+    document.getElementById('hl-most-conceded-sub').textContent =
+      `${h.most_conceded_team.goals} goal${h.most_conceded_team.goals !== 1 ? 's' : ''} conceded`;
+  }
+  if (h.top_scorers && h.top_scorers.length) {
+    const top = h.top_scorers[0];
+    document.getElementById('hl-scorer-card').style.display = 'flex';
+    document.getElementById('hl-scorer').textContent = top.name;
+    document.getElementById('hl-scorer-sub').textContent =
+      `${flag(top.team)} ${top.team} · ${top.goals} goal${top.goals !== 1 ? 's' : ''}`;
+  }
+}
+
 function renderLive(data) {
   document.getElementById('live-loading').style.display = 'none';
   document.getElementById('live-content').style.display = 'block';
+
+  LIVE_TEAM_STATS = data.team_stats || {};
 
   const d = new Date(data.last_updated);
   document.getElementById('last-updated-val').textContent =
@@ -848,6 +1074,8 @@ function renderLive(data) {
   setNextUpdate();
   document.getElementById('live-source-note').textContent =
     'Source: ' + (data.source || 'Live betting markets') + ' · ' + d.toLocaleDateString('en-AU');
+
+  renderHighlights(data);
 
   const players = data.players;
   const max = Math.max(...players.map(p => p.probability));
@@ -862,13 +1090,54 @@ function renderLive(data) {
     return `<tr class="${rowClass(i)}">
       <td class="medal-cell">${medal(i)}</td>
       <td class="player-name">${p.name}</td>
-      <td>${chips(p.teams)}</td>
+      <td>${liveChips(p.teams)}</td>
       <td>${probBar(p.probability, max)}</td>
       <td class="c">${diffHtml}</td>
     </tr>`;
   }).join('');
   animateBars();
 }
+
+// ═══════════════════════════════════
+// TEAM MODAL
+// ═══════════════════════════════════
+function openTeamModal(team) {
+  const s = LIVE_TEAM_STATS[team];
+  const prob = TEAM_PROBS[team] ?? 0.05;
+
+  document.getElementById('m-flag').textContent = flag(team);
+  document.getElementById('m-name').textContent = team;
+  document.getElementById('m-group').textContent = s ? s.group : 'Group stage';
+
+  if (s) {
+    document.getElementById('m-p').textContent  = s.played;
+    document.getElementById('m-w').textContent  = s.won;
+    document.getElementById('m-d').textContent  = s.drawn;
+    document.getElementById('m-l').textContent  = s.lost;
+    document.getElementById('m-gf').textContent = s.goals_for;
+    document.getElementById('m-ga').textContent = s.goals_against;
+    document.getElementById('m-gd').textContent = (s.goal_diff > 0 ? '+' : '') + s.goal_diff;
+    const fx = document.getElementById('m-fixture');
+    fx.textContent = s.next_fixture || 'No upcoming fixture';
+    fx.className = 'fixture-box' + (s.next_fixture && s.next_fixture !== 'No upcoming fixture' ? '' : ' none');
+  } else {
+    ['m-p','m-w','m-d','m-l','m-gf','m-ga','m-gd'].forEach(id =>
+      document.getElementById(id).textContent = '—');
+    const fx = document.getElementById('m-fixture');
+    fx.textContent = 'No match data yet — tournament may not have started';
+    fx.className = 'fixture-box none';
+  }
+
+  document.getElementById('m-prob').textContent = prob.toFixed(2) + '%';
+  document.getElementById('team-modal').classList.add('open');
+}
+
+function closeModal(e) {
+  if (!e || e.target === document.getElementById('team-modal')) {
+    document.getElementById('team-modal').classList.remove('open');
+  }
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 function loadLiveData() {
   const RAW = 'https://raw.githubusercontent.com/fifa2026ocsweeps/worldcup/main/data.json';

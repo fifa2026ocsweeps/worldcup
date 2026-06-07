@@ -41,7 +41,7 @@ DRAW = [
     {"name": "Linda",         "teams": ["Ecuador", "Bosnia & Herzegovina"]},
     {"name": "Adele",         "teams": ["Türkiye"]},
     {"name": "Lidia",         "teams": ["Sweden"]},
-    {"name": "Steph",         "teams": ["Cape Verde"]},
+    {"name": "Steph",         "teams": ["Canada"]},
     {"name": "Fiona",         "teams": ["Panama"]},
     {"name": "Kena",          "teams": ["Egypt"]},
     {"name": "Nicko",         "teams": ["Algeria"]},
@@ -57,7 +57,7 @@ DRAW = [
     {"name": "Kath",          "teams": ["DR Congo"]},
     {"name": "Upendra",       "teams": ["Haiti"]},
     {"name": "Gina",          "teams": ["Jordan"]},
-    {"name": "Clarence",      "teams": ["Canada"]},
+    {"name": "Clarence",      "teams": ["Cape Verde"]},
     {"name": "Daniel",        "teams": ["Saudi Arabia"]},
     {"name": "Maria",         "teams": ["Iraq"]},
     {"name": "Josh",          "teams": ["Ghana"]},
@@ -99,7 +99,6 @@ def normalise(name):
 
 # ─── Discover correct FIFA WC sport key from The Odds API ────────────────────
 def find_wc_sport_key(api_key):
-    """Return the sport key for FIFA World Cup outright winner market, or None."""
     try:
         r = requests.get(
             "https://api.the-odds-api.com/v4/sports/",
@@ -108,7 +107,6 @@ def find_wc_sport_key(api_key):
         )
         r.raise_for_status()
         sports = r.json()
-        # Prefer an outright/winner market; fall back to any WC sport
         wc_key = None
         for s in sports:
             key = s.get("key", "").lower()
@@ -126,23 +124,15 @@ def find_wc_sport_key(api_key):
 
 # ─── Fetch odds from The Odds API ────────────────────────────────────────────
 def fetch_team_probs(api_key):
-    """Return dict {team_name: probability_%} from The Odds API outright market."""
     sport_key = find_wc_sport_key(api_key)
     if not sport_key:
-        print("[WARN] FIFA World Cup sport not found in The Odds API — not active yet?", file=sys.stderr)
+        print("[WARN] FIFA World Cup sport not found in The Odds API.", file=sys.stderr)
         return None
 
     print(f"  Using sport key: {sport_key}")
-
-    # Try outright winner market first, fall back to h2h
     for market in ("outrights", "h2h"):
         url = f"https://api.the-odds-api.com/v4/sports/{sport_key}/odds/"
-        params = {
-            "apiKey": api_key,
-            "regions": "uk,eu,us",
-            "markets": market,
-            "oddsFormat": "decimal",
-        }
+        params = {"apiKey": api_key, "regions": "uk,eu,us", "markets": market, "oddsFormat": "decimal"}
         try:
             r = requests.get(url, params=params, timeout=15)
             if r.status_code == 422:
@@ -159,10 +149,7 @@ def fetch_team_probs(api_key):
     else:
         return None
 
-    # Aggregate decimal odds per team across bookmakers (use average)
-    team_odds_sum = {}
-    team_odds_count = {}
-
+    team_odds_sum, team_odds_count = {}, {}
     for event in data:
         for bm in event.get("bookmakers", []):
             for mkt in bm.get("markets", []):
@@ -175,22 +162,16 @@ def fetch_team_probs(api_key):
     if not team_odds_sum:
         return None
 
-    # Convert average decimal odds → implied probability, then normalise to 100%
-    raw = {t: 1 / (team_odds_sum[t] / team_odds_count[t]) * 100
-           for t in team_odds_sum}
+    raw = {t: 1 / (team_odds_sum[t] / team_odds_count[t]) * 100 for t in team_odds_sum}
     total = sum(raw.values())
     return {t: round(v / total * 100, 2) for t, v in raw.items()}
 
 
-# ─── Fetch last finished match from football-data.org ────────────────────────
-def fetch_last_match(api_key):
-    """Return a human-readable string for the most recently finished WC match."""
-    # Competition code is 'WC'; season=2026 targets the 2026 tournament
+# ─── Fetch last finished match ────────────────────────────────────────────────
+def fetch_last_match(headers):
     url = "https://api.football-data.org/v4/competitions/WC/matches"
-    headers = {"X-Auth-Token": api_key}
-    params = {"status": "FINISHED", "season": "2026"}
     try:
-        r = requests.get(url, headers=headers, params=params, timeout=15)
+        r = requests.get(url, headers=headers, params={"status": "FINISHED", "season": "2026"}, timeout=15)
         r.raise_for_status()
         matches = r.json().get("matches", [])
         if not matches:
@@ -198,14 +179,127 @@ def fetch_last_match(api_key):
         last = matches[-1]
         home = last["homeTeam"]["name"]
         away = last["awayTeam"]["name"]
-        hs = last["score"]["fullTime"]["home"]
-        as_ = last["score"]["fullTime"]["away"]
+        hs   = last["score"]["fullTime"]["home"]
+        as_  = last["score"]["fullTime"]["away"]
         date = last["utcDate"][:10]
         stage = last.get("stage", "").replace("_", " ").title()
         return f"{stage}: {home} {hs}–{as_} {away}  ({date})"
     except Exception as e:
-        print(f"[WARN] football-data.org error: {e}", file=sys.stderr)
+        print(f"[WARN] Last match fetch error: {e}", file=sys.stderr)
         return "Match data unavailable"
+
+
+# ─── Fetch team stats from group standings ───────────────────────────────────
+def fetch_team_stats(headers):
+    """Return dict keyed by team name with group stage stats."""
+    url = "https://api.football-data.org/v4/competitions/WC/standings"
+    try:
+        r = requests.get(url, headers=headers, params={"season": "2026"}, timeout=15)
+        r.raise_for_status()
+        standings = r.json().get("standings", [])
+        team_stats = {}
+        for group in standings:
+            group_name = group.get("group", group.get("stage", "Group"))
+            for entry in group.get("table", []):
+                name = normalise(entry["team"]["name"])
+                team_stats[name] = {
+                    "group":        group_name,
+                    "played":       entry.get("playedGames", 0),
+                    "won":          entry.get("won", 0),
+                    "drawn":        entry.get("draw", 0),
+                    "lost":         entry.get("lost", 0),
+                    "goals_for":    entry.get("goalsFor", 0),
+                    "goals_against":entry.get("goalsAgainst", 0),
+                    "goal_diff":    entry.get("goalDifference", 0),
+                    "points":       entry.get("points", 0),
+                }
+        print(f"  ✅ Team stats fetched for {len(team_stats)} teams.")
+        return team_stats
+    except Exception as e:
+        print(f"[WARN] Standings fetch error: {e}", file=sys.stderr)
+        return {}
+
+
+# ─── Fetch next fixture per team ─────────────────────────────────────────────
+def fetch_next_fixtures(headers, team_stats):
+    """Add next_fixture string to each team in team_stats dict."""
+    url = "https://api.football-data.org/v4/competitions/WC/matches"
+    try:
+        r = requests.get(url, headers=headers,
+                         params={"status": "SCHEDULED", "season": "2026"}, timeout=15)
+        r.raise_for_status()
+        scheduled = r.json().get("matches", [])
+
+        # Build lookup: team_name → next match string
+        next_fix = {}
+        for m in scheduled:
+            home = normalise(m["homeTeam"]["name"])
+            away = normalise(m["awayTeam"]["name"])
+            date_str = m["utcDate"][:10]
+            stage = m.get("stage", "").replace("_", " ").title()
+            fixture_str = f"{stage}: {home} vs {away} ({date_str})"
+            for team in (home, away):
+                if team not in next_fix:  # only store first (soonest) fixture
+                    next_fix[team] = fixture_str
+
+        for team in team_stats:
+            team_stats[team]["next_fixture"] = next_fix.get(team, "No upcoming fixture")
+
+        print(f"  ✅ Next fixtures mapped for {len(next_fix)} teams.")
+    except Exception as e:
+        print(f"[WARN] Fixtures fetch error: {e}", file=sys.stderr)
+        for team in team_stats:
+            team_stats[team].setdefault("next_fixture", "Unavailable")
+
+    return team_stats
+
+
+# ─── Fetch top scorers ────────────────────────────────────────────────────────
+def fetch_top_scorers(headers, limit=5):
+    url = "https://api.football-data.org/v4/competitions/WC/scorers"
+    try:
+        r = requests.get(url, headers=headers,
+                         params={"season": "2026", "limit": limit}, timeout=15)
+        r.raise_for_status()
+        scorers = r.json().get("scorers", [])
+        result = []
+        for s in scorers:
+            result.append({
+                "name":   s["player"]["name"],
+                "team":   normalise(s["team"]["name"]),
+                "goals":  s.get("goals", 0),
+                "assists":s.get("assists", 0),
+            })
+        print(f"  ✅ Top {len(result)} scorers fetched.")
+        return result
+    except Exception as e:
+        print(f"[WARN] Scorers fetch error: {e}", file=sys.stderr)
+        return []
+
+
+# ─── Derive tournament highlights from team stats ────────────────────────────
+def compute_highlights(team_stats, top_scorers):
+    if not team_stats:
+        return {}
+
+    by_gf = sorted(team_stats.items(), key=lambda x: x[1].get("goals_for", 0),    reverse=True)
+    by_ga = sorted(team_stats.items(), key=lambda x: x[1].get("goals_against", 0), reverse=True)
+
+    highlights = {}
+    if by_gf and by_gf[0][1].get("goals_for", 0) > 0:
+        highlights["top_scoring_team"] = {
+            "team":  by_gf[0][0],
+            "goals": by_gf[0][1]["goals_for"],
+        }
+    if by_ga and by_ga[0][1].get("goals_against", 0) > 0:
+        highlights["most_conceded_team"] = {
+            "team":  by_ga[0][0],
+            "goals": by_ga[0][1]["goals_against"],
+        }
+    if top_scorers:
+        highlights["top_scorers"] = top_scorers
+
+    return highlights
 
 
 # ─── Compute player standings ─────────────────────────────────────────────────
@@ -224,11 +318,13 @@ def main():
     fd_key   = os.environ.get("FOOTBALL_DATA_KEY", "")
 
     print("=" * 50)
-    print(f"ODDS_API_KEY   : {'SET ✅' if odds_key else 'NOT SET ❌'}")
+    print(f"ODDS_API_KEY     : {'SET ✅' if odds_key else 'NOT SET ❌'}")
     print(f"FOOTBALL_DATA_KEY: {'SET ✅' if fd_key else 'NOT SET ❌'}")
     print("=" * 50)
 
-    # Fetch live odds (or fall back to static)
+    fd_headers = {"X-Auth-Token": fd_key} if fd_key else {}
+
+    # ── Win probabilities ──────────────────────────────────────────────────────
     team_probs = None
     source = "Pre-tournament static data (live odds API not configured)"
 
@@ -239,41 +335,54 @@ def main():
             source = "The Odds API (live betting markets)"
             print(f"  ✅ Got odds for {len(team_probs)} teams.")
         else:
-            print("  ⚠️  Odds API returned no data — falling back to static probabilities.")
-            source = "Static fallback (Odds API unavailable or tournament not yet active)"
+            print("  ⚠️  Falling back to static probabilities.")
+            source = "Static fallback (Odds API unavailable)"
     else:
         print("\n⚠️  ODDS_API_KEY not set — using static probabilities.")
 
     if team_probs is None:
         team_probs = FALLBACK_PROBS.copy()
 
-    # Fetch last match
+    # ── Last match ────────────────────────────────────────────────────────────
     last_match = "Tournament not yet started"
     if fd_key:
-        print("\nFetching last match from football-data.org…")
-        last_match = fetch_last_match(fd_key)
-        print(f"  Last match: {last_match}")
+        print("\nFetching last match…")
+        last_match = fetch_last_match(fd_headers)
+        print(f"  {last_match}")
     else:
-        print("\n⚠️  FOOTBALL_DATA_KEY not set — skipping match fetch.")
+        print("\n⚠️  FOOTBALL_DATA_KEY not set — skipping match/stats fetch.")
 
-    # Build output
+    # ── Team stats, fixtures, scorers ─────────────────────────────────────────
+    team_stats  = {}
+    highlights  = {}
+    if fd_key:
+        print("\nFetching group standings…")
+        team_stats = fetch_team_stats(fd_headers)
+
+        if team_stats:
+            print("Fetching next fixtures…")
+            team_stats = fetch_next_fixtures(fd_headers, team_stats)
+
+            print("Fetching top scorers…")
+            top_scorers = fetch_top_scorers(fd_headers)
+            highlights  = compute_highlights(team_stats, top_scorers)
+
+    # ── Build output ──────────────────────────────────────────────────────────
     players = compute_players(team_probs)
     output = {
-        "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "last_match": last_match,
-        "source": source,
-        "players": players,
+        "last_updated":  datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "last_match":    last_match,
+        "source":        source,
+        "players":       players,
+        "team_stats":    team_stats,
+        "highlights":    highlights,
     }
 
     out_path = os.path.join(os.path.dirname(__file__), "..", "data.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
-    print(f"\n✅  data.json written to: {os.path.abspath(out_path)}")
-    print(f"    last_updated : {output['last_updated']}")
-    print(f"    last_match   : {output['last_match']}")
-    print(f"    source       : {output['source']}")
-    print(f"    players      : {len(players)}")
+    print(f"\n✅  data.json written — {len(players)} players, {len(team_stats)} team stats, highlights: {list(highlights.keys())}")
 
 
 if __name__ == "__main__":
