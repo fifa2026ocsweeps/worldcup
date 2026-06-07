@@ -1,52 +1,325 @@
 {
-  "last_updated": "2026-06-04T06:00:00Z",
-  "last_match": "Tournament not yet started — showing pre-tournament odds",
-  "source": "Pre-tournament betting markets (ESPN, RotoWire) — 1 Jun 2026",
+  "last_updated": "2026-06-07T01:21:25Z",
+  "last_match": "No matches played yet",
+  "source": "The Odds API (live betting markets)",
   "players": [
-    { "name": "Alan",          "teams": ["Spain"],                        "probability": 17.40 },
-    { "name": "Livia",         "teams": ["France"],                       "probability": 16.70 },
-    { "name": "Jon",           "teams": ["England"],                      "probability": 13.30 },
-    { "name": "Gabi",          "teams": ["Brazil"],                       "probability": 10.50 },
-    { "name": "Matt",          "teams": ["Argentina"],                    "probability": 10.00 },
-    { "name": "MEJ (Michael)", "teams": ["Portugal"],                     "probability": 9.10  },
-    { "name": "Georgia",       "teams": ["Germany"],                      "probability": 6.70  },
-    { "name": "Orgil",         "teams": ["Netherlands"],                  "probability": 4.30  },
-    { "name": "Rose",          "teams": ["Belgium", "Uzbekistan"],        "probability": 2.87  },
-    { "name": "Eden",          "teams": ["Norway"],                       "probability": 2.80  },
-    { "name": "Alistair",      "teams": ["Colombia"],                     "probability": 2.40  },
-    { "name": "Pip",           "teams": ["Uruguay"],                      "probability": 1.90  },
-    { "name": "Mark",          "teams": ["Morocco"],                      "probability": 1.90  },
-    { "name": "Jimmy",         "teams": ["United States", "Qatar"],       "probability": 1.67  },
-    { "name": "Tess",          "teams": ["Switzerland"],                  "probability": 1.50  },
-    { "name": "Aditi",         "teams": ["Japan"],                        "probability": 1.50  },
-    { "name": "Denis",         "teams": ["Croatia"],                      "probability": 1.20  },
-    { "name": "Marcelo",       "teams": ["Mexico"],                       "probability": 1.20  },
-    { "name": "Linda",         "teams": ["Ecuador", "Bosnia & Herzegovina"], "probability": 1.40 },
-    { "name": "Lach",          "teams": ["Senegal"],                      "probability": 1.10  },
-    { "name": "Adele",         "teams": ["Türkiye"],                      "probability": 0.99  },
-    { "name": "Lidia",         "teams": ["Sweden"],                       "probability": 0.99  },
-    { "name": "Anita",         "teams": ["Austria"],                      "probability": 0.66  },
-    { "name": "Steph",         "teams": ["Canada"],                       "probability": 0.50  },
-    { "name": "Simon D",       "teams": ["Scotland"],                     "probability": 0.50  },
-    { "name": "Jodie",         "teams": ["Côte d'Ivoire"],                "probability": 0.40  },
-    { "name": "Kash",          "teams": ["Czechia"],                      "probability": 0.40  },
-    { "name": "Kena",          "teams": ["Egypt"],                        "probability": 0.33  },
-    { "name": "Josh",          "teams": ["Ghana"],                        "probability": 0.33  },
-    { "name": "Reino",         "teams": ["Paraguay"],                     "probability": 0.33  },
-    { "name": "Nicko",         "teams": ["Algeria"],                      "probability": 0.29  },
-    { "name": "Sanaz",         "teams": ["South Korea"],                  "probability": 0.25  },
-    { "name": "Dani",          "teams": ["Tunisia"],                      "probability": 0.20  },
-    { "name": "Sarah",         "teams": ["Australia"],                    "probability": 0.17  },
-    { "name": "Jamaica",       "teams": ["Iran"],                         "probability": 0.14  },
-    { "name": "Lids",          "teams": ["South Africa"],                 "probability": 0.10  },
-    { "name": "Fiona",         "teams": ["Panama"],                       "probability": 0.10  },
-    { "name": "Clarence",      "teams": ["Cape Verde"],                   "probability": 0.10  },
-    { "name": "Kath",          "teams": ["DR Congo"],                     "probability": 0.10  },
-    { "name": "Daniel",        "teams": ["Saudi Arabia"],                 "probability": 0.10  },
-    { "name": "Cristina",      "teams": ["New Zealand"],                  "probability": 0.07  },
-    { "name": "Maria",         "teams": ["Iraq"],                         "probability": 0.07  },
-    { "name": "Gina",          "teams": ["Jordan"],                       "probability": 0.04  },
-    { "name": "Amy",           "teams": ["Curaçao"],                      "probability": 0.04  },
-    { "name": "Upendra",       "teams": ["Haiti"],                        "probability": 0.04  }
+    {
+      "name": "Alan",
+      "teams": [
+        "Spain"
+      ],
+      "probability": 15.47
+    },
+    {
+      "name": "Livia",
+      "teams": [
+        "France"
+      ],
+      "probability": 14.76
+    },
+    {
+      "name": "Jon",
+      "teams": [
+        "England"
+      ],
+      "probability": 10.98
+    },
+    {
+      "name": "MEJ (Michael)",
+      "teams": [
+        "Portugal"
+      ],
+      "probability": 9.04
+    },
+    {
+      "name": "Matt",
+      "teams": [
+        "Argentina"
+      ],
+      "probability": 8.44
+    },
+    {
+      "name": "Gabi",
+      "teams": [
+        "Brazil"
+      ],
+      "probability": 8.44
+    },
+    {
+      "name": "Georgia",
+      "teams": [
+        "Germany"
+      ],
+      "probability": 5.65
+    },
+    {
+      "name": "Orgil",
+      "teams": [
+        "Netherlands"
+      ],
+      "probability": 4.08
+    },
+    {
+      "name": "Eden",
+      "teams": [
+        "Norway"
+      ],
+      "probability": 2.61
+    },
+    {
+      "name": "Rose",
+      "teams": [
+        "Belgium",
+        "Uzbekistan"
+      ],
+      "probability": 2.19
+    },
+    {
+      "name": "Alistair",
+      "teams": [
+        "Colombia"
+      ],
+      "probability": 1.98
+    },
+    {
+      "name": "Mark",
+      "teams": [
+        "Morocco"
+      ],
+      "probability": 1.5
+    },
+    {
+      "name": "Aditi",
+      "teams": [
+        "Japan"
+      ],
+      "probability": 1.49
+    },
+    {
+      "name": "Marcelo",
+      "teams": [
+        "Mexico"
+      ],
+      "probability": 1.29
+    },
+    {
+      "name": "Jimmy",
+      "teams": [
+        "United States",
+        "Qatar"
+      ],
+      "probability": 1.27
+    },
+    {
+      "name": "Tess",
+      "teams": [
+        "Switzerland"
+      ],
+      "probability": 1.14
+    },
+    {
+      "name": "Pip",
+      "teams": [
+        "Uruguay"
+      ],
+      "probability": 1.0
+    },
+    {
+      "name": "Linda",
+      "teams": [
+        "Ecuador",
+        "Bosnia & Herzegovina"
+      ],
+      "probability": 1.0
+    },
+    {
+      "name": "Adele",
+      "teams": [
+        "Türkiye"
+      ],
+      "probability": 0.95
+    },
+    {
+      "name": "Denis",
+      "teams": [
+        "Croatia"
+      ],
+      "probability": 0.8
+    },
+    {
+      "name": "Lach",
+      "teams": [
+        "Senegal"
+      ],
+      "probability": 0.76
+    },
+    {
+      "name": "Lidia",
+      "teams": [
+        "Sweden"
+      ],
+      "probability": 0.55
+    },
+    {
+      "name": "Anita",
+      "teams": [
+        "Austria"
+      ],
+      "probability": 0.48
+    },
+    {
+      "name": "Kash",
+      "teams": [
+        "Czechia"
+      ],
+      "probability": 0.4
+    },
+    {
+      "name": "Clarence",
+      "teams": [
+        "Canada"
+      ],
+      "probability": 0.37
+    },
+    {
+      "name": "Jodie",
+      "teams": [
+        "Côte d'Ivoire"
+      ],
+      "probability": 0.35
+    },
+    {
+      "name": "Simon D",
+      "teams": [
+        "Scotland"
+      ],
+      "probability": 0.35
+    },
+    {
+      "name": "Reino",
+      "teams": [
+        "Paraguay"
+      ],
+      "probability": 0.25
+    },
+    {
+      "name": "Kena",
+      "teams": [
+        "Egypt"
+      ],
+      "probability": 0.22
+    },
+    {
+      "name": "Nicko",
+      "teams": [
+        "Algeria"
+      ],
+      "probability": 0.21
+    },
+    {
+      "name": "Sanaz",
+      "teams": [
+        "South Korea"
+      ],
+      "probability": 0.2
+    },
+    {
+      "name": "Sarah",
+      "teams": [
+        "Australia"
+      ],
+      "probability": 0.18
+    },
+    {
+      "name": "Josh",
+      "teams": [
+        "Ghana"
+      ],
+      "probability": 0.18
+    },
+    {
+      "name": "Dani",
+      "teams": [
+        "Tunisia"
+      ],
+      "probability": 0.13
+    },
+    {
+      "name": "Jamaica",
+      "teams": [
+        "Iran"
+      ],
+      "probability": 0.12
+    },
+    {
+      "name": "Lids",
+      "teams": [
+        "South Africa"
+      ],
+      "probability": 0.1
+    },
+    {
+      "name": "Kath",
+      "teams": [
+        "DR Congo"
+      ],
+      "probability": 0.1
+    },
+    {
+      "name": "Daniel",
+      "teams": [
+        "Saudi Arabia"
+      ],
+      "probability": 0.09
+    },
+    {
+      "name": "Steph",
+      "teams": [
+        "Cape Verde"
+      ],
+      "probability": 0.08
+    },
+    {
+      "name": "Fiona",
+      "teams": [
+        "Panama"
+      ],
+      "probability": 0.08
+    },
+    {
+      "name": "Cristina",
+      "teams": [
+        "New Zealand"
+      ],
+      "probability": 0.08
+    },
+    {
+      "name": "Maria",
+      "teams": [
+        "Iraq"
+      ],
+      "probability": 0.08
+    },
+    {
+      "name": "Amy",
+      "teams": [
+        "Curaçao"
+      ],
+      "probability": 0.05
+    },
+    {
+      "name": "Upendra",
+      "teams": [
+        "Haiti"
+      ],
+      "probability": 0.05
+    },
+    {
+      "name": "Gina",
+      "teams": [
+        "Jordan"
+      ],
+      "probability": 0.05
+    }
   ]
 }
