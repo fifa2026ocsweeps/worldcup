@@ -90,7 +90,12 @@ TEAM_ALIASES = {
     "usa": "United States", "united states of america": "United States",
     "south korea": "South Korea", "republic of korea": "South Korea",
     "bosnia and herzegovina": "Bosnia & Herzegovina",
+    "bosnia-herzegovina": "Bosnia & Herzegovina",       # football-data.org uses hyphen
+    "cape verde islands": "Cape Verde",                 # football-data.org full name
     "curacao": "Curaçao",
+    "ir iran": "Iran",
+    "korea republic": "South Korea",
+    "czechia": "Czechia",
 }
 
 def normalise(name):
@@ -190,34 +195,51 @@ def fetch_last_match(headers):
 
 
 # ─── Fetch team stats from group standings ───────────────────────────────────
-def fetch_team_stats(headers):
-    """Return dict keyed by team name with group stage stats."""
+def fetch_team_stats(headers, prev_stats=None):
+    """Return dict keyed by team name with group stage stats.
+    Falls back to prev_stats during knockout rounds when standings disappear."""
     url = "https://api.football-data.org/v4/competitions/WC/standings"
     try:
         r = requests.get(url, headers=headers, params={"season": "2026"}, timeout=15)
         r.raise_for_status()
-        standings = r.json().get("standings", [])
+        data = r.json()
+        standings = data.get("standings", [])
+
         team_stats = {}
         for group in standings:
-            group_name = group.get("group", group.get("stage", "Group"))
+            # group field can be null or "GROUP_A" etc; stage is fallback
+            raw_group  = group.get("group") or group.get("stage") or "Group Stage"
+            # Prettify: "GROUP_A" → "Group A"
+            group_name = raw_group.replace("_", " ").title()
             for entry in group.get("table", []):
                 name = normalise(entry["team"]["name"])
                 team_stats[name] = {
-                    "group":        group_name,
-                    "played":       entry.get("playedGames", 0),
-                    "won":          entry.get("won", 0),
-                    "drawn":        entry.get("draw", 0),
-                    "lost":         entry.get("lost", 0),
-                    "goals_for":    entry.get("goalsFor", 0),
-                    "goals_against":entry.get("goalsAgainst", 0),
-                    "goal_diff":    entry.get("goalDifference", 0),
-                    "points":       entry.get("points", 0),
+                    "group":         group_name,
+                    "played":        entry.get("playedGames", 0),
+                    "won":           entry.get("won", 0),
+                    "drawn":         entry.get("draw", 0),
+                    "lost":          entry.get("lost", 0),
+                    "goals_for":     entry.get("goalsFor", 0),
+                    "goals_against": entry.get("goalsAgainst", 0),
+                    "goal_diff":     entry.get("goalDifference", 0),
+                    "points":        entry.get("points", 0),
                 }
-        print(f"  ✅ Team stats fetched for {len(team_stats)} teams.")
-        return team_stats
+
+        if team_stats:
+            print(f"  ✅ Team stats fetched for {len(team_stats)} teams.")
+            return team_stats
+
+        # Empty standings = knockout stage or pre-tournament; preserve last known data
+        if prev_stats:
+            print("  ⚠️  Standings empty (knockout stage?). Preserving previous group stats.")
+            return prev_stats
+
+        print("  ⚠️  Standings empty and no previous data to fall back on.")
+        return {}
+
     except Exception as e:
         print(f"[WARN] Standings fetch error: {e}", file=sys.stderr)
-        return {}
+        return prev_stats or {}
 
 
 # ─── Fetch next fixture per team ─────────────────────────────────────────────
@@ -268,7 +290,7 @@ def fetch_next_fixtures(headers, team_stats):
     except Exception as e:
         print(f"[WARN] Fixtures fetch error: {e}", file=sys.stderr)
         for team in team_stats:
-            team_stats[team].setdefault("next_fixture", "Unavailable")
+            team_stats[team].setdefault("next_fixture", "No upcoming fixture")
 
     return team_stats
 
@@ -286,7 +308,7 @@ def fetch_top_scorers(headers, limit=5):
             result.append({
                 "name":   s["player"]["name"],
                 "team":   normalise(s["team"]["name"]),
-                "goals":  s.get("goals", 0),
+                "goals":  s.get("numberOfGoals", s.get("goals", 0)),  # API uses both names
                 "assists":s.get("assists", 0),
             })
         print(f"  ✅ Top {len(result)} scorers fetched.")
@@ -375,8 +397,17 @@ def main():
     team_stats  = {}
     highlights  = {}
     if fd_key:
+        # Load previous data.json to preserve stats during knockout rounds
+        out_path = os.path.join(os.path.dirname(__file__), "..", "data.json")
+        prev_stats = {}
+        try:
+            with open(out_path, "r", encoding="utf-8") as f:
+                prev_stats = json.load(f).get("team_stats", {})
+        except Exception:
+            pass
+
         print("\nFetching group standings…")
-        team_stats = fetch_team_stats(fd_headers)
+        team_stats = fetch_team_stats(fd_headers, prev_stats)
 
         if team_stats:
             print("Fetching next fixtures…")
