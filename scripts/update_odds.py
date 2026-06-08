@@ -247,16 +247,28 @@ def fetch_next_fixtures(headers, team_stats):
     """Add next_fixture string to each team in team_stats dict."""
     url = "https://api.football-data.org/v4/competitions/WC/matches"
     try:
-        # Fetch all matches (TIMED = confirmed kickoff, SCHEDULED = awaiting time)
-        # Don't filter by status so we get all upcoming fixtures
         r = requests.get(url, headers=headers,
                          params={"season": "2026"}, timeout=15)
         r.raise_for_status()
         all_matches = r.json().get("matches", [])
+
+        # Debug: show all unique statuses returned
+        statuses = {}
+        for m in all_matches:
+            s = m.get("status", "UNKNOWN")
+            statuses[s] = statuses.get(s, 0) + 1
+        print(f"  Matches returned: {len(all_matches)} total. Statuses: {statuses}")
+
+        # Debug: show first 3 match samples
+        for m in all_matches[:3]:
+            home = m.get("homeTeam", {}).get("name", "?")
+            away = m.get("awayTeam", {}).get("name", "?")
+            print(f"    Sample: {m.get('status')} | {home} vs {away} | {m.get('utcDate','')[:10]}")
+
         # Keep only upcoming matches
         upcoming_statuses = {"SCHEDULED", "TIMED", "POSTPONED"}
         scheduled = [m for m in all_matches if m.get("status") in upcoming_statuses]
-        print(f"  Found {len(scheduled)} upcoming fixtures (from {len(all_matches)} total matches).")
+        print(f"  Upcoming fixtures found: {len(scheduled)}")
 
         # Sort by date so first match found is soonest
         scheduled.sort(key=lambda m: m.get("utcDate", ""))
