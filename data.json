@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-08T23:40:25Z",
-  "last_match": "Match data unavailable",
+  "last_updated": "2026-06-08T23:44:32Z",
+  "last_match": "No matches played yet",
   "source": "The Odds API (live betting markets)",
   "players": [
     {
@@ -8,7 +8,7 @@
       "teams": [
         "Spain"
       ],
-      "probability": 15.76
+      "probability": 15.77
     },
     {
       "name": "Livia",
@@ -22,14 +22,14 @@
       "teams": [
         "England"
       ],
-      "probability": 10.55
+      "probability": 10.56
     },
     {
       "name": "MEJ (Michael)",
       "teams": [
         "Portugal"
       ],
-      "probability": 9.3
+      "probability": 9.28
     },
     {
       "name": "Matt",
@@ -64,7 +64,7 @@
       "teams": [
         "Norway"
       ],
-      "probability": 2.62
+      "probability": 2.63
     },
     {
       "name": "Rose",
@@ -118,17 +118,17 @@
       "probability": 1.15
     },
     {
-      "name": "Pip",
-      "teams": [
-        "Uruguay"
-      ],
-      "probability": 1.0
-    },
-    {
       "name": "Linda",
       "teams": [
         "Ecuador",
         "Bosnia & Herzegovina"
+      ],
+      "probability": 1.01
+    },
+    {
+      "name": "Pip",
+      "teams": [
+        "Uruguay"
       ],
       "probability": 1.0
     },
