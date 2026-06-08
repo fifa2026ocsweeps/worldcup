@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-08T23:34:47Z",
+  "last_updated": "2026-06-08T23:36:56Z",
   "last_match": "No matches played yet",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -8,56 +8,56 @@
       "teams": [
         "Spain"
       ],
-      "probability": 15.72
+      "probability": 15.75
     },
     {
       "name": "Livia",
       "teams": [
         "France"
       ],
-      "probability": 14.65
+      "probability": 14.68
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 10.53
+      "probability": 10.55
     },
     {
       "name": "MEJ (Michael)",
       "teams": [
         "Portugal"
       ],
-      "probability": 9.25
+      "probability": 9.27
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 8.45
+      "probability": 8.46
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 8.34
+      "probability": 8.35
     },
     {
       "name": "Georgia",
       "teams": [
         "Germany"
       ],
-      "probability": 5.66
+      "probability": 5.67
     },
     {
       "name": "Orgil",
       "teams": [
         "Netherlands"
       ],
-      "probability": 4.31
+      "probability": 4.32
     },
     {
       "name": "Eden",
@@ -86,21 +86,21 @@
       "teams": [
         "Morocco"
       ],
-      "probability": 1.57
+      "probability": 1.58
     },
     {
       "name": "Aditi",
       "teams": [
         "Japan"
       ],
-      "probability": 1.55
+      "probability": 1.56
     },
     {
       "name": "Marcelo",
       "teams": [
         "Mexico"
       ],
-      "probability": 1.29
+      "probability": 1.3
     },
     {
       "name": "Jimmy",
@@ -115,7 +115,7 @@
       "teams": [
         "Switzerland"
       ],
-      "probability": 1.14
+      "probability": 1.15
     },
     {
       "name": "Pip",
@@ -137,7 +137,7 @@
       "teams": [
         "Türkiye"
       ],
-      "probability": 0.91
+      "probability": 0.92
     },
     {
       "name": "Denis",
@@ -157,13 +157,6 @@
       "name": "Anita",
       "teams": [
         "Austria"
-      ],
-      "probability": 0.5
-    },
-    {
-      "name": "Lidia",
-      "teams": [
-        "Sweden"
       ],
       "probability": 0.5
     },
@@ -194,6 +187,13 @@
         "Scotland"
       ],
       "probability": 0.34
+    },
+    {
+      "name": "Lidia",
+      "teams": [
+        "Sweden"
+      ],
+      "probability": 0.32
     },
     {
       "name": "Reino",
