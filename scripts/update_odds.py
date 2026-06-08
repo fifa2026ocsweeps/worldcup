@@ -11,8 +11,28 @@ Required GitHub Secrets:
 import json
 import os
 import sys
+import time
 import requests
 from datetime import datetime, timezone
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+
+
+def make_session():
+    """HTTP session with automatic retries and backoff."""
+    session = requests.Session()
+    retry = Retry(
+        total=4,
+        backoff_factor=2,          # waits 2, 4, 8 seconds between retries
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=["GET"],
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+    return session
+
+SESSION = make_session()
 
 # ─── User draw data ───────────────────────────────────────────────────────────
 DRAW = [
@@ -107,7 +127,7 @@ def normalise(name):
 # ─── Discover correct FIFA WC sport key from The Odds API ────────────────────
 def find_wc_sport_key(api_key):
     try:
-        r = requests.get(
+        r = SESSION.get(
             "https://api.the-odds-api.com/v4/sports/",
             params={"apiKey": api_key, "all": "true"},
             timeout=15,
@@ -141,7 +161,7 @@ def fetch_team_probs(api_key):
         url = f"https://api.the-odds-api.com/v4/sports/{sport_key}/odds/"
         params = {"apiKey": api_key, "regions": "uk,eu,us", "markets": market, "oddsFormat": "decimal"}
         try:
-            r = requests.get(url, params=params, timeout=15)
+            r = SESSION.get(url, params=params, timeout=15)
             if r.status_code == 422:
                 print(f"  Market '{market}' not available, trying next…")
                 continue
@@ -178,7 +198,7 @@ def fetch_team_probs(api_key):
 def fetch_last_match(headers):
     url = "https://api.football-data.org/v4/competitions/WC/matches"
     try:
-        r = requests.get(url, headers=headers, params={"status": "FINISHED", "season": "2026"}, timeout=15)
+        r = SESSION.get(url, headers=headers, params={"status": "FINISHED", "season": "2026"}, timeout=15)
         r.raise_for_status()
         matches = r.json().get("matches", [])
         if not matches:
@@ -202,7 +222,7 @@ def fetch_team_stats(headers, prev_stats=None):
     Falls back to prev_stats during knockout rounds when standings disappear."""
     url = "https://api.football-data.org/v4/competitions/WC/standings"
     try:
-        r = requests.get(url, headers=headers, params={"season": "2026"}, timeout=15)
+        r = SESSION.get(url, headers=headers, params={"season": "2026"}, timeout=15)
         r.raise_for_status()
         data = r.json()
         standings = data.get("standings", [])
@@ -249,7 +269,7 @@ def fetch_next_fixtures(headers, team_stats):
     """Add next_fixture string to each team in team_stats dict."""
     url = "https://api.football-data.org/v4/competitions/WC/matches"
     try:
-        r = requests.get(url, headers=headers,
+        r = SESSION.get(url, headers=headers,
                          params={"season": "2026"}, timeout=15)
         r.raise_for_status()
         all_matches = r.json().get("matches", [])
@@ -315,7 +335,7 @@ def fetch_next_fixtures(headers, team_stats):
 def fetch_top_scorers(headers, limit=5):
     url = "https://api.football-data.org/v4/competitions/WC/scorers"
     try:
-        r = requests.get(url, headers=headers,
+        r = SESSION.get(url, headers=headers,
                          params={"season": "2026", "limit": limit}, timeout=15)
         r.raise_for_status()
         scorers = r.json().get("scorers", [])
@@ -406,6 +426,7 @@ def main():
         print("\nFetching last match…")
         last_match = fetch_last_match(fd_headers)
         print(f"  {last_match}")
+        time.sleep(2)
     else:
         print("\n⚠️  FOOTBALL_DATA_KEY not set — skipping match/stats fetch.")
 
@@ -424,10 +445,12 @@ def main():
 
         print("\nFetching group standings…")
         team_stats = fetch_team_stats(fd_headers, prev_stats)
+        time.sleep(2)   # avoid hammering football-data.org free tier
 
         if team_stats:
             print("Fetching next fixtures…")
             team_stats = fetch_next_fixtures(fd_headers, team_stats)
+            time.sleep(2)
 
             print("Fetching top scorers…")
             top_scorers = fetch_top_scorers(fd_headers)
