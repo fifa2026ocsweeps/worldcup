@@ -820,9 +820,8 @@
                   <th class="c">Rank</th>
                   <th>Player</th>
                   <th>Teams</th>
-                  <th>Win Probability</th>
                   <th>Next Match Win %</th>
-                  <th class="c">vs Pre-Tournament</th>
+                  <th>WC Win Probability</th>
                 </tr>
               </thead>
               <tbody id="player-live-tbody"></tbody>
@@ -1165,9 +1164,8 @@ function renderLive(data) {
       <td class="medal-cell">${medal(i)}</td>
       <td class="player-name">${p.name}</td>
       <td>${liveChips(p.teams)}</td>
-      <td>${probBar(p.probability, max)}</td>
       <td>${matchProbCell(p.teams)}</td>
-      <td class="c">${diffHtml}</td>
+      <td>${probBar(p.probability, max)}</td>
     </tr>`;
   }).join('');
   animateBars();
@@ -1176,11 +1174,24 @@ function renderLive(data) {
 // ═══════════════════════════════════
 // MATCH WIN PROBABILITY
 // ═══════════════════════════════════
+function getTeamStats(team) {
+  // Direct match first
+  if (LIVE_TEAM_STATS[team]) return LIVE_TEAM_STATS[team];
+  // Fuzzy: find a key that contains or is contained by the team name (case-insensitive)
+  const t = team.toLowerCase();
+  const key = Object.keys(LIVE_TEAM_STATS).find(k =>
+    k.toLowerCase() === t ||
+    k.toLowerCase().includes(t) ||
+    t.includes(k.toLowerCase())
+  );
+  return key ? LIVE_TEAM_STATS[key] : null;
+}
+
 function matchProbBadge(team) {
-  const s = LIVE_TEAM_STATS[team];
+  const s = getTeamStats(team);
   const fixture = s ? s.next_fixture : null;
   const mp = calcMatchProb(team, fixture);
-  if (!mp) return `<span class="match-prob-badge none">No fixture</span>`;
+  if (!mp) return `<span class="match-prob-badge none">No fixture yet</span>`;
 
   const pct = parseFloat(mp.prob);
   const cls = pct >= 60 ? 'fav' : pct >= 40 ? 'close' : 'under';
@@ -1214,7 +1225,7 @@ function calcMatchProb(team, fixtureStr) {
 // TEAM MODAL
 // ═══════════════════════════════════
 function openTeamModal(team) {
-  const s = LIVE_TEAM_STATS[team];
+  const s = getTeamStats(team);
   const prob = TEAM_PROBS[team] ?? 0.05;
 
   document.getElementById('m-flag').textContent = flag(team);
