@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-08T23:32:34Z",
+  "last_updated": "2026-06-08T23:34:47Z",
   "last_match": "No matches played yet",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -324,7 +324,7 @@
   ],
   "team_stats": {
     "Mexico": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -333,10 +333,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "South Africa": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -345,10 +345,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "South Korea": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -357,10 +357,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Czechia": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -369,10 +369,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Canada": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -381,10 +381,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
-    "Bosnia-Herzegovina": {
-      "group": null,
+    "Bosnia & Herzegovina": {
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -393,10 +393,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "United States": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -405,10 +405,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Paraguay": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -417,10 +417,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Qatar": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -429,10 +429,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Switzerland": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -441,10 +441,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Brazil": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -453,10 +453,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Morocco": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -465,10 +465,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Haiti": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -477,10 +477,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Scotland": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -489,10 +489,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Australia": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -501,10 +501,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Türkiye": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -513,10 +513,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Germany": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -525,10 +525,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Curaçao": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -537,10 +537,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Netherlands": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -549,10 +549,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Japan": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -561,10 +561,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Côte d'Ivoire": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -573,10 +573,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Ecuador": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -585,10 +585,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Sweden": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -597,10 +597,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Tunisia": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -609,10 +609,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Spain": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -621,10 +621,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
-    "Cape Verde Islands": {
-      "group": null,
+    "Cape Verde": {
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -633,10 +633,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Belgium": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -645,10 +645,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Egypt": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -657,10 +657,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Saudi Arabia": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -669,10 +669,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Uruguay": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -681,10 +681,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Iran": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -693,10 +693,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "New Zealand": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -705,10 +705,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "France": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -717,10 +717,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Senegal": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -729,10 +729,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Iraq": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -741,10 +741,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Norway": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -753,10 +753,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Argentina": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -765,10 +765,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Algeria": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -777,10 +777,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Austria": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -789,10 +789,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Jordan": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -801,10 +801,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Portugal": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -813,10 +813,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "DR Congo": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -825,10 +825,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "England": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -837,10 +837,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Croatia": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -849,10 +849,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Ghana": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -861,10 +861,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Panama": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -873,10 +873,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Uzbekistan": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -885,10 +885,10 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     },
     "Colombia": {
-      "group": null,
+      "group": "Group Stage",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -897,7 +897,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "Unavailable"
+      "next_fixture": "No upcoming fixture"
     }
   },
   "highlights": {}
