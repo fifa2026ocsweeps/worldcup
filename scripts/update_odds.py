@@ -225,19 +225,38 @@ def fetch_next_fixtures(headers, team_stats):
     """Add next_fixture string to each team in team_stats dict."""
     url = "https://api.football-data.org/v4/competitions/WC/matches"
     try:
+        # Fetch all matches (TIMED = confirmed kickoff, SCHEDULED = awaiting time)
+        # Don't filter by status so we get all upcoming fixtures
         r = requests.get(url, headers=headers,
-                         params={"status": "SCHEDULED", "season": "2026"}, timeout=15)
+                         params={"season": "2026"}, timeout=15)
         r.raise_for_status()
-        scheduled = r.json().get("matches", [])
+        all_matches = r.json().get("matches", [])
+        # Keep only upcoming matches
+        upcoming_statuses = {"SCHEDULED", "TIMED", "POSTPONED"}
+        scheduled = [m for m in all_matches if m.get("status") in upcoming_statuses]
+        print(f"  Found {len(scheduled)} upcoming fixtures (from {len(all_matches)} total matches).")
+
+        # Sort by date so first match found is soonest
+        scheduled.sort(key=lambda m: m.get("utcDate", ""))
 
         # Build lookup: team_name → next match string
         next_fix = {}
         for m in scheduled:
             home = normalise(m["homeTeam"]["name"])
             away = normalise(m["awayTeam"]["name"])
-            date_str = m["utcDate"][:10]
+            utc_date = m.get("utcDate", "")
+            date_str = utc_date[:10]
+            # Convert UTC time to AEST (UTC+10)
+            time_str = ""
+            if len(utc_date) >= 16:
+                try:
+                    dt = datetime.strptime(utc_date[:16], "%Y-%m-%dT%H:%M")
+                    aest_hour = (dt.hour + 10) % 24
+                    time_str = f" {aest_hour:02d}:{dt.minute:02d} AEST"
+                except Exception:
+                    pass
             stage = m.get("stage", "").replace("_", " ").title()
-            fixture_str = f"{stage}: {home} vs {away} ({date_str})"
+            fixture_str = f"{home} vs {away} · {date_str}{time_str}"
             for team in (home, away):
                 if team not in next_fix:  # only store first (soonest) fixture
                     next_fix[team] = fixture_str

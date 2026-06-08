@@ -1177,8 +1177,9 @@ function openTeamModal(team) {
     document.getElementById('m-ga').textContent = s.goals_against;
     document.getElementById('m-gd').textContent = (s.goal_diff > 0 ? '+' : '') + s.goal_diff;
     const fx = document.getElementById('m-fixture');
-    fx.textContent = s.next_fixture || 'No upcoming fixture';
-    fx.className = 'fixture-box' + (s.next_fixture && s.next_fixture !== 'No upcoming fixture' ? '' : ' none');
+    const hasFixture = s.next_fixture && s.next_fixture !== 'No upcoming fixture' && s.next_fixture !== 'Unavailable';
+    fx.textContent = hasFixture ? s.next_fixture : 'No upcoming fixture scheduled';
+    fx.className = 'fixture-box' + (hasFixture ? '' : ' none');
   } else {
     ['m-p','m-w','m-d','m-l','m-gf','m-ga','m-gd'].forEach(id =>
       document.getElementById(id).textContent = '—');
