@@ -624,10 +624,10 @@
 
 <!-- ══ TABS ══ -->
 <nav class="tab-bar">
-  <button class="tab-btn active" onclick="showTab('tab1', this)">📋 Sweepstakes Draw</button>
+  <button class="tab-btn"        onclick="showTab('tab1', this)">📋 Sweepstakes Draw</button>
   <button class="tab-btn"        onclick="showTab('tab2', this)">📊 Team Odds</button>
   <button class="tab-btn"        onclick="showTab('tab3', this)">🏅 Pre-Tournament</button>
-  <button class="tab-btn"        onclick="showTab('tab4', this)">🔴 Live Standings</button>
+  <button class="tab-btn active" onclick="showTab('tab4', this)">🔴 Live Standings</button>
   <div class="tab-spacer"></div>
   <a class="tab-fixtures-link"
      href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures?country=AU&wtw-filter=ALL"
@@ -642,7 +642,7 @@
 <!-- ══════════════════════════════════════════
      TAB 1 – SWEEPSTAKES DRAW
      ══════════════════════════════════════════ -->
-<div id="tab1" class="tab-panel active">
+<div id="tab1" class="tab-panel">
   <div class="panel-header">
     <div class="panel-icon">📋</div>
     <div class="panel-title">Sweepstakes Draw</div>
@@ -738,7 +738,7 @@
 <!-- ══════════════════════════════════════════
      TAB 4 – LIVE STANDINGS
      ══════════════════════════════════════════ -->
-<div id="tab4" class="tab-panel">
+<div id="tab4" class="tab-panel active">
   <div class="panel-header">
     <div class="panel-icon">🔴</div>
     <div class="panel-title">Live Player Standings</div>
@@ -1295,6 +1295,7 @@ function showTab(id, btn) {
 renderDraw();
 renderTeams();
 renderStaticPlayers();
+loadLiveData();
 </script>
 </body>
 </html>
