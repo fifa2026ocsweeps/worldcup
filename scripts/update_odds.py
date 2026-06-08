@@ -99,6 +99,8 @@ TEAM_ALIASES = {
 }
 
 def normalise(name):
+    if not name:
+        return name
     return TEAM_ALIASES.get(name.lower().strip(), name.strip())
 
 
@@ -276,8 +278,10 @@ def fetch_next_fixtures(headers, team_stats):
         # Build lookup: team_name → next match string
         next_fix = {}
         for m in scheduled:
-            home = normalise(m["homeTeam"]["name"])
-            away = normalise(m["awayTeam"]["name"])
+            home = normalise(m.get("homeTeam", {}).get("name"))
+            away = normalise(m.get("awayTeam", {}).get("name"))
+            if not home or not away:
+                continue
             utc_date = m.get("utcDate", "")
             date_str = utc_date[:10]
             # Convert UTC time to AEST (UTC+10)
