@@ -786,7 +786,7 @@
         <div class="modal-section-title">Next Fixture</div>
         <div class="fixture-box" id="m-fixture">—</div>
         <div class="modal-win-prob">
-          <span class="label">⚽ Pre-tournament win probability</span>
+          <span class="label" id="m-prob-label">⚽ Est. match win probability</span>
           <span class="value" id="m-prob">—</span>
         </div>
       </div>
@@ -1158,6 +1158,27 @@ function renderLive(data) {
 }
 
 // ═══════════════════════════════════
+// MATCH WIN PROBABILITY
+// ═══════════════════════════════════
+function calcMatchProb(team, fixtureStr) {
+  // fixtureStr format: "Mexico vs South Africa · 2026-06-11 08:00 AEST"
+  if (!fixtureStr || fixtureStr === 'No upcoming fixture scheduled') return null;
+  const matchPart = fixtureStr.split(' · ')[0];
+  const parts = matchPart.split(' vs ');
+  if (parts.length !== 2) return null;
+
+  const home = parts[0].trim();
+  const away = parts[1].trim();
+  const opponent = home.toLowerCase() === team.toLowerCase() ? away : home;
+
+  const teamP = TEAM_PROBS[team] ?? 0.05;
+  const oppP  = TEAM_PROBS[opponent] ?? 0.05;
+  const winPct = ((teamP / (teamP + oppP)) * 100).toFixed(1);
+
+  return { prob: winPct, opponent };
+}
+
+// ═══════════════════════════════════
 // TEAM MODAL
 // ═══════════════════════════════════
 function openTeamModal(team) {
@@ -1188,7 +1209,15 @@ function openTeamModal(team) {
     fx.className = 'fixture-box none';
   }
 
-  document.getElementById('m-prob').textContent = prob.toFixed(2) + '%';
+  // Match win probability vs next opponent
+  const matchProb = calcMatchProb(team, s ? s.next_fixture : null);
+  if (matchProb) {
+    document.getElementById('m-prob-label').textContent = `⚽ Est. win chance vs ${matchProb.opponent}`;
+    document.getElementById('m-prob').textContent = matchProb.prob + '%';
+  } else {
+    document.getElementById('m-prob-label').textContent = '⚽ World Cup win probability';
+    document.getElementById('m-prob').textContent = (TEAM_PROBS[team] ?? 0.05).toFixed(2) + '%';
+  }
   document.getElementById('team-modal').classList.add('open');
 }
 
