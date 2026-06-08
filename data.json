@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-08T23:38:18Z",
+  "last_updated": "2026-06-08T23:40:25Z",
   "last_match": "Match data unavailable",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -333,7 +333,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Mexico vs South Africa · 2026-06-11 05:00 AEST"
     },
     "South Africa": {
       "group": "Group Stage",
@@ -345,7 +345,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Mexico vs South Africa · 2026-06-11 05:00 AEST"
     },
     "South Korea": {
       "group": "Group Stage",
@@ -357,7 +357,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "South Korea vs Czechia · 2026-06-12 12:00 AEST"
     },
     "Czechia": {
       "group": "Group Stage",
@@ -369,7 +369,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "South Korea vs Czechia · 2026-06-12 12:00 AEST"
     },
     "Canada": {
       "group": "Group Stage",
@@ -381,7 +381,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Canada vs Bosnia & Herzegovina · 2026-06-12 05:00 AEST"
     },
     "Bosnia & Herzegovina": {
       "group": "Group Stage",
@@ -393,7 +393,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Canada vs Bosnia & Herzegovina · 2026-06-12 05:00 AEST"
     },
     "United States": {
       "group": "Group Stage",
@@ -405,7 +405,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "United States vs Paraguay · 2026-06-13 11:00 AEST"
     },
     "Paraguay": {
       "group": "Group Stage",
@@ -417,7 +417,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "United States vs Paraguay · 2026-06-13 11:00 AEST"
     },
     "Qatar": {
       "group": "Group Stage",
@@ -429,7 +429,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Qatar vs Switzerland · 2026-06-13 05:00 AEST"
     },
     "Switzerland": {
       "group": "Group Stage",
@@ -441,7 +441,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Qatar vs Switzerland · 2026-06-13 05:00 AEST"
     },
     "Brazil": {
       "group": "Group Stage",
@@ -453,7 +453,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Brazil vs Morocco · 2026-06-13 08:00 AEST"
     },
     "Morocco": {
       "group": "Group Stage",
@@ -465,7 +465,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Brazil vs Morocco · 2026-06-13 08:00 AEST"
     },
     "Haiti": {
       "group": "Group Stage",
@@ -477,7 +477,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Haiti vs Scotland · 2026-06-14 11:00 AEST"
     },
     "Scotland": {
       "group": "Group Stage",
@@ -489,7 +489,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Haiti vs Scotland · 2026-06-14 11:00 AEST"
     },
     "Australia": {
       "group": "Group Stage",
@@ -501,7 +501,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Australia vs Türkiye · 2026-06-14 14:00 AEST"
     },
     "Türkiye": {
       "group": "Group Stage",
@@ -513,7 +513,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Australia vs Türkiye · 2026-06-14 14:00 AEST"
     },
     "Germany": {
       "group": "Group Stage",
@@ -525,7 +525,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Germany vs Curaçao · 2026-06-14 03:00 AEST"
     },
     "Curaçao": {
       "group": "Group Stage",
@@ -537,7 +537,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Germany vs Curaçao · 2026-06-14 03:00 AEST"
     },
     "Netherlands": {
       "group": "Group Stage",
@@ -549,7 +549,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Netherlands vs Japan · 2026-06-14 06:00 AEST"
     },
     "Japan": {
       "group": "Group Stage",
@@ -561,7 +561,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Netherlands vs Japan · 2026-06-14 06:00 AEST"
     },
     "Côte d'Ivoire": {
       "group": "Group Stage",
@@ -573,7 +573,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Côte d'Ivoire vs Ecuador · 2026-06-14 09:00 AEST"
     },
     "Ecuador": {
       "group": "Group Stage",
@@ -585,7 +585,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Côte d'Ivoire vs Ecuador · 2026-06-14 09:00 AEST"
     },
     "Sweden": {
       "group": "Group Stage",
@@ -597,7 +597,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Sweden vs Tunisia · 2026-06-15 12:00 AEST"
     },
     "Tunisia": {
       "group": "Group Stage",
@@ -609,7 +609,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Sweden vs Tunisia · 2026-06-15 12:00 AEST"
     },
     "Spain": {
       "group": "Group Stage",
@@ -621,7 +621,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Spain vs Cape Verde · 2026-06-15 02:00 AEST"
     },
     "Cape Verde": {
       "group": "Group Stage",
@@ -633,7 +633,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Spain vs Cape Verde · 2026-06-15 02:00 AEST"
     },
     "Belgium": {
       "group": "Group Stage",
@@ -645,7 +645,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Belgium vs Egypt · 2026-06-15 05:00 AEST"
     },
     "Egypt": {
       "group": "Group Stage",
@@ -657,7 +657,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Belgium vs Egypt · 2026-06-15 05:00 AEST"
     },
     "Saudi Arabia": {
       "group": "Group Stage",
@@ -669,7 +669,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Saudi Arabia vs Uruguay · 2026-06-15 08:00 AEST"
     },
     "Uruguay": {
       "group": "Group Stage",
@@ -681,7 +681,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Saudi Arabia vs Uruguay · 2026-06-15 08:00 AEST"
     },
     "Iran": {
       "group": "Group Stage",
@@ -693,7 +693,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Iran vs New Zealand · 2026-06-16 11:00 AEST"
     },
     "New Zealand": {
       "group": "Group Stage",
@@ -705,7 +705,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Iran vs New Zealand · 2026-06-16 11:00 AEST"
     },
     "France": {
       "group": "Group Stage",
@@ -717,7 +717,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "France vs Senegal · 2026-06-16 05:00 AEST"
     },
     "Senegal": {
       "group": "Group Stage",
@@ -729,7 +729,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "France vs Senegal · 2026-06-16 05:00 AEST"
     },
     "Iraq": {
       "group": "Group Stage",
@@ -741,7 +741,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Iraq vs Norway · 2026-06-16 08:00 AEST"
     },
     "Norway": {
       "group": "Group Stage",
@@ -753,7 +753,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Iraq vs Norway · 2026-06-16 08:00 AEST"
     },
     "Argentina": {
       "group": "Group Stage",
@@ -765,7 +765,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Argentina vs Algeria · 2026-06-17 11:00 AEST"
     },
     "Algeria": {
       "group": "Group Stage",
@@ -777,7 +777,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Argentina vs Algeria · 2026-06-17 11:00 AEST"
     },
     "Austria": {
       "group": "Group Stage",
@@ -789,7 +789,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Austria vs Jordan · 2026-06-17 14:00 AEST"
     },
     "Jordan": {
       "group": "Group Stage",
@@ -801,7 +801,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Austria vs Jordan · 2026-06-17 14:00 AEST"
     },
     "Portugal": {
       "group": "Group Stage",
@@ -813,7 +813,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Portugal vs DR Congo · 2026-06-17 03:00 AEST"
     },
     "DR Congo": {
       "group": "Group Stage",
@@ -825,7 +825,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Portugal vs DR Congo · 2026-06-17 03:00 AEST"
     },
     "England": {
       "group": "Group Stage",
@@ -837,7 +837,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "England vs Croatia · 2026-06-17 06:00 AEST"
     },
     "Croatia": {
       "group": "Group Stage",
@@ -849,7 +849,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "England vs Croatia · 2026-06-17 06:00 AEST"
     },
     "Ghana": {
       "group": "Group Stage",
@@ -861,7 +861,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Ghana vs Panama · 2026-06-17 09:00 AEST"
     },
     "Panama": {
       "group": "Group Stage",
@@ -873,7 +873,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Ghana vs Panama · 2026-06-17 09:00 AEST"
     },
     "Uzbekistan": {
       "group": "Group Stage",
@@ -885,7 +885,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Uzbekistan vs Colombia · 2026-06-18 12:00 AEST"
     },
     "Colombia": {
       "group": "Group Stage",
@@ -897,7 +897,7 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 0,
-      "next_fixture": "No upcoming fixture"
+      "next_fixture": "Uzbekistan vs Colombia · 2026-06-18 12:00 AEST"
     }
   },
   "highlights": {}
