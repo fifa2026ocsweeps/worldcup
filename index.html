@@ -513,6 +513,20 @@
     .modal-win-prob .label { font-size: 0.75rem; font-weight: 600; color: var(--text-mid); }
     .modal-win-prob .value { font-size: 1.1rem; font-weight: 800; color: var(--pitch); }
 
+    /* ── MATCH PROB BADGES ── */
+    .match-prob-wrap { display: flex; flex-direction: column; gap: 4px; }
+    .match-prob-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.74rem; font-weight: 700;
+      padding: 3px 8px; border-radius: 20px;
+      white-space: nowrap;
+    }
+    .match-prob-badge.fav    { background: #e8f5e9; color: #1b5e20; border: 1px solid #a5d6a7; }
+    .match-prob-badge.close  { background: #fff8e1; color: #e65100; border: 1px solid #ffcc80; }
+    .match-prob-badge.under  { background: #fce4ec; color: #b71c1c; border: 1px solid #f48fb1; }
+    .match-prob-badge.none   { background: #f5f5f5; color: #90a4ae; border: 1px solid #e0e0e0;
+                               font-weight: 400; font-style: italic; }
+
     /* clickable chip on live tab */
     .chip-btn {
       cursor: pointer;
@@ -807,6 +821,7 @@
                   <th>Player</th>
                   <th>Teams</th>
                   <th>Win Probability</th>
+                  <th>Next Match Win %</th>
                   <th class="c">vs Pre-Tournament</th>
                 </tr>
               </thead>
@@ -1151,6 +1166,7 @@ function renderLive(data) {
       <td class="player-name">${p.name}</td>
       <td>${liveChips(p.teams)}</td>
       <td>${probBar(p.probability, max)}</td>
+      <td>${matchProbCell(p.teams)}</td>
       <td class="c">${diffHtml}</td>
     </tr>`;
   }).join('');
@@ -1160,6 +1176,22 @@ function renderLive(data) {
 // ═══════════════════════════════════
 // MATCH WIN PROBABILITY
 // ═══════════════════════════════════
+function matchProbBadge(team) {
+  const s = LIVE_TEAM_STATS[team];
+  const fixture = s ? s.next_fixture : null;
+  const mp = calcMatchProb(team, fixture);
+  if (!mp) return `<span class="match-prob-badge none">No fixture</span>`;
+
+  const pct = parseFloat(mp.prob);
+  const cls = pct >= 60 ? 'fav' : pct >= 40 ? 'close' : 'under';
+  const label = pct >= 60 ? '🟢' : pct >= 40 ? '🟡' : '🔴';
+  return `<span class="match-prob-badge ${cls}" title="vs ${mp.opponent}">${label} ${flag(team)} ${mp.prob}% vs ${mp.opponent}</span>`;
+}
+
+function matchProbCell(teams) {
+  return `<div class="match-prob-wrap">${teams.map(t => matchProbBadge(t)).join('')}</div>`;
+}
+
 function calcMatchProb(team, fixtureStr) {
   // fixtureStr format: "Mexico vs South Africa · 2026-06-11 08:00 AEST"
   if (!fixtureStr || fixtureStr === 'No upcoming fixture scheduled') return null;
