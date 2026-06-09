@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-09T01:37:58Z",
+  "last_updated": "2026-06-09T02:41:57Z",
   "last_match": "No matches played yet",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -15,14 +15,14 @@
       "teams": [
         "France"
       ],
-      "probability": 14.66
+      "probability": 14.67
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 10.53
+      "probability": 10.54
     },
     {
       "name": "MEJ (Michael)",
@@ -43,7 +43,7 @@
       "teams": [
         "Brazil"
       ],
-      "probability": 8.34
+      "probability": 8.35
     },
     {
       "name": "Georgia",
@@ -175,18 +175,18 @@
       "probability": 0.4
     },
     {
-      "name": "Jodie",
-      "teams": [
-        "Côte d'Ivoire"
-      ],
-      "probability": 0.35
-    },
-    {
       "name": "Clarence",
       "teams": [
         "Canada"
       ],
       "probability": 0.35
+    },
+    {
+      "name": "Jodie",
+      "teams": [
+        "Côte d'Ivoire"
+      ],
+      "probability": 0.34
     },
     {
       "name": "Simon D",
@@ -235,7 +235,7 @@
       "teams": [
         "Ghana"
       ],
-      "probability": 0.17
+      "probability": 0.16
     },
     {
       "name": "Dani",
