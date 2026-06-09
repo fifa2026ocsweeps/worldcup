@@ -177,9 +177,9 @@
     {
       "name": "Steph",
       "teams": [
-        "Canada"
+        "Cape Verde"
       ],
-      "probability": 0.35
+      "probability": 0.08
     },
     {
       "name": "Jodie",
@@ -282,9 +282,9 @@
     {
       "name": "Clarence",
       "teams": [
-        "Cape Verde"
+        "Canada"
       ],
-      "probability": 0.08
+      "probability": 0.35
     },
     {
       "name": "Maria",
