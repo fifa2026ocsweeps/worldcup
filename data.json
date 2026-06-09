@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-09T00:54:11Z",
+  "last_updated": "2026-06-09T01:37:58Z",
   "last_match": "No matches played yet",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -175,16 +175,16 @@
       "probability": 0.4
     },
     {
-      "name": "Steph",
-      "teams": [
-        "Cape Verde"
-      ],
-      "probability": 0.08
-    },
-    {
       "name": "Jodie",
       "teams": [
         "Côte d'Ivoire"
+      ],
+      "probability": 0.35
+    },
+    {
+      "name": "Clarence",
+      "teams": [
+        "Canada"
       ],
       "probability": 0.35
     },
@@ -273,18 +273,18 @@
       "probability": 0.09
     },
     {
+      "name": "Steph",
+      "teams": [
+        "Cape Verde"
+      ],
+      "probability": 0.08
+    },
+    {
       "name": "Fiona",
       "teams": [
         "Panama"
       ],
       "probability": 0.08
-    },
-    {
-      "name": "Clarence",
-      "teams": [
-        "Canada"
-      ],
-      "probability": 0.35
     },
     {
       "name": "Maria",
