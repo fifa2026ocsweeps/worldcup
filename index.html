@@ -18,25 +18,25 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --pitch:      #1b5e20;
-      --pitch-mid:  #2e7d32;
-      --pitch-lite: #43a047;
-      --grass:      #e8f5e9;
-      --gold:       #ffd600;
-      --gold-dark:  #f9a825;
+      --pitch:      #1a3a4a;
+      --pitch-mid:  #2d6070;
+      --pitch-lite: #4a8fa8;
+      --grass:      #e8f2f7;
+      --gold:       #c8a96e;
+      --gold-dark:  #a8853e;
       --silver:     #b0bec5;
-      --bronze:     #d7985a;
+      --bronze:     #c49a6c;
       --white:      #ffffff;
-      --bg:         #f0f7f1;
+      --bg:         #f2f6f9;
       --card:       #ffffff;
-      --border:     #c8e6c9;
-      --text:       #1b3a1f;
-      --text-mid:   #4a7a50;
-      --red:        #e53935;
-      --green-win:  #2e7d32;
+      --border:     #cddce8;
+      --text:       #1a2e3a;
+      --text-mid:   #4a6a7a;
+      --red:        #c0392b;
+      --green-win:  #2d7a5a;
       --radius:     14px;
-      --shadow:     0 4px 20px rgba(0,0,0,0.08);
-      --shadow-lg:  0 8px 32px rgba(0,0,0,0.13);
+      --shadow:     0 4px 20px rgba(0,0,0,0.07);
+      --shadow-lg:  0 8px 32px rgba(0,0,0,0.11);
     }
 
     body {
@@ -48,7 +48,7 @@
 
     /* ── HEADER ── */
     header {
-      background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 45%, #388e3c 75%, #43a047 100%);
+      background: linear-gradient(135deg, #0f2535 0%, #1a3a4a 40%, #2d6070 75%, #4a8fa8 100%);
       color: var(--white);
       text-align: center;
       padding: 22px 20px 20px;
@@ -93,8 +93,9 @@
 
     /* ── COUNTDOWN STRIP ── */
     .countdown-strip {
-      background: var(--gold);
-      color: #1b3a1f;
+      background: #e8f2f7;
+      color: #1a3a4a;
+      border-bottom: 1px solid #cddce8;
       text-align: center;
       padding: 8px 16px;
       font-size: 0.82rem;
@@ -186,7 +187,7 @@
       border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.3rem;
-      box-shadow: 0 4px 10px rgba(46,125,50,0.3);
+      box-shadow: 0 4px 10px rgba(26,58,74,0.25);
       flex-shrink: 0;
     }
     .panel-title {
@@ -202,8 +203,8 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
     }
-    .badge-static { background: #e8f5e9; color: var(--pitch-mid); border: 1px solid var(--border); }
-    .badge-live   { background: #fff3e0; color: #e65100; border: 1px solid #ffcc80;
+    .badge-static { background: var(--grass); color: var(--pitch-mid); border: 1px solid var(--border); }
+    .badge-live   { background: #fef6e8; color: #8a5a00; border: 1px solid #e8c97a;
                     animation: pulse-badge 2s ease-in-out infinite; }
     @keyframes pulse-badge {
       0%,100% { box-shadow: 0 0 0 0 rgba(230,81,0,0.3); }
@@ -240,6 +241,7 @@
       text-transform: uppercase;
     }
     thead th.c { text-align: center; }
+    thead th.teams-col { min-width: 180px; }
 
     tbody tr {
       border-bottom: 1px solid #f0f7f0;
@@ -251,12 +253,12 @@
     tbody td.c { text-align: center; }
 
     /* rank highlight rows */
-    tr.r1 { background: linear-gradient(90deg, #fffde7 0%, #fffff8 100%); }
-    tr.r2 { background: linear-gradient(90deg, #fafafa 0%, #fdfdfd 100%); }
-    tr.r3 { background: linear-gradient(90deg, #fff8f0 0%, #fffdfb 100%); }
-    tr.r1:hover { background: #fff9c4; }
-    tr.r2:hover { background: #f5f5f5; }
-    tr.r3:hover { background: #fdf0e0; }
+    tr.r1 { background: linear-gradient(90deg, #fdf8ee 0%, #fffef8 100%); }
+    tr.r2 { background: linear-gradient(90deg, #f7f9fa 0%, #fdfdfd 100%); }
+    tr.r3 { background: linear-gradient(90deg, #f5f0ea 0%, #fdfaf7 100%); }
+    tr.r1:hover { background: #f9f0d8; }
+    tr.r2:hover { background: #eef4f8; }
+    tr.r3:hover { background: #ede6da; }
 
     /* rank medal cell */
     .medal-cell { text-align: center; font-size: 1.1rem; min-width: 48px; }
@@ -288,10 +290,10 @@
       transform-origin: left;
       transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
     }
-    .bar-fill.tier1 { background: linear-gradient(90deg, #1b5e20, #2e7d32); }
-    .bar-fill.tier2 { background: linear-gradient(90deg, #388e3c, #66bb6a); }
-    .bar-fill.tier3 { background: linear-gradient(90deg, #43a047, #81c784); }
-    .bar-fill.tier4 { background: linear-gradient(90deg, #66bb6a, #a5d6a7); }
+    .bar-fill.tier1 { background: linear-gradient(90deg, #1a3a4a, #2d6070); }
+    .bar-fill.tier2 { background: linear-gradient(90deg, #2d6070, #4a8fa8); }
+    .bar-fill.tier3 { background: linear-gradient(90deg, #4a8fa8, #7ab5cc); }
+    .bar-fill.tier4 { background: linear-gradient(90deg, #7ab5cc, #a8d4e6); }
     .prob-val {
       min-width: 50px;
       text-align: right;
@@ -301,18 +303,19 @@
     }
 
     /* ── TEAM CHIPS ── */
-    .chips { display: flex; flex-wrap: wrap; gap: 5px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 5px; min-width: 160px; }
     .chip {
       background: var(--grass);
       color: var(--pitch);
-      border: 1px solid #c8e6c9;
+      border: 1px solid var(--border);
       padding: 3px 10px;
       border-radius: 20px;
       font-size: 0.76rem;
       font-weight: 600;
+      white-space: nowrap;
       transition: background 0.15s;
     }
-    .chip:hover { background: #c8e6c9; }
+    .chip:hover { background: #cddce8; }
 
     /* ── PLAYER NAME ── */
     .player-name { font-weight: 700; font-size: 0.92rem; }
@@ -521,10 +524,10 @@
       padding: 3px 8px; border-radius: 20px;
       white-space: nowrap;
     }
-    .match-prob-badge.fav    { background: #e8f5e9; color: #1b5e20; border: 1px solid #a5d6a7; }
-    .match-prob-badge.close  { background: #fff8e1; color: #e65100; border: 1px solid #ffcc80; }
-    .match-prob-badge.under  { background: #fce4ec; color: #b71c1c; border: 1px solid #f48fb1; }
-    .match-prob-badge.none   { background: #f5f5f5; color: #90a4ae; border: 1px solid #e0e0e0;
+    .match-prob-badge.fav    { background: #e6f4f0; color: #1a5c42; border: 1px solid #a8d5c5; }
+    .match-prob-badge.close  { background: #fef6e8; color: #8a5a00; border: 1px solid #e8c97a; }
+    .match-prob-badge.under  { background: #faeaea; color: #8b1a1a; border: 1px solid #e8a0a0; }
+    .match-prob-badge.none   { background: #f2f5f7; color: #7a9aaa; border: 1px solid #cddce8;
                                font-weight: 400; font-style: italic; }
 
     /* clickable chip on live tab */
@@ -540,9 +543,9 @@
     .click-hint {
       display: inline-block;
       margin-top: 6px;
-      background: #fff8e1;
-      color: #e65100;
-      border: 1px solid #ffcc80;
+      background: #fef6e8;
+      color: #8a5a00;
+      border: 1px solid #e8c97a;
       border-radius: 20px;
       padding: 3px 10px;
       font-size: 0.75rem;
@@ -738,7 +741,7 @@
           <tr>
             <th class="c">Rank</th>
             <th>Player</th>
-            <th>Teams</th>
+            <th class="teams-col">Teams</th>
             <th>Sweepstakes Win %</th>
           </tr>
         </thead>
@@ -819,7 +822,7 @@
                 <tr>
                   <th class="c">Rank</th>
                   <th>Player</th>
-                  <th>Teams</th>
+                  <th class="teams-col">Teams</th>
                   <th>Next Match Win %</th>
                   <th>Sweepstakes Win %</th>
                 </tr>
