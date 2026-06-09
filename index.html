@@ -876,6 +876,46 @@
               <div class="hl-sub"   id="hl-scorer-sub"></div>
             </div>
           </div>
+          <div class="hl-card" id="hl-assists-card" style="display:none">
+            <div class="hl-icon">🎯</div>
+            <div>
+              <div class="hl-label">Leading Assists</div>
+              <div class="hl-value" id="hl-assists">—</div>
+              <div class="hl-sub"   id="hl-assists-sub"></div>
+            </div>
+          </div>
+          <div class="hl-card" id="hl-yellow-card" style="display:none">
+            <div class="hl-icon">🟨</div>
+            <div>
+              <div class="hl-label">Most Yellow Cards</div>
+              <div class="hl-value" id="hl-yellow">—</div>
+              <div class="hl-sub"   id="hl-yellow-sub"></div>
+            </div>
+          </div>
+          <div class="hl-card" id="hl-red-card" style="display:none">
+            <div class="hl-icon">🟥</div>
+            <div>
+              <div class="hl-label">Most Red Cards</div>
+              <div class="hl-value" id="hl-red">—</div>
+              <div class="hl-sub"   id="hl-red-sub"></div>
+            </div>
+          </div>
+          <div class="hl-card" id="hl-saves-card" style="display:none">
+            <div class="hl-icon">🧤</div>
+            <div>
+              <div class="hl-label">Leading Saves</div>
+              <div class="hl-value" id="hl-saves">—</div>
+              <div class="hl-sub"   id="hl-saves-sub"></div>
+            </div>
+          </div>
+          <div class="hl-card" id="hl-defends-card" style="display:none">
+            <div class="hl-icon">🛡️</div>
+            <div>
+              <div class="hl-label">Leading Defends</div>
+              <div class="hl-value" id="hl-defends">—</div>
+              <div class="hl-sub"   id="hl-defends-sub"></div>
+            </div>
+          </div>
         </div>
 
       </aside>
@@ -1107,6 +1147,11 @@ const DUMMY_HIGHLIGHTS = {
     { name: "Erling Haaland", team: "Norway", goals: 4, assists: 1 },
     { name: "Lamine Yamal",   team: "Spain",  goals: 3, assists: 3 },
   ],
+  top_assister:      { name: "Kylian Mbappé",   team: "France",      assists: 3 },
+  most_yellow_team:  { team: "Argentina",        count: 8 },
+  most_red_team:     { team: "Netherlands",      count: 2 },
+  top_saves:         { name: "Yann Sommer",      team: "Switzerland", saves: 18 },
+  top_defends:       { name: "Virgil van Dijk",  team: "Netherlands", defends: 24 },
 };
 
 function renderHighlights(data) {
@@ -1135,6 +1180,37 @@ function renderHighlights(data) {
     document.getElementById('hl-scorer-sub').textContent =
       `${flag(top.team)} ${top.team} · ${top.goals} goals${preview ? ' · preview' : ''}`;
   }
+
+  const show = (id, valEl, subEl, valTxt, subTxt) => {
+    document.getElementById(id).style.display = 'flex';
+    document.getElementById(valEl).textContent = valTxt;
+    document.getElementById(subEl).textContent = subTxt + (preview ? ' · preview' : '');
+  };
+
+  if (h.top_assister)
+    show('hl-assists-card','hl-assists','hl-assists-sub',
+      h.top_assister.name,
+      `${flag(h.top_assister.team)} ${h.top_assister.team} · ${h.top_assister.assists} assist${h.top_assister.assists !== 1 ? 's' : ''}`);
+
+  if (h.most_yellow_team)
+    show('hl-yellow-card','hl-yellow','hl-yellow-sub',
+      `${flag(h.most_yellow_team.team)} ${h.most_yellow_team.team}`,
+      `${h.most_yellow_team.count} yellow card${h.most_yellow_team.count !== 1 ? 's' : ''}`);
+
+  if (h.most_red_team)
+    show('hl-red-card','hl-red','hl-red-sub',
+      `${flag(h.most_red_team.team)} ${h.most_red_team.team}`,
+      `${h.most_red_team.count} red card${h.most_red_team.count !== 1 ? 's' : ''}`);
+
+  if (h.top_saves)
+    show('hl-saves-card','hl-saves','hl-saves-sub',
+      h.top_saves.name,
+      `${flag(h.top_saves.team)} ${h.top_saves.team} · ${h.top_saves.saves} saves`);
+
+  if (h.top_defends)
+    show('hl-defends-card','hl-defends','hl-defends-sub',
+      h.top_defends.name,
+      `${flag(h.top_defends.team)} ${h.top_defends.team} · ${h.top_defends.defends} defends`);
 }
 
 function renderLive(data) {

@@ -354,27 +354,78 @@ def fetch_top_scorers(headers, limit=5):
         return []
 
 
-# ─── Derive tournament highlights from team stats ────────────────────────────
-def compute_highlights(team_stats, top_scorers):
-    if not team_stats:
+# ─── Fetch team discipline (yellow/red cards) from finished matches ───────────
+def fetch_team_discipline(headers):
+    """Try to aggregate yellow & red cards per team from finished match bookings."""
+    url = "https://api.football-data.org/v4/competitions/WC/matches"
+    try:
+        r = SESSION.get(url, headers=headers,
+                        params={"season": "2026", "status": "FINISHED"}, timeout=15)
+        r.raise_for_status()
+        matches = r.json().get("matches", [])
+        if not matches:
+            print("  No finished matches yet for discipline stats.")
+            return {}
+
+        yellow = {}
+        red    = {}
+        for m in matches:
+            for booking in m.get("bookings", []):
+                team = normalise((booking.get("team") or {}).get("name"))
+                if not team:
+                    continue
+                card = booking.get("card", "")
+                if "YELLOW" in card.upper():
+                    yellow[team] = yellow.get(team, 0) + 1
+                elif "RED" in card.upper():
+                    red[team] = red.get(team, 0) + 1
+
+        result = {}
+        if yellow:
+            top_y = max(yellow, key=yellow.get)
+            result["most_yellow_team"] = {"team": top_y, "count": yellow[top_y]}
+        if red:
+            top_r = max(red, key=red.get)
+            result["most_red_team"]    = {"team": top_r, "count": red[top_r]}
+
+        print(f"  ✅ Discipline: yellow cards for {len(yellow)} teams, red for {len(red)} teams.")
+        return result
+    except Exception as e:
+        print(f"[WARN] Discipline fetch error: {e}", file=sys.stderr)
         return {}
 
-    by_gf = sorted(team_stats.items(), key=lambda x: x[1].get("goals_for", 0),    reverse=True)
-    by_ga = sorted(team_stats.items(), key=lambda x: x[1].get("goals_against", 0), reverse=True)
 
+# ─── Derive tournament highlights from team stats ────────────────────────────
+def compute_highlights(team_stats, top_scorers, discipline):
     highlights = {}
-    if by_gf and by_gf[0][1].get("goals_for", 0) > 0:
-        highlights["top_scoring_team"] = {
-            "team":  by_gf[0][0],
-            "goals": by_gf[0][1]["goals_for"],
-        }
-    if by_ga and by_ga[0][1].get("goals_against", 0) > 0:
-        highlights["most_conceded_team"] = {
-            "team":  by_ga[0][0],
-            "goals": by_ga[0][1]["goals_against"],
-        }
+
+    if team_stats:
+        by_gf = sorted(team_stats.items(), key=lambda x: x[1].get("goals_for", 0),    reverse=True)
+        by_ga = sorted(team_stats.items(), key=lambda x: x[1].get("goals_against", 0), reverse=True)
+
+        if by_gf and by_gf[0][1].get("goals_for", 0) > 0:
+            highlights["top_scoring_team"] = {
+                "team":  by_gf[0][0],
+                "goals": by_gf[0][1]["goals_for"],
+            }
+        if by_ga and by_ga[0][1].get("goals_against", 0) > 0:
+            highlights["most_conceded_team"] = {
+                "team":  by_ga[0][0],
+                "goals": by_ga[0][1]["goals_against"],
+            }
+
     if top_scorers:
         highlights["top_scorers"] = top_scorers
+        # Leading assists — pick player with most assists (ignoring 0s)
+        top_assist = max(top_scorers, key=lambda s: s.get("assists") or 0, default=None)
+        if top_assist and (top_assist.get("assists") or 0) > 0:
+            highlights["top_assister"] = {
+                "name":    top_assist["name"],
+                "team":    top_assist["team"],
+                "assists": top_assist["assists"],
+            }
+
+    highlights.update(discipline)   # adds most_yellow_team / most_red_team if available
 
     return highlights
 
@@ -433,6 +484,7 @@ def main():
     # ── Team stats, fixtures, scorers ─────────────────────────────────────────
     team_stats  = {}
     highlights  = {}
+    discipline  = {}
     if fd_key:
         # Load previous data.json to preserve stats during knockout rounds
         out_path = os.path.join(os.path.dirname(__file__), "..", "data.json")
@@ -454,7 +506,11 @@ def main():
 
             print("Fetching top scorers…")
             top_scorers = fetch_top_scorers(fd_headers)
-            highlights  = compute_highlights(team_stats, top_scorers)
+            time.sleep(2)
+
+            print("Fetching discipline (yellow/red cards)…")
+            discipline  = fetch_team_discipline(fd_headers)
+            highlights  = compute_highlights(team_stats, top_scorers, discipline)
 
     # ── Build output ──────────────────────────────────────────────────────────
     players = compute_players(team_probs)
