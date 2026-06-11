@@ -428,6 +428,35 @@
       .live-sidebar { grid-template-columns: 1fr; }
     }
 
+    /* ── DID YOU KNOW ── */
+    .dyk-card {
+      background: linear-gradient(135deg, #1a3a4a 0%, #2d6070 100%);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+    }
+    .dyk-header {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      opacity: 0.75;
+      margin-bottom: 10px;
+    }
+    .dyk-body {
+      font-size: 0.86rem;
+      font-weight: 500;
+      line-height: 1.55;
+      min-height: 60px;
+    }
+    .dyk-footer {
+      margin-top: 10px;
+      font-size: 0.68rem;
+      opacity: 0.55;
+      text-align: right;
+    }
+
     /* ── TEAM MODAL ── */
     .modal-overlay {
       display: none;
@@ -900,22 +929,13 @@
               <div class="hl-sub"   id="hl-red-sub"></div>
             </div>
           </div>
-          <div class="hl-card" id="hl-saves-card" style="display:none">
-            <div class="hl-icon">🧤</div>
-            <div>
-              <div class="hl-label">Leading Saves</div>
-              <div class="hl-value" id="hl-saves">—</div>
-              <div class="hl-sub"   id="hl-saves-sub"></div>
-            </div>
-          </div>
-          <div class="hl-card" id="hl-defends-card" style="display:none">
-            <div class="hl-icon">🛡️</div>
-            <div>
-              <div class="hl-label">Leading Defends</div>
-              <div class="hl-value" id="hl-defends">—</div>
-              <div class="hl-sub"   id="hl-defends-sub"></div>
-            </div>
-          </div>
+        </div>
+
+        <!-- Did You Know -->
+        <div class="dyk-card">
+          <div class="dyk-header">💡 Did You Know?</div>
+          <div class="dyk-body" id="dyk-text"></div>
+          <div class="dyk-footer" id="dyk-footer"></div>
         </div>
 
       </aside>
@@ -1150,8 +1170,6 @@ const DUMMY_HIGHLIGHTS = {
   top_assister:      { name: "Kylian Mbappé",   team: "France",      assists: 3 },
   most_yellow_team:  { team: "Argentina",        count: 8 },
   most_red_team:     { team: "Netherlands",      count: 2 },
-  top_saves:         { name: "Yann Sommer",      team: "Switzerland", saves: 18 },
-  top_defends:       { name: "Virgil van Dijk",  team: "Netherlands", defends: 24 },
 };
 
 function renderHighlights(data) {
@@ -1202,15 +1220,6 @@ function renderHighlights(data) {
       `${flag(h.most_red_team.team)} ${h.most_red_team.team}`,
       `${h.most_red_team.count} red card${h.most_red_team.count !== 1 ? 's' : ''}`);
 
-  if (h.top_saves)
-    show('hl-saves-card','hl-saves','hl-saves-sub',
-      h.top_saves.name,
-      `${flag(h.top_saves.team)} ${h.top_saves.team} · ${h.top_saves.saves} saves`);
-
-  if (h.top_defends)
-    show('hl-defends-card','hl-defends','hl-defends-sub',
-      h.top_defends.name,
-      `${flag(h.top_defends.team)} ${h.top_defends.team} · ${h.top_defends.defends} defends`);
 }
 
 function renderLive(data) {
@@ -1365,6 +1374,44 @@ function loadLiveData() {
 }
 
 // ═══════════════════════════════════
+// DID YOU KNOW
+// ═══════════════════════════════════
+const DYK_FACTS = [
+  { fact: "Brazil is the only nation to have appeared in every FIFA World Cup, participating in all 22 tournaments since 1930.", tag: "🇧🇷 Brazil" },
+  { fact: "The fastest goal in World Cup history was scored by Hakan Şükür of Turkey — just 11 seconds into the 2002 third-place match against South Korea.", tag: "⚡ Speed record" },
+  { fact: "Just Fontaine of France holds the record for most goals in a single World Cup — 13 goals at the 1958 tournament in Sweden.", tag: "🥅 Goalscoring record" },
+  { fact: "The 1950 World Cup Final was the largest crowd ever for a football match — 199,854 people watched Uruguay beat Brazil in the Maracanã.", tag: "👥 Attendance record" },
+  { fact: "Italy and Brazil are joint record holders for most World Cup wins — but Brazil's 5 titles were spread across 5 different continents.", tag: "🏆 Most titles" },
+  { fact: "The 1994 World Cup final between Brazil and Italy was the first ever decided by a penalty shootout. Roberto Baggio missed the decisive kick.", tag: "🎯 Penalty drama" },
+  { fact: "Germany's 7–1 demolition of host nation Brazil in the 2014 semi-final is the biggest upset in modern World Cup history. Known as the 'Mineirazo'.", tag: "😱 Biggest upset" },
+  { fact: "The 2026 tournament is the first to feature 48 teams — up from 32 — and the first co-hosted by three nations: USA, Canada, and Mexico.", tag: "🇺🇸🇨🇦🇲🇽 2026" },
+  { fact: "Miroslav Klose of Germany is the all-time top scorer in World Cup history with 16 goals across four tournaments (2002–2014).", tag: "⚽ All-time top scorer" },
+  { fact: "England won their only World Cup on home soil in 1966, beating West Germany 4–2. The final was Geoff Hurst's famous hat-trick.", tag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England 1966" },
+  { fact: "Diego Maradona's 'Hand of God' goal against England in 1986 remains the most controversial moment in World Cup history.", tag: "🤲 Hand of God" },
+  { fact: "The 2002 World Cup, co-hosted by Japan and South Korea, was the first held in Asia — and produced the biggest shock as Senegal beat France in the opener.", tag: "🌏 First in Asia" },
+  { fact: "Pelé is the only player to have won three World Cups (1958, 1962, 1970). He scored in the 1958 final aged just 17.", tag: "👑 Pelé" },
+  { fact: "The Golden Ball for best player at the 2022 World Cup went to Lionel Messi — his second, having also won in 2014 despite Argentina losing the final.", tag: "🌟 Golden Ball" },
+  { fact: "North Korea's 1966 World Cup campaign remains a fairy tale — they knocked out Italy and led Portugal 3–0 before losing 5–3 to Eusébio's brilliance.", tag: "🇰🇵 1966 shock" },
+  { fact: "The fastest red card in World Cup history came after just 56 seconds — Uruguay's José Batista against Scotland in 1986.", tag: "🟥 Fastest red card" },
+  { fact: "Spain won three consecutive major tournaments: Euro 2008, World Cup 2010, Euro 2012. No other nation has ever won three in a row.", tag: "🇪🇸 Spain's golden era" },
+  { fact: "France's 1998 World Cup winning squad featured players from 14 different countries of origin — dubbed 'Black Blanc Beur' (Black White Arab).", tag: "🇫🇷 France 1998" },
+  { fact: "The World Cup trophy was stolen in England before the 1966 tournament and found by a dog named Pickles sniffing around a hedge in South London.", tag: "🐕 Trophy heist" },
+  { fact: "Argentina and the Netherlands have met in three World Cup finals (1974, 1978, 2022). Argentina lead the head-to-head 2–1.", tag: "🇦🇷🇳🇱 Classic rivalry" },
+];
+
+function renderDyk() {
+  const el = document.getElementById('dyk-text');
+  const footer = document.getElementById('dyk-footer');
+  if (!el) return;
+
+  // Pick fact based on UTC time ÷ 2 hours — same for all viewers
+  const slot = Math.floor(Date.now() / (2 * 60 * 60 * 1000));
+  const fact = DYK_FACTS[slot % DYK_FACTS.length];
+  el.textContent = fact.fact;
+  footer.textContent = fact.tag;
+}
+
+// ═══════════════════════════════════
 // NEXT UPDATE TIME
 // ═══════════════════════════════════
 function setNextUpdate() {
@@ -1447,6 +1494,7 @@ function showTab(id, btn) {
 renderDraw();
 renderTeams();
 renderStaticPlayers();
+renderDyk();
 loadLiveData();
 </script>
 </body>
