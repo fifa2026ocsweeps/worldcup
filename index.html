@@ -1257,8 +1257,8 @@ function renderLive(data) {
   const lastMatch = data.last_match || '';
   const matchBar = document.getElementById('last-match-bar');
   const noMatch = !lastMatch || lastMatch.toLowerCase().includes('no matches') || lastMatch.toLowerCase().includes('not yet') || lastMatch.toLowerCase().includes('unavailable');
-  document.getElementById('last-match-val').textContent = lastMatch || '—';
-  if (matchBar) matchBar.style.display = noMatch ? 'none' : 'flex';
+  document.getElementById('last-match-val').textContent = noMatch ? 'Tournament kicks off 11 Jun 2026 — check back after the first match!' : lastMatch;
+  if (matchBar) matchBar.style.display = 'flex';
   document.getElementById('live-source-note').textContent =
     'Probabilities: ' + (data.source || 'Live betting markets') + ' · Last updated: ' + d.toLocaleDateString('en-AU') + '. Match data: football-data.org.';
 
