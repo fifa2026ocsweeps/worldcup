@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-11T04:01:50Z",
+  "last_updated": "2026-06-11T10:41:33Z",
   "last_match": "No matches played yet",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -8,56 +8,56 @@
       "teams": [
         "Spain"
       ],
-      "probability": 15.72
+      "probability": 15.48
     },
     {
       "name": "Livia",
       "teams": [
         "France"
       ],
-      "probability": 14.93
+      "probability": 15.42
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 10.53
+      "probability": 10.51
     },
     {
       "name": "MEJ (Michael)",
       "teams": [
         "Portugal"
       ],
-      "probability": 9.78
+      "probability": 9.8
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 8.28
+      "probability": 8.27
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 8.18
+      "probability": 8.17
     },
     {
       "name": "Georgia",
       "teams": [
         "Germany"
       ],
-      "probability": 5.56
+      "probability": 5.55
     },
     {
       "name": "Orgil",
       "teams": [
         "Netherlands"
       ],
-      "probability": 4.31
+      "probability": 4.37
     },
     {
       "name": "Eden",
@@ -79,7 +79,7 @@
       "teams": [
         "Colombia"
       ],
-      "probability": 1.77
+      "probability": 1.73
     },
     {
       "name": "Mark",
@@ -118,19 +118,19 @@
       "probability": 1.19
     },
     {
-      "name": "Pip",
-      "teams": [
-        "Uruguay"
-      ],
-      "probability": 1.05
-    },
-    {
       "name": "Linda",
       "teams": [
         "Ecuador",
         "Bosnia & Herzegovina"
       ],
-      "probability": 1.05
+      "probability": 1.04
+    },
+    {
+      "name": "Pip",
+      "teams": [
+        "Uruguay"
+      ],
+      "probability": 1.0
     },
     {
       "name": "Adele",
@@ -158,14 +158,14 @@
       "teams": [
         "Austria"
       ],
-      "probability": 0.49
+      "probability": 0.46
     },
     {
       "name": "Lidia",
       "teams": [
         "Sweden"
       ],
-      "probability": 0.41
+      "probability": 0.4
     },
     {
       "name": "Kash",
@@ -179,35 +179,28 @@
       "teams": [
         "Côte d'Ivoire"
       ],
-      "probability": 0.37
+      "probability": 0.34
     },
     {
       "name": "Simon D",
       "teams": [
         "Scotland"
       ],
-      "probability": 0.29
+      "probability": 0.27
     },
     {
       "name": "Clarence",
       "teams": [
         "Canada"
       ],
-      "probability": 0.29
+      "probability": 0.26
     },
     {
       "name": "Reino",
       "teams": [
         "Paraguay"
       ],
-      "probability": 0.21
-    },
-    {
-      "name": "Kena",
-      "teams": [
-        "Egypt"
-      ],
-      "probability": 0.19
+      "probability": 0.2
     },
     {
       "name": "Nicko",
@@ -231,11 +224,18 @@
       "probability": 0.18
     },
     {
+      "name": "Kena",
+      "teams": [
+        "Egypt"
+      ],
+      "probability": 0.18
+    },
+    {
       "name": "Josh",
       "teams": [
         "Ghana"
       ],
-      "probability": 0.15
+      "probability": 0.14
     },
     {
       "name": "Dani",
