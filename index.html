@@ -428,6 +428,35 @@
       .live-sidebar { grid-template-columns: 1fr; }
     }
 
+    /* ── LAST UPDATED INLINE ── */
+    .last-updated-inline {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--text-mid);
+      background: var(--grass);
+      border: 1px solid var(--border);
+      padding: 3px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    /* ── LAST MATCH BAR ── */
+    .last-match-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 14px;
+      margin-bottom: 16px;
+      font-size: 0.82rem;
+      box-shadow: var(--shadow);
+    }
+    .last-match-bar-icon { font-size: 1rem; flex-shrink: 0; }
+    .last-match-bar-label { font-weight: 700; color: var(--pitch); white-space: nowrap; }
+    .last-match-bar-val   { color: var(--text-mid); }
+
     /* ── DID YOU KNOW ── */
     .dyk-card {
       background: linear-gradient(135deg, #1a3a4a 0%, #2d6070 100%);
@@ -789,6 +818,7 @@
     <div class="panel-icon">🔴</div>
     <div class="panel-title">Live Player Standings</div>
     <span class="badge badge-live">⚡ Updated Daily 4 PM AEST</span>
+    <span class="last-updated-inline" id="last-updated-val">—</span>
     <div class="panel-header-right">
       <input class="search-box" type="search" placeholder="Search player or team…" oninput="filterTable('player-live-tbody', this.value, 'live-count')">
       <span class="search-count" id="live-count"></span>
@@ -797,6 +827,11 @@
   <div class="panel-subtitle">
     Probabilities reflect current betting markets — refreshed automatically after each match day
     <span class="click-hint">👆 Click any team name for match stats &amp; fixtures</span>
+  </div>
+  <div class="last-match-bar" id="last-match-bar" style="display:none">
+    <span class="last-match-bar-icon">⚽</span>
+    <span class="last-match-bar-label">Last match:</span>
+    <span class="last-match-bar-val" id="last-match-val">—</span>
   </div>
 
   <div id="live-loading">
@@ -865,18 +900,6 @@
 
       <!-- ── SIDEBAR ── -->
       <aside class="live-sidebar">
-
-        <div class="sb-card">
-          <div class="sb-card-title">🕓 Last Updated</div>
-          <div class="sb-card-value" id="last-updated-val">—</div>
-        </div>
-
-
-        <div class="match-box">
-          <span class="match-ball">⚽</span>
-          <div class="match-label">Last match considered</div>
-          <div class="match-name" id="last-match-val">Loading…</div>
-        </div>
 
         <!-- Highlights — shown once data has them -->
         <div class="sb-card" id="highlights-strip" style="display:none">
@@ -1231,8 +1254,11 @@ function renderLive(data) {
   const d = new Date(data.last_updated);
   document.getElementById('last-updated-val').textContent =
     d.toLocaleString('en-AU', { timeZone:'Australia/Sydney', dateStyle:'medium', timeStyle:'short' }) + ' AEST';
-  document.getElementById('last-match-val').textContent = data.last_match || 'Tournament not started yet';
-  setNextUpdate();
+  const lastMatch = data.last_match || '';
+  const matchBar = document.getElementById('last-match-bar');
+  const noMatch = !lastMatch || lastMatch.toLowerCase().includes('no matches') || lastMatch.toLowerCase().includes('not yet') || lastMatch.toLowerCase().includes('unavailable');
+  document.getElementById('last-match-val').textContent = lastMatch || '—';
+  if (matchBar) matchBar.style.display = noMatch ? 'none' : 'flex';
   document.getElementById('live-source-note').textContent =
     'Source: ' + (data.source || 'Live betting markets') + ' · ' + d.toLocaleDateString('en-AU');
 
