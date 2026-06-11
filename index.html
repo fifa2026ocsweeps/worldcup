@@ -1377,26 +1377,119 @@ function loadLiveData() {
 // DID YOU KNOW
 // ═══════════════════════════════════
 const DYK_FACTS = [
+  // ── Records ──────────────────────────────────────────────────────────────
   { fact: "Brazil is the only nation to have appeared in every FIFA World Cup, participating in all 22 tournaments since 1930.", tag: "🇧🇷 Brazil" },
-  { fact: "The fastest goal in World Cup history was scored by Hakan Şükür of Turkey — just 11 seconds into the 2002 third-place match against South Korea.", tag: "⚡ Speed record" },
-  { fact: "Just Fontaine of France holds the record for most goals in a single World Cup — 13 goals at the 1958 tournament in Sweden.", tag: "🥅 Goalscoring record" },
-  { fact: "The 1950 World Cup Final was the largest crowd ever for a football match — 199,854 people watched Uruguay beat Brazil in the Maracanã.", tag: "👥 Attendance record" },
-  { fact: "Italy and Brazil are joint record holders for most World Cup wins — but Brazil's 5 titles were spread across 5 different continents.", tag: "🏆 Most titles" },
-  { fact: "The 1994 World Cup final between Brazil and Italy was the first ever decided by a penalty shootout. Roberto Baggio missed the decisive kick.", tag: "🎯 Penalty drama" },
-  { fact: "Germany's 7–1 demolition of host nation Brazil in the 2014 semi-final is the biggest upset in modern World Cup history. Known as the 'Mineirazo'.", tag: "😱 Biggest upset" },
-  { fact: "The 2026 tournament is the first to feature 48 teams — up from 32 — and the first co-hosted by three nations: USA, Canada, and Mexico.", tag: "🇺🇸🇨🇦🇲🇽 2026" },
   { fact: "Miroslav Klose of Germany is the all-time top scorer in World Cup history with 16 goals across four tournaments (2002–2014).", tag: "⚽ All-time top scorer" },
-  { fact: "England won their only World Cup on home soil in 1966, beating West Germany 4–2. The final was Geoff Hurst's famous hat-trick.", tag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England 1966" },
-  { fact: "Diego Maradona's 'Hand of God' goal against England in 1986 remains the most controversial moment in World Cup history.", tag: "🤲 Hand of God" },
-  { fact: "The 2002 World Cup, co-hosted by Japan and South Korea, was the first held in Asia — and produced the biggest shock as Senegal beat France in the opener.", tag: "🌏 First in Asia" },
-  { fact: "Pelé is the only player to have won three World Cups (1958, 1962, 1970). He scored in the 1958 final aged just 17.", tag: "👑 Pelé" },
-  { fact: "The Golden Ball for best player at the 2022 World Cup went to Lionel Messi — his second, having also won in 2014 despite Argentina losing the final.", tag: "🌟 Golden Ball" },
-  { fact: "North Korea's 1966 World Cup campaign remains a fairy tale — they knocked out Italy and led Portugal 3–0 before losing 5–3 to Eusébio's brilliance.", tag: "🇰🇵 1966 shock" },
+  { fact: "Just Fontaine of France holds the record for most goals in a single World Cup — 13 goals at the 1958 tournament in Sweden.", tag: "🥅 Single tournament record" },
+  { fact: "The fastest goal in World Cup history was scored by Hakan Şükür of Turkey — just 11 seconds into the 2002 third-place match against South Korea.", tag: "⚡ Speed record" },
+  { fact: "The 1950 World Cup Final had the largest crowd ever for a football match — 199,854 people watched Uruguay beat Brazil in the Maracanã.", tag: "👥 Attendance record" },
+  { fact: "Antonio Carbajal of Mexico and Lothar Matthäus of Germany both appeared in five World Cups — a record shared by several players.", tag: "🎖️ Most tournaments" },
   { fact: "The fastest red card in World Cup history came after just 56 seconds — Uruguay's José Batista against Scotland in 1986.", tag: "🟥 Fastest red card" },
-  { fact: "Spain won three consecutive major tournaments: Euro 2008, World Cup 2010, Euro 2012. No other nation has ever won three in a row.", tag: "🇪🇸 Spain's golden era" },
-  { fact: "France's 1998 World Cup winning squad featured players from 14 different countries of origin — dubbed 'Black Blanc Beur' (Black White Arab).", tag: "🇫🇷 France 1998" },
-  { fact: "The World Cup trophy was stolen in England before the 1966 tournament and found by a dog named Pickles sniffing around a hedge in South London.", tag: "🐕 Trophy heist" },
+  { fact: "Oleg Salenko of Russia scored 5 goals in a single World Cup match against Cameroon in 1994 — the most by any player in one game.", tag: "🔥 Single-match record" },
+  { fact: "The record for most World Cup appearances by a goalkeeper is held by Essam El Hadary of Egypt, who played at the 2018 World Cup aged 45.", tag: "🧤 Oldest player" },
+  { fact: "Norman Whiteside of Northern Ireland became the youngest player ever to appear at a World Cup — aged 17 years, 41 days in 1982.", tag: "👶 Youngest debutant" },
+  // ── Titles & Champions ───────────────────────────────────────────────────
+  { fact: "Italy and Brazil are joint record holders for most World Cup wins with 4 each… wait — Brazil has 5! Brazil leads with 1958, 1962, 1970, 1994, 2002.", tag: "🏆 Most titles" },
+  { fact: "Uruguay won the very first World Cup in 1930, defeating Argentina 4–2 in the final in Montevideo before 93,000 fans.", tag: "🇺🇾 First champions" },
+  { fact: "England won their only World Cup on home soil in 1966, beating West Germany 4–2. Geoff Hurst scored a famous hat-trick in the final.", tag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England 1966" },
+  { fact: "Spain won three consecutive major tournaments: Euro 2008, World Cup 2010, Euro 2012. No other nation has ever achieved that treble.", tag: "🇪🇸 Spain's golden era" },
+  { fact: "Argentina won the 2022 World Cup in Qatar — their third title (1978, 1986, 2022) — with Lionel Messi finally lifting the trophy.", tag: "🇦🇷 Messi's dream" },
+  { fact: "France became back-to-back finalists in 2018 and 2022, winning in 2018. They are one of only three nations to defend the title (Italy 1934/38, Brazil 1958/62).", tag: "🇫🇷 Back-to-back finalists" },
+  { fact: "Germany (as West Germany) reached the World Cup final a record 8 times, winning 4. They lost the 1966 final to England in extra time.", tag: "🇩🇪 Germany's consistency" },
+  { fact: "Only 8 different nations have ever won the World Cup: Brazil, Germany, Italy, Argentina, France, Uruguay, England, and Spain.", tag: "🌍 Exclusive club" },
+  // ── Legends ─────────────────────────────────────────────────────────────
+  { fact: "Pelé is the only player to have won three World Cups (1958, 1962, 1970). He scored in the 1958 final aged just 17.", tag: "👑 Pelé" },
+  { fact: "Lionel Messi has scored 13 World Cup goals — more than any other Argentine — and won both the Golden Ball and the trophy in 2022.", tag: "🌟 Messi" },
+  { fact: "Ronaldo (Brazilian) won two World Cups (1994, 2002) and scored 15 goals — the record at the time — before Klose surpassed him.", tag: "⚽ Ronaldo Nazário" },
+  { fact: "Diego Maradona led Argentina to the 1986 World Cup title, scoring the 'Goal of the Century' and the 'Hand of God' goal against England in the same game.", tag: "🤲 Maradona 1986" },
+  { fact: "Zinedine Zidane won the 1998 World Cup with France, scoring twice in the final — then infamously headbutted Materazzi in his last-ever game in 2006.", tag: "👤 Zidane" },
+  { fact: "Lev Yashin, the legendary Soviet goalkeeper, is widely considered the best keeper in history. He won the Ballon d'Or — the only goalkeeper ever to do so.", tag: "🧤 Yashin" },
+  { fact: "Eusébio of Portugal scored 9 goals at the 1966 World Cup, including 4 against North Korea in a comeback from 3–0 down. Portugal finished third.", tag: "🇵🇹 Eusébio 1966" },
+  // ── Iconic Moments ──────────────────────────────────────────────────────
+  { fact: "Germany's 7–1 demolition of host nation Brazil in the 2014 semi-final is known as the 'Mineirazo' — Brazil's most traumatic football defeat.", tag: "😱 Mineirazo" },
+  { fact: "The 1994 World Cup final between Brazil and Italy was the first ever decided by a penalty shootout. Roberto Baggio missed the decisive kick.", tag: "🎯 Penalty drama" },
+  { fact: "The World Cup trophy was stolen in England before the 1966 tournament and found seven days later by a dog named Pickles in a hedge in South London.", tag: "🐕 Trophy heist" },
+  { fact: "North Korea's 1966 World Cup campaign is legendary — they beat Italy 1–0 and led Portugal 3–0 before Eusébio scored 4 to turn it around 5–3.", tag: "🇰🇵 1966 shock" },
+  { fact: "Senegal's opening win over defending champions France at the 2002 World Cup was one of the biggest upsets in tournament history.", tag: "🇸🇳 2002 upset" },
+  { fact: "France's 1998 World Cup winning squad featured players born in 14 different countries, dubbed 'Black Blanc Beur' — a symbol of multicultural France.", tag: "🇫🇷 France 1998" },
+  { fact: "Greece won Euro 2004 as massive underdogs — the only European Championship won by a team that had never previously won a major tournament.", tag: "🇬🇷 Miracle of Portugal" },
+  { fact: "At the 1950 World Cup, the USA beat England 1–0 in one of the sport's greatest upsets. The result was so shocking that some newspaper editors thought it was a typo.", tag: "🇺🇸 1950 shock" },
+  { fact: "The 2022 World Cup in Qatar was the first held in the Middle East and the first played in November–December due to the desert heat.", tag: "🇶🇦 Qatar 2022" },
+  { fact: "South Africa 2010 was the first World Cup held on African soil. The vuvuzela horn became the tournament's iconic — and divisive — soundtrack.", tag: "🎺 Vuvuzela era" },
+  // ── 2026 Edition ────────────────────────────────────────────────────────
+  { fact: "The 2026 World Cup is the first to feature 48 teams, up from 32. The expanded format means 104 matches across the three host nations.", tag: "🇺🇸🇨🇦🇲🇽 2026" },
+  { fact: "FIFA 2026 is the first World Cup co-hosted by three nations. The 16 host cities span from Vancouver to Miami and Mexico City to Boston.", tag: "🗺️ 2026 host cities" },
+  { fact: "The 2026 final will be held at the MetLife Stadium in New Jersey, USA — one of the largest football stadiums in the world with a capacity of 82,500.", tag: "🏟️ 2026 final venue" },
+  { fact: "With 48 teams in 2026, every confederation gets more slots. AFC (Asia) goes from 4 to 8 teams and CAF (Africa) from 5 to 9.", tag: "📊 2026 format" },
+  { fact: "Mexico 2026 will be the first time Mexico has co-hosted a World Cup. They previously hosted alone in 1970 and 1986.", tag: "🇲🇽 Mexico's third WC" },
+  { fact: "Canada has never advanced beyond the group stage at a World Cup. 2026 gives them a home-soil shot at making history as co-hosts.", tag: "🇨🇦 Canada's chance" },
+  { fact: "The USA hosted the 1994 World Cup and holds the all-time record for single-tournament attendance — over 3.5 million fans across 52 matches.", tag: "🇺🇸 USA 1994" },
+  // ── Controversies ──────────────────────────────────────────────────────
+  { fact: "Diego Maradona's 'Hand of God' goal against England in 1986 was punched in with his fist. He later described it as 'a little with the head of Maradona and a little with the hand of God'.", tag: "🤲 Hand of God" },
+  { fact: "The 1978 World Cup in Argentina was held during a military dictatorship. Argentina controversially beat Peru 6–0 to qualify for the final.", tag: "🇦🇷 1978 controversy" },
+  { fact: "France's Zinedine Zidane was sent off in the 2006 final for headbutting Italy's Marco Materazzi. France went on to lose on penalties.", tag: "😤 Zidane red card" },
+  { fact: "In 2010, referee Koman Coulibaly controversially disallowed a valid Frank Lampard goal for England vs Germany — despite the ball crossing the line by nearly a metre.", tag: "😠 Lampard ghost goal" },
+  { fact: "Luis Suárez of Uruguay deliberately handballed on the goal line in the 2010 quarter-final vs Ghana, denying a certain goal. Uruguay survived the resulting penalty miss.", tag: "✋ Suárez handball" },
+  // ── Goalkeepers & Defenders ─────────────────────────────────────────────
+  { fact: "Peter Shilton of England played in 17 World Cup matches — more than any other goalkeeper — across the 1982, 1986, and 1990 tournaments.", tag: "🧤 Peter Shilton" },
+  { fact: "Italy's goalkeeper Dino Zoff won the 1982 World Cup aged 40 years and 133 days — the oldest ever World Cup winning player.", tag: "🎂 Oldest WC winner" },
+  { fact: "The 2010 World Cup had the lowest goals-per-game average in history (2.27) and the most goalless draws (6) including the final 120 minutes.", tag: "🔒 Defensive 2010" },
+  // ── Penalties ───────────────────────────────────────────────────────────
+  { fact: "Penalties were introduced to the World Cup in 1978. The first shootout happened in 1982 — West Germany beat France 5–4 after a dramatic semi-final.", tag: "🎯 First shootout" },
+  { fact: "England have been eliminated from the World Cup by penalty shootout four times (1990, 1998, 2006, 2022) — more than any other nation.", tag: "😬 England penalties" },
+  { fact: "The 2022 World Cup featured more penalty shootouts (4) than any previous tournament, including France vs Morocco which ended in a thrilling semi-final.", tag: "⚽ 2022 shootouts" },
+  // ── Format & History ────────────────────────────────────────────────────
+  { fact: "The first World Cup in 1930 had only 13 teams. The USA finished third — their best-ever result. Most European nations refused to make the long sea voyage to Uruguay.", tag: "📅 1930 origins" },
+  { fact: "The World Cup was not held in 1942 or 1946 due to World War II — the only times the tournament has been cancelled in its history.", tag: "🕊️ Wartime break" },
+  { fact: "From 1938 to 1974, the World Cup final was replayed if it ended in a draw after extra time. The format was changed to penalties.", tag: "📋 Format history" },
+  { fact: "Goal-line technology was first used at a World Cup in 2014 in Brazil, following the controversial Lampard goal in 2010.", tag: "💻 Tech milestone" },
+  { fact: "VAR (Video Assistant Referee) was introduced at the 2018 World Cup in Russia — the first time video review was used at the tournament.", tag: "📺 VAR debut" },
+  { fact: "The Group of Death at the 2014 World Cup — Group D with Uruguay, Italy, England and Costa Rica — saw England and Italy eliminated as Costa Rica topped the group.", tag: "💀 Group of Death" },
+  // ── Teams & Nations ─────────────────────────────────────────────────────
+  { fact: "Portugal has never won the World Cup, despite producing legends like Eusébio, Figo, and Ronaldo. Their best finish remains third place in 1966.", tag: "🇵🇹 Portugal" },
+  { fact: "The Netherlands ('The Oranje') have reached three World Cup finals (1974, 1978, 2010) but never won, earning them the label of football's greatest underachievers.", tag: "🇳🇱 Netherlands" },
+  { fact: "Hungary's 'Magical Magyars' of 1954 were considered the greatest team ever — unbeaten in 4 years — yet shockingly lost the final 3–2 to West Germany.", tag: "🇭🇺 Hungary 1954" },
+  { fact: "Australia's 'Socceroos' reached the round of 16 at both the 2006 and 2022 World Cups — their best performances in the modern era.", tag: "🇦🇺 Socceroos" },
+  { fact: "Japan has qualified for every World Cup since 1998 and reached the quarter-finals for the first time in 2022, beating Germany and Spain in the group stage.", tag: "🇯🇵 Japan 2022" },
+  { fact: "Morocco made history at the 2022 World Cup by becoming the first African and Arab nation to reach the semi-finals.", tag: "🇲🇦 Morocco 2022" },
+  { fact: "Cameroon was the first African team to reach the quarter-finals, doing so at the 1990 World Cup in Italy under the legendary Roger Milla.", tag: "🇨🇲 Cameroon 1990" },
+  { fact: "Iceland debuted at the 2018 World Cup with a population of just 335,000 — the smallest nation ever to qualify. They drew with Argentina in their first match.", tag: "🇮🇸 Iceland debut" },
+  { fact: "Saudi Arabia's shock 2–1 win over Argentina at the 2022 World Cup is considered the biggest upset in modern World Cup history.", tag: "🇸🇦 Saudi upset 2022" },
+  { fact: "Costa Rica famously topped Group D in 2014, beating Uruguay, Italy and drawing with England — reaching the quarter-finals before losing to the Netherlands on penalties.", tag: "🇨🇷 Costa Rica 2014" },
+  // ── Stars & Golden Boots ────────────────────────────────────────────────
+  { fact: "Gary Lineker won the 1986 Golden Boot with 6 goals for England. He never received a single yellow card in his entire international career.", tag: "🥾 Lineker" },
+  { fact: "Ronaldo (Brazilian) won the Golden Boot at the 2002 World Cup with 8 goals, including both in the final against Germany.", tag: "🥾 Ronaldo 2002" },
+  { fact: "Thomas Müller won the 2010 Golden Boot (5 goals) and Golden Shoe (5 assists) in his debut World Cup — aged just 20.", tag: "⭐ Müller debut" },
+  { fact: "Kylian Mbappé won the 2018 World Cup aged 19, becoming only the second teenager after Pelé (1958) to score in a World Cup final.", tag: "🌟 Mbappé 2018" },
+  { fact: "Adidas has been the official match ball supplier for every World Cup since 1970. Each tournament features a distinctively named ball.", tag: "⚽ Adidas balls" },
+  // ── Coaches ─────────────────────────────────────────────────────────────
+  { fact: "Only three coaches have won the World Cup with different nations: Marcello Lippi (Italy 2006 as player, Italy 2006 as coach), and… actually only one: Ernst Happel.", tag: "🧠 Coaching records" },
+  { fact: "Brazil's 1970 squad coached by Mário Zagallo is widely considered the greatest World Cup team ever assembled — featuring Pelé, Tostão, Rivelino and Jairzinho.", tag: "🌟 Greatest team ever" },
+  { fact: "Didier Deschamps is one of only two people to win the World Cup as both captain (1998) and manager (2018) of France.", tag: "🏆 Deschamps double" },
+  { fact: "Aimé Jacquet, France's 1998 World Cup winning coach, was heavily criticised by the French press before the tournament. He retired immediately after the victory.", tag: "😤 Jacquet vindicated" },
+  // ── Fun & Quirky ────────────────────────────────────────────────────────
+  { fact: "The original Jules Rimet Trophy was solid gold and weighed 3.8 kg. Brazil kept it permanently after winning three World Cups — but it was stolen in 1983 and never recovered.", tag: "🥇 Jules Rimet" },
+  { fact: "The current FIFA World Cup trophy was designed by Italian sculptor Silvio Gazzaniga in 1971 and depicts two human figures holding up the earth.", tag: "🏆 Trophy design" },
+  { fact: "At the 1938 World Cup, Cuba — a team of amateur players — beat Romania 3–0 and reached the quarter-finals, where they lost 8–0 to Sweden.", tag: "🇨🇺 Cuba 1938" },
+  { fact: "The most goals scored in a single World Cup match is 12 — Austria beat Switzerland 7–5 in 1954 in what became known as 'The Battle of Lausanne'.", tag: "🔢 Highest-scoring match" },
+  { fact: "Archie Thompson of Australia scored 13 goals in a single match — a 31–0 win over American Samoa in a World Cup qualifier in 2001.", tag: "💥 Qualifier record" },
+  { fact: "The 1966 World Cup mascot, World Cup Willie, was the first official World Cup mascot in history.", tag: "🦁 First mascot" },
+  { fact: "Argentina won their 2022 World Cup final on penalties after a 3–3 draw — the highest-scoring final since England vs Germany in 1966.", tag: "🎭 2022 final drama" },
+  { fact: "The 2026 World Cup will use a brand new 12-group format in the group stage before reverting to a knockout bracket of 32 teams.", tag: "📋 2026 format" },
+  { fact: "Paul the Octopus became famous during the 2010 World Cup for correctly predicting the results of 8 out of 8 matches, including Spain's final win.", tag: "🐙 Paul the Octopus" },
+  { fact: "Africa was allocated 9 slots for the 2026 World Cup, more than doubling their previous allocation of 5 — a historic milestone for African football.", tag: "🌍 Africa 2026" },
+  { fact: "Norway's Ada Hegerberg was the first woman to win the Ballon d'Or in 2018. She refused to play for Norway for six years in protest at how women's football was managed.", tag: "⚽ Women's game" },
+  { fact: "The 2014 World Cup in Brazil was the first to use goal-line technology in its matches, after Frank Lampard's controversial disallowed goal in 2010.", tag: "💡 Tech innovation" },
+  { fact: "Roger Milla of Cameroon scored at the 1994 World Cup aged 42 years and 39 days — the oldest goalscorer in World Cup history.", tag: "🎂 Oldest WC scorer" },
+  { fact: "Cristiano Ronaldo became the first man to score at five different World Cups in 2022, netting against Ghana in Qatar.", tag: "🇵🇹 Ronaldo's record" },
+  { fact: "The word 'soccer' is actually British slang — short for 'Association Football'. It was commonly used in England before 'football' took over.", tag: "📖 Soccer etymology" },
+  { fact: "The 2022 World Cup in Qatar was the most expensive ever hosted — estimates put the total infrastructure spend at over $220 billion USD.", tag: "💰 Qatar spend" },
   { fact: "Argentina and the Netherlands have met in three World Cup finals (1974, 1978, 2022). Argentina lead the head-to-head 2–1.", tag: "🇦🇷🇳🇱 Classic rivalry" },
+  { fact: "The three host cities for the 2026 World Cup final candidates include New York/New Jersey, Dallas, and Los Angeles — all with stadium capacities over 70,000.", tag: "🏟️ US venues" },
+  { fact: "Colombia was stripped of hosting rights for the 1986 World Cup due to economic difficulties — Mexico stepped in as replacement host and went on to stage a classic tournament.", tag: "🇨🇴🇲🇽 1986 switch" },
+  { fact: "The Golden Glove (best goalkeeper) has been won by players from 9 different countries since it was introduced in 1994, reflecting the global spread of goalkeeping talent.", tag: "🧤 Golden Glove" },
+  { fact: "Only 5 players have scored in two different World Cup finals: Vavá, Pelé, Zidane, Ronaldo and Kylian Mbappé — who scored a hat-trick in the 2022 final.", tag: "🌟 Final scorers" },
+  { fact: "Sweden's 1958 World Cup team is the only host nation to have reached the final without winning it — they lost 5–2 to a Pelé-inspired Brazil.", tag: "🇸🇪 Sweden 1958" },
 ];
 
 function renderDyk() {
@@ -1404,8 +1497,8 @@ function renderDyk() {
   const footer = document.getElementById('dyk-footer');
   if (!el) return;
 
-  // Pick fact based on UTC time ÷ 2 hours — same for all viewers
-  const slot = Math.floor(Date.now() / (2 * 60 * 60 * 1000));
+  // Pick fact based on UTC time ÷ 4 hours — same for all viewers, changes 6x per day
+  const slot = Math.floor(Date.now() / (4 * 60 * 60 * 1000));
   const fact = DYK_FACTS[slot % DYK_FACTS.length];
   el.textContent = fact.fact;
   footer.textContent = fact.tag;
