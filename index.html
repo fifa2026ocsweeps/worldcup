@@ -830,7 +830,7 @@
   </div>
   <div class="last-match-bar" id="last-match-bar" style="display:none">
     <span class="last-match-bar-icon">⚽</span>
-    <span class="last-match-bar-label">Last match:</span>
+    <span class="last-match-bar-label">Latest match played:</span>
     <span class="last-match-bar-val" id="last-match-val">—</span>
   </div>
 
@@ -1260,7 +1260,7 @@ function renderLive(data) {
   document.getElementById('last-match-val').textContent = lastMatch || '—';
   if (matchBar) matchBar.style.display = noMatch ? 'none' : 'flex';
   document.getElementById('live-source-note').textContent =
-    'Source: ' + (data.source || 'Live betting markets') + ' · ' + d.toLocaleDateString('en-AU');
+    'Probabilities: ' + (data.source || 'Live betting markets') + ' · Last updated: ' + d.toLocaleDateString('en-AU') + '. Match data: football-data.org.';
 
   renderHighlights(data);
 
