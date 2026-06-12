@@ -264,15 +264,74 @@ def fetch_team_stats(headers, prev_stats=None):
         return prev_stats or {}
 
 
+# ─── Compute team stats from finished match results ──────────────────────────
+def compute_stats_from_matches(all_matches, team_stats):
+    """
+    Patch goals_for / goals_against / played / won / drawn / lost / points
+    from FINISHED matches when the standings API lags behind.
+    Only overwrites if the standings data still shows all zeros.
+    """
+    finished = [m for m in all_matches if m.get("status") == "FINISHED"]
+    if not finished:
+        return team_stats
+
+    # Check if standings data is stale (all zeros)
+    total_gf = sum(v.get("goals_for", 0) for v in team_stats.values())
+    if total_gf > 0:
+        return team_stats  # standings already have real data, leave them alone
+
+    print(f"  ⚠️  Standings show all-zero goals. Computing from {len(finished)} finished matches...")
+
+    computed = {}
+    for m in finished:
+        home = normalise(m.get("homeTeam", {}).get("name"))
+        away = normalise(m.get("awayTeam", {}).get("name"))
+        score = m.get("score", {}).get("fullTime", {})
+        hg = score.get("home") or 0
+        ag = score.get("away") or 0
+        if not home or not away:
+            continue
+        for team, gf, ga in [(home, hg, ag), (away, ag, hg)]:
+            if team not in computed:
+                computed[team] = {"played": 0, "won": 0, "drawn": 0, "lost": 0,
+                                  "goals_for": 0, "goals_against": 0, "points": 0}
+            c = computed[team]
+            c["played"]        += 1
+            c["goals_for"]     += gf
+            c["goals_against"] += ga
+            c["goal_diff"]      = c["goals_for"] - c["goals_against"]
+            if gf > ga:
+                c["won"] += 1; c["points"] += 3
+            elif gf == ga:
+                c["drawn"] += 1; c["points"] += 1
+            else:
+                c["lost"] += 1
+
+    # Merge computed stats into team_stats (preserve group/fixture info)
+    for team, c in computed.items():
+        if team in team_stats:
+            team_stats[team].update(c)
+        else:
+            # Team in match results but not in standings (rare) — add minimal entry
+            team_stats[team] = {**c, "group": "Group Stage", "next_fixture": "No upcoming fixture"}
+
+    print(f"  ✅ Patched stats for {len(computed)} teams from match results.")
+    return team_stats
+
+
 # ─── Fetch next fixture per team ─────────────────────────────────────────────
 def fetch_next_fixtures(headers, team_stats):
-    """Add next_fixture string to each team in team_stats dict."""
+    """Add next_fixture string to each team in team_stats dict.
+    Also patches goals/results from FINISHED matches when standings are stale."""
     url = "https://api.football-data.org/v4/competitions/WC/matches"
     try:
         r = SESSION.get(url, headers=headers,
                          params={"season": "2026"}, timeout=15)
         r.raise_for_status()
         all_matches = r.json().get("matches", [])
+
+        # Patch team stats from match results if standings are lagging
+        team_stats = compute_stats_from_matches(all_matches, team_stats)
 
         # Debug: show all unique statuses returned
         statuses = {}
