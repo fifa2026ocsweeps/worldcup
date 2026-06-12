@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-12T05:31:18Z",
+  "last_updated": "2026-06-12T05:36:10Z",
   "last_match": "Group Stage: South Korea 2–1 Czechia  (2026-06-12)",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -1042,5 +1042,23 @@
       "team": "South Korea",
       "assists": 1
     }
-  }
+  },
+  "recent_results": [
+    {
+      "home": "South Korea",
+      "away": "Czechia",
+      "home_goals": 2,
+      "away_goals": 1,
+      "winner": "South Korea",
+      "date": "2026-06-12"
+    },
+    {
+      "home": "Mexico",
+      "away": "South Africa",
+      "home_goals": 2,
+      "away_goals": 0,
+      "winner": "Mexico",
+      "date": "2026-06-11"
+    }
+  ]
 }
