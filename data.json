@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-12T00:50:32Z",
+  "last_updated": "2026-06-12T00:54:38Z",
   "last_match": "Group Stage: Mexico 2–0 South Africa  (2026-06-11)",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -22,7 +22,7 @@
       "teams": [
         "England"
       ],
-      "probability": 10.37
+      "probability": 10.36
     },
     {
       "name": "MEJ (Michael)",
@@ -36,7 +36,7 @@
       "teams": [
         "Brazil"
       ],
-      "probability": 8.45
+      "probability": 8.44
     },
     {
       "name": "Matt",
@@ -108,7 +108,7 @@
         "United States",
         "Qatar"
       ],
-      "probability": 1.29
+      "probability": 1.28
     },
     {
       "name": "Tess",
@@ -137,7 +137,7 @@
       "teams": [
         "Türkiye"
       ],
-      "probability": 0.92
+      "probability": 0.95
     },
     {
       "name": "Denis",
