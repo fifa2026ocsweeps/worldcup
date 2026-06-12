@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-12T05:36:10Z",
+  "last_updated": "2026-06-12T05:47:49Z",
   "last_match": "Group Stage: South Korea 2–1 Czechia  (2026-06-12)",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -100,7 +100,7 @@
       "teams": [
         "Japan"
       ],
-      "probability": 1.41
+      "probability": 1.38
     },
     {
       "name": "Jimmy",
@@ -115,7 +115,7 @@
       "teams": [
         "Switzerland"
       ],
-      "probability": 1.17
+      "probability": 1.15
     },
     {
       "name": "Linda",
@@ -130,7 +130,7 @@
       "teams": [
         "Uruguay"
       ],
-      "probability": 0.95
+      "probability": 0.99
     },
     {
       "name": "Adele",
@@ -151,7 +151,7 @@
       "teams": [
         "Senegal"
       ],
-      "probability": 0.75
+      "probability": 0.77
     },
     {
       "name": "Anita",
@@ -325,28 +325,28 @@
   "team_stats": {
     "Mexico": {
       "group": "Group Stage",
-      "played": 0,
-      "won": 0,
+      "played": 1,
+      "won": 1,
       "drawn": 0,
       "lost": 0,
-      "goals_for": 0,
+      "goals_for": 2,
       "goals_against": 0,
-      "goal_diff": 0,
-      "points": 0,
+      "goal_diff": 2,
+      "points": 3,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Mexico vs South Korea · 2026-06-19 11:00 AEST"
     },
     "South Korea": {
       "group": "Group Stage",
-      "played": 0,
-      "won": 0,
+      "played": 1,
+      "won": 1,
       "drawn": 0,
       "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
-      "goal_diff": 0,
-      "points": 0,
+      "goals_for": 2,
+      "goals_against": 1,
+      "goal_diff": 1,
+      "points": 3,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Mexico vs South Korea · 2026-06-19 11:00 AEST"
@@ -998,12 +998,18 @@
   },
   "highlights": {
     "top_scoring_team": {
-      "team": "Czechia",
-      "goals": 1
+      "goals": 2,
+      "teams": [
+        "Mexico",
+        "South Korea"
+      ]
     },
     "most_conceded_team": {
-      "team": "Czechia",
-      "goals": 2
+      "goals": 2,
+      "teams": [
+        "Czechia",
+        "South Africa"
+      ]
     },
     "top_scorers": [
       {
