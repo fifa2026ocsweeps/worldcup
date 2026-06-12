@@ -922,10 +922,9 @@
           </div>
           <div class="hl-card" id="hl-scorer-card" style="display:none">
             <div class="hl-icon">⭐</div>
-            <div>
+            <div style="flex:1">
               <div class="hl-label">Leading Scorer</div>
-              <div class="hl-value" id="hl-scorer">—</div>
-              <div class="hl-sub"   id="hl-scorer-sub"></div>
+              <div id="hl-scorers-list"></div>
             </div>
           </div>
           <div class="hl-card" id="hl-assists-card" style="display:none">
@@ -1215,11 +1214,13 @@ function renderHighlights(data) {
       `${h.most_conceded_team.goals} goals conceded${preview ? ' · preview' : ''}`;
   }
   if (h.top_scorers && h.top_scorers.length) {
-    const top = h.top_scorers[0];
+    const maxGoals = h.top_scorers[0].goals;
+    const leaders = h.top_scorers.filter(s => s.goals === maxGoals);
     document.getElementById('hl-scorer-card').style.display = 'flex';
-    document.getElementById('hl-scorer').textContent = top.name;
-    document.getElementById('hl-scorer-sub').textContent =
-      `${flag(top.team)} ${top.team} · ${top.goals} goals${preview ? ' · preview' : ''}`;
+    document.getElementById('hl-scorers-list').innerHTML = leaders.map(s =>
+      `<div class="hl-value">${s.name}</div>
+       <div class="hl-sub">${flag(s.team)} ${s.team} · ${s.goals} goal${s.goals !== 1 ? 's' : ''}${s.assists ? ' · ' + s.assists + ' ast' : ''}${preview ? ' · preview' : ''}</div>`
+    ).join('<div style="margin-top:6px"></div>');
   }
 
   const show = (id, valEl, subEl, valTxt, subTxt) => {
