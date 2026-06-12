@@ -519,12 +519,15 @@
     }
     .winner-trophy { font-size: 1rem; flex-shrink: 0; }
 
-    /* confetti canvas — fixed overlay, pointer-events off */
-    #confetti-canvas {
-      position: fixed; top: 0; left: 0;
-      width: 100%; height: 100%;
-      pointer-events: none;
-      z-index: 9999;
+    /* winners card celebration pulse */
+    @keyframes winners-glow {
+      0%   { box-shadow: 0 0 0 0 rgba(250,210,80,0.0), var(--shadow); }
+      30%  { box-shadow: 0 0 18px 6px rgba(250,210,80,0.55), var(--shadow); }
+      60%  { box-shadow: 0 0 10px 2px rgba(250,210,80,0.25), var(--shadow); }
+      100% { box-shadow: 0 0 0 0 rgba(250,210,80,0.0), var(--shadow); }
+    }
+    .winners-card.celebrate {
+      animation: winners-glow 1.2s ease 3;
     }
 
     /* ── TEAM MODAL ── */
@@ -948,18 +951,16 @@
           <div class="sb-card-title" style="margin-bottom:10px">🏆 Tournament Highlights</div>
           <div class="hl-card">
             <div class="hl-icon">🥅</div>
-            <div>
+            <div style="flex:1">
               <div class="hl-label">Top Scoring Team</div>
-              <div class="hl-value" id="hl-top-team">—</div>
-              <div class="hl-sub"   id="hl-top-team-sub"></div>
+              <div id="hl-top-team-list">—</div>
             </div>
           </div>
           <div class="hl-card">
             <div class="hl-icon">🛡️</div>
-            <div>
+            <div style="flex:1">
               <div class="hl-label">Most Conceded</div>
-              <div class="hl-value" id="hl-most-conceded">—</div>
-              <div class="hl-sub"   id="hl-most-conceded-sub"></div>
+              <div id="hl-most-conceded-list">—</div>
             </div>
           </div>
           <div class="hl-card" id="hl-scorer-card" style="display:none">
@@ -1012,8 +1013,6 @@
     </div>
   </div>
 </div>
-
-<canvas id="confetti-canvas" style="display:none"></canvas>
 
 <script>
 // ═══════════════════════════════════
@@ -1251,17 +1250,23 @@ function renderHighlights(data) {
 
   document.getElementById('highlights-strip').style.display = 'block';
 
+  const renderTeamList = (elId, teams, goals, suffix) => {
+    const list = Array.isArray(teams) ? teams : [teams]; // handle old single-team format
+    document.getElementById(elId).innerHTML = list.map((t, i) =>
+      `<div class="hl-value">${flag(t)} ${t}</div>` +
+      (i === list.length - 1
+        ? `<div class="hl-sub">${goals} ${suffix}${preview ? ' · preview' : ''}</div>`
+        : '')
+    ).join('');
+  };
+
   if (h.top_scoring_team) {
-    document.getElementById('hl-top-team').textContent =
-      `${flag(h.top_scoring_team.team)} ${h.top_scoring_team.team}`;
-    document.getElementById('hl-top-team-sub').textContent =
-      `${h.top_scoring_team.goals} goals scored${preview ? ' · preview' : ''}`;
+    const teams = h.top_scoring_team.teams || [h.top_scoring_team.team];
+    renderTeamList('hl-top-team-list', teams, h.top_scoring_team.goals, 'goals scored');
   }
   if (h.most_conceded_team) {
-    document.getElementById('hl-most-conceded').textContent =
-      `${flag(h.most_conceded_team.team)} ${h.most_conceded_team.team}`;
-    document.getElementById('hl-most-conceded-sub').textContent =
-      `${h.most_conceded_team.goals} goals conceded${preview ? ' · preview' : ''}`;
+    const teams = h.most_conceded_team.teams || [h.most_conceded_team.team];
+    renderTeamList('hl-most-conceded-list', teams, h.most_conceded_team.goals, 'goals conceded');
   }
   if (h.top_scorers && h.top_scorers.length) {
     const maxGoals = h.top_scorers[0].goals;
@@ -1617,51 +1622,13 @@ function renderWinners(data) {
      </div>`
   ).join('');
 
-  // Fire confetti once for celebration
-  launchConfetti();
-}
-
-function launchConfetti() {
-  const canvas = document.getElementById('confetti-canvas');
-  canvas.style.display = 'block';
-  canvas.width  = window.innerWidth;
-  canvas.height = window.innerHeight;
-  const ctx = canvas.getContext('2d');
-  const COLORS = ['#f7c948','#e84e3a','#3ab57c','#4a8fa8','#c86ecf','#f4a261'];
-  const pieces = Array.from({length: 120}, () => ({
-    x: Math.random() * canvas.width,
-    y: Math.random() * -canvas.height,
-    r: 4 + Math.random() * 6,
-    d: 1.5 + Math.random() * 2.5,
-    color: COLORS[Math.floor(Math.random() * COLORS.length)],
-    tilt: Math.random() * 10 - 10,
-    tiltSpeed: 0.1 + Math.random() * 0.1,
-    tiltAngle: 0,
-  }));
-  let frame = 0;
-  const MAX = 220;
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    pieces.forEach(p => {
-      p.tiltAngle += p.tiltSpeed;
-      p.y += p.d;
-      p.tilt = Math.sin(p.tiltAngle) * 12;
-      ctx.beginPath();
-      ctx.lineWidth = p.r;
-      ctx.strokeStyle = p.color;
-      ctx.moveTo(p.x + p.tilt + p.r / 2, p.y);
-      ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r / 2);
-      ctx.stroke();
-    });
-    frame++;
-    if (frame < MAX) {
-      requestAnimationFrame(draw);
-    } else {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      canvas.style.display = 'none';
-    }
-  }
-  requestAnimationFrame(draw);
+  // Pulse the winners card with a gold glow
+  setTimeout(() => {
+    const card = document.getElementById('winners-card');
+    card.classList.remove('celebrate');
+    void card.offsetWidth; // force reflow to restart animation
+    card.classList.add('celebrate');
+  }, 400);
 }
 
 function renderDyk() {

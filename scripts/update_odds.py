@@ -274,41 +274,39 @@ def compute_stats_from_matches(all_matches, team_stats):
     if not finished:
         return team_stats
 
-    # ── Goals / results ──────────────────────────────────────────────────────
-    total_gf = sum(v.get("goals_for", 0) for v in team_stats.values())
+    # ── Goals / results — always compute from match results (standings API lags) ─
+    print(f"  Computing goal/result stats from {len(finished)} finished matches...")
     computed = {}
-    if total_gf == 0:
-        print(f"  ⚠️  Standings show all-zero goals. Computing from {len(finished)} finished matches...")
-        for m in finished:
-            home = normalise(m.get("homeTeam", {}).get("name"))
-            away = normalise(m.get("awayTeam", {}).get("name"))
-            score = m.get("score", {}).get("fullTime", {})
-            hg = score.get("home") or 0
-            ag = score.get("away") or 0
-            if not home or not away:
-                continue
-            for team, gf, ga in [(home, hg, ag), (away, ag, hg)]:
-                if team not in computed:
-                    computed[team] = {"played": 0, "won": 0, "drawn": 0, "lost": 0,
-                                      "goals_for": 0, "goals_against": 0, "points": 0}
-                c = computed[team]
-                c["played"]        += 1
-                c["goals_for"]     += gf
-                c["goals_against"] += ga
-                c["goal_diff"]      = c["goals_for"] - c["goals_against"]
-                if gf > ga:
-                    c["won"] += 1; c["points"] += 3
-                elif gf == ga:
-                    c["drawn"] += 1; c["points"] += 1
-                else:
-                    c["lost"] += 1
-
-        for team, c in computed.items():
-            if team in team_stats:
-                team_stats[team].update(c)
+    for m in finished:
+        home = normalise(m.get("homeTeam", {}).get("name"))
+        away = normalise(m.get("awayTeam", {}).get("name"))
+        score = m.get("score", {}).get("fullTime", {})
+        hg = score.get("home") or 0
+        ag = score.get("away") or 0
+        if not home or not away:
+            continue
+        for team, gf, ga in [(home, hg, ag), (away, ag, hg)]:
+            if team not in computed:
+                computed[team] = {"played": 0, "won": 0, "drawn": 0, "lost": 0,
+                                  "goals_for": 0, "goals_against": 0, "points": 0}
+            c = computed[team]
+            c["played"]        += 1
+            c["goals_for"]     += gf
+            c["goals_against"] += ga
+            c["goal_diff"]      = c["goals_for"] - c["goals_against"]
+            if gf > ga:
+                c["won"] += 1; c["points"] += 3
+            elif gf == ga:
+                c["drawn"] += 1; c["points"] += 1
             else:
-                team_stats[team] = {**c, "group": "Group Stage", "next_fixture": "No upcoming fixture"}
-        print(f"  ✅ Patched goal stats for {len(computed)} teams from match results.")
+                c["lost"] += 1
+
+    for team, c in computed.items():
+        if team in team_stats:
+            team_stats[team].update(c)
+        else:
+            team_stats[team] = {**c, "group": "Group Stage", "next_fixture": "No upcoming fixture"}
+    print(f"  ✅ Goal/result stats computed for {len(computed)} teams from match results.")
 
     # ── Cards — always compute from bookings in each finished match ──────────
     yellow = {}
@@ -525,15 +523,18 @@ def compute_highlights(team_stats, top_scorers, discipline):
         by_gf = sorted(team_stats.items(), key=lambda x: x[1].get("goals_for", 0),    reverse=True)
         by_ga = sorted(team_stats.items(), key=lambda x: x[1].get("goals_against", 0), reverse=True)
 
-        if by_gf and by_gf[0][1].get("goals_for", 0) > 0:
+        max_gf = by_gf[0][1].get("goals_for", 0) if by_gf else 0
+        if max_gf > 0:
             highlights["top_scoring_team"] = {
-                "team":  by_gf[0][0],
-                "goals": by_gf[0][1]["goals_for"],
+                "goals": max_gf,
+                "teams": [t for t, v in by_gf if v.get("goals_for", 0) == max_gf],
             }
-        if by_ga and by_ga[0][1].get("goals_against", 0) > 0:
+
+        max_ga = by_ga[0][1].get("goals_against", 0) if by_ga else 0
+        if max_ga > 0:
             highlights["most_conceded_team"] = {
-                "team":  by_ga[0][0],
-                "goals": by_ga[0][1]["goals_against"],
+                "goals": max_ga,
+                "teams": [t for t, v in by_ga if v.get("goals_against", 0) == max_ga],
             }
 
     if top_scorers:
