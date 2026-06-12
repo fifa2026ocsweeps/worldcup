@@ -13,7 +13,7 @@ import os
 import sys
 import time
 import requests
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
@@ -405,12 +405,52 @@ def fetch_next_fixtures(headers, team_stats):
             team_stats[team]["next_fixture"] = next_fix.get(team, "No upcoming fixture")
 
         print(f"  ✅ Next fixtures mapped for {len(next_fix)} teams.")
+
+        recent = build_recent_results(all_matches)
+        return team_stats, recent
+
     except Exception as e:
         print(f"[WARN] Fixtures fetch error: {e}", file=sys.stderr)
         for team in team_stats:
             team_stats[team].setdefault("next_fixture", "No upcoming fixture")
 
-    return team_stats
+    return team_stats, []
+
+
+# ─── Build recent results (last 2 days) ──────────────────────────────────────
+def build_recent_results(all_matches):
+    """Return list of finished matches from the last 2 days (AEST)."""
+    from datetime import timezone as tz
+    results = []
+    now_utc = datetime.now(tz.utc)
+    cutoff  = now_utc - timedelta(hours=48)
+    for m in all_matches:
+        if m.get("status") != "FINISHED":
+            continue
+        utc_date = m.get("utcDate", "")
+        try:
+            match_dt = datetime.strptime(utc_date[:19], "%Y-%m-%dT%H:%M:%S").replace(tzinfo=tz.utc)
+        except Exception:
+            continue
+        if match_dt < cutoff:
+            continue
+        home  = normalise(m.get("homeTeam", {}).get("name"))
+        away  = normalise(m.get("awayTeam", {}).get("name"))
+        score = m.get("score", {}).get("fullTime", {})
+        hg    = score.get("home") or 0
+        ag    = score.get("away") or 0
+        if not home or not away:
+            continue
+        winner = home if hg > ag else (away if ag > hg else None)  # None = draw
+        results.append({
+            "home": home, "away": away,
+            "home_goals": hg, "away_goals": ag,
+            "winner": winner,
+            "date": utc_date[:10],
+        })
+    results.sort(key=lambda x: x["date"], reverse=True)
+    print(f"  ✅ Recent results (last 48h): {len(results)} matches.")
+    return results
 
 
 # ─── Fetch top scorers ────────────────────────────────────────────────────────
@@ -579,9 +619,10 @@ def main():
         print("\n⚠️  FOOTBALL_DATA_KEY not set — skipping match/stats fetch.")
 
     # ── Team stats, fixtures, scorers ─────────────────────────────────────────
-    team_stats  = {}
-    highlights  = {}
-    discipline  = {}
+    team_stats     = {}
+    highlights     = {}
+    discipline     = {}
+    recent_results = []
     if fd_key:
         # Load previous data.json to preserve stats during knockout rounds
         out_path = os.path.join(os.path.dirname(__file__), "..", "data.json")
@@ -598,7 +639,7 @@ def main():
 
         if team_stats:
             print("Fetching next fixtures…")
-            team_stats = fetch_next_fixtures(fd_headers, team_stats)
+            team_stats, recent_results = fetch_next_fixtures(fd_headers, team_stats)
             time.sleep(2)
 
             print("Fetching top scorers…")
@@ -624,8 +665,9 @@ def main():
         "last_match":    last_match,
         "source":        source,
         "players":       players,
-        "team_stats":    team_stats,
-        "highlights":    highlights,
+        "team_stats":      team_stats,
+        "highlights":      highlights,
+        "recent_results":  recent_results,
     }
 
     out_path = os.path.join(os.path.dirname(__file__), "..", "data.json")

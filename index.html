@@ -485,6 +485,48 @@
       text-align: right;
     }
 
+    /* ── TODAY'S WINNERS ── */
+    .winners-card {
+      background: linear-gradient(135deg, #1a4a2a 0%, #2d7048 100%);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .winners-card .sb-card-title { color: rgba(255,255,255,0.85); }
+    .winner-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+    .winner-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .winner-row:first-child { padding-top: 0; }
+    .winner-team {
+      font-size: 0.84rem;
+      font-weight: 700;
+      flex: 1;
+    }
+    .winner-score {
+      font-size: 0.75rem;
+      opacity: 0.75;
+      white-space: nowrap;
+    }
+    .winner-player {
+      font-size: 0.7rem;
+      opacity: 0.65;
+      margin-top: 1px;
+    }
+    .winner-trophy { font-size: 1rem; flex-shrink: 0; }
+
+    /* confetti canvas — fixed overlay, pointer-events off */
+    #confetti-canvas {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
     /* ── TEAM MODAL ── */
     .modal-overlay {
       display: none;
@@ -953,6 +995,12 @@
           </div>
         </div>
 
+        <!-- Today's Winners -->
+        <div class="sb-card winners-card" id="winners-card" style="display:none">
+          <div class="sb-card-title" style="margin-bottom:8px">🎉 Today's Winners</div>
+          <div id="winners-list"></div>
+        </div>
+
         <!-- Did You Know -->
         <div class="dyk-card">
           <div class="dyk-header">💡 Did You Know?</div>
@@ -964,6 +1012,8 @@
     </div>
   </div>
 </div>
+
+<canvas id="confetti-canvas" style="display:none"></canvas>
 
 <script>
 // ═══════════════════════════════════
@@ -1264,6 +1314,7 @@ function renderLive(data) {
     'Probabilities: ' + (data.source || 'Live betting markets') + ' · Last updated: ' + d.toLocaleDateString('en-AU') + '. Match data: football-data.org.';
 
   renderHighlights(data);
+  renderWinners(data);
 
   const players = [...data.players].sort((a, b) => b.probability - a.probability);
   const max = players[0]?.probability ?? 1;
@@ -1529,6 +1580,89 @@ const DYK_FACTS = [
   { fact: "Only 5 players have scored in two different World Cup finals: Vavá, Pelé, Zidane, Ronaldo and Kylian Mbappé — who scored a hat-trick in the 2022 final.", tag: "🌟 Final scorers" },
   { fact: "Sweden's 1958 World Cup team is the only host nation to have reached the final without winning it — they lost 5–2 to a Pelé-inspired Brazil.", tag: "🇸🇪 Sweden 1958" },
 ];
+
+// ═══════════════════════════════════
+// TODAY'S WINNERS + CONFETTI
+// ═══════════════════════════════════
+function renderWinners(data) {
+  const results = data.recent_results || [];
+  const winners = results.filter(r => r.winner);
+  if (!winners.length) return;
+
+  // Build reverse lookup: team → player name(s)
+  const teamToPlayers = {};
+  DRAW.forEach(p => p.teams.forEach(t => {
+    if (!teamToPlayers[t]) teamToPlayers[t] = [];
+    teamToPlayers[t].push(p.name);
+  }));
+
+  // Only show rows where a sweepstakes player owns the winning team
+  const rows = winners.map(r => {
+    const players = teamToPlayers[r.winner] || [];
+    return { ...r, players };
+  }).filter(r => r.players.length);
+
+  if (!rows.length) return;
+
+  const card = document.getElementById('winners-card');
+  card.style.display = 'block';
+  document.getElementById('winners-list').innerHTML = rows.map(r =>
+    `<div class="winner-row">
+       <span class="winner-trophy">🏆</span>
+       <div style="flex:1;min-width:0">
+         <div class="winner-team">${flag(r.winner)} ${r.winner}</div>
+         <div class="winner-score">${r.home} ${r.home_goals}–${r.away_goals} ${r.away}</div>
+         <div class="winner-player">🎉 ${r.players.join(', ')}</div>
+       </div>
+     </div>`
+  ).join('');
+
+  // Fire confetti once for celebration
+  launchConfetti();
+}
+
+function launchConfetti() {
+  const canvas = document.getElementById('confetti-canvas');
+  canvas.style.display = 'block';
+  canvas.width  = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const ctx = canvas.getContext('2d');
+  const COLORS = ['#f7c948','#e84e3a','#3ab57c','#4a8fa8','#c86ecf','#f4a261'];
+  const pieces = Array.from({length: 120}, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * -canvas.height,
+    r: 4 + Math.random() * 6,
+    d: 1.5 + Math.random() * 2.5,
+    color: COLORS[Math.floor(Math.random() * COLORS.length)],
+    tilt: Math.random() * 10 - 10,
+    tiltSpeed: 0.1 + Math.random() * 0.1,
+    tiltAngle: 0,
+  }));
+  let frame = 0;
+  const MAX = 220;
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    pieces.forEach(p => {
+      p.tiltAngle += p.tiltSpeed;
+      p.y += p.d;
+      p.tilt = Math.sin(p.tiltAngle) * 12;
+      ctx.beginPath();
+      ctx.lineWidth = p.r;
+      ctx.strokeStyle = p.color;
+      ctx.moveTo(p.x + p.tilt + p.r / 2, p.y);
+      ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r / 2);
+      ctx.stroke();
+    });
+    frame++;
+    if (frame < MAX) {
+      requestAnimationFrame(draw);
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      canvas.style.display = 'none';
+    }
+  }
+  requestAnimationFrame(draw);
+}
 
 function renderDyk() {
   const el = document.getElementById('dyk-text');
