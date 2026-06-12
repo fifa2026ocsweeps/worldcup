@@ -267,55 +267,78 @@ def fetch_team_stats(headers, prev_stats=None):
 # ─── Compute team stats from finished match results ──────────────────────────
 def compute_stats_from_matches(all_matches, team_stats):
     """
-    Patch goals_for / goals_against / played / won / drawn / lost / points
-    from FINISHED matches when the standings API lags behind.
-    Only overwrites if the standings data still shows all zeros.
+    1. Patch goals_for/against/played/won/drawn/lost/points when standings lag.
+    2. Always compute yellow_cards + red_cards per team from match bookings.
     """
     finished = [m for m in all_matches if m.get("status") == "FINISHED"]
     if not finished:
         return team_stats
 
-    # Check if standings data is stale (all zeros)
+    # ── Goals / results ──────────────────────────────────────────────────────
     total_gf = sum(v.get("goals_for", 0) for v in team_stats.values())
-    if total_gf > 0:
-        return team_stats  # standings already have real data, leave them alone
-
-    print(f"  ⚠️  Standings show all-zero goals. Computing from {len(finished)} finished matches...")
-
     computed = {}
-    for m in finished:
-        home = normalise(m.get("homeTeam", {}).get("name"))
-        away = normalise(m.get("awayTeam", {}).get("name"))
-        score = m.get("score", {}).get("fullTime", {})
-        hg = score.get("home") or 0
-        ag = score.get("away") or 0
-        if not home or not away:
-            continue
-        for team, gf, ga in [(home, hg, ag), (away, ag, hg)]:
-            if team not in computed:
-                computed[team] = {"played": 0, "won": 0, "drawn": 0, "lost": 0,
-                                  "goals_for": 0, "goals_against": 0, "points": 0}
-            c = computed[team]
-            c["played"]        += 1
-            c["goals_for"]     += gf
-            c["goals_against"] += ga
-            c["goal_diff"]      = c["goals_for"] - c["goals_against"]
-            if gf > ga:
-                c["won"] += 1; c["points"] += 3
-            elif gf == ga:
-                c["drawn"] += 1; c["points"] += 1
+    if total_gf == 0:
+        print(f"  ⚠️  Standings show all-zero goals. Computing from {len(finished)} finished matches...")
+        for m in finished:
+            home = normalise(m.get("homeTeam", {}).get("name"))
+            away = normalise(m.get("awayTeam", {}).get("name"))
+            score = m.get("score", {}).get("fullTime", {})
+            hg = score.get("home") or 0
+            ag = score.get("away") or 0
+            if not home or not away:
+                continue
+            for team, gf, ga in [(home, hg, ag), (away, ag, hg)]:
+                if team not in computed:
+                    computed[team] = {"played": 0, "won": 0, "drawn": 0, "lost": 0,
+                                      "goals_for": 0, "goals_against": 0, "points": 0}
+                c = computed[team]
+                c["played"]        += 1
+                c["goals_for"]     += gf
+                c["goals_against"] += ga
+                c["goal_diff"]      = c["goals_for"] - c["goals_against"]
+                if gf > ga:
+                    c["won"] += 1; c["points"] += 3
+                elif gf == ga:
+                    c["drawn"] += 1; c["points"] += 1
+                else:
+                    c["lost"] += 1
+
+        for team, c in computed.items():
+            if team in team_stats:
+                team_stats[team].update(c)
             else:
-                c["lost"] += 1
+                team_stats[team] = {**c, "group": "Group Stage", "next_fixture": "No upcoming fixture"}
+        print(f"  ✅ Patched goal stats for {len(computed)} teams from match results.")
 
-    # Merge computed stats into team_stats (preserve group/fixture info)
-    for team, c in computed.items():
-        if team in team_stats:
-            team_stats[team].update(c)
-        else:
-            # Team in match results but not in standings (rare) — add minimal entry
-            team_stats[team] = {**c, "group": "Group Stage", "next_fixture": "No upcoming fixture"}
+    # ── Cards — always compute from bookings in each finished match ──────────
+    yellow = {}
+    red    = {}
+    for m in finished:
+        for booking in m.get("bookings", []):
+            team = normalise((booking.get("team") or {}).get("name"))
+            if not team:
+                continue
+            card = booking.get("card", "").upper()
+            if "YELLOW" in card:
+                yellow[team] = yellow.get(team, 0) + 1
+            elif "RED" in card:
+                red[team] = red.get(team, 0) + 1
 
-    print(f"  ✅ Patched stats for {len(computed)} teams from match results.")
+    # Store per-team card counts in team_stats
+    for team in team_stats:
+        team_stats[team]["yellow_cards"] = yellow.get(team, 0)
+        team_stats[team]["red_cards"]    = red.get(team, 0)
+    # Also handle any teams only in match data
+    for team in set(list(yellow.keys()) + list(red.keys())):
+        if team not in team_stats:
+            team_stats[team] = {"yellow_cards": yellow.get(team, 0),
+                                "red_cards":    red.get(team, 0)}
+
+    total_cards = sum(yellow.values()) + sum(red.values())
+    print(f"  ✅ Cards: {sum(yellow.values())} yellow, {sum(red.values())} red across {len(yellow)+len(red)} teams.")
+    if total_cards == 0:
+        print("  ℹ️  No bookings in match data (may not be available on free tier).")
+
     return team_stats
 
 
@@ -484,7 +507,22 @@ def compute_highlights(team_stats, top_scorers, discipline):
                 "assists": top_assist["assists"],
             }
 
-    highlights.update(discipline)   # adds most_yellow_team / most_red_team if available
+    # Cards — derive from per-team yellow_cards/red_cards stored in team_stats
+    if team_stats:
+        by_yellow = [(t, v.get("yellow_cards", 0)) for t, v in team_stats.items() if v.get("yellow_cards", 0) > 0]
+        by_red    = [(t, v.get("red_cards",    0)) for t, v in team_stats.items() if v.get("red_cards",    0) > 0]
+        if by_yellow:
+            top_y = max(by_yellow, key=lambda x: x[1])
+            highlights["most_yellow_team"] = {"team": top_y[0], "count": top_y[1]}
+        if by_red:
+            top_r = max(by_red, key=lambda x: x[1])
+            highlights["most_red_team"] = {"team": top_r[0], "count": top_r[1]}
+
+    # Fallback: use discipline dict if cards weren't in match bookings
+    if "most_yellow_team" not in highlights and discipline.get("most_yellow_team"):
+        highlights["most_yellow_team"] = discipline["most_yellow_team"]
+    if "most_red_team" not in highlights and discipline.get("most_red_team"):
+        highlights["most_red_team"] = discipline["most_red_team"]
 
     return highlights
 
@@ -567,8 +605,16 @@ def main():
             top_scorers = fetch_top_scorers(fd_headers)
             time.sleep(2)
 
-            print("Fetching discipline (yellow/red cards)…")
-            discipline  = fetch_team_discipline(fd_headers)
+            # Cards are already computed inside fetch_next_fixtures → compute_stats_from_matches
+            # fetch_team_discipline is a fallback only if bookings weren't in match data
+            discipline = {}
+            if not any(v.get("yellow_cards", 0) > 0 for v in team_stats.values()):
+                print("Fetching discipline (yellow/red cards) — bookings not in match data…")
+                discipline = fetch_team_discipline(fd_headers)
+                time.sleep(2)
+            else:
+                print("  ✅ Cards already computed from match bookings — skipping extra discipline fetch.")
+
             highlights  = compute_highlights(team_stats, top_scorers, discipline)
 
     # ── Build output ──────────────────────────────────────────────────────────

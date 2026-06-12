@@ -859,6 +859,11 @@
           <div class="stat-box"><div class="sv" id="m-ga">—</div><div class="sl">Against</div></div>
           <div class="stat-box"><div class="sv" id="m-gd">—</div><div class="sl">Diff</div></div>
         </div>
+        <div class="modal-section-title" id="m-cards-title" style="display:none">Cards</div>
+        <div class="stats-grid-2" id="m-cards-grid" style="display:none">
+          <div class="stat-box"><div class="sv" id="m-yellow" style="color:#c8a900">—</div><div class="sl">🟨 Yellow</div></div>
+          <div class="stat-box"><div class="sv" id="m-red" style="color:#c0392b">—</div><div class="sl">🟥 Red</div></div>
+        </div>
         <div class="modal-section-title">Next Fixture</div>
         <div class="fixture-box" id="m-fixture">—</div>
         <div class="modal-win-prob">
@@ -1353,12 +1358,23 @@ function openTeamModal(team) {
     const hasFixture = s.next_fixture && s.next_fixture !== 'No upcoming fixture' && s.next_fixture !== 'Unavailable';
     fx.textContent = hasFixture ? s.next_fixture : 'No upcoming fixture scheduled';
     fx.className = 'fixture-box' + (hasFixture ? '' : ' none');
+
+    // Cards — show section only if any card data exists
+    const hasCards = (s.yellow_cards ?? 0) > 0 || (s.red_cards ?? 0) > 0;
+    document.getElementById('m-cards-title').style.display = hasCards ? '' : 'none';
+    document.getElementById('m-cards-grid').style.display  = hasCards ? '' : 'none';
+    if (hasCards) {
+      document.getElementById('m-yellow').textContent = s.yellow_cards ?? 0;
+      document.getElementById('m-red').textContent    = s.red_cards    ?? 0;
+    }
   } else {
     ['m-p','m-w','m-d','m-l','m-gf','m-ga','m-gd'].forEach(id =>
       document.getElementById(id).textContent = '—');
     const fx = document.getElementById('m-fixture');
     fx.textContent = 'No match data yet — tournament may not have started';
     fx.className = 'fixture-box none';
+    document.getElementById('m-cards-title').style.display = 'none';
+    document.getElementById('m-cards-grid').style.display  = 'none';
   }
 
   // Match win probability vs next opponent
