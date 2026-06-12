@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-12T05:47:49Z",
+  "last_updated": "2026-06-12T10:18:41Z",
   "last_match": "Group Stage: South Korea 2–1 Czechia  (2026-06-12)",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -57,7 +57,7 @@
       "teams": [
         "Netherlands"
       ],
-      "probability": 4.4
+      "probability": 4.53
     },
     {
       "name": "Eden",
@@ -86,7 +86,7 @@
       "teams": [
         "Morocco"
       ],
-      "probability": 1.58
+      "probability": 1.51
     },
     {
       "name": "Marcelo",
@@ -100,7 +100,7 @@
       "teams": [
         "Japan"
       ],
-      "probability": 1.38
+      "probability": 1.35
     },
     {
       "name": "Jimmy",
@@ -123,14 +123,14 @@
         "Ecuador",
         "Bosnia & Herzegovina"
       ],
-      "probability": 1.11
+      "probability": 1.1
     },
     {
       "name": "Pip",
       "teams": [
         "Uruguay"
       ],
-      "probability": 0.99
+      "probability": 1.01
     },
     {
       "name": "Adele",
@@ -165,7 +165,7 @@
       "teams": [
         "Sweden"
       ],
-      "probability": 0.43
+      "probability": 0.42
     },
     {
       "name": "Kash",
@@ -179,7 +179,7 @@
       "teams": [
         "Côte d'Ivoire"
       ],
-      "probability": 0.33
+      "probability": 0.32
     },
     {
       "name": "Simon D",
@@ -193,26 +193,26 @@
       "teams": [
         "Canada"
       ],
-      "probability": 0.29
+      "probability": 0.28
     },
     {
       "name": "Sanaz",
       "teams": [
         "South Korea"
       ],
-      "probability": 0.27
-    },
-    {
-      "name": "Reino",
-      "teams": [
-        "Paraguay"
-      ],
-      "probability": 0.2
+      "probability": 0.26
     },
     {
       "name": "Sarah",
       "teams": [
         "Australia"
+      ],
+      "probability": 0.19
+    },
+    {
+      "name": "Reino",
+      "teams": [
+        "Paraguay"
       ],
       "probability": 0.19
     },
@@ -228,14 +228,14 @@
       "teams": [
         "Algeria"
       ],
-      "probability": 0.15
+      "probability": 0.17
     },
     {
       "name": "Josh",
       "teams": [
         "Ghana"
       ],
-      "probability": 0.15
+      "probability": 0.14
     },
     {
       "name": "Dani",
