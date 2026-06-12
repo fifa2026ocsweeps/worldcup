@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-12T00:37:12Z",
+  "last_updated": "2026-06-12T00:38:28Z",
   "last_match": "Group Stage: Mexico 2–0 South Africa  (2026-06-11)",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -15,7 +15,7 @@
       "teams": [
         "France"
       ],
-      "probability": 15.71
+      "probability": 15.72
     },
     {
       "name": "Jon",
@@ -29,7 +29,7 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 9.86
+      "probability": 9.87
     },
     {
       "name": "Gabi",
@@ -43,7 +43,7 @@
       "teams": [
         "Argentina"
       ],
-      "probability": 7.96
+      "probability": 7.97
     },
     {
       "name": "Georgia",
@@ -57,7 +57,7 @@
       "teams": [
         "Netherlands"
       ],
-      "probability": 4.39
+      "probability": 4.4
     },
     {
       "name": "Eden",
@@ -72,7 +72,7 @@
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 2.24
+      "probability": 2.25
     },
     {
       "name": "Alistair",
@@ -130,7 +130,7 @@
       "teams": [
         "Uruguay"
       ],
-      "probability": 0.96
+      "probability": 0.95
     },
     {
       "name": "Adele",
@@ -144,14 +144,14 @@
       "teams": [
         "Croatia"
       ],
-      "probability": 0.76
+      "probability": 0.77
     },
     {
       "name": "Lach",
       "teams": [
         "Senegal"
       ],
-      "probability": 0.76
+      "probability": 0.77
     },
     {
       "name": "Anita",
@@ -165,7 +165,7 @@
       "teams": [
         "Sweden"
       ],
-      "probability": 0.44
+      "probability": 0.43
     },
     {
       "name": "Kash",
@@ -325,14 +325,14 @@
   "team_stats": {
     "Mexico": {
       "group": "Group Stage",
-      "played": 0,
-      "won": 0,
+      "played": 1,
+      "won": 1,
       "drawn": 0,
       "lost": 0,
-      "goals_for": 0,
+      "goals_for": 2,
       "goals_against": 0,
-      "goal_diff": 0,
-      "points": 0,
+      "goal_diff": 2,
+      "points": 3,
       "next_fixture": "Mexico vs South Korea · 2026-06-19 11:00 AEST"
     },
     "South Korea": {
@@ -901,6 +901,10 @@
     }
   },
   "highlights": {
+    "top_scoring_team": {
+      "team": "Mexico",
+      "goals": 2
+    },
     "most_conceded_team": {
       "team": "South Africa",
       "goals": 2
