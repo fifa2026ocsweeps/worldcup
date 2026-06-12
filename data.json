@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-12T00:02:42Z",
+  "last_updated": "2026-06-12T00:32:48Z",
   "last_match": "Group Stage: Mexico 2–0 South Africa  (2026-06-11)",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -43,7 +43,7 @@
       "teams": [
         "Argentina"
       ],
-      "probability": 7.97
+      "probability": 7.96
     },
     {
       "name": "Georgia",
@@ -115,7 +115,7 @@
       "teams": [
         "Switzerland"
       ],
-      "probability": 1.17
+      "probability": 1.19
     },
     {
       "name": "Linda",
@@ -130,7 +130,7 @@
       "teams": [
         "Uruguay"
       ],
-      "probability": 0.99
+      "probability": 0.96
     },
     {
       "name": "Adele",
@@ -165,7 +165,7 @@
       "teams": [
         "Sweden"
       ],
-      "probability": 0.43
+      "probability": 0.44
     },
     {
       "name": "Kash",
@@ -193,7 +193,7 @@
       "teams": [
         "Canada"
       ],
-      "probability": 0.29
+      "probability": 0.3
     },
     {
       "name": "Sarah",
@@ -210,18 +210,18 @@
       "probability": 0.19
     },
     {
+      "name": "Sanaz",
+      "teams": [
+        "South Korea"
+      ],
+      "probability": 0.18
+    },
+    {
       "name": "Nicko",
       "teams": [
         "Algeria"
       ],
       "probability": 0.18
-    },
-    {
-      "name": "Sanaz",
-      "teams": [
-        "South Korea"
-      ],
-      "probability": 0.17
     },
     {
       "name": "Kena",
