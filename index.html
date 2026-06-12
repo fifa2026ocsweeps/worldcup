@@ -1260,8 +1260,8 @@ function renderLive(data) {
 
   renderHighlights(data);
 
-  const players = data.players;
-  const max = Math.max(...players.map(p => p.probability));
+  const players = [...data.players].sort((a, b) => b.probability - a.probability);
+  const max = players[0]?.probability ?? 1;
 
   document.getElementById('player-live-tbody').innerHTML = players.map((p, i) => {
     const diff = p.probability - (STATIC_PROBS[p.name] ?? p.probability);
