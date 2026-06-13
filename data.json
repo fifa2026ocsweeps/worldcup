@@ -1,35 +1,35 @@
 {
-  "last_updated": "2026-06-12T10:18:41Z",
-  "last_match": "Group Stage: South Korea 2–1 Czechia  (2026-06-12)",
+  "last_updated": "2026-06-13T09:20:51Z",
+  "last_match": "Group Stage: United States 4–1 Paraguay  (2026-06-13)",
   "source": "The Odds API (live betting markets)",
   "players": [
-    {
-      "name": "Alan",
-      "teams": [
-        "Spain"
-      ],
-      "probability": 15.84
-    },
     {
       "name": "Livia",
       "teams": [
         "France"
       ],
-      "probability": 15.74
+      "probability": 16.06
+    },
+    {
+      "name": "Alan",
+      "teams": [
+        "Spain"
+      ],
+      "probability": 15.61
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 10.38
+      "probability": 10.25
     },
     {
       "name": "MEJ (Michael)",
       "teams": [
         "Portugal"
       ],
-      "probability": 9.88
+      "probability": 9.93
     },
     {
       "name": "Gabi",
@@ -57,14 +57,14 @@
       "teams": [
         "Netherlands"
       ],
-      "probability": 4.53
+      "probability": 4.46
     },
     {
       "name": "Eden",
       "teams": [
         "Norway"
       ],
-      "probability": 2.55
+      "probability": 2.47
     },
     {
       "name": "Rose",
@@ -75,11 +75,19 @@
       "probability": 2.26
     },
     {
+      "name": "Jimmy",
+      "teams": [
+        "United States",
+        "Qatar"
+      ],
+      "probability": 1.75
+    },
+    {
       "name": "Alistair",
       "teams": [
         "Colombia"
       ],
-      "probability": 1.61
+      "probability": 1.53
     },
     {
       "name": "Mark",
@@ -100,22 +108,14 @@
       "teams": [
         "Japan"
       ],
-      "probability": 1.35
-    },
-    {
-      "name": "Jimmy",
-      "teams": [
-        "United States",
-        "Qatar"
-      ],
-      "probability": 1.29
+      "probability": 1.41
     },
     {
       "name": "Tess",
       "teams": [
         "Switzerland"
       ],
-      "probability": 1.15
+      "probability": 1.2
     },
     {
       "name": "Linda",
@@ -123,14 +123,14 @@
         "Ecuador",
         "Bosnia & Herzegovina"
       ],
-      "probability": 1.1
+      "probability": 1.05
     },
     {
       "name": "Pip",
       "teams": [
         "Uruguay"
       ],
-      "probability": 1.01
+      "probability": 0.95
     },
     {
       "name": "Adele",
@@ -151,21 +151,21 @@
       "teams": [
         "Senegal"
       ],
-      "probability": 0.77
+      "probability": 0.67
     },
     {
       "name": "Anita",
       "teams": [
         "Austria"
       ],
-      "probability": 0.44
+      "probability": 0.42
     },
     {
       "name": "Lidia",
       "teams": [
         "Sweden"
       ],
-      "probability": 0.42
+      "probability": 0.41
     },
     {
       "name": "Kash",
@@ -179,7 +179,7 @@
       "teams": [
         "Côte d'Ivoire"
       ],
-      "probability": 0.32
+      "probability": 0.31
     },
     {
       "name": "Simon D",
@@ -189,18 +189,18 @@
       "probability": 0.3
     },
     {
-      "name": "Clarence",
-      "teams": [
-        "Canada"
-      ],
-      "probability": 0.28
-    },
-    {
       "name": "Sanaz",
       "teams": [
         "South Korea"
       ],
-      "probability": 0.26
+      "probability": 0.29
+    },
+    {
+      "name": "Clarence",
+      "teams": [
+        "Canada"
+      ],
+      "probability": 0.23
     },
     {
       "name": "Sarah",
@@ -210,25 +210,25 @@
       "probability": 0.19
     },
     {
-      "name": "Reino",
-      "teams": [
-        "Paraguay"
-      ],
-      "probability": 0.19
-    },
-    {
       "name": "Kena",
       "teams": [
         "Egypt"
       ],
-      "probability": 0.17
+      "probability": 0.16
     },
     {
       "name": "Nicko",
       "teams": [
         "Algeria"
       ],
-      "probability": 0.17
+      "probability": 0.15
+    },
+    {
+      "name": "Reino",
+      "teams": [
+        "Paraguay"
+      ],
+      "probability": 0.15
     },
     {
       "name": "Josh",
@@ -323,6 +323,20 @@
     }
   ],
   "team_stats": {
+    "United States": {
+      "group": "Group Stage",
+      "played": 1,
+      "won": 1,
+      "drawn": 0,
+      "lost": 0,
+      "goals_for": 4,
+      "goals_against": 1,
+      "goal_diff": 3,
+      "points": 3,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "United States vs Australia · 2026-06-19 05:00 AEST"
+    },
     "Mexico": {
       "group": "Group Stage",
       "played": 1,
@@ -353,59 +367,31 @@
     },
     "Canada": {
       "group": "Group Stage",
-      "played": 0,
+      "played": 1,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
+      "goals_for": 1,
+      "goals_against": 1,
       "goal_diff": 0,
-      "points": 0,
+      "points": 1,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Canada vs Bosnia & Herzegovina · 2026-06-12 05:00 AEST"
+      "next_fixture": "Canada vs Qatar · 2026-06-18 08:00 AEST"
     },
     "Bosnia & Herzegovina": {
       "group": "Group Stage",
-      "played": 0,
+      "played": 1,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
+      "goals_for": 1,
+      "goals_against": 1,
       "goal_diff": 0,
-      "points": 0,
+      "points": 1,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Canada vs Bosnia & Herzegovina · 2026-06-12 05:00 AEST"
-    },
-    "United States": {
-      "group": "Group Stage",
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
-      "goal_diff": 0,
-      "points": 0,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "United States vs Paraguay · 2026-06-13 11:00 AEST"
-    },
-    "Paraguay": {
-      "group": "Group Stage",
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
-      "goal_diff": 0,
-      "points": 0,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "United States vs Paraguay · 2026-06-13 11:00 AEST"
+      "next_fixture": "Switzerland vs Bosnia & Herzegovina · 2026-06-18 05:00 AEST"
     },
     "Qatar": {
       "group": "Group Stage",
@@ -994,24 +980,42 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Czechia vs South Africa · 2026-06-18 02:00 AEST"
+    },
+    "Paraguay": {
+      "group": "Group Stage",
+      "played": 1,
+      "won": 0,
+      "drawn": 0,
+      "lost": 1,
+      "goals_for": 1,
+      "goals_against": 4,
+      "goal_diff": -3,
+      "points": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "Türkiye vs Paraguay · 2026-06-20 13:00 AEST"
     }
   },
   "highlights": {
     "top_scoring_team": {
-      "goals": 2,
+      "goals": 4,
       "teams": [
-        "Mexico",
-        "South Korea"
+        "United States"
       ]
     },
     "most_conceded_team": {
-      "goals": 2,
+      "goals": 4,
       "teams": [
-        "Czechia",
-        "South Africa"
+        "Paraguay"
       ]
     },
     "top_scorers": [
+      {
+        "name": "Folarin Balogun",
+        "team": "United States",
+        "goals": 2,
+        "assists": null
+      },
       {
         "name": "Julián Quiñones",
         "team": "Mexico",
@@ -1035,12 +1039,6 @@
         "team": "South Korea",
         "goals": 1,
         "assists": 1
-      },
-      {
-        "name": "Hyun-Gyu Oh",
-        "team": "South Korea",
-        "goals": 1,
-        "assists": null
       }
     ],
     "top_assister": {
@@ -1051,11 +1049,27 @@
   },
   "recent_results": [
     {
+      "home": "United States",
+      "away": "Paraguay",
+      "home_goals": 4,
+      "away_goals": 1,
+      "winner": "United States",
+      "date": "2026-06-13"
+    },
+    {
       "home": "South Korea",
       "away": "Czechia",
       "home_goals": 2,
       "away_goals": 1,
       "winner": "South Korea",
+      "date": "2026-06-12"
+    },
+    {
+      "home": "Canada",
+      "away": "Bosnia & Herzegovina",
+      "home_goals": 1,
+      "away_goals": 1,
+      "winner": null,
       "date": "2026-06-12"
     },
     {
