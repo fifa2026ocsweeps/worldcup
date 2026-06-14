@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-14T22:29:28Z",
+  "last_updated": "2026-06-14T22:31:28Z",
   "last_match": "Group Stage: Netherlands 2–2 Japan  (2026-06-14)",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -15,7 +15,7 @@
       "teams": [
         "Spain"
       ],
-      "probability": 15.67
+      "probability": 15.66
     },
     {
       "name": "Jon",
@@ -36,7 +36,7 @@
       "teams": [
         "Argentina"
       ],
-      "probability": 7.82
+      "probability": 7.81
     },
     {
       "name": "Gabi",
@@ -64,7 +64,7 @@
       "teams": [
         "Norway"
       ],
-      "probability": 2.37
+      "probability": 2.36
     },
     {
       "name": "Rose",
@@ -101,7 +101,7 @@
       "teams": [
         "Colombia"
       ],
-      "probability": 1.45
+      "probability": 1.48
     },
     {
       "name": "Marcelo",
@@ -168,18 +168,18 @@
       "probability": 0.46
     },
     {
+      "name": "Lidia",
+      "teams": [
+        "Sweden"
+      ],
+      "probability": 0.4
+    },
+    {
       "name": "Kash",
       "teams": [
         "Czechia"
       ],
       "probability": 0.4
-    },
-    {
-      "name": "Lidia",
-      "teams": [
-        "Sweden"
-      ],
-      "probability": 0.39
     },
     {
       "name": "Jodie",
@@ -441,8 +441,8 @@
       "won": 0,
       "drawn": 1,
       "lost": 0,
-      "goals_for": 1,
-      "goals_against": 1,
+      "goals_for": 0,
+      "goals_against": 0,
       "goal_diff": 0,
       "points": 1,
       "yellow_cards": 0,
@@ -455,8 +455,8 @@
       "won": 0,
       "drawn": 1,
       "lost": 0,
-      "goals_for": 1,
-      "goals_against": 1,
+      "goals_for": 0,
+      "goals_against": 0,
       "goal_diff": 0,
       "points": 1,
       "yellow_cards": 0,
