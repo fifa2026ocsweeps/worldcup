@@ -891,12 +891,13 @@
         <button class="modal-close" onclick="closeModal()">✕</button>
       </div>
       <div class="modal-body">
-        <div class="modal-section-title">Match Record</div>
+        <div class="modal-section-title">Standing</div>
         <div class="stats-grid">
           <div class="stat-box"><div class="sv" id="m-p">—</div><div class="sl">Played</div></div>
           <div class="stat-box"><div class="sv" id="m-w">—</div><div class="sl">Won</div></div>
           <div class="stat-box"><div class="sv" id="m-d">—</div><div class="sl">Drawn</div></div>
           <div class="stat-box"><div class="sv" id="m-l">—</div><div class="sl">Lost</div></div>
+          <div class="stat-box"><div class="sv" id="m-pts" style="color:var(--pitch)">—</div><div class="sl">Points</div></div>
         </div>
         <div class="modal-section-title">Goals</div>
         <div class="stats-grid-2">
@@ -946,6 +947,12 @@
       <!-- ── SIDEBAR ── -->
       <aside class="live-sidebar">
 
+        <!-- Today's Winners -->
+        <div class="sb-card winners-card" id="winners-card" style="display:none">
+          <div class="sb-card-title" style="margin-bottom:8px">🎉 Today's Winners</div>
+          <div id="winners-list"></div>
+        </div>
+
         <!-- Highlights — shown once data has them -->
         <div class="sb-card" id="highlights-strip" style="display:none">
           <div class="sb-card-title" style="margin-bottom:10px">🏆 Tournament Highlights</div>
@@ -970,14 +977,6 @@
               <div id="hl-scorers-list"></div>
             </div>
           </div>
-          <div class="hl-card" id="hl-assists-card" style="display:none">
-            <div class="hl-icon">🎯</div>
-            <div>
-              <div class="hl-label">Leading Assists</div>
-              <div class="hl-value" id="hl-assists">—</div>
-              <div class="hl-sub"   id="hl-assists-sub"></div>
-            </div>
-          </div>
           <div class="hl-card" id="hl-yellow-card" style="display:none">
             <div class="hl-icon">🟨</div>
             <div>
@@ -994,12 +993,6 @@
               <div class="hl-sub"   id="hl-red-sub"></div>
             </div>
           </div>
-        </div>
-
-        <!-- Today's Winners -->
-        <div class="sb-card winners-card" id="winners-card" style="display:none">
-          <div class="sb-card-title" style="margin-bottom:8px">🎉 Today's Winners</div>
-          <div id="winners-list"></div>
         </div>
 
         <!-- Did You Know -->
@@ -1284,10 +1277,6 @@ function renderHighlights(data) {
     document.getElementById(subEl).textContent = subTxt + (preview ? ' · preview' : '');
   };
 
-  if (h.top_assister)
-    show('hl-assists-card','hl-assists','hl-assists-sub',
-      h.top_assister.name,
-      `${flag(h.top_assister.team)} ${h.top_assister.team} · ${h.top_assister.assists} assist${h.top_assister.assists !== 1 ? 's' : ''}`);
 
   if (h.most_yellow_team)
     show('hl-yellow-card','hl-yellow','hl-yellow-sub',
@@ -1404,10 +1393,11 @@ function openTeamModal(team) {
   document.getElementById('m-group').textContent = s ? s.group : 'Group stage';
 
   if (s) {
-    document.getElementById('m-p').textContent  = s.played;
-    document.getElementById('m-w').textContent  = s.won;
-    document.getElementById('m-d').textContent  = s.drawn;
-    document.getElementById('m-l').textContent  = s.lost;
+    document.getElementById('m-p').textContent   = s.played;
+    document.getElementById('m-w').textContent   = s.won;
+    document.getElementById('m-d').textContent   = s.drawn;
+    document.getElementById('m-l').textContent   = s.lost;
+    document.getElementById('m-pts').textContent = s.points ?? '—';
     document.getElementById('m-gf').textContent = s.goals_for;
     document.getElementById('m-ga').textContent = s.goals_against;
     document.getElementById('m-gd').textContent = (s.goal_diff > 0 ? '+' : '') + s.goal_diff;
@@ -1425,7 +1415,7 @@ function openTeamModal(team) {
       document.getElementById('m-red').textContent    = s.red_cards    ?? 0;
     }
   } else {
-    ['m-p','m-w','m-d','m-l','m-gf','m-ga','m-gd'].forEach(id =>
+    ['m-p','m-w','m-d','m-l','m-pts','m-gf','m-ga','m-gd'].forEach(id =>
       document.getElementById(id).textContent = '—');
     const fx = document.getElementById('m-fixture');
     fx.textContent = 'No match data yet — tournament may not have started';
