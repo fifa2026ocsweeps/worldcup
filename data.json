@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-14T22:31:28Z",
+  "last_updated": "2026-06-14T22:43:08Z",
   "last_match": "Group Stage: Netherlands 2–2 Japan  (2026-06-14)",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -8,7 +8,7 @@
       "teams": [
         "France"
       ],
-      "probability": 16.06
+      "probability": 16.05
     },
     {
       "name": "Alan",
@@ -79,7 +79,7 @@
       "teams": [
         "Morocco"
       ],
-      "probability": 2.19
+      "probability": 2.21
     },
     {
       "name": "Jimmy",
@@ -186,7 +186,7 @@
       "teams": [
         "Côte d'Ivoire"
       ],
-      "probability": 0.34
+      "probability": 0.33
     },
     {
       "name": "Sanaz",
@@ -441,8 +441,8 @@
       "won": 0,
       "drawn": 1,
       "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
+      "goals_for": 1,
+      "goals_against": 1,
       "goal_diff": 0,
       "points": 1,
       "yellow_cards": 0,
@@ -455,8 +455,8 @@
       "won": 0,
       "drawn": 1,
       "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
+      "goals_for": 1,
+      "goals_against": 1,
       "goal_diff": 0,
       "points": 1,
       "yellow_cards": 0,
