@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-13T09:20:51Z",
-  "last_match": "Group Stage: United States 4–1 Paraguay  (2026-06-13)",
+  "last_updated": "2026-06-14T09:39:15Z",
+  "last_match": "Group Stage: Australia 2–0 Turkey  (2026-06-14)",
   "source": "The Odds API (live betting markets)",
   "players": [
     {
@@ -8,21 +8,21 @@
       "teams": [
         "France"
       ],
-      "probability": 16.06
+      "probability": 16.17
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 15.61
+      "probability": 15.62
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 10.25
+      "probability": 10.39
     },
     {
       "name": "MEJ (Michael)",
@@ -32,13 +32,6 @@
       "probability": 9.93
     },
     {
-      "name": "Gabi",
-      "teams": [
-        "Brazil"
-      ],
-      "probability": 8.45
-    },
-    {
       "name": "Matt",
       "teams": [
         "Argentina"
@@ -46,25 +39,39 @@
       "probability": 7.98
     },
     {
+      "name": "Gabi",
+      "teams": [
+        "Brazil"
+      ],
+      "probability": 7.34
+    },
+    {
       "name": "Georgia",
       "teams": [
         "Germany"
       ],
-      "probability": 5.41
+      "probability": 5.32
     },
     {
       "name": "Orgil",
       "teams": [
         "Netherlands"
       ],
-      "probability": 4.46
+      "probability": 4.66
     },
     {
       "name": "Eden",
       "teams": [
         "Norway"
       ],
-      "probability": 2.47
+      "probability": 2.33
+    },
+    {
+      "name": "Mark",
+      "teams": [
+        "Morocco"
+      ],
+      "probability": 2.31
     },
     {
       "name": "Rose",
@@ -72,7 +79,7 @@
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 2.26
+      "probability": 2.21
     },
     {
       "name": "Jimmy",
@@ -80,42 +87,35 @@
         "United States",
         "Qatar"
       ],
-      "probability": 1.75
+      "probability": 2.05
     },
     {
       "name": "Alistair",
       "teams": [
         "Colombia"
       ],
-      "probability": 1.53
-    },
-    {
-      "name": "Mark",
-      "teams": [
-        "Morocco"
-      ],
-      "probability": 1.51
-    },
-    {
-      "name": "Marcelo",
-      "teams": [
-        "Mexico"
-      ],
-      "probability": 1.51
+      "probability": 1.5
     },
     {
       "name": "Aditi",
       "teams": [
         "Japan"
       ],
-      "probability": 1.41
+      "probability": 1.48
     },
     {
-      "name": "Tess",
+      "name": "Marcelo",
       "teams": [
-        "Switzerland"
+        "Mexico"
       ],
-      "probability": 1.2
+      "probability": 1.44
+    },
+    {
+      "name": "Pip",
+      "teams": [
+        "Uruguay"
+      ],
+      "probability": 0.97
     },
     {
       "name": "Linda",
@@ -123,49 +123,56 @@
         "Ecuador",
         "Bosnia & Herzegovina"
       ],
-      "probability": 1.05
+      "probability": 0.96
     },
     {
-      "name": "Pip",
+      "name": "Tess",
       "teams": [
-        "Uruguay"
+        "Switzerland"
       ],
       "probability": 0.95
-    },
-    {
-      "name": "Adele",
-      "teams": [
-        "Türkiye"
-      ],
-      "probability": 0.92
     },
     {
       "name": "Denis",
       "teams": [
         "Croatia"
       ],
-      "probability": 0.77
+      "probability": 0.81
     },
     {
       "name": "Lach",
       "teams": [
         "Senegal"
       ],
-      "probability": 0.67
+      "probability": 0.7
+    },
+    {
+      "name": "Sarah",
+      "teams": [
+        "Australia"
+      ],
+      "probability": 0.57
+    },
+    {
+      "name": "Adele",
+      "teams": [
+        "Türkiye"
+      ],
+      "probability": 0.54
     },
     {
       "name": "Anita",
       "teams": [
         "Austria"
       ],
-      "probability": 0.42
+      "probability": 0.43
     },
     {
       "name": "Lidia",
       "teams": [
         "Sweden"
       ],
-      "probability": 0.41
+      "probability": 0.4
     },
     {
       "name": "Kash",
@@ -179,6 +186,13 @@
       "teams": [
         "Côte d'Ivoire"
       ],
+      "probability": 0.32
+    },
+    {
+      "name": "Sanaz",
+      "teams": [
+        "South Korea"
+      ],
       "probability": 0.31
     },
     {
@@ -186,42 +200,28 @@
       "teams": [
         "Scotland"
       ],
-      "probability": 0.3
-    },
-    {
-      "name": "Sanaz",
-      "teams": [
-        "South Korea"
-      ],
-      "probability": 0.29
+      "probability": 0.31
     },
     {
       "name": "Clarence",
       "teams": [
         "Canada"
       ],
-      "probability": 0.23
-    },
-    {
-      "name": "Sarah",
-      "teams": [
-        "Australia"
-      ],
-      "probability": 0.19
+      "probability": 0.28
     },
     {
       "name": "Kena",
       "teams": [
         "Egypt"
       ],
-      "probability": 0.16
+      "probability": 0.18
     },
     {
       "name": "Nicko",
       "teams": [
         "Algeria"
       ],
-      "probability": 0.15
+      "probability": 0.16
     },
     {
       "name": "Reino",
@@ -280,18 +280,18 @@
       "probability": 0.08
     },
     {
-      "name": "Lids",
-      "teams": [
-        "South Africa"
-      ],
-      "probability": 0.08
-    },
-    {
       "name": "Maria",
       "teams": [
         "Iraq"
       ],
       "probability": 0.08
+    },
+    {
+      "name": "Lids",
+      "teams": [
+        "South Africa"
+      ],
+      "probability": 0.07
     },
     {
       "name": "Cristina",
@@ -301,16 +301,16 @@
       "probability": 0.07
     },
     {
-      "name": "Upendra",
-      "teams": [
-        "Haiti"
-      ],
-      "probability": 0.06
-    },
-    {
       "name": "Amy",
       "teams": [
         "Curaçao"
+      ],
+      "probability": 0.05
+    },
+    {
+      "name": "Upendra",
+      "teams": [
+        "Haiti"
       ],
       "probability": 0.05
     },
@@ -351,6 +351,20 @@
       "red_cards": 0,
       "next_fixture": "Mexico vs South Korea · 2026-06-19 11:00 AEST"
     },
+    "Australia": {
+      "group": "Group Stage",
+      "played": 1,
+      "won": 1,
+      "drawn": 0,
+      "lost": 0,
+      "goals_for": 2,
+      "goals_against": 0,
+      "goal_diff": 2,
+      "points": 3,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "United States vs Australia · 2026-06-19 05:00 AEST"
+    },
     "South Korea": {
       "group": "Group Stage",
       "played": 1,
@@ -364,6 +378,20 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Mexico vs South Korea · 2026-06-19 11:00 AEST"
+    },
+    "Scotland": {
+      "group": "Group Stage",
+      "played": 1,
+      "won": 1,
+      "drawn": 0,
+      "lost": 0,
+      "goals_for": 1,
+      "goals_against": 0,
+      "goal_diff": 1,
+      "points": 3,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "Scotland vs Morocco · 2026-06-19 08:00 AEST"
     },
     "Canada": {
       "group": "Group Stage",
@@ -395,115 +423,59 @@
     },
     "Qatar": {
       "group": "Group Stage",
-      "played": 0,
+      "played": 1,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
+      "goals_for": 1,
+      "goals_against": 1,
       "goal_diff": 0,
-      "points": 0,
+      "points": 1,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Qatar vs Switzerland · 2026-06-13 05:00 AEST"
+      "next_fixture": "Canada vs Qatar · 2026-06-18 08:00 AEST"
     },
     "Switzerland": {
       "group": "Group Stage",
-      "played": 0,
+      "played": 1,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
+      "goals_for": 1,
+      "goals_against": 1,
       "goal_diff": 0,
-      "points": 0,
+      "points": 1,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Qatar vs Switzerland · 2026-06-13 05:00 AEST"
+      "next_fixture": "Switzerland vs Bosnia & Herzegovina · 2026-06-18 05:00 AEST"
     },
     "Brazil": {
       "group": "Group Stage",
-      "played": 0,
+      "played": 1,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
+      "goals_for": 1,
+      "goals_against": 1,
       "goal_diff": 0,
-      "points": 0,
+      "points": 1,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Brazil vs Morocco · 2026-06-13 08:00 AEST"
+      "next_fixture": "Brazil vs Haiti · 2026-06-20 10:30 AEST"
     },
     "Morocco": {
       "group": "Group Stage",
-      "played": 0,
+      "played": 1,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
+      "goals_for": 1,
+      "goals_against": 1,
       "goal_diff": 0,
-      "points": 0,
+      "points": 1,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Brazil vs Morocco · 2026-06-13 08:00 AEST"
-    },
-    "Haiti": {
-      "group": "Group Stage",
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
-      "goal_diff": 0,
-      "points": 0,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Haiti vs Scotland · 2026-06-14 11:00 AEST"
-    },
-    "Scotland": {
-      "group": "Group Stage",
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
-      "goal_diff": 0,
-      "points": 0,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Haiti vs Scotland · 2026-06-14 11:00 AEST"
-    },
-    "Australia": {
-      "group": "Group Stage",
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
-      "goal_diff": 0,
-      "points": 0,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Australia vs Türkiye · 2026-06-14 14:00 AEST"
-    },
-    "Türkiye": {
-      "group": "Group Stage",
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
-      "goal_diff": 0,
-      "points": 0,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Australia vs Türkiye · 2026-06-14 14:00 AEST"
+      "next_fixture": "Scotland vs Morocco · 2026-06-19 08:00 AEST"
     },
     "Germany": {
       "group": "Group Stage",
@@ -967,6 +939,20 @@
       "red_cards": 0,
       "next_fixture": "Czechia vs South Africa · 2026-06-18 02:00 AEST"
     },
+    "Haiti": {
+      "group": "Group Stage",
+      "played": 1,
+      "won": 0,
+      "drawn": 0,
+      "lost": 1,
+      "goals_for": 0,
+      "goals_against": 1,
+      "goal_diff": -1,
+      "points": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "Brazil vs Haiti · 2026-06-20 10:30 AEST"
+    },
     "South Africa": {
       "group": "Group Stage",
       "played": 1,
@@ -980,6 +966,20 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Czechia vs South Africa · 2026-06-18 02:00 AEST"
+    },
+    "Türkiye": {
+      "group": "Group Stage",
+      "played": 1,
+      "won": 0,
+      "drawn": 0,
+      "lost": 1,
+      "goals_for": 0,
+      "goals_against": 2,
+      "goal_diff": -2,
+      "points": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "Türkiye vs Paraguay · 2026-06-20 13:00 AEST"
     },
     "Paraguay": {
       "group": "Group Stage",
@@ -1049,6 +1049,22 @@
   },
   "recent_results": [
     {
+      "home": "Haiti",
+      "away": "Scotland",
+      "home_goals": 0,
+      "away_goals": 1,
+      "winner": "Scotland",
+      "date": "2026-06-14"
+    },
+    {
+      "home": "Australia",
+      "away": "Türkiye",
+      "home_goals": 2,
+      "away_goals": 0,
+      "winner": "Australia",
+      "date": "2026-06-14"
+    },
+    {
       "home": "United States",
       "away": "Paraguay",
       "home_goals": 4,
@@ -1057,12 +1073,20 @@
       "date": "2026-06-13"
     },
     {
-      "home": "South Korea",
-      "away": "Czechia",
-      "home_goals": 2,
+      "home": "Qatar",
+      "away": "Switzerland",
+      "home_goals": 1,
       "away_goals": 1,
-      "winner": "South Korea",
-      "date": "2026-06-12"
+      "winner": null,
+      "date": "2026-06-13"
+    },
+    {
+      "home": "Brazil",
+      "away": "Morocco",
+      "home_goals": 1,
+      "away_goals": 1,
+      "winner": null,
+      "date": "2026-06-13"
     },
     {
       "home": "Canada",
@@ -1071,14 +1095,6 @@
       "away_goals": 1,
       "winner": null,
       "date": "2026-06-12"
-    },
-    {
-      "home": "Mexico",
-      "away": "South Africa",
-      "home_goals": 2,
-      "away_goals": 0,
-      "winner": "Mexico",
-      "date": "2026-06-11"
     }
   ]
 }
