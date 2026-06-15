@@ -530,6 +530,54 @@
       animation: winners-glow 1.2s ease 3;
     }
 
+    /* ── GROUPS TAB ── */
+    .groups-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 18px;
+      padding: 4px 0 16px;
+    }
+    .group-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .group-card-title {
+      background: var(--pitch);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 9px 14px;
+    }
+    .group-card table { width: 100%; border-collapse: collapse; }
+    .group-card thead th {
+      font-size: 0.63rem; font-weight: 700; color: var(--text-mid);
+      text-transform: uppercase; letter-spacing: 0.4px;
+      padding: 7px 8px; border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .group-card thead th:first-child { text-align: left; padding-left: 14px; }
+    .group-card tbody td {
+      padding: 8px 8px; font-size: 0.82rem; text-align: center;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+    .group-card tbody tr:last-child td { border-bottom: none; }
+    .group-card tbody td:first-child { text-align: left; padding-left: 14px; font-weight: 600; }
+    .group-card tbody td.pts { font-weight: 800; color: var(--pitch); }
+    .group-card tbody tr.qualified td { background: rgba(58,181,124,0.08); }
+    .group-team-btn {
+      background: none; border: none; cursor: pointer;
+      color: var(--pitch); font-weight: 600; font-size: 0.82rem;
+      padding: 0; text-align: left; font-family: inherit;
+    }
+    .group-team-btn:hover { text-decoration: underline; }
+    .group-hidden { display: none; }
+
     /* ── TEAM MODAL ── */
     .modal-overlay {
       display: none;
@@ -747,6 +795,7 @@
   <button class="tab-btn"        onclick="showTab('tab2', this)">📊 Team Odds</button>
   <button class="tab-btn"        onclick="showTab('tab3', this)">🏅 Pre-Tournament</button>
   <button class="tab-btn active" onclick="showTab('tab4', this)">🔴 Live Standings</button>
+  <button class="tab-btn"        onclick="showTab('tab5', this)">🗂️ Groups</button>
   <div class="tab-spacer"></div>
   <a class="tab-fixtures-link"
      href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures?country=AU&wtw-filter=ALL"
@@ -1005,6 +1054,18 @@
       </aside>
     </div>
   </div>
+</div>
+
+<!-- ══ TAB 5: GROUPS ══ -->
+<div id="tab5" class="tab-panel">
+  <div class="panel-header">
+    <div class="panel-icon">🗂️</div>
+    <div class="panel-title">Group Standings</div>
+    <div class="panel-header-right">
+      <input class="search-box" type="search" placeholder="Search team…" oninput="filterGroups(this.value)">
+    </div>
+  </div>
+  <div id="groups-container" class="groups-grid"></div>
 </div>
 
 <script>
@@ -1309,6 +1370,9 @@ function renderLive(data) {
 
   renderHighlights(data);
   renderWinners(data);
+  // Render groups now that LIVE_TEAM_STATS is populated (reset cache if re-rendering)
+  delete document.getElementById('groups-container')?.dataset.rendered;
+  renderGroups();
 
   const players = [...data.players].sort((a, b) => b.probability - a.probability);
   const max = players[0]?.probability ?? 1;
@@ -1581,8 +1645,7 @@ const DYK_FACTS = [
 // ═══════════════════════════════════
 function renderWinners(data) {
   const results = data.recent_results || [];
-  const winners = results.filter(r => r.winner);
-  if (!winners.length) return;
+  if (!results.length) return;
 
   // Build reverse lookup: team → player name(s)
   const teamToPlayers = {};
@@ -1591,26 +1654,45 @@ function renderWinners(data) {
     teamToPlayers[t].push(p.name);
   }));
 
-  // Only show rows where a sweepstakes player owns the winning team
-  const rows = winners.map(r => {
-    const players = teamToPlayers[r.winner] || [];
+  // Show all results (wins + draws), but only where a player has a stake
+  const rows = results.map(r => {
+    const teams = r.winner ? [r.winner] : [r.home, r.away];
+    const players = [...new Set(teams.flatMap(t => teamToPlayers[t] || []))];
     return { ...r, players };
   }).filter(r => r.players.length);
 
   if (!rows.length) return;
 
+  // Separate today vs yesterday
+  const today = rows.filter(r => r.days_ago === 0);
+  const yesterday = rows.filter(r => r.days_ago === 1);
+
+  const renderRow = r => {
+    const icon = r.winner ? '🏆' : '🤝';
+    const label = r.winner ? r.players.join(', ') + ' 🎉' : r.players.join(', ');
+    return `<div class="winner-row">
+      <span class="winner-trophy">${icon}</span>
+      <div style="flex:1;min-width:0">
+        <div class="winner-team">${r.winner ? flag(r.winner) + ' ' + r.winner : flag(r.home) + ' ' + r.home + ' vs ' + flag(r.away) + ' ' + r.away}</div>
+        <div class="winner-score">${r.home} ${r.home_goals}–${r.away_goals} ${r.away}</div>
+        <div class="winner-player">${label}</div>
+      </div>
+    </div>`;
+  };
+
+  let html = '';
+  if (today.length) {
+    html += `<div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;opacity:0.65;letter-spacing:0.5px;margin-bottom:4px">Today</div>`;
+    html += today.map(renderRow).join('');
+  }
+  if (yesterday.length) {
+    if (today.length) html += `<div style="margin-top:8px;font-size:0.65rem;font-weight:700;text-transform:uppercase;opacity:0.65;letter-spacing:0.5px;margin-bottom:4px">Yesterday</div>`;
+    html += yesterday.map(renderRow).join('');
+  }
+
   const card = document.getElementById('winners-card');
   card.style.display = 'block';
-  document.getElementById('winners-list').innerHTML = rows.map(r =>
-    `<div class="winner-row">
-       <span class="winner-trophy">🏆</span>
-       <div style="flex:1;min-width:0">
-         <div class="winner-team">${flag(r.winner)} ${r.winner}</div>
-         <div class="winner-score">${r.home} ${r.home_goals}–${r.away_goals} ${r.away}</div>
-         <div class="winner-player">🎉 ${r.players.join(', ')}</div>
-       </div>
-     </div>`
-  ).join('');
+  document.getElementById('winners-list').innerHTML = html;
 
   // Pulse the winners card with a gold glow
   setTimeout(() => {
@@ -1701,13 +1783,90 @@ function filterTable(tbodyId, query, countId) {
 // ═══════════════════════════════════
 // TAB SWITCHING
 // ═══════════════════════════════════
+// ═══════════════════════════════════
+// GROUPS TAB
+// ═══════════════════════════════════
+function renderGroups() {
+  const container = document.getElementById('groups-container');
+  if (!container || container.dataset.rendered) return;
+
+  const ts = LIVE_TEAM_STATS;
+  if (!ts || !Object.keys(ts).length) {
+    container.innerHTML = '<p style="color:var(--text-mid);padding:20px">Live data not loaded yet — visit Live Standings first.</p>';
+    return;
+  }
+
+  // Bucket teams by group
+  const groups = {};
+  Object.entries(ts).forEach(([team, s]) => {
+    const g = (s.group && s.group !== 'Group Stage') ? s.group : 'Unassigned';
+    if (!groups[g]) groups[g] = [];
+    groups[g].push({ team, ...s });
+  });
+
+  // Sort each group: points desc, then goal_diff desc, then goals_for desc
+  const sortGroup = arr => arr.sort((a, b) =>
+    (b.points - a.points) || ((b.goal_diff||0) - (a.goal_diff||0)) || ((b.goals_for||0) - (a.goals_for||0))
+  );
+
+  const groupKeys = Object.keys(groups).sort();
+  container.innerHTML = groupKeys.map(g => {
+    const teams = sortGroup(groups[g]);
+    const rows = teams.map((t, i) => `
+      <tr data-group-team="${t.team.toLowerCase()}">
+        <td><button class="group-team-btn" onclick="openTeamModal('${t.team.replace(/'/g,"\\'")}')">
+          ${flag(t.team)} ${t.team}
+        </button></td>
+        <td>${t.played ?? 0}</td>
+        <td>${t.won ?? 0}</td>
+        <td>${t.drawn ?? 0}</td>
+        <td>${t.lost ?? 0}</td>
+        <td>${t.goals_for ?? 0}</td>
+        <td>${t.goals_against ?? 0}</td>
+        <td>${t.goal_diff != null ? (t.goal_diff > 0 ? '+' : '') + t.goal_diff : 0}</td>
+        <td class="pts">${t.points ?? 0}</td>
+      </tr>`).join('');
+    return `<div class="group-card" data-group="${g.toLowerCase()}">
+      <div class="group-card-title">${g}</div>
+      <table>
+        <thead><tr>
+          <th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th>
+          <th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+  }).join('');
+
+  container.dataset.rendered = '1';
+}
+
+function filterGroups(query) {
+  const q = query.toLowerCase().trim();
+  document.querySelectorAll('#groups-container .group-card').forEach(card => {
+    const rows = card.querySelectorAll('tbody tr');
+    let visible = 0;
+    rows.forEach(row => {
+      const name = row.dataset.groupTeam || '';
+      const show = !q || name.includes(q);
+      row.classList.toggle('group-hidden', !show);
+      if (show) visible++;
+    });
+    card.style.display = (!q || visible > 0) ? '' : 'none';
+  });
+}
+
 function showTab(id, btn) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   btn.classList.add('active');
   if (id === 'tab4') loadLiveData();
-  else setTimeout(animateBars, 50);
+  else if (id === 'tab5') {
+    // If live data already loaded render immediately, else load first
+    if (Object.keys(LIVE_TEAM_STATS).length) renderGroups();
+    else loadLiveData().then && loadLiveData();
+  } else setTimeout(animateBars, 50);
 }
 
 // ═══════════════════════════════════

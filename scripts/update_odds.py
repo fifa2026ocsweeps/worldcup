@@ -274,6 +274,23 @@ def compute_stats_from_matches(all_matches, team_stats):
     if not finished:
         return team_stats
 
+    # ── Group assignment — extract from match group field (standings API returns null) ─
+    team_group = {}
+    for m in all_matches:
+        raw_g = m.get("group") or ""
+        if not raw_g or raw_g.upper() in ("GROUP_STAGE", ""):
+            continue
+        group_name = raw_g.replace("_", " ").title()  # "GROUP_A" → "Group A"
+        home = normalise(m.get("homeTeam", {}).get("name"))
+        away = normalise(m.get("awayTeam", {}).get("name"))
+        if home: team_group[home] = group_name
+        if away: team_group[away] = group_name
+    if team_group:
+        for team, g in team_group.items():
+            if team in team_stats:
+                team_stats[team]["group"] = g
+        print(f"  ✅ Group assignments extracted from match data for {len(team_group)} teams.")
+
     # ── Goals / results — always compute from match results (standings API lags) ─
     print(f"  Computing goal/result stats from {len(finished)} finished matches...")
     computed = {}
@@ -302,10 +319,11 @@ def compute_stats_from_matches(all_matches, team_stats):
                 c["lost"] += 1
 
     for team, c in computed.items():
+        grp = team_group.get(team, team_stats.get(team, {}).get("group", "Group Stage"))
         if team in team_stats:
             team_stats[team].update(c)
         else:
-            team_stats[team] = {**c, "group": "Group Stage", "next_fixture": "No upcoming fixture"}
+            team_stats[team] = {**c, "group": grp, "next_fixture": "No upcoming fixture"}
     print(f"  ✅ Goal/result stats computed for {len(computed)} teams from match results.")
 
     # ── Cards — always compute from bookings in each finished match ──────────
@@ -414,22 +432,26 @@ def fetch_next_fixtures(headers, team_stats):
     return team_stats, []
 
 
-# ─── Build recent results (last 2 days) ──────────────────────────────────────
+# ─── Build recent results (today + yesterday in AEST) ────────────────────────
 def build_recent_results(all_matches):
-    """Return list of finished matches from the last 2 days (AEST)."""
+    """Return finished matches from today and yesterday in AEST (UTC+10).
+    Labelled with their AEST date so the JS can show 'Today' vs 'Yesterday'."""
     from datetime import timezone as tz
     results = []
-    now_utc = datetime.now(tz.utc)
-    cutoff  = now_utc - timedelta(hours=48)
+    now_aest   = datetime.now(tz.utc) + timedelta(hours=10)
+    today_aest = now_aest.date()
     for m in all_matches:
         if m.get("status") != "FINISHED":
             continue
         utc_date = m.get("utcDate", "")
         try:
-            match_dt = datetime.strptime(utc_date[:19], "%Y-%m-%dT%H:%M:%S").replace(tzinfo=tz.utc)
+            match_dt_utc  = datetime.strptime(utc_date[:19], "%Y-%m-%dT%H:%M:%S").replace(tzinfo=tz.utc)
+            match_dt_aest = match_dt_utc + timedelta(hours=10)
+            match_date    = match_dt_aest.date()
         except Exception:
             continue
-        if match_dt < cutoff:
+        days_ago = (today_aest - match_date).days
+        if days_ago > 1:   # only today and yesterday
             continue
         home  = normalise(m.get("homeTeam", {}).get("name"))
         away  = normalise(m.get("awayTeam", {}).get("name"))
@@ -438,15 +460,17 @@ def build_recent_results(all_matches):
         ag    = score.get("away") or 0
         if not home or not away:
             continue
-        winner = home if hg > ag else (away if ag > hg else None)  # None = draw
+        winner = home if hg > ag else (away if ag > hg else None)
         results.append({
             "home": home, "away": away,
             "home_goals": hg, "away_goals": ag,
+            "aest_date": match_date.isoformat(),
+            "days_ago": days_ago,
             "winner": winner,
             "date": utc_date[:10],
         })
-    results.sort(key=lambda x: x["date"], reverse=True)
-    print(f"  ✅ Recent results (last 48h): {len(results)} matches.")
+    results.sort(key=lambda x: (x["days_ago"], x["aest_date"]))
+    print(f"  ✅ Recent results (today/yesterday AEST): {len(results)} matches.")
     return results
 
 
