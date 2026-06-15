@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-15T02:01:37Z",
-  "last_match": "Group Stage: Netherlands 2–2 Japan  (2026-06-14)",
+  "last_updated": "2026-06-15T12:21:40Z",
+  "last_match": "Group Stage: Sweden 5–1 Tunisia  (2026-06-15)",
   "source": "The Odds API (live betting markets)",
   "players": [
     {
@@ -15,7 +15,7 @@
       "teams": [
         "Spain"
       ],
-      "probability": 15.64
+      "probability": 15.63
     },
     {
       "name": "Jon",
@@ -43,7 +43,7 @@
       "teams": [
         "Brazil"
       ],
-      "probability": 7.27
+      "probability": 6.8
     },
     {
       "name": "Georgia",
@@ -57,14 +57,21 @@
       "teams": [
         "Netherlands"
       ],
-      "probability": 4.47
+      "probability": 4.6
     },
     {
       "name": "Eden",
       "teams": [
         "Norway"
       ],
-      "probability": 2.36
+      "probability": 2.43
+    },
+    {
+      "name": "Mark",
+      "teams": [
+        "Morocco"
+      ],
+      "probability": 2.25
     },
     {
       "name": "Rose",
@@ -73,13 +80,6 @@
         "Uzbekistan"
       ],
       "probability": 2.21
-    },
-    {
-      "name": "Mark",
-      "teams": [
-        "Morocco"
-      ],
-      "probability": 2.19
     },
     {
       "name": "Jimmy",
@@ -132,33 +132,33 @@
       "probability": 0.77
     },
     {
-      "name": "Linda",
+      "name": "Lidia",
       "teams": [
-        "Ecuador",
-        "Bosnia & Herzegovina"
+        "Sweden"
       ],
-      "probability": 0.74
+      "probability": 0.72
     },
     {
       "name": "Lach",
       "teams": [
         "Senegal"
       ],
-      "probability": 0.67
+      "probability": 0.7
+    },
+    {
+      "name": "Linda",
+      "teams": [
+        "Ecuador",
+        "Bosnia & Herzegovina"
+      ],
+      "probability": 0.7
     },
     {
       "name": "Sarah",
       "teams": [
         "Australia"
       ],
-      "probability": 0.58
-    },
-    {
-      "name": "Jodie",
-      "teams": [
-        "Côte d'Ivoire"
-      ],
-      "probability": 0.55
+      "probability": 0.59
     },
     {
       "name": "Adele",
@@ -168,18 +168,18 @@
       "probability": 0.54
     },
     {
+      "name": "Jodie",
+      "teams": [
+        "Côte d'Ivoire"
+      ],
+      "probability": 0.51
+    },
+    {
       "name": "Anita",
       "teams": [
         "Austria"
       ],
       "probability": 0.45
-    },
-    {
-      "name": "Lidia",
-      "teams": [
-        "Sweden"
-      ],
-      "probability": 0.41
     },
     {
       "name": "Kash",
@@ -193,21 +193,21 @@
       "teams": [
         "South Korea"
       ],
-      "probability": 0.35
+      "probability": 0.34
     },
     {
       "name": "Clarence",
       "teams": [
         "Canada"
       ],
-      "probability": 0.32
+      "probability": 0.31
     },
     {
       "name": "Simon D",
       "teams": [
         "Scotland"
       ],
-      "probability": 0.3
+      "probability": 0.29
     },
     {
       "name": "Kena",
@@ -336,6 +336,20 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Germany vs Côte d'Ivoire · 2026-06-21 06:00 AEST"
+    },
+    "Sweden": {
+      "group": "Group Stage",
+      "played": 1,
+      "won": 1,
+      "drawn": 0,
+      "lost": 0,
+      "goals_for": 5,
+      "goals_against": 1,
+      "goal_diff": 4,
+      "points": 3,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "Netherlands vs Sweden · 2026-06-21 03:00 AEST"
     },
     "United States": {
       "group": "Group Stage",
@@ -532,34 +546,6 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Scotland vs Morocco · 2026-06-20 08:00 AEST"
-    },
-    "Sweden": {
-      "group": "Group Stage",
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
-      "goal_diff": 0,
-      "points": 0,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Sweden vs Tunisia · 2026-06-15 12:00 AEST"
-    },
-    "Tunisia": {
-      "group": "Group Stage",
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
-      "goal_diff": 0,
-      "points": 0,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Sweden vs Tunisia · 2026-06-15 12:00 AEST"
     },
     "Spain": {
       "group": "Group Stage",
@@ -981,6 +967,20 @@
       "red_cards": 0,
       "next_fixture": "Türkiye vs Paraguay · 2026-06-20 13:00 AEST"
     },
+    "Tunisia": {
+      "group": "Group Stage",
+      "played": 1,
+      "won": 0,
+      "drawn": 0,
+      "lost": 1,
+      "goals_for": 1,
+      "goals_against": 5,
+      "goal_diff": -4,
+      "points": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "Tunisia vs Japan · 2026-06-21 14:00 AEST"
+    },
     "Curaçao": {
       "group": "Group Stage",
       "played": 1,
@@ -1023,6 +1023,12 @@
         "assists": null
       },
       {
+        "name": "Yasin Ayari",
+        "team": "Sweden",
+        "goals": 2,
+        "assists": null
+      },
+      {
         "name": "Julián Quiñones",
         "team": "Mexico",
         "goals": 1,
@@ -1033,16 +1039,18 @@
         "team": "Mexico",
         "goals": 1,
         "assists": null
-      },
-      {
-        "name": "Ladislav Krejčí",
-        "team": "Czechia",
-        "goals": 1,
-        "assists": null
       }
     ]
   },
   "recent_results": [
+    {
+      "home": "Sweden",
+      "away": "Tunisia",
+      "home_goals": 5,
+      "away_goals": 1,
+      "winner": "Sweden",
+      "date": "2026-06-15"
+    },
     {
       "home": "Haiti",
       "away": "Scotland",
