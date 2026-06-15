@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-14T22:43:08Z",
+  "last_updated": "2026-06-15T02:01:37Z",
   "last_match": "Group Stage: Netherlands 2–2 Japan  (2026-06-14)",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -8,56 +8,56 @@
       "teams": [
         "France"
       ],
-      "probability": 16.05
+      "probability": 16.19
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 15.66
+      "probability": 15.64
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 10.42
+      "probability": 10.4
     },
     {
       "name": "MEJ (Michael)",
       "teams": [
         "Portugal"
       ],
-      "probability": 9.89
+      "probability": 9.87
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 7.81
+      "probability": 7.8
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 7.12
+      "probability": 7.27
     },
     {
       "name": "Georgia",
       "teams": [
         "Germany"
       ],
-      "probability": 5.72
+      "probability": 5.71
     },
     {
       "name": "Orgil",
       "teams": [
         "Netherlands"
       ],
-      "probability": 4.61
+      "probability": 4.47
     },
     {
       "name": "Eden",
@@ -79,7 +79,7 @@
       "teams": [
         "Morocco"
       ],
-      "probability": 2.21
+      "probability": 2.19
     },
     {
       "name": "Jimmy",
@@ -94,36 +94,28 @@
       "teams": [
         "Japan"
       ],
-      "probability": 1.72
+      "probability": 1.65
     },
     {
       "name": "Alistair",
       "teams": [
         "Colombia"
       ],
-      "probability": 1.48
+      "probability": 1.44
     },
     {
       "name": "Marcelo",
       "teams": [
         "Mexico"
       ],
-      "probability": 1.45
+      "probability": 1.38
     },
     {
       "name": "Tess",
       "teams": [
         "Switzerland"
       ],
-      "probability": 0.98
-    },
-    {
-      "name": "Linda",
-      "teams": [
-        "Ecuador",
-        "Bosnia & Herzegovina"
-      ],
-      "probability": 0.98
+      "probability": 1.01
     },
     {
       "name": "Pip",
@@ -140,18 +132,33 @@
       "probability": 0.77
     },
     {
+      "name": "Linda",
+      "teams": [
+        "Ecuador",
+        "Bosnia & Herzegovina"
+      ],
+      "probability": 0.74
+    },
+    {
       "name": "Lach",
       "teams": [
         "Senegal"
       ],
-      "probability": 0.68
+      "probability": 0.67
     },
     {
       "name": "Sarah",
       "teams": [
         "Australia"
       ],
-      "probability": 0.57
+      "probability": 0.58
+    },
+    {
+      "name": "Jodie",
+      "teams": [
+        "Côte d'Ivoire"
+      ],
+      "probability": 0.55
     },
     {
       "name": "Adele",
@@ -165,14 +172,14 @@
       "teams": [
         "Austria"
       ],
-      "probability": 0.46
+      "probability": 0.45
     },
     {
       "name": "Lidia",
       "teams": [
         "Sweden"
       ],
-      "probability": 0.4
+      "probability": 0.41
     },
     {
       "name": "Kash",
@@ -182,32 +189,25 @@
       "probability": 0.4
     },
     {
-      "name": "Jodie",
-      "teams": [
-        "Côte d'Ivoire"
-      ],
-      "probability": 0.33
-    },
-    {
       "name": "Sanaz",
       "teams": [
         "South Korea"
       ],
-      "probability": 0.32
+      "probability": 0.35
     },
     {
       "name": "Clarence",
       "teams": [
         "Canada"
       ],
-      "probability": 0.29
+      "probability": 0.32
     },
     {
       "name": "Simon D",
       "teams": [
         "Scotland"
       ],
-      "probability": 0.28
+      "probability": 0.3
     },
     {
       "name": "Kena",
@@ -221,14 +221,14 @@
       "teams": [
         "Algeria"
       ],
-      "probability": 0.16
+      "probability": 0.17
     },
     {
       "name": "Reino",
       "teams": [
         "Paraguay"
       ],
-      "probability": 0.14
+      "probability": 0.16
     },
     {
       "name": "Josh",
@@ -335,7 +335,7 @@
       "points": 3,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Germany vs Côte d'Ivoire · 2026-06-20 06:00 AEST"
+      "next_fixture": "Germany vs Côte d'Ivoire · 2026-06-21 06:00 AEST"
     },
     "United States": {
       "group": "Group Stage",
@@ -349,7 +349,7 @@
       "points": 3,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "United States vs Australia · 2026-06-19 05:00 AEST"
+      "next_fixture": "United States vs Australia · 2026-06-20 05:00 AEST"
     },
     "Mexico": {
       "group": "Group Stage",
@@ -377,7 +377,7 @@
       "points": 3,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "United States vs Australia · 2026-06-19 05:00 AEST"
+      "next_fixture": "United States vs Australia · 2026-06-20 05:00 AEST"
     },
     "South Korea": {
       "group": "Group Stage",
@@ -405,7 +405,21 @@
       "points": 3,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Scotland vs Morocco · 2026-06-19 08:00 AEST"
+      "next_fixture": "Scotland vs Morocco · 2026-06-20 08:00 AEST"
+    },
+    "Côte d'Ivoire": {
+      "group": "Group Stage",
+      "played": 1,
+      "won": 1,
+      "drawn": 0,
+      "lost": 0,
+      "goals_for": 1,
+      "goals_against": 0,
+      "goal_diff": 1,
+      "points": 3,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "Germany vs Côte d'Ivoire · 2026-06-21 06:00 AEST"
     },
     "Netherlands": {
       "group": "Group Stage",
@@ -419,7 +433,7 @@
       "points": 1,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Netherlands vs Sweden · 2026-06-20 03:00 AEST"
+      "next_fixture": "Netherlands vs Sweden · 2026-06-21 03:00 AEST"
     },
     "Japan": {
       "group": "Group Stage",
@@ -447,7 +461,7 @@
       "points": 1,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Canada vs Qatar · 2026-06-18 08:00 AEST"
+      "next_fixture": "Canada vs Qatar · 2026-06-19 08:00 AEST"
     },
     "Bosnia & Herzegovina": {
       "group": "Group Stage",
@@ -461,7 +475,7 @@
       "points": 1,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Switzerland vs Bosnia & Herzegovina · 2026-06-18 05:00 AEST"
+      "next_fixture": "Switzerland vs Bosnia & Herzegovina · 2026-06-19 05:00 AEST"
     },
     "Qatar": {
       "group": "Group Stage",
@@ -475,7 +489,7 @@
       "points": 1,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Canada vs Qatar · 2026-06-18 08:00 AEST"
+      "next_fixture": "Canada vs Qatar · 2026-06-19 08:00 AEST"
     },
     "Switzerland": {
       "group": "Group Stage",
@@ -489,7 +503,7 @@
       "points": 1,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Switzerland vs Bosnia & Herzegovina · 2026-06-18 05:00 AEST"
+      "next_fixture": "Switzerland vs Bosnia & Herzegovina · 2026-06-19 05:00 AEST"
     },
     "Brazil": {
       "group": "Group Stage",
@@ -517,35 +531,7 @@
       "points": 1,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Scotland vs Morocco · 2026-06-19 08:00 AEST"
-    },
-    "Côte d'Ivoire": {
-      "group": "Group Stage",
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
-      "goal_diff": 0,
-      "points": 0,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Côte d'Ivoire vs Ecuador · 2026-06-14 09:00 AEST"
-    },
-    "Ecuador": {
-      "group": "Group Stage",
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
-      "goal_diff": 0,
-      "points": 0,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Côte d'Ivoire vs Ecuador · 2026-06-14 09:00 AEST"
+      "next_fixture": "Scotland vs Morocco · 2026-06-20 08:00 AEST"
     },
     "Sweden": {
       "group": "Group Stage",
@@ -587,7 +573,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Spain vs Cape Verde · 2026-06-15 02:00 AEST"
+      "next_fixture": "Spain vs Cape Verde · 2026-06-16 02:00 AEST"
     },
     "Cape Verde": {
       "group": "Group Stage",
@@ -601,7 +587,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Spain vs Cape Verde · 2026-06-15 02:00 AEST"
+      "next_fixture": "Spain vs Cape Verde · 2026-06-16 02:00 AEST"
     },
     "Belgium": {
       "group": "Group Stage",
@@ -615,7 +601,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Belgium vs Egypt · 2026-06-15 05:00 AEST"
+      "next_fixture": "Belgium vs Egypt · 2026-06-16 05:00 AEST"
     },
     "Egypt": {
       "group": "Group Stage",
@@ -629,7 +615,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Belgium vs Egypt · 2026-06-15 05:00 AEST"
+      "next_fixture": "Belgium vs Egypt · 2026-06-16 05:00 AEST"
     },
     "Saudi Arabia": {
       "group": "Group Stage",
@@ -643,7 +629,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Saudi Arabia vs Uruguay · 2026-06-15 08:00 AEST"
+      "next_fixture": "Saudi Arabia vs Uruguay · 2026-06-16 08:00 AEST"
     },
     "Uruguay": {
       "group": "Group Stage",
@@ -657,7 +643,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Saudi Arabia vs Uruguay · 2026-06-15 08:00 AEST"
+      "next_fixture": "Saudi Arabia vs Uruguay · 2026-06-16 08:00 AEST"
     },
     "Iran": {
       "group": "Group Stage",
@@ -699,7 +685,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "France vs Senegal · 2026-06-16 05:00 AEST"
+      "next_fixture": "France vs Senegal · 2026-06-17 05:00 AEST"
     },
     "Senegal": {
       "group": "Group Stage",
@@ -713,7 +699,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "France vs Senegal · 2026-06-16 05:00 AEST"
+      "next_fixture": "France vs Senegal · 2026-06-17 05:00 AEST"
     },
     "Iraq": {
       "group": "Group Stage",
@@ -727,7 +713,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Iraq vs Norway · 2026-06-16 08:00 AEST"
+      "next_fixture": "Iraq vs Norway · 2026-06-17 08:00 AEST"
     },
     "Norway": {
       "group": "Group Stage",
@@ -741,7 +727,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Iraq vs Norway · 2026-06-16 08:00 AEST"
+      "next_fixture": "Iraq vs Norway · 2026-06-17 08:00 AEST"
     },
     "Argentina": {
       "group": "Group Stage",
@@ -811,7 +797,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Portugal vs DR Congo · 2026-06-17 03:00 AEST"
+      "next_fixture": "Portugal vs DR Congo · 2026-06-18 03:00 AEST"
     },
     "DR Congo": {
       "group": "Group Stage",
@@ -825,7 +811,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Portugal vs DR Congo · 2026-06-17 03:00 AEST"
+      "next_fixture": "Portugal vs DR Congo · 2026-06-18 03:00 AEST"
     },
     "England": {
       "group": "Group Stage",
@@ -839,7 +825,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "England vs Croatia · 2026-06-17 06:00 AEST"
+      "next_fixture": "England vs Croatia · 2026-06-18 06:00 AEST"
     },
     "Croatia": {
       "group": "Group Stage",
@@ -853,7 +839,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "England vs Croatia · 2026-06-17 06:00 AEST"
+      "next_fixture": "England vs Croatia · 2026-06-18 06:00 AEST"
     },
     "Ghana": {
       "group": "Group Stage",
@@ -867,7 +853,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Ghana vs Panama · 2026-06-17 09:00 AEST"
+      "next_fixture": "Ghana vs Panama · 2026-06-18 09:00 AEST"
     },
     "Panama": {
       "group": "Group Stage",
@@ -881,7 +867,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Ghana vs Panama · 2026-06-17 09:00 AEST"
+      "next_fixture": "Ghana vs Panama · 2026-06-18 09:00 AEST"
     },
     "Uzbekistan": {
       "group": "Group Stage",
@@ -923,7 +909,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Czechia vs South Africa · 2026-06-18 02:00 AEST"
+      "next_fixture": "Czechia vs South Africa · 2026-06-19 02:00 AEST"
     },
     "Haiti": {
       "group": "Group Stage",
@@ -939,6 +925,20 @@
       "red_cards": 0,
       "next_fixture": "Brazil vs Haiti · 2026-06-20 10:30 AEST"
     },
+    "Ecuador": {
+      "group": "Group Stage",
+      "played": 1,
+      "won": 0,
+      "drawn": 0,
+      "lost": 1,
+      "goals_for": 0,
+      "goals_against": 1,
+      "goal_diff": -1,
+      "points": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "Ecuador vs Curaçao · 2026-06-21 10:00 AEST"
+    },
     "South Africa": {
       "group": "Group Stage",
       "played": 1,
@@ -951,7 +951,7 @@
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Czechia vs South Africa · 2026-06-18 02:00 AEST"
+      "next_fixture": "Czechia vs South Africa · 2026-06-19 02:00 AEST"
     },
     "Türkiye": {
       "group": "Group Stage",
@@ -1076,12 +1076,12 @@
       "date": "2026-06-14"
     },
     {
-      "home": "United States",
-      "away": "Paraguay",
-      "home_goals": 4,
-      "away_goals": 1,
-      "winner": "United States",
-      "date": "2026-06-13"
+      "home": "Côte d'Ivoire",
+      "away": "Ecuador",
+      "home_goals": 1,
+      "away_goals": 0,
+      "winner": "Côte d'Ivoire",
+      "date": "2026-06-14"
     },
     {
       "home": "Qatar",
