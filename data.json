@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-15T23:11:35Z",
+  "last_updated": "2026-06-15T23:14:47Z",
   "last_match": "Group Stage: Belgium 1–1 Egypt  (2026-06-15)",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -8,28 +8,28 @@
       "teams": [
         "France"
       ],
-      "probability": 16.59
+      "probability": 16.58
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 14.66
+      "probability": 14.65
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 10.58
+      "probability": 10.57
     },
     {
       "name": "MEJ (Michael)",
       "teams": [
         "Portugal"
       ],
-      "probability": 10.03
+      "probability": 10.02
     },
     {
       "name": "Matt",
@@ -43,7 +43,7 @@
       "teams": [
         "Brazil"
       ],
-      "probability": 6.98
+      "probability": 6.97
     },
     {
       "name": "Georgia",
@@ -57,7 +57,7 @@
       "teams": [
         "Netherlands"
       ],
-      "probability": 4.65
+      "probability": 4.68
     },
     {
       "name": "Eden",
@@ -71,7 +71,7 @@
       "teams": [
         "Morocco"
       ],
-      "probability": 2.33
+      "probability": 2.32
     },
     {
       "name": "Jimmy",
@@ -118,19 +118,19 @@
       "probability": 0.95
     },
     {
-      "name": "Denis",
-      "teams": [
-        "Croatia"
-      ],
-      "probability": 0.74
-    },
-    {
       "name": "Linda",
       "teams": [
         "Ecuador",
         "Bosnia & Herzegovina"
       ],
       "probability": 0.74
+    },
+    {
+      "name": "Denis",
+      "teams": [
+        "Croatia"
+      ],
+      "probability": 0.73
     },
     {
       "name": "Pip",
@@ -144,7 +144,7 @@
       "teams": [
         "Senegal"
       ],
-      "probability": 0.71
+      "probability": 0.72
     },
     {
       "name": "Lidia",
@@ -252,16 +252,16 @@
       "probability": 0.12
     },
     {
-      "name": "Kath",
-      "teams": [
-        "DR Congo"
-      ],
-      "probability": 0.1
-    },
-    {
       "name": "Daniel",
       "teams": [
         "Saudi Arabia"
+      ],
+      "probability": 0.11
+    },
+    {
+      "name": "Kath",
+      "teams": [
+        "DR Congo"
       ],
       "probability": 0.1
     },
