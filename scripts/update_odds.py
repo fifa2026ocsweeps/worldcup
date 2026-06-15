@@ -383,18 +383,17 @@ def fetch_next_fixtures(headers, team_stats):
             if not home or not away:
                 continue
             utc_date = m.get("utcDate", "")
-            date_str = utc_date[:10]
-            # Convert UTC time to AEST (UTC+10)
-            time_str = ""
+            # Convert UTC to AEST (UTC+10) using proper datetime arithmetic
+            fixture_str = f"{home} vs {away}"
             if len(utc_date) >= 16:
                 try:
-                    dt = datetime.strptime(utc_date[:16], "%Y-%m-%dT%H:%M")
-                    aest_hour = (dt.hour + 10) % 24
-                    time_str = f" {aest_hour:02d}:{dt.minute:02d} AEST"
+                    dt_utc  = datetime.strptime(utc_date[:16], "%Y-%m-%dT%H:%M")
+                    dt_aest = dt_utc + timedelta(hours=10)
+                    fixture_str += f" · {dt_aest.strftime('%Y-%m-%d')} {dt_aest.strftime('%H:%M')} AEST"
                 except Exception:
-                    pass
-            stage = m.get("stage", "").replace("_", " ").title()
-            fixture_str = f"{home} vs {away} · {date_str}{time_str}"
+                    fixture_str += f" · {utc_date[:10]}"
+            else:
+                fixture_str += f" · {utc_date[:10]}"
             for team in (home, away):
                 if team not in next_fix:  # only store first (soonest) fixture
                     next_fix[team] = fixture_str
