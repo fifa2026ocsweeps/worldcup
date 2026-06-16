@@ -533,9 +533,15 @@
     /* ── GROUPS TAB ── */
     .groups-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
       padding: 4px 0 16px;
+    }
+    @media (max-width: 900px) {
+      .groups-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .groups-grid { grid-template-columns: 1fr; }
     }
     .group-card {
       background: var(--card);
@@ -1788,7 +1794,7 @@ function filterTable(tbodyId, query, countId) {
 // ═══════════════════════════════════
 function renderGroups() {
   const container = document.getElementById('groups-container');
-  if (!container || container.dataset.rendered) return;
+  if (!container) return;
 
   const ts = LIVE_TEAM_STATS;
   if (!ts || !Object.keys(ts).length) {
@@ -1838,7 +1844,7 @@ function renderGroups() {
     </div>`;
   }).join('');
 
-  container.dataset.rendered = '1';
+
 }
 
 function filterGroups(query) {
