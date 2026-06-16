@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-16T00:00:34Z",
+  "last_updated": "2026-06-16T00:04:58Z",
   "last_match": "Group Stage: Belgium 1–1 Egypt  (2026-06-15)",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -29,21 +29,21 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 10.1
+      "probability": 10.11
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 7.82
+      "probability": 7.83
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.97
+      "probability": 6.98
     },
     {
       "name": "Georgia",
@@ -71,7 +71,7 @@
       "teams": [
         "Morocco"
       ],
-      "probability": 2.32
+      "probability": 2.33
     },
     {
       "name": "Jimmy",
@@ -122,14 +122,14 @@
       "teams": [
         "Uruguay"
       ],
-      "probability": 0.83
+      "probability": 0.82
     },
     {
       "name": "Denis",
       "teams": [
         "Croatia"
       ],
-      "probability": 0.73
+      "probability": 0.74
     },
     {
       "name": "Lach",
@@ -575,6 +575,34 @@
       "red_cards": 0,
       "next_fixture": "New Zealand vs Egypt · 2026-06-22 11:00 AEST"
     },
+    "Saudi Arabia": {
+      "group": "Group H",
+      "played": 0,
+      "won": 0,
+      "drawn": 0,
+      "lost": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_diff": 0,
+      "points": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "Spain vs Saudi Arabia · 2026-06-22 02:00 AEST"
+    },
+    "Uruguay": {
+      "group": "Group H",
+      "played": 1,
+      "won": 0,
+      "drawn": 1,
+      "lost": 0,
+      "goals_for": 1,
+      "goals_against": 1,
+      "goal_diff": 0,
+      "points": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "Uruguay vs Cape Verde · 2026-06-22 08:00 AEST"
+    },
     "Spain": {
       "group": "Group H",
       "played": 1,
@@ -599,34 +627,6 @@
       "goals_against": 0,
       "goal_diff": 0,
       "points": 1,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Uruguay vs Cape Verde · 2026-06-22 08:00 AEST"
-    },
-    "Saudi Arabia": {
-      "group": "Group H",
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
-      "goal_diff": 0,
-      "points": 0,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Spain vs Saudi Arabia · 2026-06-22 02:00 AEST"
-    },
-    "Uruguay": {
-      "group": "Group H",
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "goals_for": 0,
-      "goals_against": 0,
-      "goal_diff": 0,
-      "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Uruguay vs Cape Verde · 2026-06-22 08:00 AEST"
