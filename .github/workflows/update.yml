@@ -2,8 +2,12 @@ name: Update Live Standings (Scheduled)
 
 on:
   schedule:
-    # 4:00 PM AEST = 06:00 UTC (AEST is UTC+10, no daylight saving in Jun–Jul)
-    - cron: '0 6 * * *'
+    # 6:00 AM AEST  = 20:00 UTC (prev day) — AEST is UTC+10, no DST in Jun–Jul
+    - cron: '0 20 * * *'
+    # 11:00 AM AEST = 01:00 UTC
+    - cron: '0 1 * * *'
+    # 3:00 PM AEST  = 05:00 UTC
+    - cron: '0 5 * * *'
   workflow_dispatch:   # Allow manual trigger from GitHub Actions tab
 
 permissions:
