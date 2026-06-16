@@ -1660,12 +1660,11 @@ function renderWinners(data) {
     teamToPlayers[t].push(p.name);
   }));
 
-  // Show all results (wins + draws), but only where a player has a stake
-  const rows = results.map(r => {
-    const teams = r.winner ? [r.winner] : [r.home, r.away];
-    const players = [...new Set(teams.flatMap(t => teamToPlayers[t] || []))];
-    return { ...r, players };
-  }).filter(r => r.players.length);
+  // Only show wins (no draws), and only where a sweepstakes player owns the winner
+  const rows = results
+    .filter(r => r.winner)
+    .map(r => ({ ...r, players: teamToPlayers[r.winner] || [] }))
+    .filter(r => r.players.length);
 
   if (!rows.length) return;
 
