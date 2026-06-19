@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-19T06:08:06Z",
+  "last_updated": "2026-06-19T09:27:55Z",
   "last_match": "Group Stage: Mexico 1–0 South Korea  (2026-06-19)",
   "source": "The Odds API (live betting markets)",
   "players": [
@@ -8,21 +8,21 @@
       "teams": [
         "France"
       ],
-      "probability": 18.27
+      "probability": 18.28
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 12.99
+      "probability": 13.21
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 12.61
+      "probability": 12.52
     },
     {
       "name": "Matt",
@@ -50,7 +50,7 @@
       "teams": [
         "Germany"
       ],
-      "probability": 5.79
+      "probability": 5.8
     },
     {
       "name": "Orgil",
@@ -108,7 +108,7 @@
       "teams": [
         "Mexico"
       ],
-      "probability": 1.5
+      "probability": 1.44
     },
     {
       "name": "Tess",
@@ -137,14 +137,7 @@
         "Ecuador",
         "Bosnia & Herzegovina"
       ],
-      "probability": 0.66
-    },
-    {
-      "name": "Denis",
-      "teams": [
-        "Croatia"
-      ],
-      "probability": 0.63
+      "probability": 0.64
     },
     {
       "name": "Pip",
@@ -154,39 +147,46 @@
       "probability": 0.63
     },
     {
+      "name": "Denis",
+      "teams": [
+        "Croatia"
+      ],
+      "probability": 0.62
+    },
+    {
       "name": "Lidia",
       "teams": [
         "Sweden"
       ],
-      "probability": 0.58
-    },
-    {
-      "name": "Clarence",
-      "teams": [
-        "Canada"
-      ],
-      "probability": 0.48
+      "probability": 0.59
     },
     {
       "name": "Anita",
       "teams": [
         "Austria"
       ],
-      "probability": 0.47
+      "probability": 0.46
+    },
+    {
+      "name": "Clarence",
+      "teams": [
+        "Canada"
+      ],
+      "probability": 0.46
     },
     {
       "name": "Adele",
       "teams": [
         "Türkiye"
       ],
-      "probability": 0.44
+      "probability": 0.45
     },
     {
       "name": "Jodie",
       "teams": [
         "Côte d'Ivoire"
       ],
-      "probability": 0.43
+      "probability": 0.42
     },
     {
       "name": "Kash",
@@ -200,7 +200,7 @@
       "teams": [
         "South Korea"
       ],
-      "probability": 0.29
+      "probability": 0.28
     },
     {
       "name": "Kena",
