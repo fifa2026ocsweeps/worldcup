@@ -1993,11 +1993,14 @@ function renderTimeline() {
     return `${months[+m]} ${+d}`;
   };
 
+  // Find active stage; if in a gap between stages, highlight the next upcoming one
+  let currentIdx = STAGES.findIndex(s => todayStr >= s.start && todayStr <= s.end);
+  if (currentIdx === -1)
+    currentIdx = STAGES.findIndex(s => todayStr < s.start); // next upcoming
+
   const container = document.getElementById('tl-stages');
   container.innerHTML = STAGES.map((s, i) => {
-    let cls = 'future';
-    if (todayStr > s.end)         cls = 'past';
-    else if (todayStr >= s.start) cls = 'current';
+    const cls = i < currentIdx ? 'past' : i === currentIdx ? 'current' : 'future';
 
     const dates = s.start === s.end
       ? fmt(s.start)
