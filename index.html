@@ -104,6 +104,86 @@
     }
     .countdown-strip span { opacity: 0.7; font-weight: 500; margin: 0 6px; }
 
+    /* ── TOURNAMENT TIMELINE ── */
+    .tournament-timeline {
+      background: var(--pitch);
+      padding: 0 20px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      display: flex;
+      align-items: stretch;
+    }
+    .tournament-timeline::-webkit-scrollbar { display: none; }
+    .tl-stages {
+      display: flex;
+      align-items: center;
+      min-width: max-content;
+      margin: 0 auto;
+      padding: 0;
+    }
+    .tl-stage {
+      display: flex;
+      align-items: center;
+      padding: 10px 14px;
+      position: relative;
+      cursor: default;
+      border-bottom: 3px solid transparent;
+      transition: background 0.15s;
+    }
+    .tl-stage:hover { background: rgba(255,255,255,0.07); }
+    .tl-stage-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1px;
+      white-space: nowrap;
+    }
+    .tl-name {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .tl-dates {
+      font-size: 0.6rem;
+      color: rgba(255,255,255,0.35);
+      font-weight: 500;
+    }
+    /* connector arrow between stages */
+    .tl-arrow {
+      color: rgba(255,255,255,0.2);
+      font-size: 0.7rem;
+      flex-shrink: 0;
+      padding: 0 2px;
+    }
+    /* past stage */
+    .tl-stage.past .tl-name  { color: rgba(255,255,255,0.45); }
+    .tl-stage.past .tl-dates { color: rgba(255,255,255,0.28); }
+    /* current stage */
+    .tl-stage.current {
+      border-bottom-color: var(--gold);
+      background: rgba(200,169,110,0.12);
+    }
+    .tl-stage.current .tl-name {
+      color: var(--gold);
+      font-size: 0.7rem;
+    }
+    .tl-stage.current .tl-dates { color: rgba(200,169,110,0.8); }
+    .tl-stage.current::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 50%;
+      transform: translateX(-50%);
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+    /* future stage */
+    .tl-stage.future .tl-name  { color: rgba(255,255,255,0.3); }
+    .tl-stage.future .tl-dates { color: rgba(255,255,255,0.2); }
+
     /* ── TABS ── */
     .tab-bar {
       background: var(--card);
@@ -793,6 +873,11 @@
 
 <div class="countdown-strip">
   🏆 48 Teams &nbsp;<span>·</span>&nbsp; 104 Matches &nbsp;<span>·</span>&nbsp; 3 Host Nations &nbsp;<span>·</span>&nbsp; 1 Champion
+</div>
+
+<!-- ══ TOURNAMENT TIMELINE ══ -->
+<div class="tournament-timeline">
+  <div class="tl-stages" id="tl-stages"></div>
 </div>
 
 <!-- ══ TABS ══ -->
@@ -1881,7 +1966,53 @@ renderDraw();
 renderTeams();
 renderStaticPlayers();
 renderDyk();
+renderTimeline();
 loadLiveData();
+
+// ═══════════════════════════════════
+// TOURNAMENT TIMELINE
+// ═══════════════════════════════════
+function renderTimeline() {
+  const STAGES = [
+    { name: 'Group Stage',    start: '2026-06-11', end: '2026-06-27' },
+    { name: 'Round of 32',    start: '2026-06-28', end: '2026-07-03' },
+    { name: 'Round of 16',    start: '2026-07-04', end: '2026-07-07' },
+    { name: 'Quarterfinals',  start: '2026-07-09', end: '2026-07-11' },
+    { name: 'Semifinals',     start: '2026-07-14', end: '2026-07-15' },
+    { name: '3rd Place',      start: '2026-07-18', end: '2026-07-18' },
+    { name: 'Final',          start: '2026-07-19', end: '2026-07-19' },
+  ];
+
+  // Today in AEST (UTC+10)
+  const nowAEST = new Date(Date.now() + 10 * 60 * 60 * 1000);
+  const todayStr = nowAEST.toISOString().slice(0, 10);
+
+  const fmt = iso => {
+    const [, m, d] = iso.split('-');
+    const months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return `${months[+m]} ${+d}`;
+  };
+
+  const container = document.getElementById('tl-stages');
+  container.innerHTML = STAGES.map((s, i) => {
+    let cls = 'future';
+    if (todayStr > s.end)         cls = 'past';
+    else if (todayStr >= s.start) cls = 'current';
+
+    const dates = s.start === s.end
+      ? fmt(s.start)
+      : `${fmt(s.start)} – ${fmt(s.end)}`;
+
+    const arrow = i < STAGES.length - 1 ? '<span class="tl-arrow">›</span>' : '';
+
+    return `<div class="tl-stage ${cls}">
+      <div class="tl-stage-inner">
+        <span class="tl-name">${s.name}</span>
+        <span class="tl-dates">${dates}</span>
+      </div>
+    </div>${arrow}`;
+  }).join('');
+}
 </script>
 </body>
 </html>
