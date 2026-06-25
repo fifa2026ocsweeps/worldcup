@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-25T00:43:28Z",
+  "last_updated": "2026-06-25T00:46:17Z",
   "last_match": "Group Stage: Scotland 0–3 Brazil  (2026-06-24)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "GROUP_STAGE",
@@ -9,7 +9,7 @@
       "teams": [
         "France"
       ],
-      "probability": 17.82
+      "probability": 17.83
     },
     {
       "name": "Alan",
@@ -51,7 +51,7 @@
       "teams": [
         "Germany"
       ],
-      "probability": 5.84
+      "probability": 5.85
     },
     {
       "name": "Orgil",
@@ -73,7 +73,7 @@
       "teams": [
         "Norway"
       ],
-      "probability": 2.51
+      "probability": 2.52
     },
     {
       "name": "Mark",
@@ -116,7 +116,7 @@
       "teams": [
         "Mexico"
       ],
-      "probability": 1.17
+      "probability": 1.16
     },
     {
       "name": "Adele",
@@ -250,7 +250,7 @@
       "teams": [
         "Iran"
       ],
-      "probability": 0.13
+      "probability": 0.12
     },
     {
       "name": "Fiona",
