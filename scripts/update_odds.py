@@ -421,6 +421,7 @@ def fetch_next_fixtures(headers, team_stats):
 
         print(f"  ✅ Next fixtures mapped for {len(next_fix)} teams.")
 
+        team_stats = compute_advancement(all_matches, team_stats)
         recent = build_recent_results(all_matches)
         return team_stats, recent
 
@@ -430,6 +431,118 @@ def fetch_next_fixtures(headers, team_stats):
             team_stats[team].setdefault("next_fixture", "No upcoming fixture")
 
     return team_stats, []
+
+
+# ─── Compute team advancement status ─────────────────────────────────────────
+STAGE_ORDER = [
+    "GROUP_STAGE", "ROUND_OF_32", "ROUND_OF_16",
+    "QUARTER_FINALS", "SEMI_FINALS", "THIRD_PLACE", "FINAL",
+]
+
+def compute_advancement(all_matches, team_stats):
+    """
+    Sets advanced_to on each team in team_stats.
+    During group stage: provisional top-2 per group → ROUND_OF_32, rest → None.
+    During knockout stages: uses actual fixture appearances and match results.
+    Also returns the current_stage string for the top-level data.json field.
+    """
+    # Determine current stage = highest-order stage with a FINISHED or IN_PLAY match
+    active_stages = set()
+    for m in all_matches:
+        if m.get("status") in ("FINISHED", "IN_PLAY"):
+            s = m.get("stage", "").upper()
+            if s in STAGE_ORDER:
+                active_stages.add(s)
+
+    current_stage = "GROUP_STAGE"
+    for s in reversed(STAGE_ORDER):
+        if s in active_stages:
+            current_stage = s
+            break
+
+    print(f"  Tournament stage detected: {current_stage}")
+
+    # Reset advanced_to for all teams
+    for team in team_stats:
+        team_stats[team]["advanced_to"] = None
+
+    if current_stage == "GROUP_STAGE":
+        # Provisional: top 2 per group advance
+        groups = {}
+        for team, s in team_stats.items():
+            g = s.get("group", "Unassigned")
+            if g == "Group Stage": g = "Unassigned"
+            groups.setdefault(g, []).append(team)
+
+        for g, teams in groups.items():
+            sorted_teams = sorted(
+                teams,
+                key=lambda t: (
+                    team_stats[t].get("points", 0),
+                    team_stats[t].get("goal_diff", 0),
+                    team_stats[t].get("goals_for", 0),
+                ),
+                reverse=True,
+            )
+            for i, team in enumerate(sorted_teams):
+                if i < 2:
+                    team_stats[team]["advanced_to"] = "ROUND_OF_32"
+                # positions 2+ stay None
+
+    else:
+        # Knockout stage: build team → highest stage they appear in (any status)
+        team_best_stage = {}
+        for m in all_matches:
+            stage = m.get("stage", "").upper()
+            if stage not in STAGE_ORDER:
+                continue
+            home = normalise(m.get("homeTeam", {}).get("name"))
+            away = normalise(m.get("awayTeam", {}).get("name"))
+            for team in (home, away):
+                if not team:
+                    continue
+                prev = team_best_stage.get(team)
+                if prev is None or STAGE_ORDER.index(stage) > STAGE_ORDER.index(prev):
+                    team_best_stage[team] = stage
+
+        # Set advanced_to from best stage seen
+        for team in team_stats:
+            best = team_best_stage.get(team)
+            if best:
+                team_stats[team]["advanced_to"] = best
+            else:
+                team_stats[team]["advanced_to"] = "eliminated"
+
+        # Mark losers of FINISHED knockout matches as eliminated
+        # (except THIRD_PLACE which doesn't affect Groups tab)
+        knockout_stages = set(STAGE_ORDER) - {"GROUP_STAGE", "THIRD_PLACE"}
+        for m in all_matches:
+            if m.get("status") != "FINISHED":
+                continue
+            stage = m.get("stage", "").upper()
+            if stage not in knockout_stages:
+                continue
+            score = m.get("score", {}).get("fullTime", {})
+            hg = score.get("home") or 0
+            ag = score.get("away") or 0
+            home = normalise(m.get("homeTeam", {}).get("name"))
+            away = normalise(m.get("awayTeam", {}).get("name"))
+            if hg == ag:
+                continue  # draw in knockout = likely went to pens; skip (fixture data handles)
+            loser = away if hg > ag else home
+            winner = home if hg > ag else away
+            if loser and loser in team_stats:
+                team_stats[loser]["advanced_to"] = "eliminated"
+            if winner and stage == "FINAL" and winner in team_stats:
+                team_stats[winner]["advanced_to"] = "WINNER"
+
+    adv_count = sum(1 for s in team_stats.values() if s.get("advanced_to") not in (None, "eliminated"))
+    elim_count = sum(1 for s in team_stats.values() if s.get("advanced_to") == "eliminated")
+    print(f"  ✅ Advancement: {adv_count} advancing, {elim_count} eliminated, stage={current_stage}")
+
+    # Store current_stage on a sentinel key so fetch_next_fixtures can return it
+    team_stats["__tournament_stage__"] = current_stage
+    return team_stats
 
 
 # ─── Build recent results (today + yesterday in AEST) ────────────────────────
@@ -684,14 +797,18 @@ def main():
 
     # ── Build output ──────────────────────────────────────────────────────────
     players = compute_players(team_probs)
+    # Extract sentinel set by compute_advancement, then remove it from team_stats
+    tournament_stage = team_stats.pop("__tournament_stage__", "GROUP_STAGE")
+
     output = {
-        "last_updated":  datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "last_match":    last_match,
-        "source":        source,
-        "players":       players,
-        "team_stats":      team_stats,
-        "highlights":      highlights,
-        "recent_results":  recent_results,
+        "last_updated":     datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "last_match":       last_match,
+        "source":           source,
+        "tournament_stage": tournament_stage,
+        "players":          players,
+        "team_stats":       team_stats,
+        "highlights":       highlights,
+        "recent_results":   recent_results,
     }
 
     out_path = os.path.join(os.path.dirname(__file__), "..", "data.json")

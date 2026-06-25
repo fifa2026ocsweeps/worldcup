@@ -656,6 +656,24 @@
     .group-card tbody td:first-child { text-align: left; padding-left: 14px; font-weight: 600; }
     .group-card tbody td.pts { font-weight: 800; color: var(--pitch); }
     .group-card tbody tr.qualified td { background: rgba(58,181,124,0.08); }
+
+    /* ── Advancement row states ── */
+    .group-card tbody tr.adv-advancing td { background: rgba(58,181,124,0.10); }
+    .group-card tbody tr.adv-advancing td:first-child::before { content:"▲ "; color:#3ab57c; font-size:0.68rem; }
+    .group-card tbody tr.adv-eliminated td { background: rgba(220,53,69,0.05); }
+    .group-card tbody tr.adv-eliminated .group-team-btn { color: var(--text-mid); }
+    .group-card tbody tr.adv-eliminated td.pts { color: var(--text-mid); }
+    .group-card tbody tr.adv-champion td { background: rgba(255,193,7,0.14); }
+    .group-card tbody tr.adv-champion td:first-child::before { content:"★ "; color:#ffc107; }
+    .groups-legend {
+      grid-column: 1 / -1;
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--text-mid);
+      padding: 8px 0 2px;
+      margin: 0;
+    }
+
     .group-team-btn {
       background: none; border: none; cursor: pointer;
       color: var(--pitch); font-weight: 600; font-size: 0.82rem;
@@ -1366,6 +1384,7 @@ function renderStaticPlayers() {
 const STATIC_PROBS = Object.fromEntries(DRAW.map(p => [p.name, calcP(p.teams)]));
 
 let LIVE_TEAM_STATS = {};  // populated from data.json
+let LIVE_DATA = {};        // full data.json object
 
 // Clickable chips for live tab
 function liveChips(teams) {
@@ -1447,6 +1466,7 @@ function renderLive(data) {
   document.getElementById('live-content').style.display = 'block';
 
   LIVE_TEAM_STATS = data.team_stats || {};
+  LIVE_DATA = data;
 
   const d = new Date(data.last_updated);
   document.getElementById('last-updated-val').textContent =
@@ -1902,8 +1922,14 @@ function renderGroups() {
   const groupKeys = Object.keys(groups).sort();
   container.innerHTML = groupKeys.map(g => {
     const teams = sortGroup(groups[g]);
-    const rows = teams.map((t, i) => `
-      <tr data-group-team="${t.team.toLowerCase()}">
+    const rows = teams.map((t, i) => {
+      const adv = t.advanced_to || null;
+      const rowClass = adv === 'WINNER' ? 'adv-champion'
+        : adv === 'eliminated' ? 'adv-eliminated'
+        : adv ? 'adv-advancing'
+        : '';
+      return `
+      <tr class="${rowClass}" data-group-team="${t.team.toLowerCase()}">
         <td><button class="group-team-btn" onclick="openTeamModal('${t.team.replace(/'/g,"\\'")}')">
           ${flag(t.team)} ${t.team}
         </button></td>
@@ -1915,7 +1941,8 @@ function renderGroups() {
         <td>${t.goals_against ?? 0}</td>
         <td>${t.goal_diff != null ? (t.goal_diff > 0 ? '+' : '') + t.goal_diff : 0}</td>
         <td class="pts">${t.points ?? 0}</td>
-      </tr>`).join('');
+      </tr>`;
+    }).join('');
     return `<div class="group-card" data-group="${g.toLowerCase()}">
       <div class="group-card-title">${g}</div>
       <table>
@@ -1928,7 +1955,8 @@ function renderGroups() {
     </div>`;
   }).join('');
 
-
+  const isGroupStage = !LIVE_DATA.tournament_stage || LIVE_DATA.tournament_stage === 'GROUP_STAGE';
+  container.innerHTML += `<p class="groups-legend">▲ ${isGroupStage ? 'Provisionally advancing · updates each refresh' : 'Advanced to next round'} &nbsp;·&nbsp; greyed = eliminated</p>`;
 }
 
 function filterGroups(query) {
