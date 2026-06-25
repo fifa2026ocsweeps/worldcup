@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-25T00:46:17Z",
-  "last_match": "Group Stage: Scotland 0–3 Brazil  (2026-06-24)",
+  "last_updated": "2026-06-25T04:56:42Z",
+  "last_match": "Group Stage: South Africa 1–0 South Korea  (2026-06-25)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "GROUP_STAGE",
   "players": [
@@ -9,56 +9,56 @@
       "teams": [
         "France"
       ],
-      "probability": 17.83
+      "probability": 17.99
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 13.69
+      "probability": 13.81
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 12.72
+      "probability": 12.64
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 11.07
+      "probability": 11.02
     },
     {
       "name": "MEJ (Michael)",
       "teams": [
         "Portugal"
       ],
-      "probability": 8.06
+      "probability": 7.94
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.33
+      "probability": 6.27
     },
     {
       "name": "Georgia",
       "teams": [
         "Germany"
       ],
-      "probability": 5.85
+      "probability": 5.9
     },
     {
       "name": "Orgil",
       "teams": [
         "Netherlands"
       ],
-      "probability": 5.32
+      "probability": 5.37
     },
     {
       "name": "Jimmy",
@@ -66,35 +66,35 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.87
+      "probability": 2.89
     },
     {
       "name": "Eden",
       "teams": [
         "Norway"
       ],
-      "probability": 2.52
+      "probability": 2.51
     },
     {
       "name": "Mark",
       "teams": [
         "Morocco"
       ],
-      "probability": 1.9
+      "probability": 1.92
     },
     {
       "name": "Aditi",
       "teams": [
         "Japan"
       ],
-      "probability": 1.81
+      "probability": 1.88
     },
     {
       "name": "Alistair",
       "teams": [
         "Colombia"
       ],
-      "probability": 1.55
+      "probability": 1.57
     },
     {
       "name": "Rose",
@@ -102,21 +102,21 @@
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 1.52
-    },
-    {
-      "name": "Tess",
-      "teams": [
-        "Switzerland"
-      ],
-      "probability": 1.2
+      "probability": 1.54
     },
     {
       "name": "Marcelo",
       "teams": [
         "Mexico"
       ],
-      "probability": 1.16
+      "probability": 1.32
+    },
+    {
+      "name": "Tess",
+      "teams": [
+        "Switzerland"
+      ],
+      "probability": 1.21
     },
     {
       "name": "Adele",
@@ -130,14 +130,7 @@
       "teams": [
         "Senegal"
       ],
-      "probability": 0.47
-    },
-    {
-      "name": "Jodie",
-      "teams": [
-        "Côte d'Ivoire"
-      ],
-      "probability": 0.43
+      "probability": 0.46
     },
     {
       "name": "Kash",
@@ -147,14 +140,6 @@
       "probability": 0.4
     },
     {
-      "name": "Linda",
-      "teams": [
-        "Ecuador",
-        "Bosnia & Herzegovina"
-      ],
-      "probability": 0.36
-    },
-    {
       "name": "Lidia",
       "teams": [
         "Sweden"
@@ -162,18 +147,26 @@
       "probability": 0.31
     },
     {
+      "name": "Linda",
+      "teams": [
+        "Ecuador",
+        "Bosnia & Herzegovina"
+      ],
+      "probability": 0.3
+    },
+    {
+      "name": "Clarence",
+      "teams": [
+        "Canada"
+      ],
+      "probability": 0.3
+    },
+    {
       "name": "Anita",
       "teams": [
         "Austria"
       ],
-      "probability": 0.28
-    },
-    {
-      "name": "Kena",
-      "teams": [
-        "Egypt"
-      ],
-      "probability": 0.28
+      "probability": 0.27
     },
     {
       "name": "Pip",
@@ -183,11 +176,18 @@
       "probability": 0.26
     },
     {
-      "name": "Sanaz",
+      "name": "Sarah",
       "teams": [
-        "South Korea"
+        "Australia"
       ],
-      "probability": 0.24
+      "probability": 0.26
+    },
+    {
+      "name": "Kena",
+      "teams": [
+        "Egypt"
+      ],
+      "probability": 0.25
     },
     {
       "name": "Denis",
@@ -197,18 +197,11 @@
       "probability": 0.23
     },
     {
-      "name": "Clarence",
+      "name": "Jodie",
       "teams": [
-        "Canada"
+        "Côte d'Ivoire"
       ],
-      "probability": 0.21
-    },
-    {
-      "name": "Sarah",
-      "teams": [
-        "Australia"
-      ],
-      "probability": 0.2
+      "probability": 0.22
     },
     {
       "name": "Dani",
@@ -222,7 +215,7 @@
       "teams": [
         "Ghana"
       ],
-      "probability": 0.19
+      "probability": 0.18
     },
     {
       "name": "Reino",
@@ -232,11 +225,18 @@
       "probability": 0.16
     },
     {
+      "name": "Sanaz",
+      "teams": [
+        "South Korea"
+      ],
+      "probability": 0.14
+    },
+    {
       "name": "Nicko",
       "teams": [
         "Algeria"
       ],
-      "probability": 0.15
+      "probability": 0.14
     },
     {
       "name": "Simon D",
@@ -249,6 +249,13 @@
       "name": "Jamaica",
       "teams": [
         "Iran"
+      ],
+      "probability": 0.12
+    },
+    {
+      "name": "Lids",
+      "teams": [
+        "South Africa"
       ],
       "probability": 0.12
     },
@@ -288,13 +295,6 @@
       "probability": 0.07
     },
     {
-      "name": "Lids",
-      "teams": [
-        "South Africa"
-      ],
-      "probability": 0.06
-    },
-    {
       "name": "Amy",
       "teams": [
         "Curaçao"
@@ -324,6 +324,21 @@
     }
   ],
   "team_stats": {
+    "Mexico": {
+      "group": "Group A",
+      "played": 3,
+      "won": 3,
+      "drawn": 0,
+      "lost": 0,
+      "goals_for": 6,
+      "goals_against": 0,
+      "goal_diff": 6,
+      "points": 9,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "ROUND_OF_32"
+    },
     "Brazil": {
       "group": "Group C",
       "played": 3,
@@ -457,21 +472,6 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Colombia vs Portugal · 2026-06-28 09:30 AEST",
-      "advanced_to": "ROUND_OF_32"
-    },
-    "Mexico": {
-      "group": "Group A",
-      "played": 2,
-      "won": 2,
-      "drawn": 0,
-      "lost": 0,
-      "goals_for": 3,
-      "goals_against": 0,
-      "goal_diff": 3,
-      "points": 6,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Czechia vs Mexico · 2026-06-25 11:00 AEST",
       "advanced_to": "ROUND_OF_32"
     },
     "Canada": {
@@ -609,6 +609,21 @@
       "next_fixture": "No upcoming fixture",
       "advanced_to": null
     },
+    "South Africa": {
+      "group": "Group A",
+      "played": 3,
+      "won": 1,
+      "drawn": 1,
+      "lost": 1,
+      "goals_for": 2,
+      "goals_against": 3,
+      "goal_diff": -1,
+      "points": 4,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "ROUND_OF_32"
+    },
     "Sweden": {
       "group": "Group F",
       "played": 2,
@@ -637,21 +652,6 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Algeria vs Austria · 2026-06-28 12:00 AEST",
-      "advanced_to": "ROUND_OF_32"
-    },
-    "South Korea": {
-      "group": "Group A",
-      "played": 2,
-      "won": 1,
-      "drawn": 0,
-      "lost": 1,
-      "goals_for": 2,
-      "goals_against": 2,
-      "goal_diff": 0,
-      "points": 3,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "South Africa vs South Korea · 2026-06-25 11:00 AEST",
       "advanced_to": "ROUND_OF_32"
     },
     "Australia": {
@@ -697,6 +697,21 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Croatia vs Ghana · 2026-06-28 07:00 AEST",
+      "advanced_to": null
+    },
+    "South Korea": {
+      "group": "Group A",
+      "played": 3,
+      "won": 1,
+      "drawn": 0,
+      "lost": 2,
+      "goals_for": 2,
+      "goals_against": 3,
+      "goal_diff": -1,
+      "points": 3,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "No upcoming fixture",
       "advanced_to": null
     },
     "Paraguay": {
@@ -804,21 +819,6 @@
       "next_fixture": "New Zealand vs Belgium · 2026-06-27 13:00 AEST",
       "advanced_to": null
     },
-    "Czechia": {
-      "group": "Group A",
-      "played": 2,
-      "won": 0,
-      "drawn": 1,
-      "lost": 1,
-      "goals_for": 2,
-      "goals_against": 3,
-      "goal_diff": -1,
-      "points": 1,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Czechia vs Mexico · 2026-06-25 11:00 AEST",
-      "advanced_to": null
-    },
     "DR Congo": {
       "group": "Group K",
       "played": 2,
@@ -864,19 +864,19 @@
       "next_fixture": "New Zealand vs Belgium · 2026-06-27 13:00 AEST",
       "advanced_to": null
     },
-    "South Africa": {
+    "Czechia": {
       "group": "Group A",
-      "played": 2,
+      "played": 3,
       "won": 0,
       "drawn": 1,
-      "lost": 1,
-      "goals_for": 1,
-      "goals_against": 3,
-      "goal_diff": -2,
+      "lost": 2,
+      "goals_for": 2,
+      "goals_against": 6,
+      "goal_diff": -4,
       "points": 1,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "South Africa vs South Korea · 2026-06-25 11:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": null
     },
     "Saudi Arabia": {
@@ -1136,6 +1136,26 @@
       "days_ago": 0,
       "winner": "Brazil",
       "date": "2026-06-24"
+    },
+    {
+      "home": "Czechia",
+      "away": "Mexico",
+      "home_goals": 0,
+      "away_goals": 3,
+      "aest_date": "2026-06-25",
+      "days_ago": 0,
+      "winner": "Mexico",
+      "date": "2026-06-25"
+    },
+    {
+      "home": "South Africa",
+      "away": "South Korea",
+      "home_goals": 1,
+      "away_goals": 0,
+      "aest_date": "2026-06-25",
+      "days_ago": 0,
+      "winner": "South Africa",
+      "date": "2026-06-25"
     },
     {
       "home": "Portugal",
