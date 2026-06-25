@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-25T00:28:09Z",
+  "last_updated": "2026-06-25T00:43:28Z",
   "last_match": "Group Stage: Scotland 0–3 Brazil  (2026-06-24)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "GROUP_STAGE",
@@ -9,42 +9,42 @@
       "teams": [
         "France"
       ],
-      "probability": 17.81
+      "probability": 17.82
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 13.68
+      "probability": 13.69
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 12.71
+      "probability": 12.72
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 11.06
+      "probability": 11.07
     },
     {
       "name": "MEJ (Michael)",
       "teams": [
         "Portugal"
       ],
-      "probability": 8.05
+      "probability": 8.06
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.32
+      "probability": 6.33
     },
     {
       "name": "Georgia",
@@ -58,7 +58,7 @@
       "teams": [
         "Netherlands"
       ],
-      "probability": 5.31
+      "probability": 5.32
     },
     {
       "name": "Jimmy",
@@ -66,7 +66,7 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.86
+      "probability": 2.87
     },
     {
       "name": "Eden",
@@ -90,19 +90,19 @@
       "probability": 1.81
     },
     {
-      "name": "Rose",
-      "teams": [
-        "Belgium",
-        "Uzbekistan"
-      ],
-      "probability": 1.59
-    },
-    {
       "name": "Alistair",
       "teams": [
         "Colombia"
       ],
       "probability": 1.55
+    },
+    {
+      "name": "Rose",
+      "teams": [
+        "Belgium",
+        "Uzbekistan"
+      ],
+      "probability": 1.52
     },
     {
       "name": "Tess",
@@ -239,18 +239,18 @@
       "probability": 0.15
     },
     {
-      "name": "Jamaica",
-      "teams": [
-        "Iran"
-      ],
-      "probability": 0.14
-    },
-    {
       "name": "Simon D",
       "teams": [
         "Scotland"
       ],
       "probability": 0.14
+    },
+    {
+      "name": "Jamaica",
+      "teams": [
+        "Iran"
+      ],
+      "probability": 0.13
     },
     {
       "name": "Fiona",
