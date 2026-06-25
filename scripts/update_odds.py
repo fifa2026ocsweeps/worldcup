@@ -684,6 +684,8 @@ def compute_highlights(team_stats, top_scorers, discipline):
                 "assists": top_assist["assists"],
             }
 
+    tournament_stage = team_stats.pop("__tournament_stage__", "GROUP_STAGE")
+
     # Cards — derive from per-team yellow_cards/red_cards stored in team_stats
     if team_stats:
         by_yellow = [(t, v.get("yellow_cards", 0)) for t, v in team_stats.items() if v.get("yellow_cards", 0) > 0]
@@ -797,9 +799,6 @@ def main():
 
     # ── Build output ──────────────────────────────────────────────────────────
     players = compute_players(team_probs)
-    # Extract sentinel set by compute_advancement, then remove it from team_stats
-    tournament_stage = team_stats.pop("__tournament_stage__", "GROUP_STAGE")
-
     output = {
         "last_updated":     datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "last_match":       last_match,
