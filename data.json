@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-28T23:29:57Z",
+  "last_updated": "2026-06-28T23:35:39Z",
   "last_match": "Last 32: South Africa 0–1 Canada  (2026-06-28)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "QUARTER_FINALS",
@@ -9,63 +9,63 @@
       "teams": [
         "France"
       ],
-      "probability": 20.21
+      "probability": 20.16
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 18.14
+      "probability": 18.1
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 11.29
+      "probability": 11.27
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 11.18
-    },
-    {
-      "name": "MEJ (Michael)",
-      "teams": [
-        "Portugal"
-      ],
-      "probability": 6.25
+      "probability": 11.16
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.18
+      "probability": 6.31
+    },
+    {
+      "name": "MEJ (Michael)",
+      "teams": [
+        "Portugal"
+      ],
+      "probability": 6.24
     },
     {
       "name": "Orgil",
       "teams": [
         "Netherlands"
       ],
-      "probability": 5.02
+      "probability": 4.97
     },
     {
       "name": "Georgia",
       "teams": [
         "Germany"
       ],
-      "probability": 4.08
+      "probability": 4.19
     },
     {
       "name": "Alistair",
       "teams": [
         "Colombia"
       ],
-      "probability": 2.58
+      "probability": 2.57
     },
     {
       "name": "Jimmy",
@@ -80,7 +80,7 @@
       "teams": [
         "Norway"
       ],
-      "probability": 2.08
+      "probability": 2.07
     },
     {
       "name": "Pip",
@@ -94,7 +94,7 @@
       "teams": [
         "Morocco"
       ],
-      "probability": 1.58
+      "probability": 1.57
     },
     {
       "name": "Rose",
@@ -123,7 +123,7 @@
       "teams": [
         "Switzerland"
       ],
-      "probability": 1.03
+      "probability": 1.02
     },
     {
       "name": "Adele",
@@ -204,16 +204,16 @@
       "probability": 0.22
     },
     {
-      "name": "Kena",
-      "teams": [
-        "Egypt"
-      ],
-      "probability": 0.21
-    },
-    {
       "name": "Sarah",
       "teams": [
         "Australia"
+      ],
+      "probability": 0.2
+    },
+    {
+      "name": "Kena",
+      "teams": [
+        "Egypt"
       ],
       "probability": 0.2
     },
