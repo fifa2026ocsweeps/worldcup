@@ -339,6 +339,8 @@
     tr.r1:hover { background: #f9f0d8; }
     tr.r2:hover { background: #eef4f8; }
     tr.r3:hover { background: #ede6da; }
+    tr.player-eliminated { opacity: 0.45; }
+    tr.player-eliminated td { color: var(--text-mid) !important; }
 
     /* rank medal cell */
     .medal-cell { text-align: center; font-size: 1.1rem; min-width: 48px; }
@@ -660,7 +662,7 @@
     /* ── Advancement row states ── */
     .group-card tbody tr.adv-advancing td { background: rgba(58,181,124,0.10); }
     .group-card tbody tr.adv-advancing td:first-child::before { content:"▲ "; color:#3ab57c; font-size:0.68rem; }
-    .group-card tbody tr.adv-eliminated td { background: rgba(220,53,69,0.05); }
+    .group-card tbody tr.adv-eliminated td { background: rgba(0,0,0,0.08); opacity: 0.55; }
     .group-card tbody tr.adv-eliminated .group-team-btn { color: var(--text-mid); }
     .group-card tbody tr.adv-eliminated td.pts { color: var(--text-mid); }
     .group-card tbody tr.adv-champion td { background: rgba(255,193,7,0.14); }
@@ -1495,7 +1497,11 @@ function renderLive(data) {
       : diff > 0
         ? `<span class="up">▲ ${Math.abs(diff).toFixed(2)}%</span>`
         : `<span class="down">▼ ${Math.abs(diff).toFixed(2)}%</span>`;
-    return `<tr class="${rowClass(i)}">
+    const allEliminated = p.teams.length > 0 && p.teams.every(t =>
+      (LIVE_TEAM_STATS[t] || {}).advanced_to === 'eliminated'
+    );
+    const elimClass = allEliminated ? ' player-eliminated' : '';
+    return `<tr class="${rowClass(i)}${elimClass}">
       <td class="medal-cell">${medal(i)}</td>
       <td class="player-name">${p.name}</td>
       <td>${liveChips(p.teams)}</td>

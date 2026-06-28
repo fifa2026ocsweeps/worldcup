@@ -446,19 +446,36 @@ def compute_advancement(all_matches, team_stats):
     During knockout stages: uses actual fixture appearances and match results.
     Also returns the current_stage string for the top-level data.json field.
     """
-    # Determine current stage = highest-order stage with a FINISHED or IN_PLAY match
+    # Determine current stage:
+    # 1. Highest-order stage with a FINISHED or IN_PLAY match (authoritative)
+    # 2. If still GROUP_STAGE but knockout TIMED fixtures exist, group stage is
+    #    complete — use the highest knockout stage with TIMED matches instead.
     active_stages = set()
+    timed_knockout_stages = set()
+    knockout_stages_set = set(STAGE_ORDER) - {"GROUP_STAGE"}
     for m in all_matches:
-        if m.get("status") in ("FINISHED", "IN_PLAY"):
-            s = m.get("stage", "").upper()
-            if s in STAGE_ORDER:
-                active_stages.add(s)
+        status = m.get("status", "")
+        s = m.get("stage", "").upper()
+        if s not in STAGE_ORDER:
+            continue
+        if status in ("FINISHED", "IN_PLAY"):
+            active_stages.add(s)
+        elif status in ("TIMED", "SCHEDULED") and s in knockout_stages_set:
+            timed_knockout_stages.add(s)
 
     current_stage = "GROUP_STAGE"
     for s in reversed(STAGE_ORDER):
         if s in active_stages:
             current_stage = s
             break
+
+    # Group stage is finished but no knockout match has kicked off yet —
+    # promote to the first upcoming knockout stage so eliminations are shown.
+    if current_stage == "GROUP_STAGE" and timed_knockout_stages:
+        for s in STAGE_ORDER[1:]:
+            if s in timed_knockout_stages:
+                current_stage = s
+                break
 
     print(f"  Tournament stage detected: {current_stage}")
 
