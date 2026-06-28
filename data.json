@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-28T23:22:06Z",
+  "last_updated": "2026-06-28T23:28:35Z",
   "last_match": "Last 32: South Africa 0–1 Canada  (2026-06-28)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "QUARTER_FINALS",
@@ -337,7 +337,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "France vs Sweden · 2026-07-01 07:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Argentina": {
       "group": "Group J",
@@ -352,7 +353,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Argentina vs Cape Verde · 2026-07-04 08:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Mexico": {
       "group": "Group A",
@@ -367,7 +369,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Mexico vs Ecuador · 2026-07-01 11:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Netherlands": {
       "group": "Group F",
@@ -382,7 +385,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Netherlands vs Morocco · 2026-06-30 11:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Brazil": {
       "group": "Group C",
@@ -397,7 +401,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Brazil vs Japan · 2026-06-30 03:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Spain": {
       "group": "Group H",
@@ -412,7 +417,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Spain vs Austria · 2026-07-03 05:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Switzerland": {
       "group": "Group B",
@@ -427,7 +433,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Switzerland vs Algeria · 2026-07-03 13:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "England": {
       "group": "Group L",
@@ -442,7 +449,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "England vs DR Congo · 2026-07-02 02:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Morocco": {
       "group": "Group C",
@@ -457,7 +465,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Netherlands vs Morocco · 2026-06-30 11:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Colombia": {
       "group": "Group K",
@@ -472,7 +481,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Colombia vs Ghana · 2026-07-04 11:30 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Germany": {
       "group": "Group E",
@@ -487,7 +497,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Germany vs Paraguay · 2026-06-30 06:30 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "United States": {
       "group": "Group D",
@@ -502,7 +513,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "United States vs Bosnia & Herzegovina · 2026-07-02 10:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Côte d'Ivoire": {
       "group": "Group E",
@@ -517,7 +529,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Côte d'Ivoire vs Norway · 2026-07-01 03:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Norway": {
       "group": "Group I",
@@ -532,7 +545,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Côte d'Ivoire vs Norway · 2026-07-01 03:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Croatia": {
       "group": "Group L",
@@ -547,7 +561,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Portugal vs Croatia · 2026-07-03 09:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Portugal": {
       "group": "Group K",
@@ -562,7 +577,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Portugal vs Croatia · 2026-07-03 09:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Japan": {
       "group": "Group F",
@@ -577,7 +593,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Brazil vs Japan · 2026-06-30 03:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Belgium": {
       "group": "Group G",
@@ -592,7 +609,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Belgium vs Senegal · 2026-07-02 06:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Egypt": {
       "group": "Group G",
@@ -607,7 +625,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Australia vs Egypt · 2026-07-04 04:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Canada": {
       "group": "Group B",
@@ -622,7 +641,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "DR Congo": {
       "group": "Group K",
@@ -637,7 +657,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "England vs DR Congo · 2026-07-02 02:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": true
     },
     "Sweden": {
       "group": "Group F",
@@ -652,7 +673,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "France vs Sweden · 2026-07-01 07:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": true
     },
     "Austria": {
       "group": "Group J",
@@ -667,7 +689,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Spain vs Austria · 2026-07-03 05:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Australia": {
       "group": "Group D",
@@ -682,7 +705,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Australia vs Egypt · 2026-07-04 04:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Ecuador": {
       "group": "Group E",
@@ -697,7 +721,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Mexico vs Ecuador · 2026-07-01 11:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": true
     },
     "Ghana": {
       "group": "Group L",
@@ -712,7 +737,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Colombia vs Ghana · 2026-07-04 11:30 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": true
     },
     "Bosnia & Herzegovina": {
       "group": "Group B",
@@ -727,7 +753,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "United States vs Bosnia & Herzegovina · 2026-07-02 10:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": true
     },
     "South Africa": {
       "group": "Group A",
@@ -742,7 +769,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "Algeria": {
       "group": "Group J",
@@ -757,7 +785,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Switzerland vs Algeria · 2026-07-03 13:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": true
     },
     "Paraguay": {
       "group": "Group D",
@@ -772,7 +801,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Germany vs Paraguay · 2026-06-30 06:30 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": true
     },
     "Senegal": {
       "group": "Group I",
@@ -787,7 +817,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Belgium vs Senegal · 2026-07-02 06:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": true
     },
     "Iran": {
       "group": "Group G",
@@ -802,7 +833,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     },
     "Cape Verde": {
       "group": "Group H",
@@ -817,7 +849,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "Argentina vs Cape Verde · 2026-07-04 08:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "advanced_to": "ROUND_OF_32",
+      "via_third": false
     },
     "South Korea": {
       "group": "Group A",
@@ -832,7 +865,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     },
     "Türkiye": {
       "group": "Group D",
@@ -847,7 +881,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     },
     "Scotland": {
       "group": "Group C",
@@ -862,7 +897,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     },
     "Uruguay": {
       "group": "Group H",
@@ -877,7 +913,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     },
     "Saudi Arabia": {
       "group": "Group H",
@@ -892,7 +929,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     },
     "Czechia": {
       "group": "Group A",
@@ -907,7 +945,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     },
     "New Zealand": {
       "group": "Group G",
@@ -922,7 +961,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     },
     "Qatar": {
       "group": "Group B",
@@ -937,7 +977,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     },
     "Curaçao": {
       "group": "Group E",
@@ -952,7 +993,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     },
     "Panama": {
       "group": "Group L",
@@ -967,7 +1009,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     },
     "Jordan": {
       "group": "Group J",
@@ -982,7 +1025,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     },
     "Haiti": {
       "group": "Group C",
@@ -997,7 +1041,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     },
     "Uzbekistan": {
       "group": "Group K",
@@ -1012,7 +1057,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     },
     "Tunisia": {
       "group": "Group F",
@@ -1027,7 +1073,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     },
     "Iraq": {
       "group": "Group I",
@@ -1042,7 +1089,8 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated"
+      "advanced_to": "eliminated",
+      "via_third": false
     }
   },
   "highlights": {
