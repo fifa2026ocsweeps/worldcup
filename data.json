@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-27T21:01:40Z",
-  "last_match": "Group Stage: Egypt 1–1 Iran  (2026-06-27)",
+  "last_updated": "2026-06-28T05:11:33Z",
+  "last_match": "Group Stage: Algeria 3–3 Austria  (2026-06-28)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "GROUP_STAGE",
   "players": [
@@ -9,56 +9,56 @@
       "teams": [
         "France"
       ],
-      "probability": 20.28
+      "probability": 20.71
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 15.18
-    },
-    {
-      "name": "Alan",
-      "teams": [
-        "Spain"
-      ],
-      "probability": 12.11
+      "probability": 18.05
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 11.17
+      "probability": 11.13
     },
     {
-      "name": "MEJ (Michael)",
+      "name": "Alan",
       "teams": [
-        "Portugal"
+        "Spain"
       ],
-      "probability": 8.2
+      "probability": 10.79
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.17
+      "probability": 6.33
+    },
+    {
+      "name": "MEJ (Michael)",
+      "teams": [
+        "Portugal"
+      ],
+      "probability": 6.06
     },
     {
       "name": "Orgil",
       "teams": [
         "Netherlands"
       ],
-      "probability": 5.02
+      "probability": 4.81
     },
     {
       "name": "Georgia",
       "teams": [
         "Germany"
       ],
-      "probability": 4.04
+      "probability": 3.97
     },
     {
       "name": "Jimmy",
@@ -66,14 +66,21 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.69
+      "probability": 2.46
+    },
+    {
+      "name": "Alistair",
+      "teams": [
+        "Colombia"
+      ],
+      "probability": 2.39
     },
     {
       "name": "Eden",
       "teams": [
         "Norway"
       ],
-      "probability": 2.31
+      "probability": 2.19
     },
     {
       "name": "Pip",
@@ -88,42 +95,35 @@
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 1.66
+      "probability": 1.67
     },
     {
       "name": "Mark",
       "teams": [
         "Morocco"
       ],
-      "probability": 1.57
-    },
-    {
-      "name": "Alistair",
-      "teams": [
-        "Colombia"
-      ],
-      "probability": 1.49
+      "probability": 1.58
     },
     {
       "name": "Aditi",
       "teams": [
         "Japan"
       ],
-      "probability": 1.49
+      "probability": 1.47
     },
     {
       "name": "Marcelo",
       "teams": [
         "Mexico"
       ],
-      "probability": 1.33
+      "probability": 1.4
     },
     {
       "name": "Tess",
       "teams": [
         "Switzerland"
       ],
-      "probability": 1.11
+      "probability": 1.15
     },
     {
       "name": "Adele",
@@ -138,28 +138,21 @@
         "Ecuador",
         "Bosnia & Herzegovina"
       ],
-      "probability": 0.64
+      "probability": 0.78
     },
     {
       "name": "Lach",
       "teams": [
         "Senegal"
       ],
-      "probability": 0.59
+      "probability": 0.62
     },
     {
-      "name": "Denis",
+      "name": "Simon D",
       "teams": [
-        "Croatia"
+        "Scotland"
       ],
-      "probability": 0.46
-    },
-    {
-      "name": "Jodie",
-      "teams": [
-        "Côte d'Ivoire"
-      ],
-      "probability": 0.41
+      "probability": 0.5
     },
     {
       "name": "Kash",
@@ -169,11 +162,32 @@
       "probability": 0.4
     },
     {
+      "name": "Jodie",
+      "teams": [
+        "Côte d'Ivoire"
+      ],
+      "probability": 0.39
+    },
+    {
+      "name": "Denis",
+      "teams": [
+        "Croatia"
+      ],
+      "probability": 0.36
+    },
+    {
+      "name": "Sanaz",
+      "teams": [
+        "South Korea"
+      ],
+      "probability": 0.25
+    },
+    {
       "name": "Clarence",
       "teams": [
         "Canada"
       ],
-      "probability": 0.26
+      "probability": 0.25
     },
     {
       "name": "Lidia",
@@ -181,6 +195,13 @@
         "Sweden"
       ],
       "probability": 0.24
+    },
+    {
+      "name": "Anita",
+      "teams": [
+        "Austria"
+      ],
+      "probability": 0.21
     },
     {
       "name": "Sarah",
@@ -204,16 +225,23 @@
       "probability": 0.19
     },
     {
-      "name": "Anita",
+      "name": "Nicko",
       "teams": [
-        "Austria"
+        "Algeria"
       ],
-      "probability": 0.18
+      "probability": 0.17
     },
     {
-      "name": "Sanaz",
+      "name": "Josh",
       "teams": [
-        "South Korea"
+        "Ghana"
+      ],
+      "probability": 0.16
+    },
+    {
+      "name": "Jamaica",
+      "teams": [
+        "Iran"
       ],
       "probability": 0.14
     },
@@ -222,35 +250,7 @@
       "teams": [
         "Paraguay"
       ],
-      "probability": 0.14
-    },
-    {
-      "name": "Josh",
-      "teams": [
-        "Ghana"
-      ],
-      "probability": 0.14
-    },
-    {
-      "name": "Nicko",
-      "teams": [
-        "Algeria"
-      ],
       "probability": 0.13
-    },
-    {
-      "name": "Jamaica",
-      "teams": [
-        "Iran"
-      ],
-      "probability": 0.12
-    },
-    {
-      "name": "Simon D",
-      "teams": [
-        "Scotland"
-      ],
-      "probability": 0.12
     },
     {
       "name": "Lids",
@@ -260,16 +260,16 @@
       "probability": 0.11
     },
     {
-      "name": "Fiona",
-      "teams": [
-        "Panama"
-      ],
-      "probability": 0.1
-    },
-    {
       "name": "Kath",
       "teams": [
         "DR Congo"
+      ],
+      "probability": 0.11
+    },
+    {
+      "name": "Fiona",
+      "teams": [
+        "Panama"
       ],
       "probability": 0.1
     },
@@ -339,6 +339,21 @@
       "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32"
     },
+    "Argentina": {
+      "group": "Group J",
+      "played": 3,
+      "won": 3,
+      "drawn": 0,
+      "lost": 0,
+      "goals_for": 8,
+      "goals_against": 1,
+      "goal_diff": 7,
+      "points": 9,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "ROUND_OF_32"
+    },
     "Mexico": {
       "group": "Group A",
       "played": 3,
@@ -366,7 +381,7 @@
       "points": 7,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Netherlands vs Morocco · 2026-06-30 11:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32"
     },
     "Brazil": {
@@ -381,7 +396,7 @@
       "points": 7,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Brazil vs Japan · 2026-06-30 03:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32"
     },
     "Spain": {
@@ -414,6 +429,21 @@
       "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32"
     },
+    "England": {
+      "group": "Group L",
+      "played": 3,
+      "won": 2,
+      "drawn": 1,
+      "lost": 0,
+      "goals_for": 6,
+      "goals_against": 2,
+      "goal_diff": 4,
+      "points": 7,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "ROUND_OF_32"
+    },
     "Morocco": {
       "group": "Group C",
       "played": 3,
@@ -426,7 +456,22 @@
       "points": 7,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Netherlands vs Morocco · 2026-06-30 11:00 AEST",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "ROUND_OF_32"
+    },
+    "Colombia": {
+      "group": "Group K",
+      "played": 3,
+      "won": 2,
+      "drawn": 1,
+      "lost": 0,
+      "goals_for": 4,
+      "goals_against": 1,
+      "goal_diff": 3,
+      "points": 7,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32"
     },
     "Germany": {
@@ -444,21 +489,6 @@
       "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32"
     },
-    "Argentina": {
-      "group": "Group J",
-      "played": 2,
-      "won": 2,
-      "drawn": 0,
-      "lost": 0,
-      "goals_for": 5,
-      "goals_against": 0,
-      "goal_diff": 5,
-      "points": 6,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Jordan vs Argentina · 2026-06-28 12:00 AEST",
-      "advanced_to": "ROUND_OF_32"
-    },
     "United States": {
       "group": "Group D",
       "played": 3,
@@ -471,22 +501,7 @@
       "points": 6,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "United States vs Bosnia & Herzegovina · 2026-07-02 10:00 AEST",
-      "advanced_to": "ROUND_OF_32"
-    },
-    "Colombia": {
-      "group": "Group K",
-      "played": 2,
-      "won": 2,
-      "drawn": 0,
-      "lost": 0,
-      "goals_for": 4,
-      "goals_against": 1,
-      "goal_diff": 3,
-      "points": 6,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Colombia vs Portugal · 2026-06-28 09:30 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32"
     },
     "Côte d'Ivoire": {
@@ -519,6 +534,36 @@
       "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32"
     },
+    "Croatia": {
+      "group": "Group L",
+      "played": 3,
+      "won": 2,
+      "drawn": 0,
+      "lost": 1,
+      "goals_for": 5,
+      "goals_against": 5,
+      "goal_diff": 0,
+      "points": 6,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "ROUND_OF_32"
+    },
+    "Portugal": {
+      "group": "Group K",
+      "played": 3,
+      "won": 1,
+      "drawn": 2,
+      "lost": 0,
+      "goals_for": 6,
+      "goals_against": 1,
+      "goal_diff": 5,
+      "points": 5,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "ROUND_OF_32"
+    },
     "Japan": {
       "group": "Group F",
       "played": 3,
@@ -531,7 +576,7 @@
       "points": 5,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Brazil vs Japan · 2026-06-30 03:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32"
     },
     "Belgium": {
@@ -576,53 +621,23 @@
       "points": 4,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "South Africa vs Canada · 2026-06-29 05:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32"
     },
-    "Portugal": {
+    "DR Congo": {
       "group": "Group K",
-      "played": 2,
+      "played": 3,
       "won": 1,
       "drawn": 1,
-      "lost": 0,
-      "goals_for": 6,
-      "goals_against": 1,
-      "goal_diff": 5,
-      "points": 4,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Colombia vs Portugal · 2026-06-28 09:30 AEST",
-      "advanced_to": "ROUND_OF_32"
-    },
-    "England": {
-      "group": "Group L",
-      "played": 2,
-      "won": 1,
-      "drawn": 1,
-      "lost": 0,
+      "lost": 1,
       "goals_for": 4,
-      "goals_against": 2,
-      "goal_diff": 2,
-      "points": 4,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Panama vs England · 2026-06-28 07:00 AEST",
-      "advanced_to": "ROUND_OF_32"
-    },
-    "Ghana": {
-      "group": "Group L",
-      "played": 2,
-      "won": 1,
-      "drawn": 1,
-      "lost": 0,
-      "goals_for": 1,
-      "goals_against": 0,
+      "goals_against": 3,
       "goal_diff": 1,
       "points": 4,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Croatia vs Ghana · 2026-06-28 07:00 AEST",
-      "advanced_to": "ROUND_OF_32"
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": null
     },
     "Sweden": {
       "group": "Group F",
@@ -638,6 +653,21 @@
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
       "advanced_to": null
+    },
+    "Austria": {
+      "group": "Group J",
+      "played": 3,
+      "won": 1,
+      "drawn": 1,
+      "lost": 1,
+      "goals_for": 6,
+      "goals_against": 6,
+      "goal_diff": 0,
+      "points": 4,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "ROUND_OF_32"
     },
     "Australia": {
       "group": "Group D",
@@ -669,6 +699,21 @@
       "next_fixture": "No upcoming fixture",
       "advanced_to": null
     },
+    "Ghana": {
+      "group": "Group L",
+      "played": 3,
+      "won": 1,
+      "drawn": 1,
+      "lost": 1,
+      "goals_for": 2,
+      "goals_against": 2,
+      "goal_diff": 0,
+      "points": 4,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": null
+    },
     "Bosnia & Herzegovina": {
       "group": "Group B",
       "played": 3,
@@ -681,7 +726,7 @@
       "points": 4,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "United States vs Bosnia & Herzegovina · 2026-07-02 10:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": null
     },
     "South Africa": {
@@ -696,8 +741,23 @@
       "points": 4,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "South Africa vs Canada · 2026-06-29 05:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32"
+    },
+    "Algeria": {
+      "group": "Group J",
+      "played": 3,
+      "won": 1,
+      "drawn": 1,
+      "lost": 1,
+      "goals_for": 5,
+      "goals_against": 7,
+      "goal_diff": -2,
+      "points": 4,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": null
     },
     "Paraguay": {
       "group": "Group D",
@@ -744,21 +804,6 @@
       "next_fixture": "No upcoming fixture",
       "advanced_to": null
     },
-    "Austria": {
-      "group": "Group J",
-      "played": 2,
-      "won": 1,
-      "drawn": 0,
-      "lost": 1,
-      "goals_for": 3,
-      "goals_against": 3,
-      "goal_diff": 0,
-      "points": 3,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Algeria vs Austria · 2026-06-28 12:00 AEST",
-      "advanced_to": "ROUND_OF_32"
-    },
     "Cape Verde": {
       "group": "Group H",
       "played": 3,
@@ -773,21 +818,6 @@
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32"
-    },
-    "Croatia": {
-      "group": "Group L",
-      "played": 2,
-      "won": 1,
-      "drawn": 0,
-      "lost": 1,
-      "goals_for": 3,
-      "goals_against": 4,
-      "goal_diff": -1,
-      "points": 3,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Croatia vs Ghana · 2026-06-28 07:00 AEST",
-      "advanced_to": null
     },
     "South Korea": {
       "group": "Group A",
@@ -817,21 +847,6 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": null
-    },
-    "Algeria": {
-      "group": "Group J",
-      "played": 2,
-      "won": 1,
-      "drawn": 0,
-      "lost": 1,
-      "goals_for": 2,
-      "goals_against": 4,
-      "goal_diff": -2,
-      "points": 3,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "Algeria vs Austria · 2026-06-28 12:00 AEST",
       "advanced_to": null
     },
     "Scotland": {
@@ -877,21 +892,6 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": null
-    },
-    "DR Congo": {
-      "group": "Group K",
-      "played": 2,
-      "won": 0,
-      "drawn": 1,
-      "lost": 1,
-      "goals_for": 1,
-      "goals_against": 2,
-      "goal_diff": -1,
-      "points": 1,
-      "yellow_cards": 0,
-      "red_cards": 0,
-      "next_fixture": "DR Congo vs Uzbekistan · 2026-06-28 09:30 AEST",
       "advanced_to": null
     },
     "Czechia": {
@@ -956,32 +956,32 @@
     },
     "Panama": {
       "group": "Group L",
-      "played": 2,
+      "played": 3,
       "won": 0,
       "drawn": 0,
-      "lost": 2,
+      "lost": 3,
       "goals_for": 0,
-      "goals_against": 2,
-      "goal_diff": -2,
+      "goals_against": 4,
+      "goal_diff": -4,
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Panama vs England · 2026-06-28 07:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": null
     },
     "Jordan": {
       "group": "Group J",
-      "played": 2,
+      "played": 3,
       "won": 0,
       "drawn": 0,
-      "lost": 2,
-      "goals_for": 2,
-      "goals_against": 5,
-      "goal_diff": -3,
+      "lost": 3,
+      "goals_for": 3,
+      "goals_against": 8,
+      "goal_diff": -5,
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Jordan vs Argentina · 2026-06-28 12:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": null
     },
     "Haiti": {
@@ -1001,17 +1001,17 @@
     },
     "Uzbekistan": {
       "group": "Group K",
-      "played": 2,
+      "played": 3,
       "won": 0,
       "drawn": 0,
-      "lost": 2,
-      "goals_for": 1,
-      "goals_against": 8,
-      "goal_diff": -7,
+      "lost": 3,
+      "goals_for": 2,
+      "goals_against": 11,
+      "goal_diff": -9,
       "points": 0,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "DR Congo vs Uzbekistan · 2026-06-28 09:30 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": null
     },
     "Tunisia": {
@@ -1065,7 +1065,7 @@
       {
         "name": "Lionel Messi",
         "team": "Argentina",
-        "goals": 5,
+        "goals": 6,
         "assists": null
       },
       {
@@ -1100,6 +1100,66 @@
     }
   },
   "recent_results": [
+    {
+      "home": "Panama",
+      "away": "England",
+      "home_goals": 0,
+      "away_goals": 2,
+      "aest_date": "2026-06-28",
+      "days_ago": 0,
+      "winner": "England",
+      "date": "2026-06-27"
+    },
+    {
+      "home": "Croatia",
+      "away": "Ghana",
+      "home_goals": 2,
+      "away_goals": 1,
+      "aest_date": "2026-06-28",
+      "days_ago": 0,
+      "winner": "Croatia",
+      "date": "2026-06-27"
+    },
+    {
+      "home": "Colombia",
+      "away": "Portugal",
+      "home_goals": 0,
+      "away_goals": 0,
+      "aest_date": "2026-06-28",
+      "days_ago": 0,
+      "winner": null,
+      "date": "2026-06-27"
+    },
+    {
+      "home": "DR Congo",
+      "away": "Uzbekistan",
+      "home_goals": 3,
+      "away_goals": 1,
+      "aest_date": "2026-06-28",
+      "days_ago": 0,
+      "winner": "DR Congo",
+      "date": "2026-06-27"
+    },
+    {
+      "home": "Jordan",
+      "away": "Argentina",
+      "home_goals": 1,
+      "away_goals": 3,
+      "aest_date": "2026-06-28",
+      "days_ago": 0,
+      "winner": "Argentina",
+      "date": "2026-06-28"
+    },
+    {
+      "home": "Algeria",
+      "away": "Austria",
+      "home_goals": 3,
+      "away_goals": 3,
+      "aest_date": "2026-06-28",
+      "days_ago": 0,
+      "winner": null,
+      "date": "2026-06-28"
+    },
     {
       "home": "Norway",
       "away": "France",
