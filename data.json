@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-28T23:35:39Z",
+  "last_updated": "2026-06-28T23:40:53Z",
   "last_match": "Last 32: South Africa 0–1 Canada  (2026-06-28)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "QUARTER_FINALS",
@@ -9,42 +9,42 @@
       "teams": [
         "France"
       ],
-      "probability": 20.16
+      "probability": 20.2
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 18.1
+      "probability": 18.13
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 11.27
+      "probability": 11.29
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 11.16
+      "probability": 11.18
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.31
+      "probability": 6.25
     },
     {
       "name": "MEJ (Michael)",
       "teams": [
         "Portugal"
       ],
-      "probability": 6.24
+      "probability": 6.25
     },
     {
       "name": "Orgil",
@@ -58,14 +58,14 @@
       "teams": [
         "Germany"
       ],
-      "probability": 4.19
+      "probability": 4.13
     },
     {
       "name": "Alistair",
       "teams": [
         "Colombia"
       ],
-      "probability": 2.57
+      "probability": 2.53
     },
     {
       "name": "Jimmy",
@@ -116,14 +116,14 @@
       "teams": [
         "Japan"
       ],
-      "probability": 1.36
+      "probability": 1.35
     },
     {
       "name": "Tess",
       "teams": [
         "Switzerland"
       ],
-      "probability": 1.02
+      "probability": 1.03
     },
     {
       "name": "Adele",
@@ -145,7 +145,7 @@
       "teams": [
         "Senegal"
       ],
-      "probability": 0.53
+      "probability": 0.54
     },
     {
       "name": "Simon D",
