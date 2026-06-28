@@ -662,6 +662,9 @@
     /* ── Advancement row states ── */
     .group-card tbody tr.adv-advancing td { background: rgba(58,181,124,0.10); }
     .group-card tbody tr.adv-advancing td:first-child::before { content:"▲ "; color:#3ab57c; font-size:0.68rem; }
+    .group-card tbody tr.adv-third td { background: rgba(200,169,110,0.16); }
+    .group-card tbody tr.adv-third td:first-child::before { content:"▲ "; color:#c8a96e; font-size:0.68rem; }
+    .group-card tbody tr.adv-third td:first-child::after { content:" · 3rd"; color:#a8884e; font-size:0.6rem; font-weight:600; }
     .group-card tbody tr.adv-eliminated td { background: rgba(0,0,0,0.08); opacity: 0.55; }
     .group-card tbody tr.adv-eliminated .group-team-btn { color: var(--text-mid); }
     .group-card tbody tr.adv-eliminated td.pts { color: var(--text-mid); }
@@ -1932,6 +1935,7 @@ function renderGroups() {
       const adv = t.advanced_to || null;
       const rowClass = adv === 'WINNER' ? 'adv-champion'
         : adv === 'eliminated' ? 'adv-eliminated'
+        : t.via_third ? 'adv-third'
         : adv ? 'adv-advancing'
         : '';
       return `
@@ -1962,7 +1966,9 @@ function renderGroups() {
   }).join('');
 
   const isGroupStage = !LIVE_DATA.tournament_stage || LIVE_DATA.tournament_stage === 'GROUP_STAGE';
-  container.innerHTML += `<p class="groups-legend">▲ ${isGroupStage ? 'Provisionally advancing · updates each refresh' : 'Advanced to next round'} &nbsp;·&nbsp; greyed = eliminated</p>`;
+  container.innerHTML += isGroupStage
+    ? `<p class="groups-legend"><span style="color:#3ab57c">▲</span> Provisionally advancing (top 2) · updates each refresh &nbsp;·&nbsp; greyed = trailing</p>`
+    : `<p class="groups-legend"><span style="color:#3ab57c">▲</span> Group top 2 &nbsp;·&nbsp; <span style="color:#c8a96e">▲ 3rd</span> = one of 8 best 3rd-placed teams &nbsp;·&nbsp; both advance to Round of 32 (32 teams total) &nbsp;·&nbsp; greyed = eliminated</p>`;
 }
 
 function filterGroups(query) {

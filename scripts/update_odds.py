@@ -482,6 +482,7 @@ def compute_advancement(all_matches, team_stats):
     # Reset advanced_to for all teams
     for team in team_stats:
         team_stats[team]["advanced_to"] = None
+        team_stats[team]["via_third"] = False
 
     if current_stage == "GROUP_STAGE":
         # Provisional: top 2 per group advance
@@ -524,7 +525,8 @@ def compute_advancement(all_matches, team_stats):
             s = team_stats[t]
             return (s.get("points", 0), s.get("goal_diff", 0), s.get("goals_for", 0))
 
-        qualifiers = set()
+        qualifiers = set()       # top 2 of each group
+        third_qualifiers = set() # 8 best 3rd-placed teams
         thirds = []
         for g, teams in groups.items():
             st = sorted(teams, key=grank, reverse=True)
@@ -535,10 +537,13 @@ def compute_advancement(all_matches, team_stats):
                     thirds.append(team)
         # 8 best 3rd-placed teams across all groups also advance
         for team in sorted(thirds, key=grank, reverse=True)[:8]:
-            qualifiers.add(team)
+            third_qualifiers.add(team)
 
+        all_qualifiers = qualifiers | third_qualifiers
         for team in team_stats:
-            team_stats[team]["advanced_to"] = "ROUND_OF_32" if team in qualifiers else "eliminated"
+            team_stats[team]["advanced_to"] = "ROUND_OF_32" if team in all_qualifiers else "eliminated"
+            # Flag best-3rd qualifiers so the UI can distinguish them from group top-2.
+            team_stats[team]["via_third"] = team in third_qualifiers
 
         # Best-effort layering: if the API provides real team names in knockout
         # fixtures, promote teams to the furthest knockout round they appear in,
