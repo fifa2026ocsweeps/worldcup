@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-28T23:40:53Z",
+  "last_updated": "2026-06-29T05:22:34Z",
   "last_match": "Last 32: South Africa 0–1 Canada  (2026-06-28)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "QUARTER_FINALS",
@@ -9,63 +9,63 @@
       "teams": [
         "France"
       ],
-      "probability": 20.2
+      "probability": 20.26
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 18.13
-    },
-    {
-      "name": "Jon",
-      "teams": [
-        "England"
-      ],
-      "probability": 11.29
+      "probability": 18.19
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 11.18
+      "probability": 11.21
+    },
+    {
+      "name": "Jon",
+      "teams": [
+        "England"
+      ],
+      "probability": 10.97
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.25
+      "probability": 6.33
     },
     {
       "name": "MEJ (Michael)",
       "teams": [
         "Portugal"
       ],
-      "probability": 6.25
+      "probability": 6.13
     },
     {
       "name": "Orgil",
       "teams": [
         "Netherlands"
       ],
-      "probability": 4.97
+      "probability": 4.99
     },
     {
       "name": "Georgia",
       "teams": [
         "Germany"
       ],
-      "probability": 4.13
+      "probability": 4.34
     },
     {
       "name": "Alistair",
       "teams": [
         "Colombia"
       ],
-      "probability": 2.53
+      "probability": 2.49
     },
     {
       "name": "Jimmy",
@@ -73,14 +73,14 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.49
+      "probability": 2.42
     },
     {
       "name": "Eden",
       "teams": [
         "Norway"
       ],
-      "probability": 2.07
+      "probability": 2.16
     },
     {
       "name": "Pip",
@@ -94,7 +94,7 @@
       "teams": [
         "Morocco"
       ],
-      "probability": 1.57
+      "probability": 1.54
     },
     {
       "name": "Rose",
@@ -116,14 +116,14 @@
       "teams": [
         "Japan"
       ],
-      "probability": 1.35
+      "probability": 1.39
     },
     {
       "name": "Tess",
       "teams": [
         "Switzerland"
       ],
-      "probability": 1.03
+      "probability": 1.01
     },
     {
       "name": "Adele",
@@ -138,14 +138,14 @@
         "Ecuador",
         "Bosnia & Herzegovina"
       ],
-      "probability": 0.73
+      "probability": 0.77
     },
     {
       "name": "Lach",
       "teams": [
         "Senegal"
       ],
-      "probability": 0.54
+      "probability": 0.56
     },
     {
       "name": "Simon D",
@@ -173,7 +173,7 @@
       "teams": [
         "Côte d'Ivoire"
       ],
-      "probability": 0.33
+      "probability": 0.34
     },
     {
       "name": "Clarence",
@@ -190,23 +190,23 @@
       "probability": 0.25
     },
     {
-      "name": "Anita",
-      "teams": [
-        "Austria"
-      ],
-      "probability": 0.23
-    },
-    {
       "name": "Lidia",
       "teams": [
         "Sweden"
       ],
-      "probability": 0.22
+      "probability": 0.23
     },
     {
       "name": "Sarah",
       "teams": [
         "Australia"
+      ],
+      "probability": 0.21
+    },
+    {
+      "name": "Anita",
+      "teams": [
+        "Austria"
       ],
       "probability": 0.2
     },
