@@ -439,6 +439,22 @@ STAGE_ORDER = [
     "QUARTER_FINALS", "SEMI_FINALS", "THIRD_PLACE", "FINAL",
 ]
 
+# football-data.org uses LAST_32 / LAST_16 for the 2026 expanded rounds.
+API_STAGE_MAP = {
+    "GROUP_STAGE":   "GROUP_STAGE",
+    "LAST_32":       "ROUND_OF_32",
+    "ROUND_OF_32":   "ROUND_OF_32",
+    "LAST_16":       "ROUND_OF_16",
+    "ROUND_OF_16":   "ROUND_OF_16",
+    "QUARTER_FINALS":"QUARTER_FINALS",
+    "SEMI_FINALS":   "SEMI_FINALS",
+    "THIRD_PLACE":   "THIRD_PLACE",
+    "FINAL":         "FINAL",
+}
+
+def norm_stage(raw):
+    return API_STAGE_MAP.get(raw.upper().strip() if raw else "", None)
+
 def compute_advancement(all_matches, team_stats):
     """
     Sets advanced_to on each team in team_stats.
@@ -455,8 +471,8 @@ def compute_advancement(all_matches, team_stats):
     knockout_stages_set = set(STAGE_ORDER) - {"GROUP_STAGE"}
     for m in all_matches:
         status = m.get("status", "")
-        s = m.get("stage", "").upper()
-        if s not in STAGE_ORDER:
+        s = norm_stage(m.get("stage", ""))
+        if not s:
             continue
         if status in ("FINISHED", "IN_PLAY"):
             active_stages.add(s)
@@ -570,8 +586,8 @@ def compute_advancement(all_matches, team_stats):
         for m in all_matches:
             if m.get("status") != "FINISHED":
                 continue
-            stage = m.get("stage", "").upper()
-            if stage not in knockout_stages:
+            stage = norm_stage(m.get("stage", ""))
+            if not stage or stage not in knockout_stages:
                 continue
             winner, loser = knockout_winner(m)
             if loser and loser in team_stats:
