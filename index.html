@@ -660,16 +660,25 @@
     .group-card tbody tr.qualified td { background: rgba(58,181,124,0.08); }
 
     /* ── Advancement row states ── */
-    .group-card tbody tr.adv-advancing td { background: rgba(58,181,124,0.10); }
-    .group-card tbody tr.adv-advancing td:first-child::before { content:"▲ "; color:#3ab57c; font-size:0.68rem; }
+    .group-card tbody tr.adv-advancing td,
     .group-card tbody tr.adv-third td { background: rgba(58,181,124,0.10); }
+    .group-card tbody tr.adv-advancing td:first-child::before,
     .group-card tbody tr.adv-third td:first-child::before { content:"▲ "; color:#3ab57c; font-size:0.68rem; }
-    .group-card tbody tr.adv-third td:first-child::after { content:" (best 3rd)"; color:#3ab57c; font-size:0.6rem; opacity:0.75; }
     .group-card tbody tr.adv-eliminated td { background: rgba(0,0,0,0.08); opacity: 0.55; }
     .group-card tbody tr.adv-eliminated .group-team-btn { color: var(--text-mid); }
     .group-card tbody tr.adv-eliminated td.pts { color: var(--text-mid); }
     .group-card tbody tr.adv-champion td { background: rgba(255,193,7,0.14); }
     .group-card tbody tr.adv-champion td:first-child::before { content:"★ "; color:#ffc107; }
+    .stage-badge {
+      display: inline-block; margin-left: 5px;
+      font-size: 0.58rem; font-weight: 700; letter-spacing: 0.3px;
+      background: rgba(58,181,124,0.2); color: #2a9460;
+      border-radius: 3px; padding: 1px 4px; vertical-align: middle;
+    }
+    .third-tag {
+      display: inline-block; margin-left: 4px;
+      font-size: 0.58rem; color: #3ab57c; opacity: 0.8; vertical-align: middle;
+    }
     .groups-legend {
       grid-column: 1 / -1;
       text-align: center;
@@ -1938,11 +1947,17 @@ function renderGroups() {
         : t.via_third ? 'adv-third'
         : adv ? 'adv-advancing'
         : '';
+      const STAGE_LABEL = {
+        'ROUND_OF_32':'R32','ROUND_OF_16':'R16','QUARTER_FINALS':'QF',
+        'SEMI_FINALS':'SF','FINAL':'Final','WINNER':'Champion'
+      };
+      const stageBadge = (adv && adv !== 'eliminated' && adv !== 'ROUND_OF_32')
+        ? `<span class="stage-badge">${STAGE_LABEL[adv] || adv}</span>` : '';
       return `
       <tr class="${rowClass}" data-group-team="${t.team.toLowerCase()}">
         <td><button class="group-team-btn" onclick="openTeamModal('${t.team.replace(/'/g,"\\'")}')">
           ${flag(t.team)} ${t.team}
-        </button></td>
+        </button>${stageBadge}${t.via_third ? '<span class="third-tag">best 3rd</span>' : ''}</td>
         <td>${t.played ?? 0}</td>
         <td>${t.won ?? 0}</td>
         <td>${t.drawn ?? 0}</td>

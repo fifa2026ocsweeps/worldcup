@@ -509,11 +509,9 @@ def compute_advancement(all_matches, team_stats):
 
     else:
         # ── Knockout phase ──────────────────────────────────────────────────
-        # Reliable baseline: compute who qualified from the group stage using our
-        # OWN computed standings (knockout fixtures from the API often carry
-        # placeholder names like "Winner Group A" until results exist, so we
-        # cannot rely on fixture-name matching). 2026 format: top 2 of each group
-        # plus the 8 best 3rd-placed teams = 32 → Round of 32.
+        # Step 1 — baseline from group standings (API knockout fixtures use
+        # placeholder names like "Winner Group A" until results exist).
+        # 2026 format: top 2 of each group + 8 best 3rd-placed teams = 32.
         groups = {}
         for team, s in team_stats.items():
             g = s.get("group", "Unassigned")
@@ -525,8 +523,8 @@ def compute_advancement(all_matches, team_stats):
             s = team_stats[t]
             return (s.get("points", 0), s.get("goal_diff", 0), s.get("goals_for", 0))
 
-        qualifiers = set()       # top 2 of each group
-        third_qualifiers = set() # 8 best 3rd-placed teams
+        qualifiers = set()
+        third_qualifiers = set()
         thirds = []
         for g, teams in groups.items():
             st = sorted(teams, key=grank, reverse=True)
@@ -535,35 +533,39 @@ def compute_advancement(all_matches, team_stats):
                     qualifiers.add(team)
                 elif i == 2:
                     thirds.append(team)
-        # 8 best 3rd-placed teams across all groups also advance
         for team in sorted(thirds, key=grank, reverse=True)[:8]:
             third_qualifiers.add(team)
 
         all_qualifiers = qualifiers | third_qualifiers
         for team in team_stats:
             team_stats[team]["advanced_to"] = "ROUND_OF_32" if team in all_qualifiers else "eliminated"
-            # Flag best-3rd qualifiers so the UI can distinguish them from group top-2.
             team_stats[team]["via_third"] = team in third_qualifiers
 
-        # Best-effort layering: if the API provides real team names in knockout
-        # fixtures, promote teams to the furthest knockout round they appear in,
-        # and mark losers of finished knockout matches as eliminated.
-        team_best_stage = {}
-        for m in all_matches:
-            stage = m.get("stage", "").upper()
-            if stage not in STAGE_ORDER or stage == "GROUP_STAGE":
-                continue
-            for side in ("homeTeam", "awayTeam"):
-                nm = normalise(m.get(side, {}).get("name"))
-                if not nm or nm not in team_stats:
-                    continue
-                prev = team_best_stage.get(nm)
-                if prev is None or STAGE_ORDER.index(stage) > STAGE_ORDER.index(prev):
-                    team_best_stage[nm] = stage
-        for team, best in team_best_stage.items():
-            team_stats[team]["advanced_to"] = best  # reached this round → still alive at least to here
+        # Step 2 — layer in real knockout results where the API has actual
+        # team names (not placeholders). Resolve winner correctly:
+        # fullTime → extraTime → penalties (knockout draws always resolve).
+        NEXT_STAGE = {
+            "ROUND_OF_32":   "ROUND_OF_16",
+            "ROUND_OF_16":   "QUARTER_FINALS",
+            "QUARTER_FINALS":"SEMI_FINALS",
+            "SEMI_FINALS":   "FINAL",
+            "FINAL":         "WINNER",
+        }
 
-        # Mark losers of FINISHED knockout matches as eliminated; FINAL winner → champion.
+        def knockout_winner(m):
+            """Return (winner, loser) for a finished knockout match."""
+            home = normalise(m.get("homeTeam", {}).get("name"))
+            away = normalise(m.get("awayTeam", {}).get("name"))
+            if not home or not away:
+                return None, None
+            score = m.get("score", {})
+            for key in ("penalties", "extraTime", "fullTime"):
+                s = score.get(key, {}) or {}
+                h, a = s.get("home"), s.get("away")
+                if h is not None and a is not None and h != a:
+                    return (home, away) if h > a else (away, home)
+            return None, None  # unresolved (match still in play)
+
         knockout_stages = set(STAGE_ORDER) - {"GROUP_STAGE", "THIRD_PLACE"}
         for m in all_matches:
             if m.get("status") != "FINISHED":
@@ -571,19 +573,12 @@ def compute_advancement(all_matches, team_stats):
             stage = m.get("stage", "").upper()
             if stage not in knockout_stages:
                 continue
-            score = m.get("score", {}).get("fullTime", {})
-            hg = score.get("home") or 0
-            ag = score.get("away") or 0
-            home = normalise(m.get("homeTeam", {}).get("name"))
-            away = normalise(m.get("awayTeam", {}).get("name"))
-            if hg == ag:
-                continue  # draw in knockout = likely went to pens; skip (fixture data handles)
-            loser = away if hg > ag else home
-            winner = home if hg > ag else away
+            winner, loser = knockout_winner(m)
             if loser and loser in team_stats:
                 team_stats[loser]["advanced_to"] = "eliminated"
-            if winner and stage == "FINAL" and winner in team_stats:
-                team_stats[winner]["advanced_to"] = "WINNER"
+            if winner and winner in team_stats:
+                next_s = NEXT_STAGE.get(stage, stage)
+                team_stats[winner]["advanced_to"] = next_s  # WINNER if FINAL
 
     adv_count = sum(1 for s in team_stats.values() if s.get("advanced_to") not in (None, "eliminated"))
     elim_count = sum(1 for s in team_stats.values() if s.get("advanced_to") == "eliminated")
