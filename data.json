@@ -1,43 +1,43 @@
 {
-  "last_updated": "2026-06-29T23:42:33Z",
+  "last_updated": "2026-06-29T23:49:04Z",
   "last_match": "Last 32: Germany 5–6 Paraguay  (2026-06-29)",
   "source": "The Odds API (live betting markets)",
-  "tournament_stage": "QUARTER_FINALS",
+  "tournament_stage": "ROUND_OF_32",
   "players": [
     {
       "name": "Livia",
       "teams": [
         "France"
       ],
-      "probability": 24.71
+      "probability": 24.68
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 18.75
+      "probability": 18.73
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 11.19
+      "probability": 11.36
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 11.02
+      "probability": 11.01
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 7.43
+      "probability": 7.42
     },
     {
       "name": "Georgia",
@@ -51,21 +51,21 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 5.64
+      "probability": 5.71
     },
     {
       "name": "Orgil",
       "teams": [
         "Netherlands"
       ],
-      "probability": 4.97
+      "probability": 4.78
     },
     {
       "name": "Alistair",
       "teams": [
         "Colombia"
       ],
-      "probability": 2.74
+      "probability": 2.71
     },
     {
       "name": "Jimmy",
@@ -73,7 +73,14 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.38
+      "probability": 2.37
+    },
+    {
+      "name": "Eden",
+      "teams": [
+        "Norway"
+      ],
+      "probability": 1.92
     },
     {
       "name": "Pip",
@@ -81,13 +88,6 @@
         "Uruguay"
       ],
       "probability": 1.9
-    },
-    {
-      "name": "Eden",
-      "teams": [
-        "Norway"
-      ],
-      "probability": 1.89
     },
     {
       "name": "Mark",
@@ -159,7 +159,7 @@
       "teams": [
         "Croatia"
       ],
-      "probability": 0.41
+      "probability": 0.42
     },
     {
       "name": "Kash",
@@ -173,7 +173,7 @@
       "teams": [
         "Côte d'Ivoire"
       ],
-      "probability": 0.36
+      "probability": 0.37
     },
     {
       "name": "Clarence",
@@ -187,7 +187,7 @@
       "teams": [
         "Sweden"
       ],
-      "probability": 0.26
+      "probability": 0.27
     },
     {
       "name": "Sanaz",
@@ -195,13 +195,6 @@
         "South Korea"
       ],
       "probability": 0.25
-    },
-    {
-      "name": "Sarah",
-      "teams": [
-        "Australia"
-      ],
-      "probability": 0.2
     },
     {
       "name": "Dani",
@@ -218,6 +211,13 @@
       "probability": 0.19
     },
     {
+      "name": "Sarah",
+      "teams": [
+        "Australia"
+      ],
+      "probability": 0.19
+    },
+    {
       "name": "Kena",
       "teams": [
         "Egypt"
@@ -229,7 +229,7 @@
       "teams": [
         "Paraguay"
       ],
-      "probability": 0.19
+      "probability": 0.18
     },
     {
       "name": "Josh",
@@ -401,7 +401,7 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_32",
+      "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
     "Spain": {
@@ -497,7 +497,7 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_32",
+      "advanced_to": "eliminated",
       "via_third": false
     },
     "United States": {
@@ -593,7 +593,7 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_32",
+      "advanced_to": "eliminated",
       "via_third": false
     },
     "Belgium": {
@@ -641,7 +641,7 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_32",
+      "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
     "DR Congo": {
@@ -769,7 +769,7 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_32",
+      "advanced_to": "eliminated",
       "via_third": false
     },
     "Algeria": {
@@ -801,7 +801,7 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_32",
+      "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
     "Senegal": {
