@@ -1499,8 +1499,15 @@ function renderLive(data) {
   delete document.getElementById('groups-container')?.dataset.rendered;
   renderGroups();
 
-  const players = [...data.players].sort((a, b) => b.probability - a.probability);
-  const max = players[0]?.probability ?? 1;
+  const isElim = p => p.teams.length > 0 && p.teams.every(t =>
+    (LIVE_TEAM_STATS[t] || {}).advanced_to === 'eliminated'
+  );
+  const players = [...data.players].sort((a, b) => {
+    const ae = isElim(a), be = isElim(b);
+    if (ae !== be) return ae ? 1 : -1;   // eliminated sink to bottom
+    return b.probability - a.probability; // within each group: highest win% first
+  });
+  const max = players.find(p => !isElim(p))?.probability ?? players[0]?.probability ?? 1;
 
   document.getElementById('player-live-tbody').innerHTML = players.map((p, i) => {
     const diff = p.probability - (STATIC_PROBS[p.name] ?? p.probability);
@@ -1509,9 +1516,7 @@ function renderLive(data) {
       : diff > 0
         ? `<span class="up">▲ ${Math.abs(diff).toFixed(2)}%</span>`
         : `<span class="down">▼ ${Math.abs(diff).toFixed(2)}%</span>`;
-    const allEliminated = p.teams.length > 0 && p.teams.every(t =>
-      (LIVE_TEAM_STATS[t] || {}).advanced_to === 'eliminated'
-    );
+    const allEliminated = isElim(p);
     const elimClass = allEliminated ? ' player-eliminated' : '';
     return `<tr class="${rowClass(i)}${elimClass}">
       <td class="medal-cell">${medal(i)}</td>
