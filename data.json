@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-30T21:27:11Z",
-  "last_match": "Last 32: Ivory Coast 1–2 Norway  (2026-06-30)",
+  "last_updated": "2026-07-01T05:14:55Z",
+  "last_match": "Last 32: Mexico 2–0 Ecuador  (2026-07-01)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_32",
   "players": [
@@ -9,35 +9,35 @@
       "teams": [
         "France"
       ],
-      "probability": 25.68
+      "probability": 30.58
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.89
+      "probability": 17.03
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 11.59
+      "probability": 10.65
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 10.95
+      "probability": 10.53
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 7.69
+      "probability": 7.39
     },
     {
       "name": "Georgia",
@@ -51,7 +51,7 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 6.36
+      "probability": 5.74
     },
     {
       "name": "Orgil",
@@ -65,14 +65,21 @@
       "teams": [
         "Morocco"
       ],
-      "probability": 3.95
+      "probability": 3.09
+    },
+    {
+      "name": "Marcelo",
+      "teams": [
+        "Mexico"
+      ],
+      "probability": 2.84
     },
     {
       "name": "Alistair",
       "teams": [
         "Colombia"
       ],
-      "probability": 2.82
+      "probability": 2.73
     },
     {
       "name": "Jimmy",
@@ -80,14 +87,14 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.66
+      "probability": 2.55
     },
     {
       "name": "Eden",
       "teams": [
         "Norway"
       ],
-      "probability": 2.51
+      "probability": 2.07
     },
     {
       "name": "Pip",
@@ -97,11 +104,11 @@
       "probability": 1.9
     },
     {
-      "name": "Marcelo",
+      "name": "Aditi",
       "teams": [
-        "Mexico"
+        "Japan"
       ],
-      "probability": 1.84
+      "probability": 1.5
     },
     {
       "name": "Rose",
@@ -109,14 +116,15 @@
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 1.53
+      "probability": 1.43
     },
     {
-      "name": "Aditi",
+      "name": "Linda",
       "teams": [
-        "Japan"
+        "Ecuador",
+        "Bosnia & Herzegovina"
       ],
-      "probability": 1.5
+      "probability": 1.33
     },
     {
       "name": "Adele",
@@ -126,26 +134,25 @@
       "probability": 0.99
     },
     {
+      "name": "Lidia",
+      "teams": [
+        "Sweden"
+      ],
+      "probability": 0.99
+    },
+    {
       "name": "Tess",
       "teams": [
         "Switzerland"
       ],
-      "probability": 0.92
-    },
-    {
-      "name": "Linda",
-      "teams": [
-        "Ecuador",
-        "Bosnia & Herzegovina"
-      ],
-      "probability": 0.81
+      "probability": 0.86
     },
     {
       "name": "Lach",
       "teams": [
         "Senegal"
       ],
-      "probability": 0.64
+      "probability": 0.6
     },
     {
       "name": "Simon D",
@@ -159,7 +166,7 @@
       "teams": [
         "Croatia"
       ],
-      "probability": 0.42
+      "probability": 0.4
     },
     {
       "name": "Kash",
@@ -176,18 +183,11 @@
       "probability": 0.4
     },
     {
-      "name": "Lidia",
-      "teams": [
-        "Sweden"
-      ],
-      "probability": 0.28
-    },
-    {
       "name": "Clarence",
       "teams": [
         "Canada"
       ],
-      "probability": 0.28
+      "probability": 0.26
     },
     {
       "name": "Sanaz",
@@ -201,21 +201,7 @@
       "teams": [
         "Paraguay"
       ],
-      "probability": 0.22
-    },
-    {
-      "name": "Anita",
-      "teams": [
-        "Austria"
-      ],
-      "probability": 0.21
-    },
-    {
-      "name": "Kena",
-      "teams": [
-        "Egypt"
-      ],
-      "probability": 0.2
+      "probability": 0.23
     },
     {
       "name": "Dani",
@@ -225,11 +211,25 @@
       "probability": 0.2
     },
     {
+      "name": "Anita",
+      "teams": [
+        "Austria"
+      ],
+      "probability": 0.18
+    },
+    {
       "name": "Sarah",
       "teams": [
         "Australia"
       ],
-      "probability": 0.19
+      "probability": 0.18
+    },
+    {
+      "name": "Kena",
+      "teams": [
+        "Egypt"
+      ],
+      "probability": 0.18
     },
     {
       "name": "Josh",
@@ -260,13 +260,6 @@
       "probability": 0.11
     },
     {
-      "name": "Steph",
-      "teams": [
-        "Cape Verde"
-      ],
-      "probability": 0.1
-    },
-    {
       "name": "Fiona",
       "teams": [
         "Panama"
@@ -286,6 +279,13 @@
         "Saudi Arabia"
       ],
       "probability": 0.1
+    },
+    {
+      "name": "Steph",
+      "teams": [
+        "Cape Verde"
+      ],
+      "probability": 0.09
     },
     {
       "name": "Cristina",
@@ -326,18 +326,18 @@
   "team_stats": {
     "France": {
       "group": "Group I",
-      "played": 3,
-      "won": 3,
+      "played": 4,
+      "won": 4,
       "drawn": 0,
       "lost": 0,
-      "goals_for": 10,
+      "goals_for": 13,
       "goals_against": 2,
-      "goal_diff": 8,
-      "points": 9,
+      "goal_diff": 11,
+      "points": 12,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_32",
+      "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
     "Argentina": {
@@ -358,18 +358,18 @@
     },
     "Mexico": {
       "group": "Group A",
-      "played": 3,
-      "won": 3,
+      "played": 4,
+      "won": 4,
       "drawn": 0,
       "lost": 0,
-      "goals_for": 6,
+      "goals_for": 8,
       "goals_against": 0,
-      "goal_diff": 6,
-      "points": 9,
+      "goal_diff": 8,
+      "points": 12,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Mexico vs Ecuador · 2026-07-01 11:00 AEST",
-      "advanced_to": "ROUND_OF_32",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
     "Netherlands": {
@@ -662,18 +662,18 @@
     },
     "Sweden": {
       "group": "Group F",
-      "played": 3,
+      "played": 4,
       "won": 1,
       "drawn": 1,
-      "lost": 1,
+      "lost": 2,
       "goals_for": 7,
-      "goals_against": 7,
-      "goal_diff": 0,
+      "goals_against": 10,
+      "goal_diff": -3,
       "points": 4,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_32",
+      "advanced_to": "eliminated",
       "via_third": true
     },
     "Austria": {
@@ -710,18 +710,18 @@
     },
     "Ecuador": {
       "group": "Group E",
-      "played": 3,
+      "played": 4,
       "won": 1,
       "drawn": 1,
-      "lost": 1,
+      "lost": 2,
       "goals_for": 2,
-      "goals_against": 2,
-      "goal_diff": 0,
+      "goals_against": 4,
+      "goal_diff": -2,
       "points": 4,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Mexico vs Ecuador · 2026-07-01 11:00 AEST",
-      "advanced_to": "ROUND_OF_32",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "eliminated",
       "via_third": true
     },
     "Ghana": {
@@ -1109,6 +1109,12 @@
     },
     "top_scorers": [
       {
+        "name": "Kylian Mbappé",
+        "team": "France",
+        "goals": 6,
+        "assists": 2
+      },
+      {
         "name": "Lionel Messi",
         "team": "Argentina",
         "goals": 6,
@@ -1127,16 +1133,10 @@
         "assists": 1
       },
       {
-        "name": "Kylian Mbappé",
-        "team": "France",
-        "goals": 4,
-        "assists": 2
-      },
-      {
         "name": "Ousmane Dembélé",
         "team": "France",
         "goals": 4,
-        "assists": 1
+        "assists": 2
       }
     ],
     "top_assister": {
@@ -1155,6 +1155,26 @@
       "days_ago": 0,
       "winner": "Norway",
       "date": "2026-06-30"
+    },
+    {
+      "home": "France",
+      "away": "Sweden",
+      "home_goals": 3,
+      "away_goals": 0,
+      "aest_date": "2026-07-01",
+      "days_ago": 0,
+      "winner": "France",
+      "date": "2026-06-30"
+    },
+    {
+      "home": "Mexico",
+      "away": "Ecuador",
+      "home_goals": 2,
+      "away_goals": 0,
+      "aest_date": "2026-07-01",
+      "days_ago": 0,
+      "winner": "Mexico",
+      "date": "2026-07-01"
     },
     {
       "home": "Brazil",
