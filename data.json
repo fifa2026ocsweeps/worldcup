@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-01T21:26:46Z",
-  "last_match": "Last 32: England 2–1 Congo DR  (2026-07-01)",
+  "last_updated": "2026-07-01T23:05:57Z",
+  "last_match": "Last 32: Belgium 3–2 Senegal  (2026-07-01)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_32",
   "players": [
@@ -9,35 +9,35 @@
       "teams": [
         "France"
       ],
-      "probability": 31.9
+      "probability": 32.17
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.49
+      "probability": 17.5
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 10.65
+      "probability": 10.49
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 9.89
+      "probability": 9.56
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.93
+      "probability": 6.94
     },
     {
       "name": "Georgia",
@@ -51,7 +51,7 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 5.8
+      "probability": 5.69
     },
     {
       "name": "Orgil",
@@ -59,6 +59,13 @@
         "Netherlands"
       ],
       "probability": 4.3
+    },
+    {
+      "name": "Marcelo",
+      "teams": [
+        "Mexico"
+      ],
+      "probability": 2.92
     },
     {
       "name": "Mark",
@@ -73,13 +80,6 @@
         "Colombia"
       ],
       "probability": 2.77
-    },
-    {
-      "name": "Marcelo",
-      "teams": [
-        "Mexico"
-      ],
-      "probability": 2.75
     },
     {
       "name": "Jimmy",
@@ -104,18 +104,19 @@
       "probability": 1.9
     },
     {
+      "name": "Rose",
+      "teams": [
+        "Belgium",
+        "Uzbekistan"
+      ],
+      "probability": 1.88
+    },
+    {
       "name": "Aditi",
       "teams": [
         "Japan"
       ],
       "probability": 1.5
-    },
-    {
-      "name": "Lach",
-      "teams": [
-        "Senegal"
-      ],
-      "probability": 1.4
     },
     {
       "name": "Linda",
@@ -124,6 +125,13 @@
         "Bosnia & Herzegovina"
       ],
       "probability": 1.31
+    },
+    {
+      "name": "Lach",
+      "teams": [
+        "Senegal"
+      ],
+      "probability": 1.1
     },
     {
       "name": "Adele",
@@ -144,7 +152,7 @@
       "teams": [
         "Switzerland"
       ],
-      "probability": 0.86
+      "probability": 0.81
     },
     {
       "name": "Simon D",
@@ -175,14 +183,6 @@
       "probability": 0.37
     },
     {
-      "name": "Rose",
-      "teams": [
-        "Belgium",
-        "Uzbekistan"
-      ],
-      "probability": 0.3
-    },
-    {
       "name": "Sanaz",
       "teams": [
         "South Korea"
@@ -201,7 +201,7 @@
       "teams": [
         "Egypt"
       ],
-      "probability": 0.21
+      "probability": 0.2
     },
     {
       "name": "Dani",
@@ -239,16 +239,16 @@
       "probability": 0.14
     },
     {
-      "name": "Nicko",
-      "teams": [
-        "Algeria"
-      ],
-      "probability": 0.13
-    },
-    {
       "name": "Josh",
       "teams": [
         "Ghana"
+      ],
+      "probability": 0.14
+    },
+    {
+      "name": "Nicko",
+      "teams": [
+        "Algeria"
       ],
       "probability": 0.13
     },
@@ -598,18 +598,18 @@
     },
     "Belgium": {
       "group": "Group G",
-      "played": 3,
-      "won": 1,
+      "played": 4,
+      "won": 2,
       "drawn": 2,
       "lost": 0,
-      "goals_for": 6,
-      "goals_against": 2,
-      "goal_diff": 4,
-      "points": 5,
+      "goals_for": 9,
+      "goals_against": 4,
+      "goal_diff": 5,
+      "points": 8,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_32",
+      "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
     "Egypt": {
@@ -806,18 +806,18 @@
     },
     "Senegal": {
       "group": "Group I",
-      "played": 3,
+      "played": 4,
       "won": 1,
       "drawn": 0,
-      "lost": 2,
-      "goals_for": 8,
-      "goals_against": 6,
-      "goal_diff": 2,
+      "lost": 3,
+      "goals_for": 10,
+      "goals_against": 9,
+      "goal_diff": 1,
       "points": 3,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_32",
+      "advanced_to": "eliminated",
       "via_third": true
     },
     "Iran": {
@@ -1154,6 +1154,16 @@
       "aest_date": "2026-07-02",
       "days_ago": 0,
       "winner": "England",
+      "date": "2026-07-01"
+    },
+    {
+      "home": "Belgium",
+      "away": "Senegal",
+      "home_goals": 3,
+      "away_goals": 2,
+      "aest_date": "2026-07-02",
+      "days_ago": 0,
+      "winner": "Belgium",
       "date": "2026-07-01"
     },
     {
