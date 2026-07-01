@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01T05:14:55Z",
+  "last_updated": "2026-07-01T08:49:05Z",
   "last_match": "Last 32: Mexico 2–0 Ecuador  (2026-07-01)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_32",
@@ -9,35 +9,35 @@
       "teams": [
         "France"
       ],
-      "probability": 30.58
+      "probability": 31.21
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.03
+      "probability": 17.21
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 10.65
+      "probability": 10.48
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 10.53
+      "probability": 10.36
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 7.39
+      "probability": 7.38
     },
     {
       "name": "Georgia",
@@ -51,7 +51,7 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 5.74
+      "probability": 5.62
     },
     {
       "name": "Orgil",
@@ -65,14 +65,7 @@
       "teams": [
         "Morocco"
       ],
-      "probability": 3.09
-    },
-    {
-      "name": "Marcelo",
-      "teams": [
-        "Mexico"
-      ],
-      "probability": 2.84
+      "probability": 2.96
     },
     {
       "name": "Alistair",
@@ -80,6 +73,13 @@
         "Colombia"
       ],
       "probability": 2.73
+    },
+    {
+      "name": "Marcelo",
+      "teams": [
+        "Mexico"
+      ],
+      "probability": 2.58
     },
     {
       "name": "Jimmy",
@@ -152,7 +152,7 @@
       "teams": [
         "Senegal"
       ],
-      "probability": 0.6
+      "probability": 0.65
     },
     {
       "name": "Simon D",
@@ -183,13 +183,6 @@
       "probability": 0.4
     },
     {
-      "name": "Clarence",
-      "teams": [
-        "Canada"
-      ],
-      "probability": 0.26
-    },
-    {
       "name": "Sanaz",
       "teams": [
         "South Korea"
@@ -197,11 +190,25 @@
       "probability": 0.25
     },
     {
+      "name": "Clarence",
+      "teams": [
+        "Canada"
+      ],
+      "probability": 0.25
+    },
+    {
+      "name": "Kena",
+      "teams": [
+        "Egypt"
+      ],
+      "probability": 0.21
+    },
+    {
       "name": "Reino",
       "teams": [
         "Paraguay"
       ],
-      "probability": 0.23
+      "probability": 0.2
     },
     {
       "name": "Dani",
@@ -211,23 +218,16 @@
       "probability": 0.2
     },
     {
-      "name": "Anita",
-      "teams": [
-        "Austria"
-      ],
-      "probability": 0.18
-    },
-    {
       "name": "Sarah",
       "teams": [
         "Australia"
       ],
-      "probability": 0.18
+      "probability": 0.19
     },
     {
-      "name": "Kena",
+      "name": "Anita",
       "teams": [
-        "Egypt"
+        "Austria"
       ],
       "probability": 0.18
     },
@@ -250,7 +250,7 @@
       "teams": [
         "Algeria"
       ],
-      "probability": 0.14
+      "probability": 0.13
     },
     {
       "name": "Kath",
@@ -336,7 +336,7 @@
       "points": 12,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "No upcoming fixture",
+      "next_fixture": "Paraguay vs France · 2026-07-05 07:00 AEST",
       "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
@@ -400,7 +400,7 @@
       "points": 10,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "No upcoming fixture",
+      "next_fixture": "Brazil vs Norway · 2026-07-06 06:00 AEST",
       "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
@@ -544,7 +544,7 @@
       "points": 9,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "No upcoming fixture",
+      "next_fixture": "Brazil vs Norway · 2026-07-06 06:00 AEST",
       "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
@@ -800,7 +800,7 @@
       "points": 7,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "No upcoming fixture",
+      "next_fixture": "Paraguay vs France · 2026-07-05 07:00 AEST",
       "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
