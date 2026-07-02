@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-01T23:05:57Z",
-  "last_match": "Last 32: Belgium 3–2 Senegal  (2026-07-01)",
+  "last_updated": "2026-07-02T04:52:31Z",
+  "last_match": "Last 32: United States 2–0 Bosnia-Herzegovina  (2026-07-02)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_32",
   "players": [
@@ -9,35 +9,35 @@
       "teams": [
         "France"
       ],
-      "probability": 32.17
+      "probability": 32.07
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.5
+      "probability": 17.61
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 10.49
+      "probability": 10.55
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 9.56
+      "probability": 9.53
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.94
+      "probability": 7.14
     },
     {
       "name": "Georgia",
@@ -51,7 +51,7 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 5.69
+      "probability": 5.44
     },
     {
       "name": "Orgil",
@@ -65,21 +65,14 @@
       "teams": [
         "Mexico"
       ],
-      "probability": 2.92
+      "probability": 2.93
     },
     {
       "name": "Mark",
       "teams": [
         "Morocco"
       ],
-      "probability": 2.84
-    },
-    {
-      "name": "Alistair",
-      "teams": [
-        "Colombia"
-      ],
-      "probability": 2.77
+      "probability": 2.83
     },
     {
       "name": "Jimmy",
@@ -87,21 +80,21 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.74
+      "probability": 2.78
+    },
+    {
+      "name": "Alistair",
+      "teams": [
+        "Colombia"
+      ],
+      "probability": 2.68
     },
     {
       "name": "Eden",
       "teams": [
         "Norway"
       ],
-      "probability": 2.03
-    },
-    {
-      "name": "Pip",
-      "teams": [
-        "Uruguay"
-      ],
-      "probability": 1.9
+      "probability": 2.01
     },
     {
       "name": "Rose",
@@ -109,7 +102,14 @@
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 1.88
+      "probability": 1.94
+    },
+    {
+      "name": "Pip",
+      "teams": [
+        "Uruguay"
+      ],
+      "probability": 1.9
     },
     {
       "name": "Aditi",
@@ -124,7 +124,7 @@
         "Ecuador",
         "Bosnia & Herzegovina"
       ],
-      "probability": 1.31
+      "probability": 1.4
     },
     {
       "name": "Lach",
@@ -152,7 +152,7 @@
       "teams": [
         "Switzerland"
       ],
-      "probability": 0.81
+      "probability": 0.86
     },
     {
       "name": "Simon D",
@@ -183,16 +183,16 @@
       "probability": 0.37
     },
     {
-      "name": "Sanaz",
-      "teams": [
-        "South Korea"
-      ],
-      "probability": 0.25
-    },
-    {
       "name": "Clarence",
       "teams": [
         "Canada"
+      ],
+      "probability": 0.26
+    },
+    {
+      "name": "Sanaz",
+      "teams": [
+        "South Korea"
       ],
       "probability": 0.25
     },
@@ -201,7 +201,14 @@
       "teams": [
         "Egypt"
       ],
-      "probability": 0.2
+      "probability": 0.21
+    },
+    {
+      "name": "Reino",
+      "teams": [
+        "Paraguay"
+      ],
+      "probability": 0.21
     },
     {
       "name": "Dani",
@@ -218,13 +225,6 @@
       "probability": 0.18
     },
     {
-      "name": "Reino",
-      "teams": [
-        "Paraguay"
-      ],
-      "probability": 0.18
-    },
-    {
       "name": "Anita",
       "teams": [
         "Austria"
@@ -232,16 +232,16 @@
       "probability": 0.16
     },
     {
-      "name": "Jamaica",
-      "teams": [
-        "Iran"
-      ],
-      "probability": 0.14
-    },
-    {
       "name": "Josh",
       "teams": [
         "Ghana"
+      ],
+      "probability": 0.15
+    },
+    {
+      "name": "Jamaica",
+      "teams": [
+        "Iran"
       ],
       "probability": 0.14
     },
@@ -502,18 +502,18 @@
     },
     "United States": {
       "group": "Group D",
-      "played": 3,
-      "won": 2,
+      "played": 4,
+      "won": 3,
       "drawn": 0,
       "lost": 1,
-      "goals_for": 8,
+      "goals_for": 10,
       "goals_against": 4,
-      "goal_diff": 4,
-      "points": 6,
+      "goal_diff": 6,
+      "points": 9,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "United States vs Bosnia & Herzegovina · 2026-07-02 10:00 AEST",
-      "advanced_to": "ROUND_OF_32",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
     "Côte d'Ivoire": {
@@ -742,18 +742,18 @@
     },
     "Bosnia & Herzegovina": {
       "group": "Group B",
-      "played": 3,
+      "played": 4,
       "won": 1,
       "drawn": 1,
-      "lost": 1,
+      "lost": 2,
       "goals_for": 5,
-      "goals_against": 6,
-      "goal_diff": -1,
+      "goals_against": 8,
+      "goal_diff": -3,
       "points": 4,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "United States vs Bosnia & Herzegovina · 2026-07-02 10:00 AEST",
-      "advanced_to": "ROUND_OF_32",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "eliminated",
       "via_third": true
     },
     "South Africa": {
@@ -1165,6 +1165,16 @@
       "days_ago": 0,
       "winner": "Belgium",
       "date": "2026-07-01"
+    },
+    {
+      "home": "United States",
+      "away": "Bosnia & Herzegovina",
+      "home_goals": 2,
+      "away_goals": 0,
+      "aest_date": "2026-07-02",
+      "days_ago": 0,
+      "winner": "United States",
+      "date": "2026-07-02"
     },
     {
       "home": "Côte d'Ivoire",
