@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02T21:04:01Z",
+  "last_updated": "2026-07-03T01:14:11Z",
   "last_match": "Last 32: Spain 3–0 Austria  (2026-07-02)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_32",
@@ -9,35 +9,35 @@
       "teams": [
         "France"
       ],
-      "probability": 32.01
+      "probability": 31.7
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.32
+      "probability": 17.35
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 13.05
+      "probability": 13.35
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 8.49
+      "probability": 8.2
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.82
+      "probability": 6.99
     },
     {
       "name": "Georgia",
@@ -51,7 +51,7 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 5.13
+      "probability": 6.16
     },
     {
       "name": "Orgil",
@@ -65,7 +65,7 @@
       "teams": [
         "Mexico"
       ],
-      "probability": 3.14
+      "probability": 3.02
     },
     {
       "name": "Jimmy",
@@ -73,7 +73,7 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.87
+      "probability": 2.85
     },
     {
       "name": "Alistair",
@@ -87,7 +87,7 @@
       "teams": [
         "Morocco"
       ],
-      "probability": 2.66
+      "probability": 2.61
     },
     {
       "name": "Eden",
@@ -104,19 +104,19 @@
       "probability": 1.9
     },
     {
-      "name": "Rose",
-      "teams": [
-        "Belgium",
-        "Uzbekistan"
-      ],
-      "probability": 1.61
-    },
-    {
       "name": "Aditi",
       "teams": [
         "Japan"
       ],
       "probability": 1.5
+    },
+    {
+      "name": "Rose",
+      "teams": [
+        "Belgium",
+        "Uzbekistan"
+      ],
+      "probability": 1.49
     },
     {
       "name": "Linda",
@@ -148,11 +148,11 @@
       "probability": 0.99
     },
     {
-      "name": "Tess",
+      "name": "Anita",
       "teams": [
-        "Switzerland"
+        "Austria"
       ],
-      "probability": 0.81
+      "probability": 0.66
     },
     {
       "name": "Simon D",
@@ -180,7 +180,14 @@
       "teams": [
         "Croatia"
       ],
-      "probability": 0.33
+      "probability": 0.32
+    },
+    {
+      "name": "Tess",
+      "teams": [
+        "Switzerland"
+      ],
+      "probability": 0.26
     },
     {
       "name": "Sanaz",
@@ -211,18 +218,18 @@
       "probability": 0.17
     },
     {
-      "name": "Reino",
-      "teams": [
-        "Paraguay"
-      ],
-      "probability": 0.17
-    },
-    {
       "name": "Kena",
       "teams": [
         "Egypt"
       ],
-      "probability": 0.15
+      "probability": 0.16
+    },
+    {
+      "name": "Reino",
+      "teams": [
+        "Paraguay"
+      ],
+      "probability": 0.16
     },
     {
       "name": "Jamaica",
@@ -232,18 +239,18 @@
       "probability": 0.14
     },
     {
+      "name": "Nicko",
+      "teams": [
+        "Algeria"
+      ],
+      "probability": 0.13
+    },
+    {
       "name": "Josh",
       "teams": [
         "Ghana"
       ],
       "probability": 0.13
-    },
-    {
-      "name": "Nicko",
-      "teams": [
-        "Algeria"
-      ],
-      "probability": 0.12
     },
     {
       "name": "Fiona",
@@ -272,13 +279,6 @@
         "Saudi Arabia"
       ],
       "probability": 0.1
-    },
-    {
-      "name": "Anita",
-      "teams": [
-        "Austria"
-      ],
-      "probability": 0.09
     },
     {
       "name": "Steph",
@@ -560,7 +560,7 @@
       "points": 6,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Portugal vs Croatia · 2026-07-03 09:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32",
       "via_third": false
     },
@@ -576,7 +576,7 @@
       "points": 5,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Portugal vs Croatia · 2026-07-03 09:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32",
       "via_third": false
     },
