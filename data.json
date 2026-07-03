@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-03T04:35:15Z",
-  "last_match": "Last 32: Portugal 2–1 Croatia  (2026-07-02)",
+  "last_updated": "2026-07-03T08:08:13Z",
+  "last_match": "Last 32: Switzerland 2–0 Algeria  (2026-07-03)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_32",
   "players": [
@@ -9,35 +9,35 @@
       "teams": [
         "France"
       ],
-      "probability": 31.88
+      "probability": 32.01
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.45
+      "probability": 17.32
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 13.18
+      "probability": 13.05
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 8.37
+      "probability": 8.25
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 7.03
+      "probability": 6.98
     },
     {
       "name": "Georgia",
@@ -51,7 +51,7 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 5.91
+      "probability": 5.99
     },
     {
       "name": "Orgil",
@@ -65,7 +65,14 @@
       "teams": [
         "Mexico"
       ],
-      "probability": 3.03
+      "probability": 2.95
+    },
+    {
+      "name": "Alistair",
+      "teams": [
+        "Colombia"
+      ],
+      "probability": 2.74
     },
     {
       "name": "Jimmy",
@@ -73,28 +80,21 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.87
-    },
-    {
-      "name": "Alistair",
-      "teams": [
-        "Colombia"
-      ],
-      "probability": 2.76
+      "probability": 2.74
     },
     {
       "name": "Mark",
       "teams": [
         "Morocco"
       ],
-      "probability": 2.63
+      "probability": 2.61
     },
     {
       "name": "Eden",
       "teams": [
         "Norway"
       ],
-      "probability": 2.01
+      "probability": 2.0
     },
     {
       "name": "Pip",
@@ -104,19 +104,19 @@
       "probability": 1.9
     },
     {
-      "name": "Rose",
-      "teams": [
-        "Belgium",
-        "Uzbekistan"
-      ],
-      "probability": 1.54
-    },
-    {
       "name": "Aditi",
       "teams": [
         "Japan"
       ],
       "probability": 1.5
+    },
+    {
+      "name": "Rose",
+      "teams": [
+        "Belgium",
+        "Uzbekistan"
+      ],
+      "probability": 1.48
     },
     {
       "name": "Linda",
@@ -137,6 +137,13 @@
       "name": "Lach",
       "teams": [
         "Senegal"
+      ],
+      "probability": 1.1
+    },
+    {
+      "name": "Tess",
+      "teams": [
+        "Switzerland"
       ],
       "probability": 1.1
     },
@@ -169,13 +176,6 @@
       "probability": 0.5
     },
     {
-      "name": "Tess",
-      "teams": [
-        "Switzerland"
-      ],
-      "probability": 0.43
-    },
-    {
       "name": "Kash",
       "teams": [
         "Czechia"
@@ -188,6 +188,13 @@
         "Côte d'Ivoire"
       ],
       "probability": 0.4
+    },
+    {
+      "name": "Nicko",
+      "teams": [
+        "Algeria"
+      ],
+      "probability": 0.29
     },
     {
       "name": "Sanaz",
@@ -243,19 +250,12 @@
       "teams": [
         "Ghana"
       ],
-      "probability": 0.14
+      "probability": 0.13
     },
     {
       "name": "Fiona",
       "teams": [
         "Panama"
-      ],
-      "probability": 0.1
-    },
-    {
-      "name": "Nicko",
-      "teams": [
-        "Algeria"
       ],
       "probability": 0.1
     },
@@ -422,18 +422,18 @@
     },
     "Switzerland": {
       "group": "Group B",
-      "played": 3,
-      "won": 2,
+      "played": 4,
+      "won": 3,
       "drawn": 1,
       "lost": 0,
-      "goals_for": 7,
+      "goals_for": 9,
       "goals_against": 3,
-      "goal_diff": 4,
-      "points": 7,
+      "goal_diff": 6,
+      "points": 10,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_32",
+      "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
     "England": {
@@ -690,7 +690,7 @@
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
       "advanced_to": "eliminated",
-      "via_third": true
+      "via_third": false
     },
     "Australia": {
       "group": "Group D",
@@ -774,19 +774,19 @@
     },
     "Algeria": {
       "group": "Group J",
-      "played": 3,
+      "played": 4,
       "won": 1,
       "drawn": 1,
-      "lost": 1,
+      "lost": 2,
       "goals_for": 5,
-      "goals_against": 7,
-      "goal_diff": -2,
+      "goals_against": 9,
+      "goal_diff": -4,
       "points": 4,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_32",
-      "via_third": false
+      "advanced_to": "eliminated",
+      "via_third": true
     },
     "Paraguay": {
       "group": "Group D",
@@ -1165,6 +1165,16 @@
       "days_ago": 0,
       "winner": "Portugal",
       "date": "2026-07-02"
+    },
+    {
+      "home": "Switzerland",
+      "away": "Algeria",
+      "home_goals": 2,
+      "away_goals": 0,
+      "aest_date": "2026-07-03",
+      "days_ago": 0,
+      "winner": "Switzerland",
+      "date": "2026-07-03"
     },
     {
       "home": "England",
