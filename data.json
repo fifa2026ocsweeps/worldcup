@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03T02:24:57Z",
+  "last_updated": "2026-07-03T04:35:15Z",
   "last_match": "Last 32: Portugal 2–1 Croatia  (2026-07-02)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_32",
@@ -9,35 +9,35 @@
       "teams": [
         "France"
       ],
-      "probability": 31.64
+      "probability": 31.88
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.32
+      "probability": 17.45
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 13.08
+      "probability": 13.18
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 8.3
+      "probability": 8.37
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.98
+      "probability": 7.03
     },
     {
       "name": "Georgia",
@@ -51,7 +51,7 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 6.25
+      "probability": 5.91
     },
     {
       "name": "Orgil",
@@ -65,7 +65,7 @@
       "teams": [
         "Mexico"
       ],
-      "probability": 3.01
+      "probability": 3.03
     },
     {
       "name": "Jimmy",
@@ -73,28 +73,28 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.84
+      "probability": 2.87
     },
     {
       "name": "Alistair",
       "teams": [
         "Colombia"
       ],
-      "probability": 2.73
+      "probability": 2.76
     },
     {
       "name": "Mark",
       "teams": [
         "Morocco"
       ],
-      "probability": 2.61
+      "probability": 2.63
     },
     {
       "name": "Eden",
       "teams": [
         "Norway"
       ],
-      "probability": 2.0
+      "probability": 2.01
     },
     {
       "name": "Pip",
@@ -109,7 +109,7 @@
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 1.53
+      "probability": 1.54
     },
     {
       "name": "Aditi",
@@ -155,13 +155,6 @@
       "probability": 0.99
     },
     {
-      "name": "Tess",
-      "teams": [
-        "Switzerland"
-      ],
-      "probability": 0.79
-    },
-    {
       "name": "Anita",
       "teams": [
         "Austria"
@@ -174,6 +167,13 @@
         "Scotland"
       ],
       "probability": 0.5
+    },
+    {
+      "name": "Tess",
+      "teams": [
+        "Switzerland"
+      ],
+      "probability": 0.43
     },
     {
       "name": "Kash",
@@ -222,7 +222,7 @@
       "teams": [
         "Egypt"
       ],
-      "probability": 0.15
+      "probability": 0.16
     },
     {
       "name": "Reino",
@@ -239,23 +239,23 @@
       "probability": 0.14
     },
     {
-      "name": "Nicko",
-      "teams": [
-        "Algeria"
-      ],
-      "probability": 0.13
-    },
-    {
       "name": "Josh",
       "teams": [
         "Ghana"
       ],
-      "probability": 0.13
+      "probability": 0.14
     },
     {
       "name": "Fiona",
       "teams": [
         "Panama"
+      ],
+      "probability": 0.1
+    },
+    {
+      "name": "Nicko",
+      "teams": [
+        "Algeria"
       ],
       "probability": 0.1
     },
@@ -432,7 +432,7 @@
       "points": 7,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Switzerland vs Algeria · 2026-07-03 13:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32",
       "via_third": false
     },
@@ -784,7 +784,7 @@
       "points": 4,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Switzerland vs Algeria · 2026-07-03 13:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_32",
       "via_third": false
     },
