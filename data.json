@@ -1,43 +1,43 @@
 {
-  "last_updated": "2026-07-04T07:45:20Z",
-  "last_match": "Last 32: Colombia 1–0 Ghana  (2026-07-04)",
+  "last_updated": "2026-07-04T20:55:33Z",
+  "last_match": "Last 16: Canada 0–3 Morocco  (2026-07-04)",
   "source": "The Odds API (live betting markets)",
-  "tournament_stage": "ROUND_OF_32",
+  "tournament_stage": "ROUND_OF_16",
   "players": [
     {
       "name": "Livia",
       "teams": [
         "France"
       ],
-      "probability": 32.49
+      "probability": 32.91
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.09
+      "probability": 16.63
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 13.21
+      "probability": 13.08
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 8.06
+      "probability": 7.71
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.86
+      "probability": 6.87
     },
     {
       "name": "Georgia",
@@ -51,7 +51,7 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 6.06
+      "probability": 6.0
     },
     {
       "name": "Orgil",
@@ -65,14 +65,21 @@
       "teams": [
         "Colombia"
       ],
-      "probability": 3.33
+      "probability": 3.28
+    },
+    {
+      "name": "Mark",
+      "teams": [
+        "Morocco"
+      ],
+      "probability": 3.19
     },
     {
       "name": "Marcelo",
       "teams": [
         "Mexico"
       ],
-      "probability": 2.92
+      "probability": 3.19
     },
     {
       "name": "Jimmy",
@@ -80,14 +87,7 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.64
-    },
-    {
-      "name": "Mark",
-      "teams": [
-        "Morocco"
-      ],
-      "probability": 2.53
+      "probability": 2.51
     },
     {
       "name": "Pip",
@@ -101,14 +101,7 @@
       "teams": [
         "Norway"
       ],
-      "probability": 1.8
-    },
-    {
-      "name": "Aditi",
-      "teams": [
-        "Japan"
-      ],
-      "probability": 1.5
+      "probability": 1.84
     },
     {
       "name": "Rose",
@@ -116,7 +109,14 @@
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 1.49
+      "probability": 1.56
+    },
+    {
+      "name": "Aditi",
+      "teams": [
+        "Japan"
+      ],
+      "probability": 1.5
     },
     {
       "name": "Linda",
@@ -141,13 +141,6 @@
       "probability": 1.1
     },
     {
-      "name": "Tess",
-      "teams": [
-        "Switzerland"
-      ],
-      "probability": 1.03
-    },
-    {
       "name": "Adele",
       "teams": [
         "Türkiye"
@@ -162,6 +155,13 @@
       "probability": 0.99
     },
     {
+      "name": "Tess",
+      "teams": [
+        "Switzerland"
+      ],
+      "probability": 0.95
+    },
+    {
       "name": "Anita",
       "teams": [
         "Austria"
@@ -172,6 +172,13 @@
       "name": "Simon D",
       "teams": [
         "Scotland"
+      ],
+      "probability": 0.5
+    },
+    {
+      "name": "Clarence",
+      "teams": [
+        "Canada"
       ],
       "probability": 0.5
     },
@@ -211,16 +218,16 @@
       "probability": 0.25
     },
     {
-      "name": "Clarence",
-      "teams": [
-        "Canada"
-      ],
-      "probability": 0.24
-    },
-    {
       "name": "Kena",
       "teams": [
         "Egypt"
+      ],
+      "probability": 0.21
+    },
+    {
+      "name": "Reino",
+      "teams": [
+        "Paraguay"
       ],
       "probability": 0.2
     },
@@ -230,13 +237,6 @@
         "Tunisia"
       ],
       "probability": 0.2
-    },
-    {
-      "name": "Reino",
-      "teams": [
-        "Paraguay"
-      ],
-      "probability": 0.18
     },
     {
       "name": "Sarah",
@@ -454,18 +454,18 @@
     },
     "Morocco": {
       "group": "Group C",
-      "played": 4,
-      "won": 3,
+      "played": 5,
+      "won": 4,
       "drawn": 1,
       "lost": 0,
-      "goals_for": 10,
+      "goals_for": 13,
       "goals_against": 6,
-      "goal_diff": 4,
-      "points": 10,
+      "goal_diff": 7,
+      "points": 13,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Canada vs Morocco · 2026-07-05 03:00 AEST",
-      "advanced_to": "ROUND_OF_16",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "QUARTER_FINALS",
       "via_third": false
     },
     "Colombia": {
@@ -630,18 +630,18 @@
     },
     "Canada": {
       "group": "Group B",
-      "played": 4,
+      "played": 5,
       "won": 2,
       "drawn": 1,
-      "lost": 1,
+      "lost": 2,
       "goals_for": 9,
-      "goals_against": 3,
-      "goal_diff": 6,
+      "goals_against": 6,
+      "goal_diff": 3,
       "points": 7,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Canada vs Morocco · 2026-07-05 03:00 AEST",
-      "advanced_to": "ROUND_OF_16",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "eliminated",
       "via_third": false
     },
     "DR Congo": {
@@ -1112,7 +1112,7 @@
         "name": "Lionel Messi",
         "team": "Argentina",
         "goals": 7,
-        "assists": 1
+        "assists": null
       },
       {
         "name": "Kylian Mbappé",
@@ -1147,12 +1147,22 @@
   },
   "recent_results": [
     {
+      "home": "Canada",
+      "away": "Morocco",
+      "home_goals": 0,
+      "away_goals": 3,
+      "aest_date": "2026-07-05",
+      "days_ago": 0,
+      "winner": "Morocco",
+      "date": "2026-07-04"
+    },
+    {
       "home": "Australia",
       "away": "Egypt",
       "home_goals": 3,
       "away_goals": 5,
       "aest_date": "2026-07-04",
-      "days_ago": 0,
+      "days_ago": 1,
       "winner": "Egypt",
       "date": "2026-07-03"
     },
@@ -1162,7 +1172,7 @@
       "home_goals": 3,
       "away_goals": 2,
       "aest_date": "2026-07-04",
-      "days_ago": 0,
+      "days_ago": 1,
       "winner": "Argentina",
       "date": "2026-07-03"
     },
@@ -1172,39 +1182,9 @@
       "home_goals": 1,
       "away_goals": 0,
       "aest_date": "2026-07-04",
-      "days_ago": 0,
+      "days_ago": 1,
       "winner": "Colombia",
       "date": "2026-07-04"
-    },
-    {
-      "home": "Spain",
-      "away": "Austria",
-      "home_goals": 3,
-      "away_goals": 0,
-      "aest_date": "2026-07-03",
-      "days_ago": 1,
-      "winner": "Spain",
-      "date": "2026-07-02"
-    },
-    {
-      "home": "Portugal",
-      "away": "Croatia",
-      "home_goals": 2,
-      "away_goals": 1,
-      "aest_date": "2026-07-03",
-      "days_ago": 1,
-      "winner": "Portugal",
-      "date": "2026-07-02"
-    },
-    {
-      "home": "Switzerland",
-      "away": "Algeria",
-      "home_goals": 2,
-      "away_goals": 0,
-      "aest_date": "2026-07-03",
-      "days_ago": 1,
-      "winner": "Switzerland",
-      "date": "2026-07-03"
     }
   ]
 }
