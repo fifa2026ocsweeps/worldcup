@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-04T04:27:09Z",
+  "last_updated": "2026-07-04T07:45:20Z",
   "last_match": "Last 32: Colombia 1–0 Ghana  (2026-07-04)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_32",
@@ -9,35 +9,35 @@
       "teams": [
         "France"
       ],
-      "probability": 32.6
+      "probability": 32.49
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.17
+      "probability": 17.09
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 13.15
+      "probability": 13.21
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 7.91
+      "probability": 8.06
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.83
+      "probability": 6.86
     },
     {
       "name": "Georgia",
@@ -51,7 +51,7 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 6.04
+      "probability": 6.06
     },
     {
       "name": "Orgil",
@@ -65,14 +65,14 @@
       "teams": [
         "Colombia"
       ],
-      "probability": 3.28
+      "probability": 3.33
     },
     {
       "name": "Marcelo",
       "teams": [
         "Mexico"
       ],
-      "probability": 2.91
+      "probability": 2.92
     },
     {
       "name": "Jimmy",
@@ -80,14 +80,14 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.63
+      "probability": 2.64
     },
     {
       "name": "Mark",
       "teams": [
         "Morocco"
       ],
-      "probability": 2.56
+      "probability": 2.53
     },
     {
       "name": "Pip",
@@ -101,15 +101,7 @@
       "teams": [
         "Norway"
       ],
-      "probability": 1.85
-    },
-    {
-      "name": "Rose",
-      "teams": [
-        "Belgium",
-        "Uzbekistan"
-      ],
-      "probability": 1.5
+      "probability": 1.8
     },
     {
       "name": "Aditi",
@@ -117,6 +109,14 @@
         "Japan"
       ],
       "probability": 1.5
+    },
+    {
+      "name": "Rose",
+      "teams": [
+        "Belgium",
+        "Uzbekistan"
+      ],
+      "probability": 1.49
     },
     {
       "name": "Linda",
@@ -145,7 +145,7 @@
       "teams": [
         "Switzerland"
       ],
-      "probability": 1.07
+      "probability": 1.03
     },
     {
       "name": "Adele",
@@ -222,7 +222,7 @@
       "teams": [
         "Egypt"
       ],
-      "probability": 0.21
+      "probability": 0.2
     },
     {
       "name": "Dani",
@@ -352,7 +352,7 @@
       "points": 12,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "No upcoming fixture",
+      "next_fixture": "Argentina vs Egypt · 2026-07-08 02:00 AEST",
       "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
@@ -416,7 +416,7 @@
       "points": 10,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "No upcoming fixture",
+      "next_fixture": "Portugal vs Spain · 2026-07-07 05:00 AEST",
       "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
@@ -432,7 +432,7 @@
       "points": 10,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "No upcoming fixture",
+      "next_fixture": "Switzerland vs Colombia · 2026-07-08 06:00 AEST",
       "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
@@ -480,7 +480,7 @@
       "points": 10,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "No upcoming fixture",
+      "next_fixture": "Switzerland vs Colombia · 2026-07-08 06:00 AEST",
       "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
@@ -576,7 +576,7 @@
       "points": 8,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "No upcoming fixture",
+      "next_fixture": "Portugal vs Spain · 2026-07-07 05:00 AEST",
       "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
@@ -624,7 +624,7 @@
       "points": 8,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "No upcoming fixture",
+      "next_fixture": "Argentina vs Egypt · 2026-07-08 02:00 AEST",
       "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
