@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-03T21:04:02Z",
-  "last_match": "Last 32: Australia 3–5 Egypt  (2026-07-03)",
+  "last_updated": "2026-07-04T04:27:09Z",
+  "last_match": "Last 32: Colombia 1–0 Ghana  (2026-07-04)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_32",
   "players": [
@@ -9,35 +9,35 @@
       "teams": [
         "France"
       ],
-      "probability": 32.29
+      "probability": 32.6
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.53
+      "probability": 17.17
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 13.17
+      "probability": 13.15
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 8.09
+      "probability": 7.91
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.88
+      "probability": 6.83
     },
     {
       "name": "Georgia",
@@ -61,11 +61,18 @@
       "probability": 4.3
     },
     {
+      "name": "Alistair",
+      "teams": [
+        "Colombia"
+      ],
+      "probability": 3.28
+    },
+    {
       "name": "Marcelo",
       "teams": [
         "Mexico"
       ],
-      "probability": 3.04
+      "probability": 2.91
     },
     {
       "name": "Jimmy",
@@ -73,19 +80,12 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.77
+      "probability": 2.63
     },
     {
       "name": "Mark",
       "teams": [
         "Morocco"
-      ],
-      "probability": 2.6
-    },
-    {
-      "name": "Alistair",
-      "teams": [
-        "Colombia"
       ],
       "probability": 2.56
     },
@@ -101,14 +101,7 @@
       "teams": [
         "Norway"
       ],
-      "probability": 1.82
-    },
-    {
-      "name": "Aditi",
-      "teams": [
-        "Japan"
-      ],
-      "probability": 1.5
+      "probability": 1.85
     },
     {
       "name": "Rose",
@@ -116,7 +109,14 @@
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 1.45
+      "probability": 1.5
+    },
+    {
+      "name": "Aditi",
+      "teams": [
+        "Japan"
+      ],
+      "probability": 1.5
     },
     {
       "name": "Linda",
@@ -145,7 +145,7 @@
       "teams": [
         "Switzerland"
       ],
-      "probability": 1.08
+      "probability": 1.07
     },
     {
       "name": "Adele",
@@ -190,6 +190,13 @@
       "probability": 0.4
     },
     {
+      "name": "Josh",
+      "teams": [
+        "Ghana"
+      ],
+      "probability": 0.33
+    },
+    {
       "name": "Nicko",
       "teams": [
         "Algeria"
@@ -211,6 +218,13 @@
       "probability": 0.24
     },
     {
+      "name": "Kena",
+      "teams": [
+        "Egypt"
+      ],
+      "probability": 0.21
+    },
+    {
       "name": "Dani",
       "teams": [
         "Tunisia"
@@ -218,9 +232,9 @@
       "probability": 0.2
     },
     {
-      "name": "Kena",
+      "name": "Reino",
       "teams": [
-        "Egypt"
+        "Paraguay"
       ],
       "probability": 0.18
     },
@@ -232,13 +246,6 @@
       "probability": 0.17
     },
     {
-      "name": "Reino",
-      "teams": [
-        "Paraguay"
-      ],
-      "probability": 0.16
-    },
-    {
       "name": "Jamaica",
       "teams": [
         "Iran"
@@ -246,11 +253,11 @@
       "probability": 0.14
     },
     {
-      "name": "Josh",
+      "name": "Steph",
       "teams": [
-        "Ghana"
+        "Cape Verde"
       ],
-      "probability": 0.14
+      "probability": 0.1
     },
     {
       "name": "Fiona",
@@ -279,13 +286,6 @@
         "Saudi Arabia"
       ],
       "probability": 0.1
-    },
-    {
-      "name": "Steph",
-      "teams": [
-        "Cape Verde"
-      ],
-      "probability": 0.09
     },
     {
       "name": "Cristina",
@@ -342,18 +342,18 @@
     },
     "Argentina": {
       "group": "Group J",
-      "played": 3,
-      "won": 3,
+      "played": 4,
+      "won": 4,
       "drawn": 0,
       "lost": 0,
-      "goals_for": 8,
-      "goals_against": 1,
-      "goal_diff": 7,
-      "points": 9,
+      "goals_for": 11,
+      "goals_against": 3,
+      "goal_diff": 8,
+      "points": 12,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Argentina vs Cape Verde · 2026-07-04 08:00 AEST",
-      "advanced_to": "ROUND_OF_32",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
     "Mexico": {
@@ -470,18 +470,18 @@
     },
     "Colombia": {
       "group": "Group K",
-      "played": 3,
-      "won": 2,
+      "played": 4,
+      "won": 3,
       "drawn": 1,
       "lost": 0,
-      "goals_for": 4,
+      "goals_for": 5,
       "goals_against": 1,
-      "goal_diff": 3,
-      "points": 7,
+      "goal_diff": 4,
+      "points": 10,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Colombia vs Ghana · 2026-07-04 11:30 AEST",
-      "advanced_to": "ROUND_OF_32",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
     "Germany": {
@@ -726,18 +726,18 @@
     },
     "Ghana": {
       "group": "Group L",
-      "played": 3,
+      "played": 4,
       "won": 1,
       "drawn": 1,
-      "lost": 1,
+      "lost": 2,
       "goals_for": 2,
-      "goals_against": 2,
-      "goal_diff": 0,
+      "goals_against": 3,
+      "goal_diff": -1,
       "points": 4,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Colombia vs Ghana · 2026-07-04 11:30 AEST",
-      "advanced_to": "ROUND_OF_32",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "eliminated",
       "via_third": true
     },
     "Bosnia & Herzegovina": {
@@ -838,18 +838,18 @@
     },
     "Cape Verde": {
       "group": "Group H",
-      "played": 3,
+      "played": 4,
       "won": 0,
       "drawn": 3,
-      "lost": 0,
-      "goals_for": 2,
-      "goals_against": 2,
-      "goal_diff": 0,
+      "lost": 1,
+      "goals_for": 4,
+      "goals_against": 5,
+      "goal_diff": -1,
       "points": 3,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Argentina vs Cape Verde · 2026-07-04 08:00 AEST",
-      "advanced_to": "ROUND_OF_32",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "eliminated",
       "via_third": false
     },
     "South Korea": {
@@ -1109,16 +1109,16 @@
     },
     "top_scorers": [
       {
+        "name": "Lionel Messi",
+        "team": "Argentina",
+        "goals": 7,
+        "assists": 1
+      },
+      {
         "name": "Kylian Mbappé",
         "team": "France",
         "goals": 6,
         "assists": 2
-      },
-      {
-        "name": "Lionel Messi",
-        "team": "Argentina",
-        "goals": 6,
-        "assists": null
       },
       {
         "name": "Erling Haaland",
@@ -1155,6 +1155,26 @@
       "days_ago": 0,
       "winner": "Egypt",
       "date": "2026-07-03"
+    },
+    {
+      "home": "Argentina",
+      "away": "Cape Verde",
+      "home_goals": 3,
+      "away_goals": 2,
+      "aest_date": "2026-07-04",
+      "days_ago": 0,
+      "winner": "Argentina",
+      "date": "2026-07-03"
+    },
+    {
+      "home": "Colombia",
+      "away": "Ghana",
+      "home_goals": 1,
+      "away_goals": 0,
+      "aest_date": "2026-07-04",
+      "days_ago": 0,
+      "winner": "Colombia",
+      "date": "2026-07-04"
     },
     {
       "home": "Spain",
