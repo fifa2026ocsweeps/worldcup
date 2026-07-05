@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-05T20:58:15Z",
-  "last_match": "Last 16: Paraguay 0–1 France  (2026-07-04)",
+  "last_updated": "2026-07-05T23:09:42Z",
+  "last_match": "Last 16: Brazil 1–2 Norway  (2026-07-05)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_16",
   "players": [
@@ -9,35 +9,35 @@
       "teams": [
         "France"
       ],
-      "probability": 33.86
+      "probability": 34.05
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 16.33
+      "probability": 17.13
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 13.18
-    },
-    {
-      "name": "Jon",
-      "teams": [
-        "England"
-      ],
-      "probability": 7.48
+      "probability": 13.54
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.93
+      "probability": 10.5
+    },
+    {
+      "name": "Jon",
+      "teams": [
+        "England"
+      ],
+      "probability": 8.86
     },
     {
       "name": "Georgia",
@@ -51,7 +51,14 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 5.86
+      "probability": 6.01
+    },
+    {
+      "name": "Eden",
+      "teams": [
+        "Norway"
+      ],
+      "probability": 5.1
     },
     {
       "name": "Orgil",
@@ -61,25 +68,25 @@
       "probability": 4.3
     },
     {
-      "name": "Alistair",
-      "teams": [
-        "Colombia"
-      ],
-      "probability": 3.23
-    },
-    {
       "name": "Marcelo",
       "teams": [
         "Mexico"
       ],
-      "probability": 3.21
+      "probability": 3.73
+    },
+    {
+      "name": "Alistair",
+      "teams": [
+        "Colombia"
+      ],
+      "probability": 3.36
     },
     {
       "name": "Mark",
       "teams": [
         "Morocco"
       ],
-      "probability": 2.67
+      "probability": 2.73
     },
     {
       "name": "Jimmy",
@@ -87,14 +94,7 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.63
-    },
-    {
-      "name": "Eden",
-      "teams": [
-        "Norway"
-      ],
-      "probability": 2.03
+      "probability": 2.69
     },
     {
       "name": "Pip",
@@ -104,19 +104,19 @@
       "probability": 1.9
     },
     {
-      "name": "Aditi",
-      "teams": [
-        "Japan"
-      ],
-      "probability": 1.5
-    },
-    {
       "name": "Rose",
       "teams": [
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 1.43
+      "probability": 1.55
+    },
+    {
+      "name": "Aditi",
+      "teams": [
+        "Japan"
+      ],
+      "probability": 1.5
     },
     {
       "name": "Linda",
@@ -145,7 +145,7 @@
       "teams": [
         "Switzerland"
       ],
-      "probability": 1.02
+      "probability": 1.1
     },
     {
       "name": "Adele",
@@ -211,18 +211,18 @@
       "probability": 0.33
     },
     {
-      "name": "Kena",
-      "teams": [
-        "Egypt"
-      ],
-      "probability": 0.29
-    },
-    {
       "name": "Nicko",
       "teams": [
         "Algeria"
       ],
       "probability": 0.29
+    },
+    {
+      "name": "Kena",
+      "teams": [
+        "Egypt"
+      ],
+      "probability": 0.28
     },
     {
       "name": "Sanaz",
@@ -390,18 +390,18 @@
     },
     "Brazil": {
       "group": "Group C",
-      "played": 4,
+      "played": 5,
       "won": 3,
       "drawn": 1,
-      "lost": 0,
-      "goals_for": 9,
-      "goals_against": 2,
-      "goal_diff": 7,
+      "lost": 1,
+      "goals_for": 10,
+      "goals_against": 4,
+      "goal_diff": 6,
       "points": 10,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_16",
+      "advanced_to": "eliminated",
       "via_third": false
     },
     "Spain": {
@@ -534,18 +534,18 @@
     },
     "Norway": {
       "group": "Group I",
-      "played": 4,
-      "won": 3,
+      "played": 5,
+      "won": 4,
       "drawn": 0,
       "lost": 1,
-      "goals_for": 10,
-      "goals_against": 8,
-      "goal_diff": 2,
-      "points": 9,
+      "goals_for": 12,
+      "goals_against": 9,
+      "goal_diff": 3,
+      "points": 12,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_16",
+      "advanced_to": "QUARTER_FINALS",
       "via_third": false
     },
     "Croatia": {
@@ -1116,15 +1116,15 @@
         "assists": 2
       },
       {
-        "name": "Lionel Messi",
-        "team": "Argentina",
+        "name": "Erling Haaland",
+        "team": "Norway",
         "goals": 7,
         "assists": null
       },
       {
-        "name": "Erling Haaland",
-        "team": "Norway",
-        "goals": 5,
+        "name": "Lionel Messi",
+        "team": "Argentina",
+        "goals": 7,
         "assists": null
       },
       {
@@ -1147,6 +1147,16 @@
     }
   },
   "recent_results": [
+    {
+      "home": "Brazil",
+      "away": "Norway",
+      "home_goals": 1,
+      "away_goals": 2,
+      "aest_date": "2026-07-06",
+      "days_ago": 0,
+      "winner": "Norway",
+      "date": "2026-07-05"
+    },
     {
       "home": "Canada",
       "away": "Morocco",
