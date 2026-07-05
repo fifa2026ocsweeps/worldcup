@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-05T07:56:08Z",
+  "last_updated": "2026-07-05T20:58:15Z",
   "last_match": "Last 16: Paraguay 0–1 France  (2026-07-04)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_16",
@@ -9,35 +9,35 @@
       "teams": [
         "France"
       ],
-      "probability": 34.09
+      "probability": 33.86
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 16.01
+      "probability": 16.33
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 13.4
+      "probability": 13.18
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 7.66
+      "probability": 7.48
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.83
+      "probability": 6.93
     },
     {
       "name": "Georgia",
@@ -51,7 +51,7 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 5.96
+      "probability": 5.86
     },
     {
       "name": "Orgil",
@@ -65,21 +65,21 @@
       "teams": [
         "Colombia"
       ],
-      "probability": 3.26
+      "probability": 3.23
     },
     {
       "name": "Marcelo",
       "teams": [
         "Mexico"
       ],
-      "probability": 3.03
+      "probability": 3.21
     },
     {
       "name": "Mark",
       "teams": [
         "Morocco"
       ],
-      "probability": 2.76
+      "probability": 2.67
     },
     {
       "name": "Jimmy",
@@ -87,14 +87,14 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.49
+      "probability": 2.63
     },
     {
       "name": "Eden",
       "teams": [
         "Norway"
       ],
-      "probability": 1.95
+      "probability": 2.03
     },
     {
       "name": "Pip",
@@ -104,19 +104,19 @@
       "probability": 1.9
     },
     {
-      "name": "Rose",
-      "teams": [
-        "Belgium",
-        "Uzbekistan"
-      ],
-      "probability": 1.52
-    },
-    {
       "name": "Aditi",
       "teams": [
         "Japan"
       ],
       "probability": 1.5
+    },
+    {
+      "name": "Rose",
+      "teams": [
+        "Belgium",
+        "Uzbekistan"
+      ],
+      "probability": 1.43
     },
     {
       "name": "Linda",
@@ -141,6 +141,13 @@
       "probability": 1.1
     },
     {
+      "name": "Tess",
+      "teams": [
+        "Switzerland"
+      ],
+      "probability": 1.02
+    },
+    {
       "name": "Adele",
       "teams": [
         "Türkiye"
@@ -153,13 +160,6 @@
         "Sweden"
       ],
       "probability": 0.99
-    },
-    {
-      "name": "Tess",
-      "teams": [
-        "Switzerland"
-      ],
-      "probability": 0.95
     },
     {
       "name": "Anita",
@@ -211,6 +211,13 @@
       "probability": 0.33
     },
     {
+      "name": "Kena",
+      "teams": [
+        "Egypt"
+      ],
+      "probability": 0.29
+    },
+    {
       "name": "Nicko",
       "teams": [
         "Algeria"
@@ -223,13 +230,6 @@
         "South Korea"
       ],
       "probability": 0.25
-    },
-    {
-      "name": "Kena",
-      "teams": [
-        "Egypt"
-      ],
-      "probability": 0.23
     },
     {
       "name": "Dani",
@@ -400,7 +400,7 @@
       "points": 10,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Brazil vs Norway · 2026-07-06 06:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
@@ -544,7 +544,7 @@
       "points": 9,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Brazil vs Norway · 2026-07-06 06:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
@@ -1153,7 +1153,7 @@
       "home_goals": 0,
       "away_goals": 3,
       "aest_date": "2026-07-05",
-      "days_ago": 0,
+      "days_ago": 1,
       "winner": "Morocco",
       "date": "2026-07-04"
     },
@@ -1163,38 +1163,8 @@
       "home_goals": 0,
       "away_goals": 1,
       "aest_date": "2026-07-05",
-      "days_ago": 0,
+      "days_ago": 1,
       "winner": "France",
-      "date": "2026-07-04"
-    },
-    {
-      "home": "Australia",
-      "away": "Egypt",
-      "home_goals": 3,
-      "away_goals": 5,
-      "aest_date": "2026-07-04",
-      "days_ago": 1,
-      "winner": "Egypt",
-      "date": "2026-07-03"
-    },
-    {
-      "home": "Argentina",
-      "away": "Cape Verde",
-      "home_goals": 3,
-      "away_goals": 2,
-      "aest_date": "2026-07-04",
-      "days_ago": 1,
-      "winner": "Argentina",
-      "date": "2026-07-03"
-    },
-    {
-      "home": "Colombia",
-      "away": "Ghana",
-      "home_goals": 1,
-      "away_goals": 0,
-      "aest_date": "2026-07-04",
-      "days_ago": 1,
-      "winner": "Colombia",
       "date": "2026-07-04"
     }
   ]
