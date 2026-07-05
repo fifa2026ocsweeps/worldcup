@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-04T20:55:33Z",
-  "last_match": "Last 16: Canada 0–3 Morocco  (2026-07-04)",
+  "last_updated": "2026-07-05T04:48:41Z",
+  "last_match": "Last 16: Paraguay 0–1 France  (2026-07-04)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_16",
   "players": [
@@ -9,35 +9,35 @@
       "teams": [
         "France"
       ],
-      "probability": 32.91
+      "probability": 34.02
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 16.63
+      "probability": 15.97
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 13.08
+      "probability": 13.37
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 7.71
+      "probability": 7.64
     },
     {
       "name": "Gabi",
       "teams": [
         "Brazil"
       ],
-      "probability": 6.87
+      "probability": 6.98
     },
     {
       "name": "Georgia",
@@ -51,7 +51,7 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 6.0
+      "probability": 5.95
     },
     {
       "name": "Orgil",
@@ -65,21 +65,21 @@
       "teams": [
         "Colombia"
       ],
-      "probability": 3.28
-    },
-    {
-      "name": "Mark",
-      "teams": [
-        "Morocco"
-      ],
-      "probability": 3.19
+      "probability": 3.25
     },
     {
       "name": "Marcelo",
       "teams": [
         "Mexico"
       ],
-      "probability": 3.19
+      "probability": 3.02
+    },
+    {
+      "name": "Mark",
+      "teams": [
+        "Morocco"
+      ],
+      "probability": 2.76
     },
     {
       "name": "Jimmy",
@@ -87,7 +87,14 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.51
+      "probability": 2.53
+    },
+    {
+      "name": "Eden",
+      "teams": [
+        "Norway"
+      ],
+      "probability": 1.95
     },
     {
       "name": "Pip",
@@ -97,11 +104,11 @@
       "probability": 1.9
     },
     {
-      "name": "Eden",
+      "name": "Aditi",
       "teams": [
-        "Norway"
+        "Japan"
       ],
-      "probability": 1.84
+      "probability": 1.5
     },
     {
       "name": "Rose",
@@ -109,14 +116,7 @@
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 1.56
-    },
-    {
-      "name": "Aditi",
-      "teams": [
-        "Japan"
-      ],
-      "probability": 1.5
+      "probability": 1.48
     },
     {
       "name": "Linda",
@@ -159,7 +159,7 @@
       "teams": [
         "Switzerland"
       ],
-      "probability": 0.95
+      "probability": 0.98
     },
     {
       "name": "Anita",
@@ -197,6 +197,13 @@
       "probability": 0.4
     },
     {
+      "name": "Reino",
+      "teams": [
+        "Paraguay"
+      ],
+      "probability": 0.33
+    },
+    {
       "name": "Josh",
       "teams": [
         "Ghana"
@@ -222,14 +229,7 @@
       "teams": [
         "Egypt"
       ],
-      "probability": 0.21
-    },
-    {
-      "name": "Reino",
-      "teams": [
-        "Paraguay"
-      ],
-      "probability": 0.2
+      "probability": 0.23
     },
     {
       "name": "Dani",
@@ -326,18 +326,18 @@
   "team_stats": {
     "France": {
       "group": "Group I",
-      "played": 4,
-      "won": 4,
+      "played": 5,
+      "won": 5,
       "drawn": 0,
       "lost": 0,
-      "goals_for": 13,
+      "goals_for": 14,
       "goals_against": 2,
-      "goal_diff": 11,
-      "points": 12,
+      "goal_diff": 12,
+      "points": 15,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Paraguay vs France · 2026-07-05 07:00 AEST",
-      "advanced_to": "ROUND_OF_16",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "QUARTER_FINALS",
       "via_third": false
     },
     "Argentina": {
@@ -790,18 +790,18 @@
     },
     "Paraguay": {
       "group": "Group D",
-      "played": 4,
+      "played": 5,
       "won": 2,
       "drawn": 1,
-      "lost": 1,
+      "lost": 2,
       "goals_for": 7,
-      "goals_against": 8,
-      "goal_diff": -1,
+      "goals_against": 9,
+      "goal_diff": -2,
       "points": 7,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Paraguay vs France · 2026-07-05 07:00 AEST",
-      "advanced_to": "ROUND_OF_16",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "eliminated",
       "via_third": false
     },
     "Senegal": {
@@ -1097,6 +1097,7 @@
     "top_scoring_team": {
       "goals": 14,
       "teams": [
+        "France",
         "Germany"
       ]
     },
@@ -1109,16 +1110,16 @@
     },
     "top_scorers": [
       {
+        "name": "Kylian Mbappé",
+        "team": "France",
+        "goals": 7,
+        "assists": 2
+      },
+      {
         "name": "Lionel Messi",
         "team": "Argentina",
         "goals": 7,
         "assists": null
-      },
-      {
-        "name": "Kylian Mbappé",
-        "team": "France",
-        "goals": 6,
-        "assists": 2
       },
       {
         "name": "Erling Haaland",
@@ -1154,6 +1155,16 @@
       "aest_date": "2026-07-05",
       "days_ago": 0,
       "winner": "Morocco",
+      "date": "2026-07-04"
+    },
+    {
+      "home": "Paraguay",
+      "away": "France",
+      "home_goals": 0,
+      "away_goals": 1,
+      "aest_date": "2026-07-05",
+      "days_ago": 0,
+      "winner": "France",
       "date": "2026-07-04"
     },
     {
