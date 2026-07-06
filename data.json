@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-05T23:09:42Z",
-  "last_match": "Last 16: Brazil 1–2 Norway  (2026-07-05)",
+  "last_updated": "2026-07-06T05:02:53Z",
+  "last_match": "Last 16: Mexico 2–3 England  (2026-07-06)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_16",
   "players": [
@@ -9,21 +9,28 @@
       "teams": [
         "France"
       ],
-      "probability": 34.05
+      "probability": 33.22
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.13
+      "probability": 16.83
+    },
+    {
+      "name": "Jon",
+      "teams": [
+        "England"
+      ],
+      "probability": 13.98
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 13.54
+      "probability": 13.46
     },
     {
       "name": "Gabi",
@@ -31,13 +38,6 @@
         "Brazil"
       ],
       "probability": 10.5
-    },
-    {
-      "name": "Jon",
-      "teams": [
-        "England"
-      ],
-      "probability": 8.86
     },
     {
       "name": "Georgia",
@@ -51,14 +51,14 @@
       "teams": [
         "Portugal"
       ],
-      "probability": 6.01
+      "probability": 5.86
     },
     {
       "name": "Eden",
       "teams": [
         "Norway"
       ],
-      "probability": 5.1
+      "probability": 4.75
     },
     {
       "name": "Orgil",
@@ -68,25 +68,11 @@
       "probability": 4.3
     },
     {
-      "name": "Marcelo",
-      "teams": [
-        "Mexico"
-      ],
-      "probability": 3.73
-    },
-    {
       "name": "Alistair",
       "teams": [
         "Colombia"
       ],
-      "probability": 3.36
-    },
-    {
-      "name": "Mark",
-      "teams": [
-        "Morocco"
-      ],
-      "probability": 2.73
+      "probability": 3.55
     },
     {
       "name": "Jimmy",
@@ -94,7 +80,14 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.69
+      "probability": 2.96
+    },
+    {
+      "name": "Mark",
+      "teams": [
+        "Morocco"
+      ],
+      "probability": 2.64
     },
     {
       "name": "Pip",
@@ -109,7 +102,7 @@
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 1.55
+      "probability": 1.57
     },
     {
       "name": "Aditi",
@@ -134,6 +127,13 @@
       "probability": 1.2
     },
     {
+      "name": "Marcelo",
+      "teams": [
+        "Mexico"
+      ],
+      "probability": 1.2
+    },
+    {
       "name": "Lach",
       "teams": [
         "Senegal"
@@ -145,7 +145,7 @@
       "teams": [
         "Switzerland"
       ],
-      "probability": 1.1
+      "probability": 1.05
     },
     {
       "name": "Adele",
@@ -222,7 +222,7 @@
       "teams": [
         "Egypt"
       ],
-      "probability": 0.28
+      "probability": 0.27
     },
     {
       "name": "Sanaz",
@@ -358,18 +358,18 @@
     },
     "Mexico": {
       "group": "Group A",
-      "played": 4,
+      "played": 5,
       "won": 4,
       "drawn": 0,
-      "lost": 0,
-      "goals_for": 8,
-      "goals_against": 0,
-      "goal_diff": 8,
+      "lost": 1,
+      "goals_for": 10,
+      "goals_against": 3,
+      "goal_diff": 7,
       "points": 12,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Mexico vs England · 2026-07-06 10:00 AEST",
-      "advanced_to": "ROUND_OF_16",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "eliminated",
       "via_third": false
     },
     "Netherlands": {
@@ -438,18 +438,18 @@
     },
     "England": {
       "group": "Group L",
-      "played": 4,
-      "won": 3,
+      "played": 5,
+      "won": 4,
       "drawn": 1,
       "lost": 0,
-      "goals_for": 8,
-      "goals_against": 3,
-      "goal_diff": 5,
-      "points": 10,
+      "goals_for": 11,
+      "goals_against": 5,
+      "goal_diff": 6,
+      "points": 13,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Mexico vs England · 2026-07-06 10:00 AEST",
-      "advanced_to": "ROUND_OF_16",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "QUARTER_FINALS",
       "via_third": false
     },
     "Morocco": {
@@ -1130,12 +1130,12 @@
       {
         "name": "Harry Kane",
         "team": "England",
-        "goals": 5,
-        "assists": null
+        "goals": 6,
+        "assists": 1
       },
       {
-        "name": "Vinicius Junior",
-        "team": "Brazil",
+        "name": "Julián Quiñones",
+        "team": "Mexico",
         "goals": 4,
         "assists": 1
       }
@@ -1156,6 +1156,16 @@
       "days_ago": 0,
       "winner": "Norway",
       "date": "2026-07-05"
+    },
+    {
+      "home": "Mexico",
+      "away": "England",
+      "home_goals": 2,
+      "away_goals": 3,
+      "aest_date": "2026-07-06",
+      "days_ago": 0,
+      "winner": "England",
+      "date": "2026-07-06"
     },
     {
       "home": "Canada",
