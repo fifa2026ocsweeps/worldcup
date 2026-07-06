@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-06T08:59:17Z",
-  "last_match": "Last 16: Mexico 2–3 England  (2026-07-06)",
+  "last_updated": "2026-07-06T21:27:20Z",
+  "last_match": "Last 16: Portugal 0–1 Spain  (2026-07-06)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_16",
   "players": [
@@ -9,28 +9,28 @@
       "teams": [
         "France"
       ],
-      "probability": 33.24
-    },
-    {
-      "name": "Matt",
-      "teams": [
-        "Argentina"
-      ],
-      "probability": 16.74
-    },
-    {
-      "name": "Jon",
-      "teams": [
-        "England"
-      ],
-      "probability": 13.99
+      "probability": 32.36
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 13.72
+      "probability": 19.0
+    },
+    {
+      "name": "Matt",
+      "teams": [
+        "Argentina"
+      ],
+      "probability": 16.89
+    },
+    {
+      "name": "Jon",
+      "teams": [
+        "England"
+      ],
+      "probability": 15.08
     },
     {
       "name": "Gabi",
@@ -40,6 +40,13 @@
       "probability": 10.5
     },
     {
+      "name": "MEJ (Michael)",
+      "teams": [
+        "Portugal"
+      ],
+      "probability": 9.1
+    },
+    {
       "name": "Georgia",
       "teams": [
         "Germany"
@@ -47,18 +54,11 @@
       "probability": 6.7
     },
     {
-      "name": "MEJ (Michael)",
-      "teams": [
-        "Portugal"
-      ],
-      "probability": 5.75
-    },
-    {
       "name": "Eden",
       "teams": [
         "Norway"
       ],
-      "probability": 4.6
+      "probability": 4.77
     },
     {
       "name": "Orgil",
@@ -72,7 +72,14 @@
       "teams": [
         "Colombia"
       ],
-      "probability": 3.51
+      "probability": 3.48
+    },
+    {
+      "name": "Mark",
+      "teams": [
+        "Morocco"
+      ],
+      "probability": 2.8
     },
     {
       "name": "Jimmy",
@@ -80,14 +87,7 @@
         "United States",
         "Qatar"
       ],
-      "probability": 2.85
-    },
-    {
-      "name": "Mark",
-      "teams": [
-        "Morocco"
-      ],
-      "probability": 2.79
+      "probability": 2.78
     },
     {
       "name": "Pip",
@@ -97,19 +97,19 @@
       "probability": 1.9
     },
     {
-      "name": "Rose",
-      "teams": [
-        "Belgium",
-        "Uzbekistan"
-      ],
-      "probability": 1.58
-    },
-    {
       "name": "Aditi",
       "teams": [
         "Japan"
       ],
       "probability": 1.5
+    },
+    {
+      "name": "Rose",
+      "teams": [
+        "Belgium",
+        "Uzbekistan"
+      ],
+      "probability": 1.49
     },
     {
       "name": "Linda",
@@ -134,18 +134,18 @@
       "probability": 1.2
     },
     {
+      "name": "Tess",
+      "teams": [
+        "Switzerland"
+      ],
+      "probability": 1.18
+    },
+    {
       "name": "Lach",
       "teams": [
         "Senegal"
       ],
       "probability": 1.1
-    },
-    {
-      "name": "Tess",
-      "teams": [
-        "Switzerland"
-      ],
-      "probability": 1.09
     },
     {
       "name": "Adele",
@@ -211,18 +211,18 @@
       "probability": 0.33
     },
     {
+      "name": "Kena",
+      "teams": [
+        "Egypt"
+      ],
+      "probability": 0.3
+    },
+    {
       "name": "Nicko",
       "teams": [
         "Algeria"
       ],
       "probability": 0.29
-    },
-    {
-      "name": "Kena",
-      "teams": [
-        "Egypt"
-      ],
-      "probability": 0.28
     },
     {
       "name": "Sanaz",
@@ -406,18 +406,18 @@
     },
     "Spain": {
       "group": "Group H",
-      "played": 4,
-      "won": 3,
+      "played": 5,
+      "won": 4,
       "drawn": 1,
       "lost": 0,
-      "goals_for": 8,
+      "goals_for": 9,
       "goals_against": 0,
-      "goal_diff": 8,
-      "points": 10,
+      "goal_diff": 9,
+      "points": 13,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Portugal vs Spain · 2026-07-07 05:00 AEST",
-      "advanced_to": "ROUND_OF_16",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "QUARTER_FINALS",
       "via_third": false
     },
     "Switzerland": {
@@ -566,18 +566,18 @@
     },
     "Portugal": {
       "group": "Group K",
-      "played": 4,
+      "played": 5,
       "won": 2,
       "drawn": 2,
-      "lost": 0,
+      "lost": 1,
       "goals_for": 8,
-      "goals_against": 2,
-      "goal_diff": 6,
+      "goals_against": 3,
+      "goal_diff": 5,
       "points": 8,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Portugal vs Spain · 2026-07-07 05:00 AEST",
-      "advanced_to": "ROUND_OF_16",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "eliminated",
       "via_third": false
     },
     "Japan": {
@@ -1148,12 +1148,22 @@
   },
   "recent_results": [
     {
+      "home": "Portugal",
+      "away": "Spain",
+      "home_goals": 0,
+      "away_goals": 1,
+      "aest_date": "2026-07-07",
+      "days_ago": 0,
+      "winner": "Spain",
+      "date": "2026-07-06"
+    },
+    {
       "home": "Brazil",
       "away": "Norway",
       "home_goals": 1,
       "away_goals": 2,
       "aest_date": "2026-07-06",
-      "days_ago": 0,
+      "days_ago": 1,
       "winner": "Norway",
       "date": "2026-07-05"
     },
@@ -1163,29 +1173,9 @@
       "home_goals": 2,
       "away_goals": 3,
       "aest_date": "2026-07-06",
-      "days_ago": 0,
+      "days_ago": 1,
       "winner": "England",
       "date": "2026-07-06"
-    },
-    {
-      "home": "Canada",
-      "away": "Morocco",
-      "home_goals": 0,
-      "away_goals": 3,
-      "aest_date": "2026-07-05",
-      "days_ago": 1,
-      "winner": "Morocco",
-      "date": "2026-07-04"
-    },
-    {
-      "home": "Paraguay",
-      "away": "France",
-      "home_goals": 0,
-      "away_goals": 1,
-      "aest_date": "2026-07-05",
-      "days_ago": 1,
-      "winner": "France",
-      "date": "2026-07-04"
     }
   ]
 }
