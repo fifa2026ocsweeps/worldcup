@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-07T21:22:37Z",
-  "last_match": "Last 16: Argentina 3–2 Egypt  (2026-07-07)",
+  "last_updated": "2026-07-08T04:08:26Z",
+  "last_match": "Last 16: Switzerland 4–3 Colombia  (2026-07-07)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_16",
   "players": [
@@ -9,28 +9,28 @@
       "teams": [
         "France"
       ],
-      "probability": 32.49
+      "probability": 32.38
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 19.6
+      "probability": 19.54
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.65
+      "probability": 18.6
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 15.83
+      "probability": 15.78
     },
     {
       "name": "Gabi",
@@ -58,7 +58,7 @@
       "teams": [
         "Norway"
       ],
-      "probability": 5.59
+      "probability": 5.65
     },
     {
       "name": "Orgil",
@@ -72,7 +72,7 @@
       "teams": [
         "Morocco"
       ],
-      "probability": 2.77
+      "probability": 2.87
     },
     {
       "name": "Rose",
@@ -80,14 +80,21 @@
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 2.67
+      "probability": 2.7
+    },
+    {
+      "name": "Tess",
+      "teams": [
+        "Switzerland"
+      ],
+      "probability": 2.54
     },
     {
       "name": "Alistair",
       "teams": [
         "Colombia"
       ],
-      "probability": 2.33
+      "probability": 2.4
     },
     {
       "name": "Pip",
@@ -132,13 +139,6 @@
         "Mexico"
       ],
       "probability": 1.2
-    },
-    {
-      "name": "Tess",
-      "teams": [
-        "Switzerland"
-      ],
-      "probability": 1.15
     },
     {
       "name": "Lach",
@@ -422,18 +422,18 @@
     },
     "Switzerland": {
       "group": "Group B",
-      "played": 4,
-      "won": 3,
+      "played": 5,
+      "won": 4,
       "drawn": 1,
       "lost": 0,
-      "goals_for": 9,
-      "goals_against": 3,
-      "goal_diff": 6,
-      "points": 10,
+      "goals_for": 13,
+      "goals_against": 6,
+      "goal_diff": 7,
+      "points": 13,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_16",
+      "advanced_to": "QUARTER_FINALS",
       "via_third": false
     },
     "England": {
@@ -470,18 +470,18 @@
     },
     "Colombia": {
       "group": "Group K",
-      "played": 4,
+      "played": 5,
       "won": 3,
       "drawn": 1,
-      "lost": 0,
-      "goals_for": 5,
-      "goals_against": 1,
-      "goal_diff": 4,
+      "lost": 1,
+      "goals_for": 8,
+      "goals_against": 5,
+      "goal_diff": 3,
       "points": 10,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "ROUND_OF_16",
+      "advanced_to": "eliminated",
       "via_third": false
     },
     "Germany": {
@@ -1156,6 +1156,16 @@
       "aest_date": "2026-07-08",
       "days_ago": 0,
       "winner": "Argentina",
+      "date": "2026-07-07"
+    },
+    {
+      "home": "Switzerland",
+      "away": "Colombia",
+      "home_goals": 4,
+      "away_goals": 3,
+      "aest_date": "2026-07-08",
+      "days_ago": 0,
+      "winner": "Switzerland",
       "date": "2026-07-07"
     },
     {
