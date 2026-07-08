@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08T04:08:26Z",
+  "last_updated": "2026-07-08T07:28:25Z",
   "last_match": "Last 16: Switzerland 4–3 Colombia  (2026-07-07)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_16",
@@ -9,28 +9,28 @@
       "teams": [
         "France"
       ],
-      "probability": 32.38
+      "probability": 32.43
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 19.54
+      "probability": 19.57
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 18.6
+      "probability": 18.63
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 15.78
+      "probability": 15.8
     },
     {
       "name": "Gabi",
@@ -58,7 +58,7 @@
       "teams": [
         "Norway"
       ],
-      "probability": 5.65
+      "probability": 5.61
     },
     {
       "name": "Orgil",
@@ -80,14 +80,14 @@
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 2.7
+      "probability": 2.71
     },
     {
       "name": "Tess",
       "teams": [
         "Switzerland"
       ],
-      "probability": 2.54
+      "probability": 2.46
     },
     {
       "name": "Alistair",
@@ -352,7 +352,7 @@
       "points": 15,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "No upcoming fixture",
+      "next_fixture": "Argentina vs Switzerland · 2026-07-12 11:00 AEST",
       "advanced_to": "QUARTER_FINALS",
       "via_third": false
     },
@@ -432,7 +432,7 @@
       "points": 13,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "No upcoming fixture",
+      "next_fixture": "Argentina vs Switzerland · 2026-07-12 11:00 AEST",
       "advanced_to": "QUARTER_FINALS",
       "via_third": false
     },
