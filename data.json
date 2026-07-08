@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08T07:28:25Z",
+  "last_updated": "2026-07-08T21:06:00Z",
   "last_match": "Last 16: Switzerland 4–3 Colombia  (2026-07-07)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_16",
@@ -9,28 +9,28 @@
       "teams": [
         "France"
       ],
-      "probability": 32.43
-    },
-    {
-      "name": "Alan",
-      "teams": [
-        "Spain"
-      ],
-      "probability": 19.57
+      "probability": 31.97
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 18.63
+      "probability": 18.99
+    },
+    {
+      "name": "Alan",
+      "teams": [
+        "Spain"
+      ],
+      "probability": 18.93
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 15.8
+      "probability": 16.61
     },
     {
       "name": "Gabi",
@@ -58,7 +58,7 @@
       "teams": [
         "Norway"
       ],
-      "probability": 5.61
+      "probability": 5.59
     },
     {
       "name": "Orgil",
@@ -72,7 +72,7 @@
       "teams": [
         "Morocco"
       ],
-      "probability": 2.87
+      "probability": 2.82
     },
     {
       "name": "Rose",
@@ -80,14 +80,14 @@
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 2.71
+      "probability": 2.7
     },
     {
       "name": "Tess",
       "teams": [
         "Switzerland"
       ],
-      "probability": 2.46
+      "probability": 2.45
     },
     {
       "name": "Alistair",
@@ -1154,7 +1154,7 @@
       "home_goals": 3,
       "away_goals": 2,
       "aest_date": "2026-07-08",
-      "days_ago": 0,
+      "days_ago": 1,
       "winner": "Argentina",
       "date": "2026-07-07"
     },
@@ -1164,28 +1164,8 @@
       "home_goals": 4,
       "away_goals": 3,
       "aest_date": "2026-07-08",
-      "days_ago": 0,
+      "days_ago": 1,
       "winner": "Switzerland",
-      "date": "2026-07-07"
-    },
-    {
-      "home": "Portugal",
-      "away": "Spain",
-      "home_goals": 0,
-      "away_goals": 1,
-      "aest_date": "2026-07-07",
-      "days_ago": 1,
-      "winner": "Spain",
-      "date": "2026-07-06"
-    },
-    {
-      "home": "United States",
-      "away": "Belgium",
-      "home_goals": 1,
-      "away_goals": 4,
-      "aest_date": "2026-07-07",
-      "days_ago": 1,
-      "winner": "Belgium",
       "date": "2026-07-07"
     }
   ]
