@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-09T04:41:37Z",
+  "last_updated": "2026-07-09T08:26:21Z",
   "last_match": "Last 16: Switzerland 4–3 Colombia  (2026-07-07)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "ROUND_OF_16",
@@ -9,28 +9,28 @@
       "teams": [
         "France"
       ],
-      "probability": 31.92
+      "probability": 32.0
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 18.96
+      "probability": 19.01
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 18.9
+      "probability": 18.95
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 16.58
+      "probability": 16.62
     },
     {
       "name": "Gabi",
@@ -58,7 +58,7 @@
       "teams": [
         "Norway"
       ],
-      "probability": 5.69
+      "probability": 5.59
     },
     {
       "name": "Orgil",
@@ -72,7 +72,7 @@
       "teams": [
         "Morocco"
       ],
-      "probability": 2.87
+      "probability": 2.82
     },
     {
       "name": "Rose",
@@ -83,18 +83,18 @@
       "probability": 2.7
     },
     {
-      "name": "Tess",
-      "teams": [
-        "Switzerland"
-      ],
-      "probability": 2.45
-    },
-    {
       "name": "Alistair",
       "teams": [
         "Colombia"
       ],
       "probability": 2.4
+    },
+    {
+      "name": "Tess",
+      "teams": [
+        "Switzerland"
+      ],
+      "probability": 2.37
     },
     {
       "name": "Pip",
