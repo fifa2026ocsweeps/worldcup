@@ -1,36 +1,36 @@
 {
-  "last_updated": "2026-07-09T08:26:21Z",
+  "last_updated": "2026-07-09T21:21:55Z",
   "last_match": "Last 16: Switzerland 4–3 Colombia  (2026-07-07)",
   "source": "The Odds API (live betting markets)",
-  "tournament_stage": "ROUND_OF_16",
+  "tournament_stage": "QUARTER_FINALS",
   "players": [
     {
       "name": "Livia",
       "teams": [
         "France"
       ],
-      "probability": 32.0
-    },
-    {
-      "name": "Matt",
-      "teams": [
-        "Argentina"
-      ],
-      "probability": 19.01
+      "probability": 31.21
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 18.95
+      "probability": 19.55
+    },
+    {
+      "name": "Matt",
+      "teams": [
+        "Argentina"
+      ],
+      "probability": 18.5
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 16.62
+      "probability": 16.94
     },
     {
       "name": "Gabi",
@@ -58,7 +58,7 @@
       "teams": [
         "Norway"
       ],
-      "probability": 5.59
+      "probability": 5.79
     },
     {
       "name": "Orgil",
@@ -72,7 +72,7 @@
       "teams": [
         "Morocco"
       ],
-      "probability": 2.82
+      "probability": 3.08
     },
     {
       "name": "Rose",
@@ -80,7 +80,7 @@
         "Belgium",
         "Uzbekistan"
       ],
-      "probability": 2.7
+      "probability": 2.71
     },
     {
       "name": "Alistair",
@@ -94,7 +94,7 @@
       "teams": [
         "Switzerland"
       ],
-      "probability": 2.37
+      "probability": 2.29
     },
     {
       "name": "Pip",
@@ -336,7 +336,7 @@
       "points": 15,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "France vs Morocco · 2026-07-10 06:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "QUARTER_FINALS",
       "via_third": false
     },
@@ -464,7 +464,7 @@
       "points": 13,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "France vs Morocco · 2026-07-10 06:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "QUARTER_FINALS",
       "via_third": false
     },
@@ -1147,26 +1147,5 @@
       "assists": 2
     }
   },
-  "recent_results": [
-    {
-      "home": "Argentina",
-      "away": "Egypt",
-      "home_goals": 3,
-      "away_goals": 2,
-      "aest_date": "2026-07-08",
-      "days_ago": 1,
-      "winner": "Argentina",
-      "date": "2026-07-07"
-    },
-    {
-      "home": "Switzerland",
-      "away": "Colombia",
-      "home_goals": 4,
-      "away_goals": 3,
-      "aest_date": "2026-07-08",
-      "days_ago": 1,
-      "winner": "Switzerland",
-      "date": "2026-07-07"
-    }
-  ]
+  "recent_results": []
 }
