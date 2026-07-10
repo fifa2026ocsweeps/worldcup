@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10T04:42:57Z",
+  "last_updated": "2026-07-10T08:21:41Z",
   "last_match": "Quarter Finals: France 2–0 Morocco  (2026-07-09)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "QUARTER_FINALS",
@@ -9,28 +9,28 @@
       "teams": [
         "France"
       ],
-      "probability": 38.52
+      "probability": 38.5
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 17.54
+      "probability": 17.58
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.49
+      "probability": 17.53
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 16.36
+      "probability": 16.39
     },
     {
       "name": "Gabi",
@@ -58,7 +58,7 @@
       "teams": [
         "Norway"
       ],
-      "probability": 5.55
+      "probability": 5.56
     },
     {
       "name": "Orgil",
@@ -87,7 +87,7 @@
       "teams": [
         "Switzerland"
       ],
-      "probability": 2.19
+      "probability": 2.08
     },
     {
       "name": "Mark",
