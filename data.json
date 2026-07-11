@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-11T03:59:30Z",
+  "last_updated": "2026-07-11T07:10:32Z",
   "last_match": "Quarter Finals: Spain 2–1 Belgium  (2026-07-10)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "QUARTER_FINALS",
@@ -9,28 +9,28 @@
       "teams": [
         "France"
       ],
-      "probability": 37.18
+      "probability": 37.39
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 22.23
+      "probability": 22.02
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.35
+      "probability": 17.55
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 15.93
+      "probability": 15.68
     },
     {
       "name": "Gabi",
@@ -58,7 +58,7 @@
       "teams": [
         "Norway"
       ],
-      "probability": 5.45
+      "probability": 5.48
     },
     {
       "name": "Orgil",
@@ -101,7 +101,7 @@
       "teams": [
         "Switzerland"
       ],
-      "probability": 1.87
+      "probability": 1.88
     },
     {
       "name": "Jimmy",
@@ -336,7 +336,7 @@
       "points": 18,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "No upcoming fixture",
+      "next_fixture": "France vs Spain · 2026-07-15 05:00 AEST",
       "advanced_to": "SEMI_FINALS",
       "via_third": false
     },
@@ -416,7 +416,7 @@
       "points": 16,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "No upcoming fixture",
+      "next_fixture": "France vs Spain · 2026-07-15 05:00 AEST",
       "advanced_to": "SEMI_FINALS",
       "via_third": false
     },
