@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-10T21:04:43Z",
-  "last_match": "Quarter Finals: France 2–0 Morocco  (2026-07-09)",
+  "last_updated": "2026-07-11T03:59:30Z",
+  "last_match": "Quarter Finals: Spain 2–1 Belgium  (2026-07-10)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "QUARTER_FINALS",
   "players": [
@@ -9,28 +9,28 @@
       "teams": [
         "France"
       ],
-      "probability": 36.87
+      "probability": 37.18
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 22.01
+      "probability": 22.23
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.46
+      "probability": 17.35
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 16.02
+      "probability": 15.93
     },
     {
       "name": "Gabi",
@@ -58,7 +58,7 @@
       "teams": [
         "Norway"
       ],
-      "probability": 5.53
+      "probability": 5.45
     },
     {
       "name": "Orgil",
@@ -68,18 +68,19 @@
       "probability": 4.3
     },
     {
+      "name": "Rose",
+      "teams": [
+        "Belgium",
+        "Uzbekistan"
+      ],
+      "probability": 2.87
+    },
+    {
       "name": "Alistair",
       "teams": [
         "Colombia"
       ],
       "probability": 2.4
-    },
-    {
-      "name": "Tess",
-      "teams": [
-        "Switzerland"
-      ],
-      "probability": 1.98
     },
     {
       "name": "Mark",
@@ -94,6 +95,13 @@
         "Uruguay"
       ],
       "probability": 1.9
+    },
+    {
+      "name": "Tess",
+      "teams": [
+        "Switzerland"
+      ],
+      "probability": 1.87
     },
     {
       "name": "Jimmy",
@@ -222,14 +230,6 @@
         "South Korea"
       ],
       "probability": 0.25
-    },
-    {
-      "name": "Rose",
-      "teams": [
-        "Belgium",
-        "Uzbekistan"
-      ],
-      "probability": 0.21
     },
     {
       "name": "Dani",
@@ -406,18 +406,18 @@
     },
     "Spain": {
       "group": "Group H",
-      "played": 5,
-      "won": 4,
+      "played": 6,
+      "won": 5,
       "drawn": 1,
       "lost": 0,
-      "goals_for": 9,
-      "goals_against": 0,
-      "goal_diff": 9,
-      "points": 13,
+      "goals_for": 11,
+      "goals_against": 1,
+      "goal_diff": 10,
+      "points": 16,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "QUARTER_FINALS",
+      "advanced_to": "SEMI_FINALS",
       "via_third": false
     },
     "Switzerland": {
@@ -598,18 +598,18 @@
     },
     "Belgium": {
       "group": "Group G",
-      "played": 5,
+      "played": 6,
       "won": 3,
       "drawn": 2,
-      "lost": 0,
-      "goals_for": 13,
-      "goals_against": 5,
-      "goal_diff": 8,
+      "lost": 1,
+      "goals_for": 14,
+      "goals_against": 7,
+      "goal_diff": 7,
       "points": 11,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "QUARTER_FINALS",
+      "advanced_to": "eliminated",
       "via_third": false
     },
     "Egypt": {
@@ -1146,6 +1146,16 @@
     }
   },
   "recent_results": [
+    {
+      "home": "Spain",
+      "away": "Belgium",
+      "home_goals": 2,
+      "away_goals": 1,
+      "aest_date": "2026-07-11",
+      "days_ago": 0,
+      "winner": "Spain",
+      "date": "2026-07-10"
+    },
     {
       "home": "France",
       "away": "Morocco",
