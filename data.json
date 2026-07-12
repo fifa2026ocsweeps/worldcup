@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-11T20:43:43Z",
-  "last_match": "Quarter Finals: Spain 2–1 Belgium  (2026-07-10)",
+  "last_updated": "2026-07-12T04:20:14Z",
+  "last_match": "Quarter Finals: Argentina 3–1 Switzerland  (2026-07-12)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "QUARTER_FINALS",
   "players": [
@@ -9,28 +9,28 @@
       "teams": [
         "France"
       ],
-      "probability": 37.77
+      "probability": 37.39
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 22.01
-    },
-    {
-      "name": "Matt",
-      "teams": [
-        "Argentina"
-      ],
-      "probability": 17.34
+      "probability": 21.76
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 15.84
+      "probability": 21.21
+    },
+    {
+      "name": "Matt",
+      "teams": [
+        "Argentina"
+      ],
+      "probability": 19.64
     },
     {
       "name": "Gabi",
@@ -54,13 +54,6 @@
       "probability": 6.7
     },
     {
-      "name": "Eden",
-      "teams": [
-        "Norway"
-      ],
-      "probability": 5.14
-    },
-    {
       "name": "Orgil",
       "teams": [
         "Netherlands"
@@ -74,6 +67,13 @@
         "Uzbekistan"
       ],
       "probability": 2.87
+    },
+    {
+      "name": "Eden",
+      "teams": [
+        "Norway"
+      ],
+      "probability": 2.8
     },
     {
       "name": "Alistair",
@@ -97,13 +97,6 @@
       "probability": 1.9
     },
     {
-      "name": "Tess",
-      "teams": [
-        "Switzerland"
-      ],
-      "probability": 1.88
-    },
-    {
       "name": "Jimmy",
       "teams": [
         "United States",
@@ -115,6 +108,13 @@
       "name": "Aditi",
       "teams": [
         "Japan"
+      ],
+      "probability": 1.5
+    },
+    {
+      "name": "Tess",
+      "teams": [
+        "Switzerland"
       ],
       "probability": 1.5
     },
@@ -342,34 +342,34 @@
     },
     "Argentina": {
       "group": "Group J",
-      "played": 5,
-      "won": 5,
+      "played": 6,
+      "won": 6,
       "drawn": 0,
       "lost": 0,
-      "goals_for": 14,
-      "goals_against": 5,
-      "goal_diff": 9,
-      "points": 15,
+      "goals_for": 17,
+      "goals_against": 6,
+      "goal_diff": 11,
+      "points": 18,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Argentina vs Switzerland · 2026-07-12 11:00 AEST",
-      "advanced_to": "QUARTER_FINALS",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "SEMI_FINALS",
       "via_third": false
     },
     "Mexico": {
       "group": "Group A",
-      "played": 5,
+      "played": 4,
       "won": 4,
       "drawn": 0,
-      "lost": 1,
-      "goals_for": 10,
-      "goals_against": 3,
-      "goal_diff": 7,
+      "lost": 0,
+      "goals_for": 8,
+      "goals_against": 0,
+      "goal_diff": 8,
       "points": 12,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated",
+      "advanced_to": "ROUND_OF_16",
       "via_third": false
     },
     "Netherlands": {
@@ -422,18 +422,18 @@
     },
     "Switzerland": {
       "group": "Group B",
-      "played": 5,
+      "played": 6,
       "won": 4,
       "drawn": 1,
-      "lost": 0,
-      "goals_for": 13,
-      "goals_against": 6,
-      "goal_diff": 7,
+      "lost": 1,
+      "goals_for": 14,
+      "goals_against": 9,
+      "goal_diff": 5,
       "points": 13,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Argentina vs Switzerland · 2026-07-12 11:00 AEST",
-      "advanced_to": "QUARTER_FINALS",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "eliminated",
       "via_third": false
     },
     "England": {
@@ -442,14 +442,14 @@
       "won": 4,
       "drawn": 1,
       "lost": 0,
-      "goals_for": 11,
-      "goals_against": 5,
+      "goals_for": 10,
+      "goals_against": 4,
       "goal_diff": 6,
       "points": 13,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Norway vs England · 2026-07-12 07:00 AEST",
-      "advanced_to": "QUARTER_FINALS",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "SEMI_FINALS",
       "via_third": false
     },
     "Morocco": {
@@ -534,18 +534,18 @@
     },
     "Norway": {
       "group": "Group I",
-      "played": 5,
+      "played": 6,
       "won": 4,
       "drawn": 0,
-      "lost": 1,
-      "goals_for": 12,
-      "goals_against": 9,
-      "goal_diff": 3,
+      "lost": 2,
+      "goals_for": 13,
+      "goals_against": 11,
+      "goal_diff": 2,
       "points": 12,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Norway vs England · 2026-07-12 07:00 AEST",
-      "advanced_to": "QUARTER_FINALS",
+      "next_fixture": "No upcoming fixture",
+      "advanced_to": "eliminated",
       "via_third": false
     },
     "Croatia": {
@@ -1095,9 +1095,9 @@
   },
   "highlights": {
     "top_scoring_team": {
-      "goals": 16,
+      "goals": 17,
       "teams": [
-        "France"
+        "Argentina"
       ]
     },
     "most_conceded_team": {
@@ -1118,7 +1118,7 @@
         "name": "Lionel Messi",
         "team": "Argentina",
         "goals": 8,
-        "assists": 1
+        "assists": 2
       },
       {
         "name": "Erling Haaland",
@@ -1133,10 +1133,10 @@
         "assists": 1
       },
       {
-        "name": "Ousmane Dembélé",
-        "team": "France",
-        "goals": 5,
-        "assists": 2
+        "name": "Jude Bellingham",
+        "team": "England",
+        "goals": 6,
+        "assists": 1
       }
     ],
     "top_assister": {
@@ -1146,6 +1146,26 @@
     }
   },
   "recent_results": [
+    {
+      "home": "Norway",
+      "away": "England",
+      "home_goals": 1,
+      "away_goals": 2,
+      "aest_date": "2026-07-12",
+      "days_ago": 0,
+      "winner": "England",
+      "date": "2026-07-11"
+    },
+    {
+      "home": "Argentina",
+      "away": "Switzerland",
+      "home_goals": 3,
+      "away_goals": 1,
+      "aest_date": "2026-07-12",
+      "days_ago": 0,
+      "winner": "Argentina",
+      "date": "2026-07-12"
+    },
     {
       "home": "Spain",
       "away": "Belgium",
