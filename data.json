@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13T08:16:05Z",
+  "last_updated": "2026-07-13T20:55:58Z",
   "last_match": "Quarter Finals: Argentina 3–1 Switzerland  (2026-07-12)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "QUARTER_FINALS",
@@ -9,28 +9,28 @@
       "teams": [
         "France"
       ],
-      "probability": 38.76
+      "probability": 38.98
     },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 21.87
+      "probability": 22.31
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 21.76
+      "probability": 21.8
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.6
+      "probability": 16.91
     },
     {
       "name": "Gabi",
@@ -1145,26 +1145,5 @@
       "assists": 2
     }
   },
-  "recent_results": [
-    {
-      "home": "Norway",
-      "away": "England",
-      "home_goals": 1,
-      "away_goals": 2,
-      "aest_date": "2026-07-12",
-      "days_ago": 1,
-      "winner": "England",
-      "date": "2026-07-11"
-    },
-    {
-      "home": "Argentina",
-      "away": "Switzerland",
-      "home_goals": 3,
-      "away_goals": 1,
-      "aest_date": "2026-07-12",
-      "days_ago": 1,
-      "winner": "Argentina",
-      "date": "2026-07-12"
-    }
-  ]
+  "recent_results": []
 }
