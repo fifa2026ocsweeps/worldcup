@@ -1,36 +1,29 @@
 {
-  "last_updated": "2026-07-14T07:09:59Z",
+  "last_updated": "2026-07-14T20:58:55Z",
   "last_match": "Quarter Finals: Argentina 3–1 Switzerland  (2026-07-12)",
   "source": "The Odds API (live betting markets)",
-  "tournament_stage": "QUARTER_FINALS",
+  "tournament_stage": "SEMI_FINALS",
   "players": [
-    {
-      "name": "Livia",
-      "teams": [
-        "France"
-      ],
-      "probability": 38.9
-    },
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 22.26
+      "probability": 56.83
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 21.76
+      "probability": 24.2
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 17.08
+      "probability": 18.77
     },
     {
       "name": "Gabi",
@@ -232,6 +225,13 @@
       "probability": 0.25
     },
     {
+      "name": "Livia",
+      "teams": [
+        "France"
+      ],
+      "probability": 0.2
+    },
+    {
       "name": "Dani",
       "teams": [
         "Tunisia"
@@ -336,7 +336,7 @@
       "points": 18,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "France vs Spain · 2026-07-15 05:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "SEMI_FINALS",
       "via_third": false
     },
@@ -416,7 +416,7 @@
       "points": 16,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "France vs Spain · 2026-07-15 05:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "SEMI_FINALS",
       "via_third": false
     },
