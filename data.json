@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15T03:52:10Z",
+  "last_updated": "2026-07-15T07:13:24Z",
   "last_match": "Semi Finals: France 0–2 Spain  (2026-07-14)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "SEMI_FINALS",
@@ -9,21 +9,21 @@
       "teams": [
         "Spain"
       ],
-      "probability": 57.06
+      "probability": 57.15
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 23.94
+      "probability": 23.83
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 19.0
+      "probability": 19.02
     },
     {
       "name": "Livia",
