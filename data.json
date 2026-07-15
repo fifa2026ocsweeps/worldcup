@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15T07:13:24Z",
+  "last_updated": "2026-07-15T20:58:28Z",
   "last_match": "Semi Finals: France 0–2 Spain  (2026-07-14)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "SEMI_FINALS",
@@ -9,21 +9,14 @@
       "teams": [
         "Spain"
       ],
-      "probability": 57.15
-    },
-    {
-      "name": "Jon",
-      "teams": [
-        "England"
-      ],
-      "probability": 23.83
+      "probability": 58.69
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 19.02
+      "probability": 38.14
     },
     {
       "name": "Livia",
@@ -59,6 +52,13 @@
         "Netherlands"
       ],
       "probability": 4.3
+    },
+    {
+      "name": "Jon",
+      "teams": [
+        "England"
+      ],
+      "probability": 3.17
     },
     {
       "name": "Rose",
@@ -352,7 +352,7 @@
       "points": 18,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "England vs Argentina · 2026-07-16 05:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "SEMI_FINALS",
       "via_third": false
     },
@@ -448,7 +448,7 @@
       "points": 16,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "England vs Argentina · 2026-07-16 05:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "SEMI_FINALS",
       "via_third": false
     },
@@ -1118,7 +1118,7 @@
         "name": "Lionel Messi",
         "team": "Argentina",
         "goals": 8,
-        "assists": 2
+        "assists": 3
       },
       {
         "name": "Erling Haaland",
@@ -1140,9 +1140,9 @@
       }
     ],
     "top_assister": {
-      "name": "Kylian Mbappé",
-      "team": "France",
-      "assists": 2
+      "name": "Lionel Messi",
+      "team": "Argentina",
+      "assists": 3
     }
   },
   "recent_results": [
@@ -1152,7 +1152,7 @@
       "home_goals": 0,
       "away_goals": 2,
       "aest_date": "2026-07-15",
-      "days_ago": 0,
+      "days_ago": 1,
       "winner": "Spain",
       "date": "2026-07-14"
     }
