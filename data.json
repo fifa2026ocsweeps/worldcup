@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-14T20:58:55Z",
-  "last_match": "Quarter Finals: Argentina 3–1 Switzerland  (2026-07-12)",
+  "last_updated": "2026-07-15T03:52:10Z",
+  "last_match": "Semi Finals: France 0–2 Spain  (2026-07-14)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "SEMI_FINALS",
   "players": [
@@ -9,21 +9,28 @@
       "teams": [
         "Spain"
       ],
-      "probability": 56.83
+      "probability": 57.06
     },
     {
       "name": "Jon",
       "teams": [
         "England"
       ],
-      "probability": 24.2
+      "probability": 23.94
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 18.77
+      "probability": 19.0
+    },
+    {
+      "name": "Livia",
+      "teams": [
+        "France"
+      ],
+      "probability": 16.7
     },
     {
       "name": "Gabi",
@@ -225,13 +232,6 @@
       "probability": 0.25
     },
     {
-      "name": "Livia",
-      "teams": [
-        "France"
-      ],
-      "probability": 0.2
-    },
-    {
       "name": "Dani",
       "teams": [
         "Tunisia"
@@ -326,18 +326,18 @@
   "team_stats": {
     "France": {
       "group": "Group I",
-      "played": 6,
+      "played": 7,
       "won": 6,
       "drawn": 0,
-      "lost": 0,
+      "lost": 1,
       "goals_for": 16,
-      "goals_against": 2,
-      "goal_diff": 14,
+      "goals_against": 4,
+      "goal_diff": 12,
       "points": 18,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "SEMI_FINALS",
+      "advanced_to": "eliminated",
       "via_third": false
     },
     "Argentina": {
@@ -406,18 +406,18 @@
     },
     "Spain": {
       "group": "Group H",
-      "played": 6,
-      "won": 5,
+      "played": 7,
+      "won": 6,
       "drawn": 1,
       "lost": 0,
-      "goals_for": 11,
+      "goals_for": 13,
       "goals_against": 1,
-      "goal_diff": 10,
-      "points": 16,
+      "goal_diff": 12,
+      "points": 19,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "SEMI_FINALS",
+      "advanced_to": "FINAL",
       "via_third": false
     },
     "Switzerland": {
@@ -1145,5 +1145,16 @@
       "assists": 2
     }
   },
-  "recent_results": []
+  "recent_results": [
+    {
+      "home": "France",
+      "away": "Spain",
+      "home_goals": 0,
+      "away_goals": 2,
+      "aest_date": "2026-07-15",
+      "days_ago": 0,
+      "winner": "Spain",
+      "date": "2026-07-14"
+    }
+  ]
 }
