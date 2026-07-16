@@ -669,11 +669,18 @@
     .group-card tbody tr.adv-eliminated td.pts { color: var(--text-mid); }
     .group-card tbody tr.adv-champion td { background: rgba(255,193,7,0.14); }
     .group-card tbody tr.adv-champion td:first-child::before { content:"★ "; color:#ffc107; }
+    .group-card tbody tr.adv-bronze td { background: rgba(176,141,87,0.14); }
+    .group-card tbody tr.adv-bronze td:first-child::before { content:"🥉 "; font-size:0.72rem; }
+    .group-card tbody tr.adv-third-play td { background: rgba(58,181,124,0.10); }
+    .group-card tbody tr.adv-third-play td:first-child::before { content:"▲ "; color:#3ab57c; font-size:0.68rem; }
     .stage-badge {
       display: inline-block; margin-left: 5px;
       font-size: 0.58rem; font-weight: 700; letter-spacing: 0.3px;
       background: rgba(58,181,124,0.2); color: #2a9460;
       border-radius: 3px; padding: 1px 4px; vertical-align: middle;
+    }
+    .stage-badge.badge-bronze {
+      background: rgba(176,141,87,0.2); color: #b08d57;
     }
     .third-tag {
       display: inline-block; margin-left: 4px;
@@ -1948,13 +1955,16 @@ function renderGroups() {
     const rows = teams.map((t, i) => {
       const adv = t.advanced_to || null;
       const rowClass = adv === 'WINNER' ? 'adv-champion'
+        : adv === 'THIRD' ? 'adv-bronze'
+        : adv === 'THIRD_PLACE_CONTENDER' ? 'adv-third-play'
         : adv === 'eliminated' ? 'adv-eliminated'
         : t.via_third ? 'adv-third'
         : adv ? 'adv-advancing'
         : '';
       const STAGE_LABEL = {
         'ROUND_OF_32':'R32','ROUND_OF_16':'R16','QUARTER_FINALS':'QF',
-        'SEMI_FINALS':'SF','FINAL':'Final','THIRD':'3rd','WINNER':'Champion'
+        'SEMI_FINALS':'SF','FINAL':'Final',
+        'THIRD_PLACE_CONTENDER':'3rd place match','THIRD':'3rd place','WINNER':'Champion'
       };
       const stageBadge = (adv && adv !== 'eliminated' && adv !== 'ROUND_OF_32')
         ? `<span class="stage-badge">${STAGE_LABEL[adv] || adv}</span>` : '';

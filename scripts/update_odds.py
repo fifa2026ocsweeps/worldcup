@@ -591,11 +591,17 @@ def compute_advancement(all_matches, team_stats):
                 continue
             winner, loser = knockout_winner(m)
             if stage == "THIRD_PLACE":
-                # 3rd place match: winner gets THIRD, loser gets FOURTH (still eliminated)
+                # 3rd place match settled: winner=bronze, loser=4th
                 if winner and winner in team_stats:
                     team_stats[winner]["advanced_to"] = "THIRD"
                 if loser and loser in team_stats:
                     team_stats[loser]["advanced_to"] = "eliminated"
+            elif stage == "SEMI_FINALS":
+                # Semi-final losers play the 3rd place match — not eliminated yet
+                if loser and loser in team_stats:
+                    team_stats[loser]["advanced_to"] = "THIRD_PLACE_CONTENDER"
+                if winner and winner in team_stats:
+                    team_stats[winner]["advanced_to"] = "FINAL"
             else:
                 if loser and loser in team_stats:
                     team_stats[loser]["advanced_to"] = "eliminated"
