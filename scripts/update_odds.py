@@ -423,31 +423,40 @@ def fetch_next_fixtures(headers, team_stats):
 
         team_stats = compute_advancement(all_matches, team_stats)
 
-        # Fix next_fixture for 3rd-place contenders: the API fixture uses
-        # placeholder names so they get no match string above. Find the
-        # THIRD_PLACE fixture's date and wire it up explicitly.
-        contenders = [t for t, s in team_stats.items()
-                      if isinstance(s, dict) and s.get("advanced_to") == "THIRD_PLACE_CONTENDER"]
-        if len(contenders) == 2:
-            third_fix = next(
+        # The API uses placeholder team names in THIRD_PLACE and FINAL fixtures,
+        # so those teams get no next_fixture from next_fix above. Detect them
+        # from advanced_to and wire up the fixture explicitly.
+        def _set_fixture_for_pair(stage_name, teams_pair):
+            fix = next(
                 (m for m in all_matches
-                 if norm_stage(m.get("stage", "")) == "THIRD_PLACE"
+                 if norm_stage(m.get("stage", "")) == stage_name
                  and m.get("status") in ("TIMED", "SCHEDULED")),
                 None
             )
-            if third_fix:
-                utc_date = third_fix.get("utcDate", "")
-                fix_str = f"{contenders[0]} vs {contenders[1]}"
-                if len(utc_date) >= 16:
-                    try:
-                        dt_utc  = datetime.strptime(utc_date[:16], "%Y-%m-%dT%H:%M")
-                        dt_aest = dt_utc + timedelta(hours=10)
-                        fix_str += f" · {dt_aest.strftime('%Y-%m-%d')} {dt_aest.strftime('%H:%M')} AEST"
-                    except Exception:
-                        fix_str += f" · {utc_date[:10]}"
-                team_stats[contenders[0]]["next_fixture"] = fix_str
-                team_stats[contenders[1]]["next_fixture"] = fix_str
-                print(f"  ✅ 3rd-place fixture set for {contenders[0]} vs {contenders[1]}")
+            if not fix:
+                return
+            utc_date = fix.get("utcDate", "")
+            fix_str = f"{teams_pair[0]} vs {teams_pair[1]}"
+            if len(utc_date) >= 16:
+                try:
+                    dt_utc  = datetime.strptime(utc_date[:16], "%Y-%m-%dT%H:%M")
+                    dt_aest = dt_utc + timedelta(hours=10)
+                    fix_str += f" · {dt_aest.strftime('%Y-%m-%d')} {dt_aest.strftime('%H:%M')} AEST"
+                except Exception:
+                    fix_str += f" · {utc_date[:10]}"
+            for t in teams_pair:
+                team_stats[t]["next_fixture"] = fix_str
+            print(f"  ✅ {stage_name} fixture set: {fix_str}")
+
+        contenders = [t for t, s in team_stats.items()
+                      if isinstance(s, dict) and s.get("advanced_to") == "THIRD_PLACE_CONTENDER"]
+        if len(contenders) == 2:
+            _set_fixture_for_pair("THIRD_PLACE", contenders)
+
+        finalists = [t for t, s in team_stats.items()
+                     if isinstance(s, dict) and s.get("advanced_to") == "FINAL"]
+        if len(finalists) == 2:
+            _set_fixture_for_pair("FINAL", finalists)
 
         recent = build_recent_results(all_matches)
         return team_stats, recent
