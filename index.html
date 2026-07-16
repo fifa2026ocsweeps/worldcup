@@ -1955,7 +1955,7 @@ function renderGroups() {
         : '';
       const STAGE_LABEL = {
         'ROUND_OF_32':'R32','ROUND_OF_16':'R16','QUARTER_FINALS':'QF',
-        'SEMI_FINALS':'SF','FINAL':'Final','WINNER':'Champion'
+        'SEMI_FINALS':'SF','FINAL':'Final','THIRD':'3rd','WINNER':'Champion'
       };
       const stageBadge = (adv && adv !== 'eliminated' && adv !== 'ROUND_OF_32')
         ? `<span class="stage-badge">${STAGE_LABEL[adv] || adv}</span>` : '';
@@ -2079,10 +2079,13 @@ function renderTimeline() {
 // ═══════════════════════════════════
 // CHAMPION CONFETTI
 // ═══════════════════════════════════
-function launchConfetti(playerName, teamName) {
+function launchConfetti(playerName, teamName, isThird) {
   // Don't show again if already shown this session
   if (sessionStorage.getItem('confetti_shown')) return;
   sessionStorage.setItem('confetti_shown', '1');
+
+  const trophy = isThird ? '🥉' : '🏆';
+  const title  = isThird ? '3rd Place — Bronze Medal!' : 'World Cup Champion!';
 
   // Overlay
   const overlay = document.createElement('div');
@@ -2090,8 +2093,8 @@ function launchConfetti(playerName, teamName) {
   overlay.innerHTML = `
     <canvas id="confetti-canvas"></canvas>
     <div id="champ-msg">
-      <div id="champ-trophy">🏆</div>
-      <div id="champ-title">World Cup Champion!</div>
+      <div id="champ-trophy">${trophy}</div>
+      <div id="champ-title">${title}</div>
       <div id="champ-team">${flag(teamName)} ${teamName}</div>
       <div id="champ-player">🎉 Congratulations <strong>${playerName}</strong>!</div>
     </div>`;
@@ -2141,10 +2144,18 @@ function launchConfetti(playerName, teamName) {
 
 function checkChampion(data) {
   const ts = data.team_stats || {};
+  // Champion first, then 3rd place (champion takes priority if both resolved same day)
   const winnerTeam = Object.keys(ts).find(t => ts[t].advanced_to === 'WINNER');
-  if (!winnerTeam) return;
-  const entry = DRAW.find(p => p.teams.includes(winnerTeam));
-  launchConfetti(entry ? entry.name : 'Your sweepstakes winner', winnerTeam);
+  if (winnerTeam) {
+    const entry = DRAW.find(p => p.teams.includes(winnerTeam));
+    launchConfetti(entry ? entry.name : 'Your sweepstakes winner', winnerTeam, false);
+    return;
+  }
+  const thirdTeam = Object.keys(ts).find(t => ts[t].advanced_to === 'THIRD');
+  if (thirdTeam) {
+    const entry = DRAW.find(p => p.teams.includes(thirdTeam));
+    launchConfetti(entry ? entry.name : 'Your sweepstakes player', thirdTeam, true);
+  }
 }
 </script>
 

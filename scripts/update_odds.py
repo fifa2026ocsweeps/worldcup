@@ -582,7 +582,7 @@ def compute_advancement(all_matches, team_stats):
                     return (home, away) if h > a else (away, home)
             return None, None  # unresolved (match still in play)
 
-        knockout_stages = set(STAGE_ORDER) - {"GROUP_STAGE", "THIRD_PLACE"}
+        knockout_stages = set(STAGE_ORDER) - {"GROUP_STAGE"}
         for m in all_matches:
             if m.get("status") != "FINISHED":
                 continue
@@ -590,11 +590,18 @@ def compute_advancement(all_matches, team_stats):
             if not stage or stage not in knockout_stages:
                 continue
             winner, loser = knockout_winner(m)
-            if loser and loser in team_stats:
-                team_stats[loser]["advanced_to"] = "eliminated"
-            if winner and winner in team_stats:
-                next_s = NEXT_STAGE.get(stage, stage)
-                team_stats[winner]["advanced_to"] = next_s  # WINNER if FINAL
+            if stage == "THIRD_PLACE":
+                # 3rd place match: winner gets THIRD, loser gets FOURTH (still eliminated)
+                if winner and winner in team_stats:
+                    team_stats[winner]["advanced_to"] = "THIRD"
+                if loser and loser in team_stats:
+                    team_stats[loser]["advanced_to"] = "eliminated"
+            else:
+                if loser and loser in team_stats:
+                    team_stats[loser]["advanced_to"] = "eliminated"
+                if winner and winner in team_stats:
+                    next_s = NEXT_STAGE.get(stage, stage)
+                    team_stats[winner]["advanced_to"] = next_s  # WINNER if FINAL
 
     adv_count = sum(1 for s in team_stats.values() if s.get("advanced_to") not in (None, "eliminated"))
     elim_count = sum(1 for s in team_stats.values() if s.get("advanced_to") == "eliminated")
