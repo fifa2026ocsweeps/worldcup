@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16T00:07:11Z",
+  "last_updated": "2026-07-16T00:12:20Z",
   "last_match": "Semi Finals: England 1–2 Argentina  (2026-07-15)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "SEMI_FINALS",
@@ -337,7 +337,7 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated",
+      "advanced_to": "THIRD_PLACE_CONTENDER",
       "via_third": false
     },
     "Argentina": {
@@ -449,7 +449,7 @@
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "eliminated",
+      "advanced_to": "THIRD_PLACE_CONTENDER",
       "via_third": false
     },
     "Morocco": {
