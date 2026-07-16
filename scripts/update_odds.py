@@ -422,6 +422,33 @@ def fetch_next_fixtures(headers, team_stats):
         print(f"  ✅ Next fixtures mapped for {len(next_fix)} teams.")
 
         team_stats = compute_advancement(all_matches, team_stats)
+
+        # Fix next_fixture for 3rd-place contenders: the API fixture uses
+        # placeholder names so they get no match string above. Find the
+        # THIRD_PLACE fixture's date and wire it up explicitly.
+        contenders = [t for t, s in team_stats.items()
+                      if s.get("advanced_to") == "THIRD_PLACE_CONTENDER"]
+        if len(contenders) == 2:
+            third_fix = next(
+                (m for m in all_matches
+                 if norm_stage(m.get("stage", "")) == "THIRD_PLACE"
+                 and m.get("status") in ("TIMED", "SCHEDULED")),
+                None
+            )
+            if third_fix:
+                utc_date = third_fix.get("utcDate", "")
+                fix_str = f"{contenders[0]} vs {contenders[1]}"
+                if len(utc_date) >= 16:
+                    try:
+                        dt_utc  = datetime.strptime(utc_date[:16], "%Y-%m-%dT%H:%M")
+                        dt_aest = dt_utc + timedelta(hours=10)
+                        fix_str += f" · {dt_aest.strftime('%Y-%m-%d')} {dt_aest.strftime('%H:%M')} AEST"
+                    except Exception:
+                        fix_str += f" · {utc_date[:10]}"
+                team_stats[contenders[0]]["next_fixture"] = fix_str
+                team_stats[contenders[1]]["next_fixture"] = fix_str
+                print(f"  ✅ 3rd-place fixture set for {contenders[0]} vs {contenders[1]}")
+
         recent = build_recent_results(all_matches)
         return team_stats, recent
 
@@ -778,10 +805,16 @@ def compute_highlights(team_stats, top_scorers, discipline):
 
 
 # ─── Compute player standings ─────────────────────────────────────────────────
-def compute_players(team_probs):
+CANNOT_WIN = {"eliminated", "THIRD_PLACE_CONTENDER", "THIRD"}
+
+def compute_players(team_probs, team_stats=None):
     players = []
     for p in DRAW:
-        prob = sum(team_probs.get(t, FALLBACK_PROBS.get(t, 0.05)) for t in p["teams"])
+        prob = 0.0
+        for t in p["teams"]:
+            if team_stats and team_stats.get(t, {}).get("advanced_to") in CANNOT_WIN:
+                continue
+            prob += team_probs.get(t, FALLBACK_PROBS.get(t, 0.05))
         players.append({"name": p["name"], "teams": p["teams"], "probability": round(prob, 2)})
     players.sort(key=lambda x: x["probability"], reverse=True)
     return players
@@ -870,7 +903,7 @@ def main():
             highlights  = compute_highlights(team_stats, top_scorers, discipline)
 
     # ── Build output ──────────────────────────────────────────────────────────
-    players = compute_players(team_probs)
+    players = compute_players(team_probs, team_stats)
     output = {
         "last_updated":     datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "last_match":       last_match,
