@@ -427,7 +427,7 @@ def fetch_next_fixtures(headers, team_stats):
         # placeholder names so they get no match string above. Find the
         # THIRD_PLACE fixture's date and wire it up explicitly.
         contenders = [t for t, s in team_stats.items()
-                      if s.get("advanced_to") == "THIRD_PLACE_CONTENDER"]
+                      if isinstance(s, dict) and s.get("advanced_to") == "THIRD_PLACE_CONTENDER"]
         if len(contenders) == 2:
             third_fix = next(
                 (m for m in all_matches
@@ -454,8 +454,9 @@ def fetch_next_fixtures(headers, team_stats):
 
     except Exception as e:
         print(f"[WARN] Fixtures fetch error: {e}", file=sys.stderr)
-        for team in team_stats:
-            team_stats[team].setdefault("next_fixture", "No upcoming fixture")
+        for team, s in team_stats.items():
+            if isinstance(s, dict):
+                s.setdefault("next_fixture", "No upcoming fixture")
 
     return team_stats, []
 
