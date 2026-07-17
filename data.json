@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16T22:18:26Z",
+  "last_updated": "2026-07-17T21:08:34Z",
   "last_match": "Semi Finals: England 1–2 Argentina  (2026-07-15)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "SEMI_FINALS",
@@ -9,14 +9,14 @@
       "teams": [
         "Spain"
       ],
-      "probability": 58.31
+      "probability": 58.54
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 41.69
+      "probability": 41.46
     },
     {
       "name": "Livia",
@@ -1112,7 +1112,7 @@
         "name": "Kylian Mbappé",
         "team": "France",
         "goals": 8,
-        "assists": 2
+        "assists": 3
       },
       {
         "name": "Lionel Messi",
@@ -1145,16 +1145,5 @@
       "assists": 4
     }
   },
-  "recent_results": [
-    {
-      "home": "England",
-      "away": "Argentina",
-      "home_goals": 1,
-      "away_goals": 2,
-      "aest_date": "2026-07-16",
-      "days_ago": 1,
-      "winner": "Argentina",
-      "date": "2026-07-15"
-    }
-  ]
+  "recent_results": []
 }
