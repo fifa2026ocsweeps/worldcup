@@ -1,22 +1,22 @@
 {
-  "last_updated": "2026-07-17T22:09:04Z",
+  "last_updated": "2026-07-18T21:07:08Z",
   "last_match": "Semi Finals: England 1–2 Argentina  (2026-07-15)",
   "source": "The Odds API (live betting markets)",
-  "tournament_stage": "SEMI_FINALS",
+  "tournament_stage": "THIRD_PLACE",
   "players": [
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 58.64
+      "probability": 58.78
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 41.36
+      "probability": 41.22
     },
     {
       "name": "Livia",
@@ -336,7 +336,7 @@
       "points": 18,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "France vs England · 2026-07-19 07:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "THIRD_PLACE_CONTENDER",
       "via_third": false
     },
@@ -448,7 +448,7 @@
       "points": 16,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "France vs England · 2026-07-19 07:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "THIRD_PLACE_CONTENDER",
       "via_third": false
     },
