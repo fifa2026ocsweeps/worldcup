@@ -1,22 +1,22 @@
 {
-  "last_updated": "2026-07-18T21:36:14Z",
+  "last_updated": "2026-07-18T22:10:31Z",
   "last_match": "Semi Finals: England 1–2 Argentina  (2026-07-15)",
   "source": "The Odds API (live betting markets)",
-  "tournament_stage": "THIRD_PLACE",
+  "tournament_stage": "SEMI_FINALS",
   "players": [
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 58.78
+      "probability": 58.68
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 41.22
+      "probability": 41.32
     },
     {
       "name": "Livia",
