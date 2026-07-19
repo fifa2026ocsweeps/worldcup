@@ -1,22 +1,22 @@
 {
-  "last_updated": "2026-07-18T22:10:31Z",
-  "last_match": "Semi Finals: England 1–2 Argentina  (2026-07-15)",
+  "last_updated": "2026-07-19T21:08:13Z",
+  "last_match": "Third Place: France 4–6 England  (2026-07-18)",
   "source": "The Odds API (live betting markets)",
-  "tournament_stage": "SEMI_FINALS",
+  "tournament_stage": "FINAL",
   "players": [
     {
       "name": "Alan",
       "teams": [
         "Spain"
       ],
-      "probability": 58.68
+      "probability": 62.25
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 41.32
+      "probability": 37.75
     },
     {
       "name": "Livia",
@@ -326,18 +326,18 @@
   "team_stats": {
     "France": {
       "group": "Group I",
-      "played": 7,
+      "played": 8,
       "won": 6,
       "drawn": 0,
-      "lost": 1,
-      "goals_for": 16,
-      "goals_against": 4,
-      "goal_diff": 12,
+      "lost": 2,
+      "goals_for": 20,
+      "goals_against": 10,
+      "goal_diff": 10,
       "points": 18,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "THIRD_PLACE_CONTENDER",
+      "advanced_to": "eliminated",
       "via_third": false
     },
     "Argentina": {
@@ -352,7 +352,7 @@
       "points": 21,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Argentina vs Spain · 2026-07-20 05:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "FINAL",
       "via_third": false
     },
@@ -416,7 +416,7 @@
       "points": 19,
       "yellow_cards": 0,
       "red_cards": 0,
-      "next_fixture": "Argentina vs Spain · 2026-07-20 05:00 AEST",
+      "next_fixture": "No upcoming fixture",
       "advanced_to": "FINAL",
       "via_third": false
     },
@@ -438,18 +438,18 @@
     },
     "England": {
       "group": "Group L",
-      "played": 7,
-      "won": 5,
+      "played": 8,
+      "won": 6,
       "drawn": 1,
       "lost": 1,
-      "goals_for": 14,
-      "goals_against": 8,
-      "goal_diff": 6,
-      "points": 16,
+      "goals_for": 20,
+      "goals_against": 12,
+      "goal_diff": 8,
+      "points": 19,
       "yellow_cards": 0,
       "red_cards": 0,
       "next_fixture": "No upcoming fixture",
-      "advanced_to": "THIRD_PLACE_CONTENDER",
+      "advanced_to": "THIRD",
       "via_third": false
     },
     "Morocco": {
@@ -1095,14 +1095,16 @@
   },
   "highlights": {
     "top_scoring_team": {
-      "goals": 19,
+      "goals": 20,
       "teams": [
-        "Argentina"
+        "France",
+        "England"
       ]
     },
     "most_conceded_team": {
       "goals": 12,
       "teams": [
+        "England",
         "Tunisia",
         "Iraq"
       ]
@@ -1111,8 +1113,8 @@
       {
         "name": "Kylian Mbappé",
         "team": "France",
-        "goals": 8,
-        "assists": 3
+        "goals": 10,
+        "assists": 4
       },
       {
         "name": "Lionel Messi",
@@ -1127,23 +1129,34 @@
         "assists": null
       },
       {
-        "name": "Harry Kane",
+        "name": "Jude Bellingham",
         "team": "England",
-        "goals": 6,
+        "goals": 7,
         "assists": 1
       },
       {
-        "name": "Jude Bellingham",
+        "name": "Harry Kane",
         "team": "England",
         "goals": 6,
         "assists": 1
       }
     ],
     "top_assister": {
-      "name": "Lionel Messi",
-      "team": "Argentina",
+      "name": "Kylian Mbappé",
+      "team": "France",
       "assists": 4
     }
   },
-  "recent_results": []
+  "recent_results": [
+    {
+      "home": "France",
+      "away": "England",
+      "home_goals": 4,
+      "away_goals": 6,
+      "aest_date": "2026-07-19",
+      "days_ago": 1,
+      "winner": "England",
+      "date": "2026-07-18"
+    }
+  ]
 }
