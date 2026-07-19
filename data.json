@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-19T21:08:13Z",
+  "last_updated": "2026-07-19T21:37:27Z",
   "last_match": "Third Place: France 4–6 England  (2026-07-18)",
   "source": "The Odds API (live betting markets)",
   "tournament_stage": "FINAL",
@@ -9,14 +9,14 @@
       "teams": [
         "Spain"
       ],
-      "probability": 62.25
+      "probability": 65.49
     },
     {
       "name": "Matt",
       "teams": [
         "Argentina"
       ],
-      "probability": 37.75
+      "probability": 34.51
     },
     {
       "name": "Livia",
